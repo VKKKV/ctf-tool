@@ -1,0 +1,122 @@
+\hypertarget{a00023}{}\subsection{Référence du fichier src/algo/eof.h}
+\label{a00023}\index{src/algo/eof.\+h@{src/algo/eof.\+h}}
+
+
+Algorithme E\+OF.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de eof.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00024}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{a00025}
+\end{center}
+\end{figure}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{a00023_a1c15f35d77081a076fe7cb19c7eb13b1}{insert\+\_\+eof} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme E\+OF. \end{DoxyCompactList}\item 
+int \hyperlink{a00023_a0204ccf62793e17621fea9abae71e9da}{extract\+\_\+eof} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme E\+OF. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Algorithme E\+OF. 
+
+Contient les fonctions concernant l\textquotesingle{}algorithme E\+OF. 
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00023_a0204ccf62793e17621fea9abae71e9da}\label{a00023_a0204ccf62793e17621fea9abae71e9da}} 
+\index{eof.\+h@{eof.\+h}!extract\+\_\+eof@{extract\+\_\+eof}}
+\index{extract\+\_\+eof@{extract\+\_\+eof}!eof.\+h@{eof.\+h}}
+\paragraph{\texorpdfstring{extract\+\_\+eof()}{extract\_eof()}}
+{\footnotesize\ttfamily int extract\+\_\+eof (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme E\+OF. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant l\textquotesingle{}extraction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si l\textquotesingle{}algorithme a bien ete extrait ; sinon 1 en cas d\textquotesingle{}erreur et met à jour \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Pierre Ayoub 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 81 du fichier eof.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00023_a0204ccf62793e17621fea9abae71e9da_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{a00023_a0204ccf62793e17621fea9abae71e9da_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00023_a1c15f35d77081a076fe7cb19c7eb13b1}\label{a00023_a1c15f35d77081a076fe7cb19c7eb13b1}} 
+\index{eof.\+h@{eof.\+h}!insert\+\_\+eof@{insert\+\_\+eof}}
+\index{insert\+\_\+eof@{insert\+\_\+eof}!eof.\+h@{eof.\+h}}
+\paragraph{\texorpdfstring{insert\+\_\+eof()}{insert\_eof()}}
+{\footnotesize\ttfamily int insert\+\_\+eof (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme E\+OF. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si l\textquotesingle{}algorithme a bien ete inseré ; sinon 1 en cas d\textquotesingle{}erreur et met à jour \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Pierre Ayoub 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 20 du fichier eof.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00023_a1c15f35d77081a076fe7cb19c7eb13b1_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{a00023_a1c15f35d77081a076fe7cb19c7eb13b1_icgraph}
+\end{center}
+\end{figure}

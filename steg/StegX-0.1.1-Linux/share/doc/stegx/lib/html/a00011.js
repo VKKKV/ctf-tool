@@ -1,0 +1,24 @@
+var a00011 =
+[
+    [ "err_code", "a00011.xhtml#a08b18ac8af0f3462354240d9732f3852", [
+      [ "ERR_NONE", "a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a5203071ca85e00df6bf2526855b6df0d", null ],
+      [ "ERR_HOST", "a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a49b4659ab34e5808bae4b43669ae5689", null ],
+      [ "ERR_HIDDEN", "a00011.xhtml#a08b18ac8af0f3462354240d9732f3852af09332ce4e53766f2a7c538727b1f672", null ],
+      [ "ERR_PASSWD", "a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a4d17c66e1810646c6f6fef5e30f8904e", null ],
+      [ "ERR_RES_EXTRACT", "a00011.xhtml#a08b18ac8af0f3462354240d9732f3852ae9b69ff89121ced90b1ad58869cfbf6c", null ],
+      [ "ERR_RES_INSERT", "a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a7a60287832ac640af50a1e4d0bb5a7bf", null ],
+      [ "ERR_READ", "a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a65270b9d4567b81d393face0166d32d2", null ],
+      [ "ERR_CHECK_COMPAT", "a00011.xhtml#a08b18ac8af0f3462354240d9732f3852ab4f003f7e2c346374bb7434b940794f8", null ],
+      [ "ERR_SUGG_ALGOS", "a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a72cfc98feeed9df5050bd2b25d2d28c2", null ],
+      [ "ERR_CHOICE_ALGO", "a00011.xhtml#a08b18ac8af0f3462354240d9732f3852ab79036268630b509f43f01d2082a9154", null ],
+      [ "ERR_INSERT", "a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a103888724a059b8ab2855577bd73e8b8", null ],
+      [ "ERR_EXTRACT", "a00011.xhtml#a08b18ac8af0f3462354240d9732f3852aad3e8c13adfc55ea1cd105e92972dd33", null ],
+      [ "ERR_DETECT_ALGOS", "a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a65deae87741eaa0b2b39fe1116bfd563", null ],
+      [ "ERR_LENGTH_HIDDEN", "a00011.xhtml#a08b18ac8af0f3462354240d9732f3852ae149fbd002acad554baf6a5abbc08c12", null ],
+      [ "ERR_NEED_PASSWD", "a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a0639f3719d0bf22c36b5ca1711fe3d7e", null ],
+      [ "ERR_HIDDEN_FILE_EMPTY", "a00011.xhtml#a08b18ac8af0f3462354240d9732f3852ab2c336e452987ce9649e2071502f4b50", null ],
+      [ "ERR_OTHER", "a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a2a8c1bd6dbc0284d37030091f6c9296f", null ]
+    ] ],
+    [ "err_print", "a00011.xhtml#a5d0d86cd09d47446c87bf95c6f83cfb5", null ],
+    [ "stegx_errno", "a00011.xhtml#a5ec48ccdfbe19fe23855818f8556abec", null ]
+];

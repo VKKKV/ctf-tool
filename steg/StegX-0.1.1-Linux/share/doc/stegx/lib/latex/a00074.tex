@@ -1,0 +1,179 @@
+\hypertarget{a00074}{}\subsection{Référence du fichier src/file\+\_\+type/bmp.c}
+\label{a00074}\index{src/file\+\_\+type/bmp.\+c@{src/file\+\_\+type/bmp.\+c}}
+
+
+Fichier B\+MP.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+errors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../insert.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../protection.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../endian.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../rand.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de bmp.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00075}
+\end{center}
+\end{figure}
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00074_ae841f349a23333f726a7ae9e7c54eb74}{S\+I\+G\+\_\+\+B\+MP}~0x4\+D42
+\end{DoxyCompactItemize}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00047_af1ca434cca36ba9fb2a45f6cef3a16d6}{type\+\_\+e} \hyperlink{a00074_a9981cb05f84d85245b570a20ece33548}{stegx\+\_\+test\+\_\+file\+\_\+bmp} (F\+I\+LE $\ast$file)
+\begin{DoxyCompactList}\small\item\em Test si le fichier est un fichier B\+MP. \end{DoxyCompactList}\item 
+int \hyperlink{a00074_a9b0bec96351bc1e6be9134900590d215}{insert\+\_\+metadata\+\_\+bmp} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le format B\+MP. \end{DoxyCompactList}\item 
+int \hyperlink{a00074_a14e9a0ddec04cc168cbfe21cd839166e}{extract\+\_\+metadata\+\_\+bmp} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le formar B\+MP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Fichier B\+MP. 
+
+Contient les informations (fonctions, types, structures) relatives aux fichiers au format B\+MP. 
+
+\subsubsection{Documentation des macros}
+\mbox{\Hypertarget{a00074_ae841f349a23333f726a7ae9e7c54eb74}\label{a00074_ae841f349a23333f726a7ae9e7c54eb74}} 
+\index{bmp.\+c@{bmp.\+c}!S\+I\+G\+\_\+\+B\+MP@{S\+I\+G\+\_\+\+B\+MP}}
+\index{S\+I\+G\+\_\+\+B\+MP@{S\+I\+G\+\_\+\+B\+MP}!bmp.\+c@{bmp.\+c}}
+\paragraph{\texorpdfstring{S\+I\+G\+\_\+\+B\+MP}{SIG\_BMP}}
+{\footnotesize\ttfamily \#define S\+I\+G\+\_\+\+B\+MP~0x4\+D42}
+
+Signature B\+MP 
+
+Définition à la ligne 22 du fichier bmp.\+c.
+
+
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00074_a14e9a0ddec04cc168cbfe21cd839166e}\label{a00074_a14e9a0ddec04cc168cbfe21cd839166e}} 
+\index{bmp.\+c@{bmp.\+c}!extract\+\_\+metadata\+\_\+bmp@{extract\+\_\+metadata\+\_\+bmp}}
+\index{extract\+\_\+metadata\+\_\+bmp@{extract\+\_\+metadata\+\_\+bmp}!bmp.\+c@{bmp.\+c}}
+\paragraph{\texorpdfstring{extract\+\_\+metadata\+\_\+bmp()}{extract\_metadata\_bmp()}}
+{\footnotesize\ttfamily int extract\+\_\+metadata\+\_\+bmp (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le formar B\+MP. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant l\textquotesingle{}extraction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si les données ont bien été extraites ; sinon 1 en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Yassin Doudouh 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 164 du fichier bmp.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00074_a14e9a0ddec04cc168cbfe21cd839166e_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00074_a14e9a0ddec04cc168cbfe21cd839166e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00074_a9b0bec96351bc1e6be9134900590d215}\label{a00074_a9b0bec96351bc1e6be9134900590d215}} 
+\index{bmp.\+c@{bmp.\+c}!insert\+\_\+metadata\+\_\+bmp@{insert\+\_\+metadata\+\_\+bmp}}
+\index{insert\+\_\+metadata\+\_\+bmp@{insert\+\_\+metadata\+\_\+bmp}!bmp.\+c@{bmp.\+c}}
+\paragraph{\texorpdfstring{insert\+\_\+metadata\+\_\+bmp()}{insert\_metadata\_bmp()}}
+{\footnotesize\ttfamily int insert\+\_\+metadata\+\_\+bmp (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le format B\+MP. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si les données ont bien été inserées ; sinon 1 en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Yassin Doudouh 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 50 du fichier bmp.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00074_a9b0bec96351bc1e6be9134900590d215_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00074_a9b0bec96351bc1e6be9134900590d215_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00074_a9981cb05f84d85245b570a20ece33548}\label{a00074_a9981cb05f84d85245b570a20ece33548}} 
+\index{bmp.\+c@{bmp.\+c}!stegx\+\_\+test\+\_\+file\+\_\+bmp@{stegx\+\_\+test\+\_\+file\+\_\+bmp}}
+\index{stegx\+\_\+test\+\_\+file\+\_\+bmp@{stegx\+\_\+test\+\_\+file\+\_\+bmp}!bmp.\+c@{bmp.\+c}}
+\paragraph{\texorpdfstring{stegx\+\_\+test\+\_\+file\+\_\+bmp()}{stegx\_test\_file\_bmp()}}
+{\footnotesize\ttfamily \hyperlink{a00047_af1ca434cca36ba9fb2a45f6cef3a16d6}{type\+\_\+e} stegx\+\_\+test\+\_\+file\+\_\+bmp (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Test si le fichier est un fichier B\+MP. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em file} & Fichier à tester. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyParagraph}{Prérequis}
+Le pointeur ne doit pas être null et le fichier ouvert en lecture. 
+\end{DoxyParagraph}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da9573d9b7bb7b633a06929d27f8e90e21}{B\+M\+P\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+ED}, \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2daefc7cfb01e9ffdac79f60659489429c0}{B\+M\+P\+\_\+\+U\+N\+C\+O\+M\+P\+R\+E\+S\+S\+ED} \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da6ce26a62afab55d7606ad4e92428b30c}{U\+N\+K\+N\+O\+WN}, -\/1 en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Yassin Doudouh 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 24 du fichier bmp.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00074_a9981cb05f84d85245b570a20ece33548_icgraph}
+\end{center}
+\end{figure}

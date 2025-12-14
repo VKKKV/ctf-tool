@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>SSH助手</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="../common-libs/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="../common-libs/layoutit.css" rel="stylesheet">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="../common-libs/jquery-2.0.0.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="../common-libs/bootstrap.min.js"></script>
+    <style>
+        .control-label{
+            width: 60px !important;
+        }
+        .controls{
+            margin-left: 80px !important;
+        }
+    </style>
+</head>
+
+<body style="margin-left:20px">
+<div class="container-fluid">
+    <div class="row-fluid">
+
+        <div class="span12">
+            <h3>
+                SSH助手
+            </h3>
+
+            <div class="tabbable" id="tabs-589818"><!-- Only required for left/right tabs -->
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#panel-217771">首页</a></li>
+                    <li><a data-toggle="tab" href="#panel-356082">关于</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="panel-217771">
+                        <div class="row-fluid">
+                            <div class="span6">
+                                <form class="form-horizontal">
+                                    <fieldset>
+                                        <legend>登录信息</legend>
+                                        <div class="control-group"><label class="control-label" contenteditable="true" for="host">目标主机</label>
+                                            <div class="controls"><input id="host" placeholder="请输入目标IP或者域名" type="text" /></div>
+                                        </div>
+
+                                        <div class="control-group"><label class="control-label" contenteditable="true" for="port">端口</label>
+
+                                            <div class="controls"> <input
+                                                    placeholder="请输入端口号" type="text" id="port" value="22"/></div>
+                                        </div>
+                                        <div class="control-group"><label class="control-label" contenteditable="true" for="user">用户名</label>
+
+                                            <div class="controls"> <input
+                                                    placeholder="root" type="text" id="user" value="root"/></div>
+                                        </div>
+                                        <div class="control-group"><label class="control-label" contenteditable="true" for="pass">密码</label>
+
+                                            <div class="controls"> <input
+                                                    placeholder="请输入密码" type="text" id="pass" name="pass"/></div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" contenteditable="true" for="user">利用类型</label>
+                                            <div class="controls">   <input type="radio" class="form-check-input" name="action" value="exec" checked>命令执行
+                                                <input type="radio" class="form-check-input"  disabled name="action" value="direct">正向BShell
+
+                                                <input type="radio" class="form-check-input" disabled name="action" value="reverse">反弹BShell </div>
+                                        </div>
+                                        <div class="control-group"><label class="control-label" contenteditable="true" for="pass">命令</label>
+
+                                            <div class="controls"> <input
+                                                    placeholder="请输入需要执行的命令" type="text" id="cmd"/></div>
+                                        </div>
+                                        <div class="control-group"><label class="control-label" contenteditable="true" for="pass">监听端口</label>
+
+                                            <div class="controls"> <input
+                                                    placeholder="请输入BShell需要绑定的端口" type="text" id="listenPort"/></div>
+                                        </div>
+
+                                        <div class="control-group">
+
+                                            <div class="controls"><button class="btn btn-success" id="runBtn" type="button">执行</button></div>
+                                        </div>
+
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="span6">
+                                <form class="form-horizontal">
+                                    <fieldset>
+                                        <legend>执行结果</legend>
+                                        <div class="control-group">
+                                            <textarea class="form-control" style="width: 80%" id="result" rows="20"></textarea>
+
+                                        </div>
+
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane" id="panel-356082">
+				        <div class="alert alert-success m-3" >
+				          SSH助手是在获取到ssh认证凭据的情况下，进行下一步横向渗透的一个插件。
+				        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $(document).ready(function () {
+        $('input[type=radio][name=action]').change(function() {
+            if (this.value == 'exec') {
+                $('#cmd').parents('.control-group').show();
+                $('#listenPort').parents('.control-group').hide();
+            }
+            else {
+                $('#cmd').parents('.control-group').hide();
+                $('#listenPort').parents('.control-group').show();
+            }
+        });
+        $('#listenPort').parents('.control-group').hide();
+        $('#runBtn').click(function (event) {
+            var checkClass=PluginTools.checkClassExist('com.jcraft.jsch.JSch');
+            if (!checkClass)
+            {
+                var uploadRes = PluginTools.uploadFile('/tmp/jsch2.jpg', 'jsch-0.1.55.jar');
+                alert(uploadRes)
+                if (JSON.parse(uploadRes).status != "success")
+                {
+                    alert('upload jar failed');
+                    return;
+                }
+                var loadJarRes = PluginTools.loadJar('/tmp/jsch2.jpg');
+                if (JSON.parse(loadJarRes).status != "success")
+                {
+                    alert('load jar failed');
+                    return;
+                }
+            }
+            var params=warpParams();
+            alert(params)
+            alert(params.action)
+            alert(params.action=='exec')
+            if (params.action=='exec')
+            {
+                alert('in exec')
+                var result = PluginTools.execTask(JSON.stringify(params));
+                $('#result').text(result);
+            }
+
+        });
+    });
+    function warpParams()
+    {
+        var host = $('#host').val();
+        var port = $('#port').val();
+        var user = $('#user').val();
+        var pass = $('#pass').val();
+        var action = $("input[name='action']:checked").val();
+        var cmd = $('#cmd').val();
+        var listenPort = $('#listenPort').val();
+        return  {
+            host: host,
+            port: port,
+            user: user,
+            pass: pass,
+            action: action,
+            cmd: cmd,
+            listenPort:listenPort
+        };
+    }
+</script>
+</html>

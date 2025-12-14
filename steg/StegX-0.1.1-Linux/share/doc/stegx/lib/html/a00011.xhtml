@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>StegX: Référence du fichier inc/stegx_errors.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-doc.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">StegX
+   &#160;<span id="projectnumber">1.1.0</span>
+   </div>
+   <div id="projectbrief">Projet de Stéganographie pour l&#39;UVSQ</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('a00011.xhtml','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">Énumérations</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier stegx_errors.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Module de gestion des erreurs.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00013.svg" width="100%" height="440"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<p><a href="a00011_source.xhtml">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:a08b18ac8af0f3462354240d9732f3852"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852">err_code</a> { <br />
+&#160;&#160;<a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a5203071ca85e00df6bf2526855b6df0d">ERR_NONE</a> = 0, 
+<a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a49b4659ab34e5808bae4b43669ae5689">ERR_HOST</a>, 
+<a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852af09332ce4e53766f2a7c538727b1f672">ERR_HIDDEN</a>, 
+<a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a4d17c66e1810646c6f6fef5e30f8904e">ERR_PASSWD</a>, 
+<br />
+&#160;&#160;<a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852ae9b69ff89121ced90b1ad58869cfbf6c">ERR_RES_EXTRACT</a>, 
+<a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a7a60287832ac640af50a1e4d0bb5a7bf">ERR_RES_INSERT</a>, 
+<a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a65270b9d4567b81d393face0166d32d2">ERR_READ</a>, 
+<a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852ab4f003f7e2c346374bb7434b940794f8">ERR_CHECK_COMPAT</a>, 
+<br />
+&#160;&#160;<a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a72cfc98feeed9df5050bd2b25d2d28c2">ERR_SUGG_ALGOS</a>, 
+<a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852ab79036268630b509f43f01d2082a9154">ERR_CHOICE_ALGO</a>, 
+<a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a103888724a059b8ab2855577bd73e8b8">ERR_INSERT</a>, 
+<a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852aad3e8c13adfc55ea1cd105e92972dd33">ERR_EXTRACT</a>, 
+<br />
+&#160;&#160;<a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a65deae87741eaa0b2b39fe1116bfd563">ERR_DETECT_ALGOS</a>, 
+<a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852ae149fbd002acad554baf6a5abbc08c12">ERR_LENGTH_HIDDEN</a>, 
+<a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a0639f3719d0bf22c36b5ca1711fe3d7e">ERR_NEED_PASSWD</a>, 
+<a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852ab2c336e452987ce9649e2071502f4b50">ERR_HIDDEN_FILE_EMPTY</a>, 
+<br />
+&#160;&#160;<a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a2a8c1bd6dbc0284d37030091f6c9296f">ERR_OTHER</a>
+<br />
+ }</td></tr>
+<tr class="separator:a08b18ac8af0f3462354240d9732f3852"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a5d0d86cd09d47446c87bf95c6f83cfb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.xhtml#a5d0d86cd09d47446c87bf95c6f83cfb5">err_print</a> (const enum <a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852">err_code</a> err)</td></tr>
+<tr class="separator:a5d0d86cd09d47446c87bf95c6f83cfb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a5ec48ccdfbe19fe23855818f8556abec"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852">err_code</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.xhtml#a5ec48ccdfbe19fe23855818f8556abec">stegx_errno</a></td></tr>
+<tr class="separator:a5ec48ccdfbe19fe23855818f8556abec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Module de gestion des erreurs. </p>
+<p>Contient les définitions des codes d'erreurs ainsi que la variable globale utilisée pour communiquer. </p>
+
+<p class="definition">Définition dans le fichier <a class="el" href="a00011_source.xhtml">stegx_errors.h</a>.</p>
+</div><h2 class="groupheader">Documentation du type de l'énumération</h2>
+<a id="a08b18ac8af0f3462354240d9732f3852"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08b18ac8af0f3462354240d9732f3852">&#9670;&nbsp;</a></span>err_code</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852">err_code</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="errors"><dt><b><a class="el" href="a00134.xhtml#_errors000008">Erreurs:</a></b></dt><dd>Liste des codes d'erreurs de la bibliothèque. Utilisé dans le retour des fonctions et dans la correspondance erreur &lt;=&gt; message. Le code 0 signifie (sauf cas particulier) qu'aucune erreur ne s'est produite. </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Pierre Ayoub </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="a08b18ac8af0f3462354240d9732f3852a5203071ca85e00df6bf2526855b6df0d"></a>ERR_NONE&#160;</td><td class="fielddoc"><p>Aucune erreur. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a08b18ac8af0f3462354240d9732f3852a49b4659ab34e5808bae4b43669ae5689"></a>ERR_HOST&#160;</td><td class="fielddoc"><p>Erreur pendant l'ouverture du fichier hôte. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a08b18ac8af0f3462354240d9732f3852af09332ce4e53766f2a7c538727b1f672"></a>ERR_HIDDEN&#160;</td><td class="fielddoc"><p>Erreur pendant l'ouverture du fichier à cacher. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a08b18ac8af0f3462354240d9732f3852a4d17c66e1810646c6f6fef5e30f8904e"></a>ERR_PASSWD&#160;</td><td class="fielddoc"><p>Mot de passe invalide. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a08b18ac8af0f3462354240d9732f3852ae9b69ff89121ced90b1ad58869cfbf6c"></a>ERR_RES_EXTRACT&#160;</td><td class="fielddoc"><p>Resultat doit être un dossier en extract. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a08b18ac8af0f3462354240d9732f3852a7a60287832ac640af50a1e4d0bb5a7bf"></a>ERR_RES_INSERT&#160;</td><td class="fielddoc"><p>Resultat invalide pour l'insertion. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a08b18ac8af0f3462354240d9732f3852a65270b9d4567b81d393face0166d32d2"></a>ERR_READ&#160;</td><td class="fielddoc"><p>Erreur lors de la lecture. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a08b18ac8af0f3462354240d9732f3852ab4f003f7e2c346374bb7434b940794f8"></a>ERR_CHECK_COMPAT&#160;</td><td class="fielddoc"><p>Erreur dans le module Verification de la compatibilite des fichiers. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a08b18ac8af0f3462354240d9732f3852a72cfc98feeed9df5050bd2b25d2d28c2"></a>ERR_SUGG_ALGOS&#160;</td><td class="fielddoc"><p>Erreur dans le sous-module proposition des algos de steganographie. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a08b18ac8af0f3462354240d9732f3852ab79036268630b509f43f01d2082a9154"></a>ERR_CHOICE_ALGO&#160;</td><td class="fielddoc"><p>Erreur l'algorithme choisi par l'utilisateur n'est proposé. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a08b18ac8af0f3462354240d9732f3852a103888724a059b8ab2855577bd73e8b8"></a>ERR_INSERT&#160;</td><td class="fielddoc"><p>Erreur dans le sous-module Insertion. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a08b18ac8af0f3462354240d9732f3852aad3e8c13adfc55ea1cd105e92972dd33"></a>ERR_EXTRACT&#160;</td><td class="fielddoc"><p>Erreur dans le sous-module Extraction. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a08b18ac8af0f3462354240d9732f3852a65deae87741eaa0b2b39fe1116bfd563"></a>ERR_DETECT_ALGOS&#160;</td><td class="fielddoc"><p>Erreur dans le sous-module Dectection des algorithmes de steganographie. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a08b18ac8af0f3462354240d9732f3852ae149fbd002acad554baf6a5abbc08c12"></a>ERR_LENGTH_HIDDEN&#160;</td><td class="fielddoc"><p>Erreur taille du fichier à cacher trop élevée </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a08b18ac8af0f3462354240d9732f3852a0639f3719d0bf22c36b5ca1711fe3d7e"></a>ERR_NEED_PASSWD&#160;</td><td class="fielddoc"><p>Erreur l'application a besoin d'un mot de passe pour extraire les données. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a08b18ac8af0f3462354240d9732f3852ab2c336e452987ce9649e2071502f4b50"></a>ERR_HIDDEN_FILE_EMPTY&#160;</td><td class="fielddoc"><p>Erreur fichier caché/à cacher est vide. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a08b18ac8af0f3462354240d9732f3852a2a8c1bd6dbc0284d37030091f6c9296f"></a>ERR_OTHER&#160;</td><td class="fielddoc"><p>Erreur quelconque. </p>
+</td></tr>
+</table>
+
+<p class="definition">Définition à la ligne <a class="el" href="a00011_source.xhtml#l00017">17</a> du fichier <a class="el" href="a00011_source.xhtml">stegx_errors.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a5d0d86cd09d47446c87bf95c6f83cfb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d0d86cd09d47446c87bf95c6f83cfb5">&#9670;&nbsp;</a></span>err_print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void err_print </td>
+          <td>(</td>
+          <td class="paramtype">const enum <a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852">err_code</a>&#160;</td>
+          <td class="paramname"><em>err</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Affiche le message d'erreur sur la sortie d'erreur en fonction du code d'erreur spécifié. </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">err</td><td>Code d'erreur. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Auteur</dt><dd>Pierre Ayoub </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="a00062_source.xhtml#l00016">16</a> du fichier <a class="el" href="a00062_source.xhtml">errors.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a id="a5ec48ccdfbe19fe23855818f8556abec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ec48ccdfbe19fe23855818f8556abec">&#9670;&nbsp;</a></span>stegx_errno</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852">err_code</a> stegx_errno</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Variable mise à la disposition des fonctions de la bibliothèque pour y inscrire leur code d'erreur. </p><dl class="section author"><dt>Auteur</dt><dd>Pierre Ayoub </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="a00062_source.xhtml#l00014">14</a> du fichier <a class="el" href="a00062_source.xhtml">errors.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.xhtml">inc</a></li><li class="navelem"><a class="el" href="a00011.xhtml">stegx_errors.h</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

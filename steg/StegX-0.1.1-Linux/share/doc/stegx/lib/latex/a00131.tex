@@ -1,0 +1,88 @@
+\hypertarget{a00131}{}\subsection{Référence du fichier src/sugg\+\_\+algo.h}
+\label{a00131}\index{src/sugg\+\_\+algo.\+h@{src/sugg\+\_\+algo.\+h}}
+
+
+Proposition des algorithmes.  
+
+
+{\ttfamily \#include \char`\"{}stegx\+\_\+common.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de sugg\+\_\+algo.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{a00132}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{a00133}
+\end{center}
+\end{figure}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{a00131_a5501c9c7711252fa8d85ff12cb3390dc}{fill\+\_\+host\+\_\+info} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Remplit les informations du fichier hôte. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Proposition des algorithmes. 
+
+Module qui contient les fonctions qui permettent de proposer et de vérifier l\textquotesingle{}algorithme de stéganographie à utiliser, ainsi que la fonction de lecture/d\textquotesingle{}analyse du fichier hôte. 
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00131_a5501c9c7711252fa8d85ff12cb3390dc}\label{a00131_a5501c9c7711252fa8d85ff12cb3390dc}} 
+\index{sugg\+\_\+algo.\+h@{sugg\+\_\+algo.\+h}!fill\+\_\+host\+\_\+info@{fill\+\_\+host\+\_\+info}}
+\index{fill\+\_\+host\+\_\+info@{fill\+\_\+host\+\_\+info}!sugg\+\_\+algo.\+h@{sugg\+\_\+algo.\+h}}
+\paragraph{\texorpdfstring{fill\+\_\+host\+\_\+info()}{fill\_host\_info()}}
+{\footnotesize\ttfamily int fill\+\_\+host\+\_\+info (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Remplit les informations du fichier hôte. 
+
+Remplit les informations du fichier hôte en fonction du type de fichier. Effectue la lecture des données pour remplir la structure. \begin{DoxyParagraph}{Effet de bord}
+Initialise et rempli le champ info\+\_\+s.\+host.\+file\+\_\+info. 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Prérequis}
+info\+\_\+s.\+host.\+host doit être un fichier ouvert en lecture et compatible avec l\textquotesingle{}application. 
+\end{DoxyParagraph}
+\begin{DoxyRefDesc}{Erreurs}
+\item[\hyperlink{a00134__errors000010}{Erreurs}]\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a72cfc98feeed9df5050bd2b25d2d28c2}{E\+R\+R\+\_\+\+S\+U\+G\+G\+\_\+\+A\+L\+G\+OS} si la fonction est utilisé en mode extraction. 
+
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852ab79036268630b509f43f01d2082a9154}{E\+R\+R\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+A\+L\+GO} si l\textquotesingle{}algorithme choisi n\textquotesingle{}est pas disponible. \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si tout se passe bien, sinon 1 s\textquotesingle{}il y a une erreur. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Yassin Doudouh (B\+MP et P\+NG), Pierre Ayoub et Damien Delaunay (M\+P3 et W\+AV), Claire Baskevitch et Tristan Bessac (A\+VI et F\+LV) 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 136 du fichier sugg\+\_\+algo.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00131_a5501c9c7711252fa8d85ff12cb3390dc_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{a00131_a5501c9c7711252fa8d85ff12cb3390dc_icgraph}
+\end{center}
+\end{figure}

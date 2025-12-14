@@ -1,0 +1,104 @@
+\hypertarget{a00142}{}\subsection{Référence de la structure stegx\+\_\+choices}
+\label{a00142}\index{stegx\+\_\+choices@{stegx\+\_\+choices}}
+
+
+Informations du choix de l\textquotesingle{}utilisateur.  
+
+
+
+
+{\ttfamily \#include $<$stegx\+\_\+common.\+h$>$}
+
+
+
+Graphe de collaboration de stegx\+\_\+choices\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{a00140}
+\end{center}
+\end{figure}
+\subsubsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{a00142_a7bb2664c5894a0e9e7e4eaf6c3701105}{host\+\_\+path}
+\item 
+char $\ast$ \hyperlink{a00142_a1db5ca4f9cb9c5b56b92a0181f92ec63}{res\+\_\+path}
+\item 
+char $\ast$ \hyperlink{a00142_a3b8cb37fa26cdca2b7460e14facd9ec0}{passwd}
+\item 
+\hyperlink{a00008_a3410d2f61b2ebef290660e7d14215bbd}{mode\+\_\+e} \hyperlink{a00142_a53c249857abc01a599a933ee5c4e1841}{mode}
+\item 
+\hyperlink{a00008_a176cafec595278af1f86f1e9ef478cb0}{stegx\+\_\+info\+\_\+insert\+\_\+s} $\ast$ \hyperlink{a00142_a5a94555004756ce4454f6a055906763a}{insert\+\_\+info}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Informations du choix de l\textquotesingle{}utilisateur. 
+
+Cette structure est à remplir par les interfaces avec les choix de l\textquotesingle{}utilisateur. \begin{DoxyParagraph}{Prérequis}
+Les pointeurs ne doivent pas êtres null pour les champs requis et doivent pointer sur des zones mémoires allouées. 
+\end{DoxyParagraph}
+
+
+Définition à la ligne 92 du fichier stegx\+\_\+common.\+h.
+
+
+
+\subsubsection{Documentation des champs}
+\mbox{\Hypertarget{a00142_a7bb2664c5894a0e9e7e4eaf6c3701105}\label{a00142_a7bb2664c5894a0e9e7e4eaf6c3701105}} 
+\index{stegx\+\_\+choices@{stegx\+\_\+choices}!host\+\_\+path@{host\+\_\+path}}
+\index{host\+\_\+path@{host\+\_\+path}!stegx\+\_\+choices@{stegx\+\_\+choices}}
+\paragraph{\texorpdfstring{host\+\_\+path}{host\_path}}
+{\footnotesize\ttfamily char$\ast$ host\+\_\+path}
+
+Chemin du fichier hôte à analyser (requis). 
+
+Définition à la ligne 93 du fichier stegx\+\_\+common.\+h.
+
+\mbox{\Hypertarget{a00142_a5a94555004756ce4454f6a055906763a}\label{a00142_a5a94555004756ce4454f6a055906763a}} 
+\index{stegx\+\_\+choices@{stegx\+\_\+choices}!insert\+\_\+info@{insert\+\_\+info}}
+\index{insert\+\_\+info@{insert\+\_\+info}!stegx\+\_\+choices@{stegx\+\_\+choices}}
+\paragraph{\texorpdfstring{insert\+\_\+info}{insert\_info}}
+{\footnotesize\ttfamily \hyperlink{a00008_a176cafec595278af1f86f1e9ef478cb0}{stegx\+\_\+info\+\_\+insert\+\_\+s}$\ast$ insert\+\_\+info}
+
+Structure stockant les informations de l\textquotesingle{}insertion (requis si insertion). 
+
+Définition à la ligne 97 du fichier stegx\+\_\+common.\+h.
+
+\mbox{\Hypertarget{a00142_a53c249857abc01a599a933ee5c4e1841}\label{a00142_a53c249857abc01a599a933ee5c4e1841}} 
+\index{stegx\+\_\+choices@{stegx\+\_\+choices}!mode@{mode}}
+\index{mode@{mode}!stegx\+\_\+choices@{stegx\+\_\+choices}}
+\paragraph{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily \hyperlink{a00008_a3410d2f61b2ebef290660e7d14215bbd}{mode\+\_\+e} \hyperlink{a00008_a1a6b6fb557d8d37d59700faf4e4c9167}{mode}}
+
+Mode d\textquotesingle{}utilisation (requis). 
+
+Définition à la ligne 96 du fichier stegx\+\_\+common.\+h.
+
+\mbox{\Hypertarget{a00142_a3b8cb37fa26cdca2b7460e14facd9ec0}\label{a00142_a3b8cb37fa26cdca2b7460e14facd9ec0}} 
+\index{stegx\+\_\+choices@{stegx\+\_\+choices}!passwd@{passwd}}
+\index{passwd@{passwd}!stegx\+\_\+choices@{stegx\+\_\+choices}}
+\paragraph{\texorpdfstring{passwd}{passwd}}
+{\footnotesize\ttfamily char$\ast$ passwd}
+
+Mot de passe choisi par l\textquotesingle{}utilisateur (optionnel). 
+
+Définition à la ligne 95 du fichier stegx\+\_\+common.\+h.
+
+\mbox{\Hypertarget{a00142_a1db5ca4f9cb9c5b56b92a0181f92ec63}\label{a00142_a1db5ca4f9cb9c5b56b92a0181f92ec63}} 
+\index{stegx\+\_\+choices@{stegx\+\_\+choices}!res\+\_\+path@{res\+\_\+path}}
+\index{res\+\_\+path@{res\+\_\+path}!stegx\+\_\+choices@{stegx\+\_\+choices}}
+\paragraph{\texorpdfstring{res\+\_\+path}{res\_path}}
+{\footnotesize\ttfamily char$\ast$ res\+\_\+path}
+
+Chemin du fichier/dossier résultant (requis). 
+
+Définition à la ligne 94 du fichier stegx\+\_\+common.\+h.
+
+
+
+La documentation de cette structure a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+inc/\hyperlink{a00008}{stegx\+\_\+common.\+h}\end{DoxyCompactItemize}

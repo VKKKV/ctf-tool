@@ -1,0 +1,12 @@
+<map id="stegx_check_compatibility" name="stegx_check_compatibility">
+<area shape="rect" id="node2" href="$a00044.xhtml#aa5fe126b37cde4faccaaf190a3b977d3" title="Retourne le type du fichier. " alt="" coords="229,132,355,159"/>
+<area shape="rect" id="node3" href="$a00074.xhtml#a9981cb05f84d85245b570a20ece33548" title="Test si le fichier est un fichier BMP. " alt="" coords="403,5,541,32"/>
+<area shape="rect" id="node4" href="$a00092.xhtml#a576071ea25bd3721014ca3e596adcdfb" title="Test si le fichier est un fichier PNG. " alt="" coords="405,56,539,83"/>
+<area shape="rect" id="node5" href="$a00101.xhtml#ade2af55cc4dbaf47d31e91a4681415f1" title="Test si le fichier est un fichier WAVE. " alt="" coords="403,107,541,133"/>
+<area shape="rect" id="node6" href="$a00086.xhtml#a581193a38ac3c779c8920bd3be9883fc" title="Test si le fichier est un fichier MP3. " alt="" coords="403,157,541,184"/>
+<area shape="rect" id="node10" href="$a00068.xhtml#a219859c3514ef04eb40cb27845b208b0" title="Test si le fichier est un fichier AVI. " alt="" coords="407,208,537,235"/>
+<area shape="rect" id="node11" href="$a00080.xhtml#aeb8aa72db41eb744e933e7fed2a920a7" title="Test si le fichier est un fichier FLV. " alt="" coords="408,259,536,285"/>
+<area shape="rect" id="node7" href="$a00056.xhtml#a7434fd197d31a9571f92f9dca4f212e9" title="Convertit un nombre en big endian dans l&#39;endian de la machine. " alt="" coords="606,107,713,133"/>
+<area shape="rect" id="node8" href="$a00086.xhtml#ad5c1775e3137194eae404a93a564ab96" title="Test si le header est un header ID3v2. " alt="" coords="590,157,729,184"/>
+<area shape="rect" id="node9" href="$a00086.xhtml#a75bc8b052a4d00ab95b05b576918360d" title="Test si le header est un header MPEG 1/2 Layer III. " alt="" coords="589,208,729,235"/>
+</map>

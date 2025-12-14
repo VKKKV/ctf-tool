@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>StegX: Page principale</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-doc.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">StegX
+   &#160;<span id="projectnumber">1.1.0</span>
+   </div>
+   <div id="projectbrief">Projet de Stéganographie pour l&#39;UVSQ</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('index.xhtml','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">StegX Documentation</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><div class="image">
+<img src="https://raw.githubusercontent.com/Heisenberk/StegX/dev/doc/rsc/logo-readme.png"/>
+</div>
+ <hr/>
+<h1>Introduction </h1>
+<p><b>StegX</b> est une application de stéganographie. Elle permet de dissimuler des données dans divers formats de fichier, de type image, son ou vidéo. Les données cachées peuvent ainsi être transmises par un canal non sécurisé sans être découverte, puis le receveur pourra les extraire. L'application se compose d'une interface graphique et d'une interface en ligne de commande, ainsi que d'une bibliothèque partagée intégrable dans d'autres projets de développement.</p>
+<h2>Fonctionnalités </h2>
+<ul>
+<li><em>Formats et algorithmes pris en charge par l'application</em> :<ul>
+<li><b>BMP</b> : LSB, EOF, Metadata.</li>
+<li><b>PNG</b> : EOF, Metadata.</li>
+<li><b>AVI</b> : Junk Chunk.</li>
+<li><b>FLV</b> : EOF, EOC.</li>
+<li><b>WAVE</b> : LSB, EOF.</li>
+<li><b>MP3</b> : LSB, EOF.</li>
+</ul>
+</li>
+<li><em>Description, avantages et inconvénients des algorithmes</em> :<ul>
+<li><b>LSB (Least Significant Bit)</b> : Cet algorithme consiste à modifier les bits de poids faible des octets définissants les données du fichier. Étant un bit de moindre importance, les données ne sont quasimment pas affectées et la dissimulation est invisible pour l'homme (sur une image ou du son par exemple). De manière générale, cet algorithme consiste à modifier des bits de moindres importances (par exemple dans un header). Il a comme avantage d'être très discret et de ne pas augmenter la taille du fichier hôte. Cependant, pour cacher un fichier d'une grande taille, il faudra également un fichier hôte d'une taille conséquente.</li>
+<li><b>EOF</b> : Cet algorithme consiste à cacher les données du fichier à cacher à la fin du fichier hôte, de tel manière que les données cachées ne soient pas interprétées par les logiciels lisant le fichier hôte. L'algorithme à comme avantage d'être simple, rapide et de ne pas imposer de limite de taille. Cependant, cet algorithme n'est pas discret et augmente la taille du fichier hôte proportionnelement à la taille du fichier à cacher.</li>
+<li><b>Metadata</b> : Cet algorithme ajoute des métadonnées contenant les données à cacher au fichier hôte, en suivant les standards propre à chaque format de fichier. Cette méthode est plus discrète qu'EOF, mais augmente toujours la taille du fichier hôte proportionnellement à la taille du fichier à chacher.</li>
+<li><b>EOC</b> : Variante d'EOF, le fichier à cacher est découpé et cacher à la fin de certains chunks (blocs de base constituant les données du fichier hôte). Cette méthode est aussi plus discrète qu'EOF.</li>
+<li><b>Junk Chunk</b> : Algorithme ayant comme principe la création de chunk poubelle. Ce sont des morceaux de données non-interprétées par les logiciels lisant le fichier hôte car les données ne respecte pas le format intiale et sont invalides.</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h1>Installation </h1>
+<h2>Unix (Debian-like) </h2>
+<h3>- Installateur</h3>
+<ol type="1">
+<li>Dans la section <code>Release</code>, téléchargez le fichier <code>StegX-xxx.deb</code>.</li>
+<li>Installer le en utilisant une interface à APT (par exemple en double cliquant dessus), ou en utilisant la commande <code>sudo apt-get install ./StegX-xxx.deb</code> depuis le répertoire de téléchargement.</li>
+</ol>
+<h3>- Portable</h3>
+<ol type="1">
+<li>Dans la section <code>Release</code>, téléchargez le fichier <code>StegX-xxx.tar.gz</code> (archive tar) ou <code>StegX-xxx.sh</code> (exécutable auto extractible).</li>
+<li>Décompresser l'archive avec la commande <code>tar xzvf StegX-xxx.tar.gz</code> ou lancer l'extraction de l'exécutable avec la commande <code>./StegX-xxx.sh</code> en fonction de votre choix de téléchargement.</li>
+<li>Vous trouverez un dossier contenant l'application.</li>
+</ol>
+<h2>Windows </h2>
+<h3>- Installateur</h3>
+<ol type="1">
+<li>Dans la section <code>Release</code>, téléchargez le fichier <code>StegX-xxx.exe</code>.</li>
+<li>Installer le en double cliquant dessus.</li>
+<li>Si vous voulez pouvoir lancer l'interface en ligne de commande depuis le terminal avec la commande <code>stegx</code>, alors sélectionner <code>Ajouter le répertoire d'installation au PATH</code> lorsque cela vous sera demandé lors de l'installation.</li>
+</ol>
+<h3>- Portable</h3>
+<ol type="1">
+<li>Dans la section <code>Release</code>, téléchargez le fichier <code>StegX-xxx.zip</code> (archive compressée).</li>
+<li>Décompresser l'archive, ainsi vous trouverez un dossier contenant l'application.</li>
+</ol>
+<hr/>
+<h1>Désinstallation </h1>
+<h2>Unix (Debian-like) </h2>
+<p>Exécuter la commande <code>sudo apt remove stegx</code> pour supprimer le paquet de votre système.</p>
+<h2>Windows </h2>
+<p>Accéder au panneau de configuration, cliquer sur désinstaller un programme, sélectionner <code>StegX</code> et cliquer sur désinstaller. </p><hr/>
+<h1>Utilisation </h1>
+<h2>Après une installation avec un installateur </h2>
+<p>Dans un terminal, utiliser la commande <code>stegx</code> pour utiliser l'interface en ligne de commande. Pour lancer l'interface graphique, taper <code>stegx-gui</code> dans votre terminal, ou utiliser le raccourci créer dans le menu démarrer ou sur le bureau.</p>
+<h2>Après décompression de la version portable </h2>
+<p>Placez vous dans le répertoire dans le répertoire <code>bin</code> contenu dans le répertoire racine de l'application, puis exécutez dans votre terminal <code>./stegx</code> pour l'interface en ligne de commande ou <code>./stegx-gui</code> pour l'interface graphique.</p>
+<h2>Aide </h2>
+<p>Pour afficher l'aide de l'interface en ligne de commande, taper la commande <code>stegx -h</code>. Pour avoir une aide sur l'interface graphique, consulter le manuel d'utilisation produit lors de la génération des rapports en PDF. </p><hr/>
+<h1>Développement </h1>
+<h2>Dépendances </h2>
+<h3>- Requises</h3>
+<h4>&ndash; Unix</h4>
+<ul>
+<li><em>Compilateur</em> : <b>GNU Compiler Collection</b> (GCC) (<a href="https://gcc.gnu.org/">https://gcc.gnu.org/</a>)</li>
+<li><em>Moteur de production</em> : <b>GNU Make</b> (<a href="https://www.gnu.org/software/make/">https://www.gnu.org/software/make/</a>)</li>
+</ul>
+<h4>&ndash; Windows</h4>
+<p>Au choix :</p><ul>
+<li><em>Compilateur et environment Unix</em> :<ul>
+<li><b>MinGW-w64/GCC</b> (<a href="https://mingw-w64.org/doku.php">https://mingw-w64.org/doku.php</a>)</li>
+<li><b>MSYS2</b> (<a href="http://www.msys2.org/">http://www.msys2.org/</a>)</li>
+</ul>
+</li>
+<li><em>Compilateur et environment de développement</em> :<ul>
+<li><b>Microsoft Visual Studio</b> (MSVC) (<a href="https://www.visualstudio.com/fr/downloads/">https://www.visualstudio.com/fr/downloads/</a>)</li>
+</ul>
+</li>
+</ul>
+<h4>&ndash; Unix &amp; Windows</h4>
+<ul>
+<li><em>Moteur de production</em> : <b>CMake</b> (<a href="https://cmake.org/">https://cmake.org/</a>)</li>
+<li><em>Interface graphique</em> : <b> GTK+ </b> (&gt;= 3.0) (<a href="https://www.gtk.org/">https://www.gtk.org/</a>)</li>
+</ul>
+<h3>- Optionnelles</h3>
+<h4>&ndash; Unix &amp; Windows</h4>
+<ul>
+<li><em>Générateur de documentation</em> : <b>Doxygen</b> (<a href="https://www.stack.nl/~dimitri/doxygen/index.html">https://www.stack.nl/~dimitri/doxygen/index.html</a>)</li>
+<li><em>Distribution LaTeX</em> : <b>TeX Live</b> (<a href="https://tug.org/texlive/">https://tug.org/texlive/</a>)</li>
+<li><em>Test unitaire</em> : <b>CMocka</b> (<a href="https://cmocka.org/">https://cmocka.org/</a>)</li>
+</ul>
+<h4>&ndash; Unix</h4>
+<ul>
+<li><em>Générateur de tags</em> : <b>Ctags</b> (<a href="http://ctags.sourceforge.net/">http://ctags.sourceforge.net/</a>)</li>
+<li><em>Formateur de code source</em> : <b>GNU Indent</b> (<a href="https://www.gnu.org/software/indent/">https://www.gnu.org/software/indent/</a>)</li>
+</ul>
+<h2>Commandes et cibles </h2>
+<p>La configuration de la compilation est à faire en première. Toutes les autres commandes sont à effectuer dans le dossier <em>build</em>. Lors de l'ajout d'un fichier source au projet ou lors de la rencontre d'un bug lors de la configuration/compilation, utilisez la commande de réinitialisation de l'arborescence, sinon, supprimez le dossier <em>build</em> et recommencez la configuration. Les commandes entre <em>[ ]</em> sont optionnelles.</p>
+<p>Sur <b>Windows</b>, si une erreur survient, faites attention de placer le dossier dans un chemin qui ne contient pas d'espaces. Certains modules de <b>CMake</b> pour <b>Windows</b> gèrent mal les espaces. Les cibles (targets) exécutées par <b>CMake</b> peuvent aussi êtres générées directement par l'interface graphique de <b>MSVC</b> sous forme de solution.</p>
+<p>Pour chaque commande avec <b>Make</b>, vous pouvez utiliser <em>VERBOSE=1</em> pour afficher toutes les actions effectuées.</p>
+<p>L'option <em>-DVarName=VarValue</em> de <b>CMake</b> permet de configurer une variable. Ci-dessous une liste des variables configurables avec leurs valeurs possibles :</p><ol type="1">
+<li><em>Description</em> : <b>VarName</b> = VarValue1, VarValue2 etc...</li>
+<li><em>Chemin vers un dossier existant pour l'installation</em> : <b>CMAKE_INSTALL_PREFIX</b> = /usr/local, /opt/stegx</li>
+<li><em>Mode de compilation</em> : <b>CMAKE_BUILD_TYPE</b> = Release, Debug</li>
+</ol>
+<h3>- Unix</h3>
+<h4>&ndash; Configuration de la compilation</h4>
+<pre class="fragment">mkdir build
+cd build
+cmake .. [-G "Unix Makefiles"] [-DVarName=VarValue]
+</pre><h4>&ndash; Compilation des modules principaux</h4>
+<pre class="fragment">make [all] [stegx-cli stegx-gui stegx-lib] [VERBOSE=1]
+</pre><h4>&ndash; Génération de la documentation</h4>
+<pre class="fragment">make doc
+</pre><h4>&ndash; Génération des rapports</h4>
+<pre class="fragment">make report
+</pre><h4>&ndash; Lancement des tests unitaires</h4>
+<pre class="fragment">make check
+</pre><h4>&ndash; Création des binaires de distribution</h4>
+<pre class="fragment">sudo make dist
+</pre><h4>&ndash; Installation</h4>
+<pre class="fragment">sudo make install
+</pre><h4>&ndash; Désinstallation</h4>
+<pre class="fragment">sudo make uninstall
+</pre><h4>&ndash; Génération des tags</h4>
+<pre class="fragment">make tags
+</pre><h4>&ndash; Formatage du code source</h4>
+<pre class="fragment">make indent
+</pre><h4>&ndash; Nettoyage</h4>
+<pre class="fragment">make clean
+</pre><h4>&ndash; Réinitialisation</h4>
+<pre class="fragment">make reinit
+</pre><h3>- Windows</h3>
+<h4>&ndash; Configuration de la compilation</h4>
+<pre class="fragment">mkdir build
+cd build
+MSYS :
+    cmake .. -G "MSYS Makefiles" [-DVarName=VarValue]
+MinGW :
+    cmake .. -G "MinGW Makefiles" [-DVarName=VarValue]
+MSVC :
+    cmake .. [-G "Visual Studio 15 2017"] [-DVarName=VarValue]
+</pre><h4>&ndash; Compilation des modules principaux</h4>
+<pre class="fragment">MSYS :
+    make [all] [stegx-cli stegx-gui stegx-lib] [VERBOSE=1]
+MinGW :
+    cmake --build . --target all [stegx-cli stegx-gui stegx-lib]
+MSVC : Interface graphique (GTK+) non disponible.
+    cmake --build . --target ALL_BUILD [stegx-cli stegx-lib]
+</pre><h4>&ndash; Génération de la documentation</h4>
+<pre class="fragment">MSYS :
+    make doc
+MinGW &amp; MSVC:
+    cmake --build . --target doc
+</pre><h4>&ndash; Génération des rapports</h4>
+<pre class="fragment">MSYS :
+    make report
+MinGW &amp; MSVC :
+    cmake --build . --target report
+</pre><h4>&ndash; Lancement des tests unitaires</h4>
+<pre class="fragment">MSYS &amp; MinGW :
+    Tests unitaires non disponibles.
+MSVC :
+    cmake --build . --target check
+</pre><h4>&ndash; Création des binaires de distribution</h4>
+<pre class="fragment">MSYS :
+    make dist
+MinGW &amp; MSVC : à lancer en tant qu'administrateur.
+    cmake --build . --target dist
+</pre><h4>&ndash; Installation</h4>
+<pre class="fragment">MSYS : à lancer en tant qu'administrateur.
+    make install
+MinGW &amp; MSVC : à lancer en tant qu'administrateur.
+    cmake --build . --target INSTALL
+</pre><h4>&ndash; Désinstallation</h4>
+<pre class="fragment">MSYS : à lancer en tant qu'administrateur.
+    make uninstall
+MinGW &amp; MSVC : à lancer en tant qu'administrateur.
+    cmake --build . --target uninstall
+</pre><h4>&ndash; Nettoyage</h4>
+<pre class="fragment">MSYS :
+    make clean
+MinGW &amp; MSVC :
+    cmake --build . --target clean
+</pre><h4>&ndash; Réinitialisation</h4>
+<pre class="fragment">MSYS :
+    make reinit
+MinGW &amp; MSVC :
+    cmake --build . --target reinit</pre> </div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

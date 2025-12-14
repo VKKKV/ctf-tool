@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>StegX: Référence du fichier src/insert.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-doc.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">StegX
+   &#160;<span id="projectnumber">1.1.0</span>
+   </div>
+   <div id="projectbrief">Projet de Stéganographie pour l&#39;UVSQ</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('a00110.xhtml','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier insert.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Insertion des données cachées dans une copie de l'hôte.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;time.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00047_source.xhtml">common.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00008_source.xhtml">stegx_common.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00011_source.xhtml">stegx_errors.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00035_source.xhtml">algo/lsb.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00023_source.xhtml">algo/eof.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00041_source.xhtml">algo/metadata.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00017_source.xhtml">algo/eoc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00029_source.xhtml">algo/junk_chunk.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de insert.c:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00111.svg" width="100%" height="552"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<p><a href="a00110_source.xhtml">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a66a71cd33131eb29010132269d237356"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00110.xhtml#a66a71cd33131eb29010132269d237356">write_signature</a> (<a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *infos)</td></tr>
+<tr class="memdesc:a66a71cd33131eb29010132269d237356"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ecrit la signature StegX.  <a href="#a66a71cd33131eb29010132269d237356">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a66a71cd33131eb29010132269d237356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45a1d0709604d55e9d467cb39d6a5b54"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00110.xhtml#a45a1d0709604d55e9d467cb39d6a5b54">stegx_insert</a> (<a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *infos)</td></tr>
+<tr class="memdesc:a45a1d0709604d55e9d467cb39d6a5b54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Va faire l'insertion selon l'algorithme, ainsi que les fichiers en entrée choisis par l'utilisateur.  <a href="#a45a1d0709604d55e9d467cb39d6a5b54">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a45a1d0709604d55e9d467cb39d6a5b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Insertion des données cachées dans une copie de l'hôte. </p>
+<p>Module qui contient la fonction d'insertion et la fonction d'écriture de la signature. </p>
+
+<p class="definition">Définition dans le fichier <a class="el" href="a00110_source.xhtml">insert.c</a>.</p>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a45a1d0709604d55e9d467cb39d6a5b54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45a1d0709604d55e9d467cb39d6a5b54">&#9670;&nbsp;</a></span>stegx_insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stegx_insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *&#160;</td>
+          <td class="paramname"><em>infos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Va faire l'insertion selon l'algorithme, ainsi que les fichiers en entrée choisis par l'utilisateur. </p>
+<dl class="errors"><dt><b><a class="el" href="a00134.xhtml#_errors000006">Erreurs:</a></b></dt><dd><a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a103888724a059b8ab2855577bd73e8b8">ERR_INSERT</a> si une erreur survient durant la dissimulation. </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">infos</td><td>Structure représentant les informations concernant la dissimulation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 si l'insertion s'et bien passé, sinon 1 en cas d'erreur et met à jour <a class="el" href="a00062.xhtml#a5ec48ccdfbe19fe23855818f8556abec">stegx_errno</a>. </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Clément Caumes et Pierre Ayoub </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="a00110_source.xhtml#l00069">69</a> du fichier <a class="el" href="a00110_source.xhtml">insert.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00110_a45a1d0709604d55e9d467cb39d6a5b54_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a66a71cd33131eb29010132269d237356"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66a71cd33131eb29010132269d237356">&#9670;&nbsp;</a></span>write_signature()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int write_signature </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *&#160;</td>
+          <td class="paramname"><em>infos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ecrit la signature StegX. </p>
+<p>Ecrit l'algorithme et la méthode (1 octet), la taille du fichier caché (4 octets), la taille du nom du fichier caché (1 octet), le nom du fichier caché XORé avec le mot de passe (255 octets max), le mot de passe par défaut si l'utilisateur n'a pas choisi de mot de passe (64 octets). </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">infos</td><td>Structure représentant les informations concernant la dissimulation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 si la signature a bien ete écrite, 1 sinon. </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Clément Caumes </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="a00110_source.xhtml#l00024">24</a> du fichier <a class="el" href="a00110_source.xhtml">insert.c</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00110_a66a71cd33131eb29010132269d237356_icgraph.svg" width="620" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.xhtml">src</a></li><li class="navelem"><a class="el" href="a00110.xhtml">insert.c</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

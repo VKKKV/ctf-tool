@@ -1,0 +1,10 @@
+<map id="extract_junk_chunk" name="extract_junk_chunk">
+<area shape="rect" id="node2" href="$a00050.xhtml#ae586a372b92d84d36a5733129260dd93" title="Saute la signature. " alt="" coords="220,5,299,32"/>
+<area shape="rect" id="node3" href="$a00116.xhtml#aed2bc32539848b035b9ad4fc2efd98e8" title="Écrit des données XORées avec un mot de passe. " alt="" coords="379,56,510,83"/>
+<area shape="rect" id="node7" href="$a00116.xhtml#af1d405b272ef2dc101b959264bad47e1" title="Écrit des données mélangé ou remise en ordre avec un mot de passe. " alt="" coords="188,107,331,133"/>
+<area shape="rect" id="node4" href="$a00122.xhtml#a4e9a217b960dc65fd08dff9f78e317e4" title="Initialise la seed de la suite pseudo aléatoire. " alt="" coords="559,56,652,83"/>
+<area shape="rect" id="node5" href="$a00122.xhtml#a2a891bbe3514201de3cfc5acced104b7" title="Cree un seed a partir d&#39;un mot de passe. " alt="" coords="559,107,652,133"/>
+<area shape="rect" id="node6" href="$a00122.xhtml#a9966534d45c62d0df7a3d5df48668715" title="Renvoie un entier pseudo&#45;aléatoire. " alt="" coords="562,157,649,184"/>
+<area shape="rect" id="node8" href="$a00116.xhtml#a3fd0a8f9ba189acd34f864c97f059b0f" title="Fait le mélange ou réarrange les octets selon l&#39;algorithme de protection des données. " alt="" coords="397,157,492,184"/>
+<area shape="rect" id="node9" href="$a00116.xhtml#a7a07539cd0f2054ed61e4300f1e9a3d5" title="Écrit des données XORées avec un mot de passe. " alt="" coords="379,107,511,133"/>
+</map>

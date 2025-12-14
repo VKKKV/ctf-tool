@@ -1,0 +1,6 @@
+<map id="protect_data_lsb" name="protect_data_lsb">
+<area shape="rect" id="node2" href="$a00035.xhtml#a14e9d876697b0225ded31095c1076b64" title="Va inserer les donnees cachees en utilisant l&#39;algorithme LSB. " alt="" coords="176,5,255,32"/>
+<area shape="rect" id="node4" href="$a00035.xhtml#abc757e2627fc9971e388a584e0e0c2ca" title="Va extraire les donnees cachees en utilisant l&#39;algorithme LSB. " alt="" coords="172,56,259,83"/>
+<area shape="rect" id="node3" href="$a00110.xhtml#a45a1d0709604d55e9d467cb39d6a5b54" title="Va faire l&#39;insertion selon l&#39;algorithme, ainsi que les fichiers en entrée choisis par l&#39;utilisateur..." alt="" coords="311,5,404,32"/>
+<area shape="rect" id="node5" href="$a00065.xhtml#a43c63dd958bfa1f4ab2ecbd7faa14abb" title="Va faire l&#39;extraction selon l&#39;algorithme détecté, ainsi que les fichiers en entrée choisis par l&#39;util..." alt="" coords="307,56,408,83"/>
+</map>

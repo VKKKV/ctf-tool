@@ -1,0 +1,79 @@
+\hypertarget{a00065}{}\subsection{Référence du fichier src/extract.c}
+\label{a00065}\index{src/extract.\+c@{src/extract.\+c}}
+
+
+Extraction des données cachées dans un fichier hôte.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+errors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}algo/lsb.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}algo/eof.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}algo/metadata.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}algo/eoc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}algo/junk\+\_\+chunk.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de extract.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00066}
+\end{center}
+\end{figure}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{a00065_a43c63dd958bfa1f4ab2ecbd7faa14abb}{stegx\+\_\+extract} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos, char $\ast$res\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Va faire l\textquotesingle{}extraction selon l\textquotesingle{}algorithme détecté, ainsi que les fichiers en entrée choisis par l\textquotesingle{}utilisateur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Extraction des données cachées dans un fichier hôte. 
+
+Module qui contient la fonction d\textquotesingle{}extraction de données. 
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00065_a43c63dd958bfa1f4ab2ecbd7faa14abb}\label{a00065_a43c63dd958bfa1f4ab2ecbd7faa14abb}} 
+\index{extract.\+c@{extract.\+c}!stegx\+\_\+extract@{stegx\+\_\+extract}}
+\index{stegx\+\_\+extract@{stegx\+\_\+extract}!extract.\+c@{extract.\+c}}
+\paragraph{\texorpdfstring{stegx\+\_\+extract()}{stegx\_extract()}}
+{\footnotesize\ttfamily int stegx\+\_\+extract (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos,  }\item[{char $\ast$}]{res\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Va faire l\textquotesingle{}extraction selon l\textquotesingle{}algorithme détecté, ainsi que les fichiers en entrée choisis par l\textquotesingle{}utilisateur. 
+
+\begin{DoxyParagraph}{Effet de bord}
+Remplit le champ res. 
+\end{DoxyParagraph}
+\begin{DoxyRefDesc}{Erreurs}
+\item[\hyperlink{a00134__errors000007}{Erreurs}]\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852aad3e8c13adfc55ea1cd105e92972dd33}{E\+R\+R\+\_\+\+E\+X\+T\+R\+A\+CT} si une erreur survient lors de l\textquotesingle{}extraction. \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant l\textquotesingle{}extraction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si l\textquotesingle{}extraction s\textquotesingle{}est bien passé, sinon 1 en cas d\textquotesingle{}erreur et met à jour \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Pierre Ayoub 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 23 du fichier extract.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00065_a43c63dd958bfa1f4ab2ecbd7faa14abb_cgraph}
+\end{center}
+\end{figure}

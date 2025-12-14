@@ -1,0 +1,262 @@
+\hypertarget{a00077}{}\subsection{Référence du fichier src/file\+\_\+type/bmp.h}
+\label{a00077}\index{src/file\+\_\+type/bmp.\+h@{src/file\+\_\+type/bmp.\+h}}
+
+
+Fichier B\+MP.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de bmp.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00078}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00079}
+\end{center}
+\end{figure}
+\subsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00162}{bmp}
+\begin{DoxyCompactList}\small\item\em Structure du format B\+MP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00077_af28313624f660b1b828baea3e23eee69}{B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+P\+IC}~10
+\item 
+\#define \hyperlink{a00077_a268e9f34a79593f7338a5c66ed6663d3}{B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+L\+E\+N\+G\+TH}~2
+\item 
+\#define \hyperlink{a00077_a1b13d5800b382ca87338563638a89d84}{B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+P\+I\+X\+\_\+\+L\+E\+N\+G\+TH}~28
+\item 
+\#define \hyperlink{a00077_aa16ceb1596db517f74081956259727ec}{B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+N\+B\+\_\+\+P\+I\+X\+EL}~18
+\item 
+\#define \hyperlink{a00077_a3bad27a02e1ada871ced73f7b86fd62e}{B\+M\+P\+\_\+\+M\+E\+T\+A\+D\+A\+T\+A\+\_\+\+M\+AX}~0x\+F\+F\+F\+F\+F\+F\+FF
+\item 
+\#define \hyperlink{a00077_a9fdc2a170d7cdd121f7ce61abf9c7afc}{A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+M\+P\+\_\+\+C\+O\+M\+P\+R\+E\+SS}~30
+\end{DoxyCompactItemize}
+\subsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00162}{bmp} \hyperlink{a00077_afb8e06bb1e6eba33c97ae40d153a0a97}{bmp\+\_\+s}
+\end{DoxyCompactItemize}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00047_af1ca434cca36ba9fb2a45f6cef3a16d6}{type\+\_\+e} \hyperlink{a00077_a9981cb05f84d85245b570a20ece33548}{stegx\+\_\+test\+\_\+file\+\_\+bmp} (F\+I\+LE $\ast$file)
+\begin{DoxyCompactList}\small\item\em Test si le fichier est un fichier B\+MP. \end{DoxyCompactList}\item 
+int \hyperlink{a00077_a9b0bec96351bc1e6be9134900590d215}{insert\+\_\+metadata\+\_\+bmp} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le format B\+MP. \end{DoxyCompactList}\item 
+int \hyperlink{a00077_a14e9a0ddec04cc168cbfe21cd839166e}{extract\+\_\+metadata\+\_\+bmp} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le formar B\+MP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Fichier B\+MP. 
+
+Contient les informations (fonctions, types, structures) relatives aux fichiers au format B\+MP. 
+
+\subsubsection{Documentation des macros}
+\mbox{\Hypertarget{a00077_a9fdc2a170d7cdd121f7ce61abf9c7afc}\label{a00077_a9fdc2a170d7cdd121f7ce61abf9c7afc}} 
+\index{bmp.\+h@{bmp.\+h}!A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+M\+P\+\_\+\+C\+O\+M\+P\+R\+E\+SS@{A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+M\+P\+\_\+\+C\+O\+M\+P\+R\+E\+SS}}
+\index{A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+M\+P\+\_\+\+C\+O\+M\+P\+R\+E\+SS@{A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+M\+P\+\_\+\+C\+O\+M\+P\+R\+E\+SS}!bmp.\+h@{bmp.\+h}}
+\paragraph{\texorpdfstring{A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+M\+P\+\_\+\+C\+O\+M\+P\+R\+E\+SS}{ADDRESS\_BMP\_COMPRESS}}
+{\footnotesize\ttfamily \#define A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+M\+P\+\_\+\+C\+O\+M\+P\+R\+E\+SS~30}
+
+Déplacement absolu à faire pour savoir si il s\textquotesingle{}agit d\textquotesingle{}un fichier compressé ou non. 
+
+Définition à la ligne 29 du fichier bmp.\+h.
+
+\mbox{\Hypertarget{a00077_a268e9f34a79593f7338a5c66ed6663d3}\label{a00077_a268e9f34a79593f7338a5c66ed6663d3}} 
+\index{bmp.\+h@{bmp.\+h}!B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+L\+E\+N\+G\+TH@{B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+L\+E\+N\+G\+TH}}
+\index{B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+L\+E\+N\+G\+TH@{B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+L\+E\+N\+G\+TH}!bmp.\+h@{bmp.\+h}}
+\paragraph{\texorpdfstring{B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+L\+E\+N\+G\+TH}{BMP\_DEF\_LENGTH}}
+{\footnotesize\ttfamily \#define B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+L\+E\+N\+G\+TH~2}
+
+Adresse (offset) de la taille du fichier (octet). 
+
+Définition à la ligne 19 du fichier bmp.\+h.
+
+\mbox{\Hypertarget{a00077_aa16ceb1596db517f74081956259727ec}\label{a00077_aa16ceb1596db517f74081956259727ec}} 
+\index{bmp.\+h@{bmp.\+h}!B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+N\+B\+\_\+\+P\+I\+X\+EL@{B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+N\+B\+\_\+\+P\+I\+X\+EL}}
+\index{B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+N\+B\+\_\+\+P\+I\+X\+EL@{B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+N\+B\+\_\+\+P\+I\+X\+EL}!bmp.\+h@{bmp.\+h}}
+\paragraph{\texorpdfstring{B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+N\+B\+\_\+\+P\+I\+X\+EL}{BMP\_DEF\_NB\_PIXEL}}
+{\footnotesize\ttfamily \#define B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+N\+B\+\_\+\+P\+I\+X\+EL~18}
+
+Adresse (offset) du nombre de pixels dans l\textquotesingle{}image (octet). 
+
+Définition à la ligne 23 du fichier bmp.\+h.
+
+\mbox{\Hypertarget{a00077_af28313624f660b1b828baea3e23eee69}\label{a00077_af28313624f660b1b828baea3e23eee69}} 
+\index{bmp.\+h@{bmp.\+h}!B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+P\+IC@{B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+P\+IC}}
+\index{B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+P\+IC@{B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+P\+IC}!bmp.\+h@{bmp.\+h}}
+\paragraph{\texorpdfstring{B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+P\+IC}{BMP\_DEF\_PIC}}
+{\footnotesize\ttfamily \#define B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+P\+IC~10}
+
+Adresse (offset) de l\textquotesingle{}octet représentant le début de l\textquotesingle{}image (octet). 
+
+Définition à la ligne 17 du fichier bmp.\+h.
+
+\mbox{\Hypertarget{a00077_a1b13d5800b382ca87338563638a89d84}\label{a00077_a1b13d5800b382ca87338563638a89d84}} 
+\index{bmp.\+h@{bmp.\+h}!B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+P\+I\+X\+\_\+\+L\+E\+N\+G\+TH@{B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+P\+I\+X\+\_\+\+L\+E\+N\+G\+TH}}
+\index{B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+P\+I\+X\+\_\+\+L\+E\+N\+G\+TH@{B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+P\+I\+X\+\_\+\+L\+E\+N\+G\+TH}!bmp.\+h@{bmp.\+h}}
+\paragraph{\texorpdfstring{B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+P\+I\+X\+\_\+\+L\+E\+N\+G\+TH}{BMP\_DEF\_PIX\_LENGTH}}
+{\footnotesize\ttfamily \#define B\+M\+P\+\_\+\+D\+E\+F\+\_\+\+P\+I\+X\+\_\+\+L\+E\+N\+G\+TH~28}
+
+Adresse (offset) de la taille des pixels (octet). 
+
+Définition à la ligne 21 du fichier bmp.\+h.
+
+\mbox{\Hypertarget{a00077_a3bad27a02e1ada871ced73f7b86fd62e}\label{a00077_a3bad27a02e1ada871ced73f7b86fd62e}} 
+\index{bmp.\+h@{bmp.\+h}!B\+M\+P\+\_\+\+M\+E\+T\+A\+D\+A\+T\+A\+\_\+\+M\+AX@{B\+M\+P\+\_\+\+M\+E\+T\+A\+D\+A\+T\+A\+\_\+\+M\+AX}}
+\index{B\+M\+P\+\_\+\+M\+E\+T\+A\+D\+A\+T\+A\+\_\+\+M\+AX@{B\+M\+P\+\_\+\+M\+E\+T\+A\+D\+A\+T\+A\+\_\+\+M\+AX}!bmp.\+h@{bmp.\+h}}
+\paragraph{\texorpdfstring{B\+M\+P\+\_\+\+M\+E\+T\+A\+D\+A\+T\+A\+\_\+\+M\+AX}{BMP\_METADATA\_MAX}}
+{\footnotesize\ttfamily \#define B\+M\+P\+\_\+\+M\+E\+T\+A\+D\+A\+T\+A\+\_\+\+M\+AX~0x\+F\+F\+F\+F\+F\+F\+FF}
+
+Taille maximale lors de l\textquotesingle{}insertion metadata dans le fichier B\+MP. 
+
+Définition à la ligne 25 du fichier bmp.\+h.
+
+
+
+\subsubsection{Documentation des définitions de type}
+\mbox{\Hypertarget{a00077_afb8e06bb1e6eba33c97ae40d153a0a97}\label{a00077_afb8e06bb1e6eba33c97ae40d153a0a97}} 
+\index{bmp.\+h@{bmp.\+h}!bmp\+\_\+s@{bmp\+\_\+s}}
+\index{bmp\+\_\+s@{bmp\+\_\+s}!bmp.\+h@{bmp.\+h}}
+\paragraph{\texorpdfstring{bmp\+\_\+s}{bmp\_s}}
+{\footnotesize\ttfamily typedef struct \hyperlink{a00162}{bmp} \hyperlink{a00077_afb8e06bb1e6eba33c97ae40d153a0a97}{bmp\+\_\+s}}
+
+Type du format B\+MP. 
+
+Définition à la ligne 44 du fichier bmp.\+h.
+
+
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00077_a14e9a0ddec04cc168cbfe21cd839166e}\label{a00077_a14e9a0ddec04cc168cbfe21cd839166e}} 
+\index{bmp.\+h@{bmp.\+h}!extract\+\_\+metadata\+\_\+bmp@{extract\+\_\+metadata\+\_\+bmp}}
+\index{extract\+\_\+metadata\+\_\+bmp@{extract\+\_\+metadata\+\_\+bmp}!bmp.\+h@{bmp.\+h}}
+\paragraph{\texorpdfstring{extract\+\_\+metadata\+\_\+bmp()}{extract\_metadata\_bmp()}}
+{\footnotesize\ttfamily int extract\+\_\+metadata\+\_\+bmp (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le formar B\+MP. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant l\textquotesingle{}extraction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si les données ont bien été extraites ; sinon 1 en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Yassin Doudouh 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 164 du fichier bmp.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00077_a14e9a0ddec04cc168cbfe21cd839166e_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00077_a14e9a0ddec04cc168cbfe21cd839166e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00077_a9b0bec96351bc1e6be9134900590d215}\label{a00077_a9b0bec96351bc1e6be9134900590d215}} 
+\index{bmp.\+h@{bmp.\+h}!insert\+\_\+metadata\+\_\+bmp@{insert\+\_\+metadata\+\_\+bmp}}
+\index{insert\+\_\+metadata\+\_\+bmp@{insert\+\_\+metadata\+\_\+bmp}!bmp.\+h@{bmp.\+h}}
+\paragraph{\texorpdfstring{insert\+\_\+metadata\+\_\+bmp()}{insert\_metadata\_bmp()}}
+{\footnotesize\ttfamily int insert\+\_\+metadata\+\_\+bmp (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le format B\+MP. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si les données ont bien été inserées ; sinon 1 en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Yassin Doudouh 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 50 du fichier bmp.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00077_a9b0bec96351bc1e6be9134900590d215_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00077_a9b0bec96351bc1e6be9134900590d215_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00077_a9981cb05f84d85245b570a20ece33548}\label{a00077_a9981cb05f84d85245b570a20ece33548}} 
+\index{bmp.\+h@{bmp.\+h}!stegx\+\_\+test\+\_\+file\+\_\+bmp@{stegx\+\_\+test\+\_\+file\+\_\+bmp}}
+\index{stegx\+\_\+test\+\_\+file\+\_\+bmp@{stegx\+\_\+test\+\_\+file\+\_\+bmp}!bmp.\+h@{bmp.\+h}}
+\paragraph{\texorpdfstring{stegx\+\_\+test\+\_\+file\+\_\+bmp()}{stegx\_test\_file\_bmp()}}
+{\footnotesize\ttfamily \hyperlink{a00047_af1ca434cca36ba9fb2a45f6cef3a16d6}{type\+\_\+e} stegx\+\_\+test\+\_\+file\+\_\+bmp (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Test si le fichier est un fichier B\+MP. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em file} & Fichier à tester. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyParagraph}{Prérequis}
+Le pointeur ne doit pas être null et le fichier ouvert en lecture. 
+\end{DoxyParagraph}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da9573d9b7bb7b633a06929d27f8e90e21}{B\+M\+P\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+ED}, \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2daefc7cfb01e9ffdac79f60659489429c0}{B\+M\+P\+\_\+\+U\+N\+C\+O\+M\+P\+R\+E\+S\+S\+ED} \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da6ce26a62afab55d7606ad4e92428b30c}{U\+N\+K\+N\+O\+WN}, -\/1 en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Yassin Doudouh 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 24 du fichier bmp.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00077_a9981cb05f84d85245b570a20ece33548_icgraph}
+\end{center}
+\end{figure}

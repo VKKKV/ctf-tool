@@ -1,0 +1,172 @@
+\hypertarget{a00068}{}\subsection{Référence du fichier src/file\+\_\+type/avi.c}
+\label{a00068}\index{src/file\+\_\+type/avi.\+c@{src/file\+\_\+type/avi.\+c}}
+
+
+Fichier A\+VI.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+errors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}riff.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de avi.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00069}
+\end{center}
+\end{figure}
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00068_a71a158945b0ef5b392da52102a122aba}{S\+I\+G\+\_\+\+A\+VI}~0x20495641
+\item 
+\#define \hyperlink{a00068_a693de8f6e59a0d12f482e5bd560af4e6}{A\+D\+D\+R\+E\+S\+S\+\_\+\+S\+I\+G\+\_\+\+A\+VI}~8
+\end{DoxyCompactItemize}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00047_af1ca434cca36ba9fb2a45f6cef3a16d6}{type\+\_\+e} \hyperlink{a00068_a219859c3514ef04eb40cb27845b208b0}{stegx\+\_\+test\+\_\+file\+\_\+avi} (F\+I\+LE $\ast$file)
+\begin{DoxyCompactList}\small\item\em Test si le fichier est un fichier A\+VI. \end{DoxyCompactList}\item 
+int \hyperlink{a00068_ac4b663dd386f05a601c55cd34b99cca4}{insert\+\_\+metadata\+\_\+avi} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le format A\+VI. \end{DoxyCompactList}\item 
+int \hyperlink{a00068_aa0a2b469d42533228d073a79868e775b}{extract\+\_\+metadata\+\_\+avi} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le formar A\+VI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Fichier A\+VI. 
+
+Contient les informations (fonctions, types, structures) relatives aux fichiers au format A\+VI. 
+
+\subsubsection{Documentation des macros}
+\mbox{\Hypertarget{a00068_a693de8f6e59a0d12f482e5bd560af4e6}\label{a00068_a693de8f6e59a0d12f482e5bd560af4e6}} 
+\index{avi.\+c@{avi.\+c}!A\+D\+D\+R\+E\+S\+S\+\_\+\+S\+I\+G\+\_\+\+A\+VI@{A\+D\+D\+R\+E\+S\+S\+\_\+\+S\+I\+G\+\_\+\+A\+VI}}
+\index{A\+D\+D\+R\+E\+S\+S\+\_\+\+S\+I\+G\+\_\+\+A\+VI@{A\+D\+D\+R\+E\+S\+S\+\_\+\+S\+I\+G\+\_\+\+A\+VI}!avi.\+c@{avi.\+c}}
+\paragraph{\texorpdfstring{A\+D\+D\+R\+E\+S\+S\+\_\+\+S\+I\+G\+\_\+\+A\+VI}{ADDRESS\_SIG\_AVI}}
+{\footnotesize\ttfamily \#define A\+D\+D\+R\+E\+S\+S\+\_\+\+S\+I\+G\+\_\+\+A\+VI~8}
+
+Déplacement absolu à faire pour lire la signature A\+VI. 
+
+Définition à la ligne 22 du fichier avi.\+c.
+
+\mbox{\Hypertarget{a00068_a71a158945b0ef5b392da52102a122aba}\label{a00068_a71a158945b0ef5b392da52102a122aba}} 
+\index{avi.\+c@{avi.\+c}!S\+I\+G\+\_\+\+A\+VI@{S\+I\+G\+\_\+\+A\+VI}}
+\index{S\+I\+G\+\_\+\+A\+VI@{S\+I\+G\+\_\+\+A\+VI}!avi.\+c@{avi.\+c}}
+\paragraph{\texorpdfstring{S\+I\+G\+\_\+\+A\+VI}{SIG\_AVI}}
+{\footnotesize\ttfamily \#define S\+I\+G\+\_\+\+A\+VI~0x20495641}
+
+Signature d\textquotesingle{}un fichier A\+VI. 
+
+Définition à la ligne 19 du fichier avi.\+c.
+
+
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00068_aa0a2b469d42533228d073a79868e775b}\label{a00068_aa0a2b469d42533228d073a79868e775b}} 
+\index{avi.\+c@{avi.\+c}!extract\+\_\+metadata\+\_\+avi@{extract\+\_\+metadata\+\_\+avi}}
+\index{extract\+\_\+metadata\+\_\+avi@{extract\+\_\+metadata\+\_\+avi}!avi.\+c@{avi.\+c}}
+\paragraph{\texorpdfstring{extract\+\_\+metadata\+\_\+avi()}{extract\_metadata\_avi()}}
+{\footnotesize\ttfamily int extract\+\_\+metadata\+\_\+avi (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le formar A\+VI. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant l\textquotesingle{}extraction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si les données ont bien été extraites ; sinon 1 en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Claire Baskevitch et Tristan Bessac 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 53 du fichier avi.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00068_aa0a2b469d42533228d073a79868e775b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00068_ac4b663dd386f05a601c55cd34b99cca4}\label{a00068_ac4b663dd386f05a601c55cd34b99cca4}} 
+\index{avi.\+c@{avi.\+c}!insert\+\_\+metadata\+\_\+avi@{insert\+\_\+metadata\+\_\+avi}}
+\index{insert\+\_\+metadata\+\_\+avi@{insert\+\_\+metadata\+\_\+avi}!avi.\+c@{avi.\+c}}
+\paragraph{\texorpdfstring{insert\+\_\+metadata\+\_\+avi()}{insert\_metadata\_avi()}}
+{\footnotesize\ttfamily int insert\+\_\+metadata\+\_\+avi (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le format A\+VI. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si les données ont bien été inserées ; sinon 1 en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Claire Baskevitch et Tristan Bessac 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 47 du fichier avi.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00068_ac4b663dd386f05a601c55cd34b99cca4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00068_a219859c3514ef04eb40cb27845b208b0}\label{a00068_a219859c3514ef04eb40cb27845b208b0}} 
+\index{avi.\+c@{avi.\+c}!stegx\+\_\+test\+\_\+file\+\_\+avi@{stegx\+\_\+test\+\_\+file\+\_\+avi}}
+\index{stegx\+\_\+test\+\_\+file\+\_\+avi@{stegx\+\_\+test\+\_\+file\+\_\+avi}!avi.\+c@{avi.\+c}}
+\paragraph{\texorpdfstring{stegx\+\_\+test\+\_\+file\+\_\+avi()}{stegx\_test\_file\_avi()}}
+{\footnotesize\ttfamily \hyperlink{a00047_af1ca434cca36ba9fb2a45f6cef3a16d6}{type\+\_\+e} stegx\+\_\+test\+\_\+file\+\_\+avi (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Test si le fichier est un fichier A\+VI. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em file} & Fichier à tester. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyParagraph}{Prérequis}
+Le pointeur ne doit pas être null et le fichier ouvert en lecture. 
+\end{DoxyParagraph}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da2c36dc6c8b804f634a89da3f50f90c07}{A\+V\+I\+\_\+\+U\+N\+C\+O\+M\+P\+R\+E\+S\+S\+ED}, \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da8be9d15a34dc2faad0683156eb0a1955}{A\+V\+I\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+ED}, \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da6ce26a62afab55d7606ad4e92428b30c}{U\+N\+K\+N\+O\+WN} ou -\/1 en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes, Claire Baskevitch et Tristan Bessac 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 24 du fichier avi.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00068_a219859c3514ef04eb40cb27845b208b0_icgraph}
+\end{center}
+\end{figure}

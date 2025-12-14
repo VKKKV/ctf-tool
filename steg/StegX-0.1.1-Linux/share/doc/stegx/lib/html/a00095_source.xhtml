@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>StegX:  Fichier source de src/file_type/png.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-doc.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">StegX
+   &#160;<span id="projectnumber">1.1.0</span>
+   </div>
+   <div id="projectbrief">Projet de Stéganographie pour l&#39;UVSQ</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('a00095_source.xhtml','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">png.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="a00095.xhtml">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef PNG_H</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define PNG_H</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00047.xhtml">common.h</a>&quot;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="a00095.xhtml#a26323106d2b60eb827c0889c658d91e1">   17</a></span>&#160;<span class="preprocessor">#define PNG_DEF_IHDR 8</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="a00095.xhtml#a93096a25f40187501506b8b775119b4a">   19</a></span>&#160;<span class="preprocessor">#define SIG_IEND 0x444E4549</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="a00095.xhtml#a634801961cc73b81c30edc286556c781">   21</a></span>&#160;<span class="preprocessor">#define SIG_IDAT 0x54414449</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="a00095.xhtml#a62c1ea4563bb6718526bdc2cdc652b5c">   23</a></span>&#160;<span class="preprocessor">#define SIG_tEXt 0x74584574</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="a00095.xhtml#acd49fabf599d0ee1224d90bdfe2e9de8">   25</a></span>&#160;<span class="preprocessor">#define SIG_STEGX_PNG 0x53544547</span></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="a00095.xhtml#a38cdc6b069846fcd541e77b8f2e55d22">   27</a></span>&#160;<span class="preprocessor">#define LENGTH_CHUNK_IEND 12</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="a00095.xhtml#ae5c81215d8f14ec1d20647029a22cf7c">   29</a></span>&#160;<span class="preprocessor">#define LENGTH_IEND 4</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="a00095.xhtml#a66b45cefa7e813509629dfff0680c50b">   31</a></span>&#160;<span class="preprocessor">#define LENGTH_CRC 4</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="a00095.xhtml#ab0b5f0b6d9c3b7aee8b41934ec34d1c4">   33</a></span>&#160;<span class="preprocessor">#define LENGTH_SIG_PNG 8</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="a00174.xhtml">   40</a></span>&#160;<span class="keyword">struct </span><a class="code" href="a00174.xhtml">png</a> {</div><div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="a00174.xhtml#a841923a20e6dda97c59351c8e97c9be6">   41</a></span>&#160;    uint32_t <a class="code" href="a00174.xhtml#a841923a20e6dda97c59351c8e97c9be6">header_size</a>;       </div><div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="a00174.xhtml#ab670c6c21aced4765ecd6b29283f22b0">   42</a></span>&#160;    uint32_t <a class="code" href="a00174.xhtml#ab670c6c21aced4765ecd6b29283f22b0">data_size</a>;         </div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="a00095.xhtml#a714e5dc9c1149c3bec03347018bdecc7">   46</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="a00174.xhtml">png</a> <a class="code" href="a00174.xhtml">png_s</a>;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<a class="code" href="a00047.xhtml#af1ca434cca36ba9fb2a45f6cef3a16d6">type_e</a> <a class="code" href="a00095.xhtml#a576071ea25bd3721014ca3e596adcdfb">stegx_test_file_png</a>(FILE * file);</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">int</span> <a class="code" href="a00095.xhtml#a2386f518ec5df78485cca31c6fe4f858">insert_metadata_png</a>(<a class="code" href="a00154.xhtml">info_s</a> * infos);</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keywordtype">int</span> <a class="code" href="a00095.xhtml#a258c2aefc0d29e112eca90e652730a84">extract_metadata_png</a>(<a class="code" href="a00154.xhtml">info_s</a> * infos);</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="a00095_xhtml_a2386f518ec5df78485cca31c6fe4f858"><div class="ttname"><a href="a00095.xhtml#a2386f518ec5df78485cca31c6fe4f858">insert_metadata_png</a></div><div class="ttdeci">int insert_metadata_png(info_s *infos)</div><div class="ttdoc">Va inserer les donnees cachees en utilisant l&amp;#39;algorithme Metadata dans le format PNG. </div><div class="ttdef"><b>Definition:</b> <a href="a00092_source.xhtml#l00039">png.c:39</a></div></div>
+<div class="ttc" id="a00174_xhtml"><div class="ttname"><a href="a00174.xhtml">png</a></div><div class="ttdoc">Structure du format PNG. </div><div class="ttdef"><b>Definition:</b> <a href="a00095_source.xhtml#l00040">png.h:40</a></div></div>
+<div class="ttc" id="a00154_xhtml"><div class="ttname"><a href="a00154.xhtml">info</a></div><div class="ttdoc">Informations utiles aux fonctions de la bibliothèque pour l&amp;#39;insertion et la dissimulation. </div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.xhtml#l00086">common.h:86</a></div></div>
+<div class="ttc" id="a00095_xhtml_a258c2aefc0d29e112eca90e652730a84"><div class="ttname"><a href="a00095.xhtml#a258c2aefc0d29e112eca90e652730a84">extract_metadata_png</a></div><div class="ttdeci">int extract_metadata_png(info_s *infos)</div><div class="ttdoc">Va extraire les donnees cachees en utilisant l&amp;#39;algorithme Metadata dans le formar PNG...</div><div class="ttdef"><b>Definition:</b> <a href="a00092_source.xhtml#l00156">png.c:156</a></div></div>
+<div class="ttc" id="a00174_xhtml_a841923a20e6dda97c59351c8e97c9be6"><div class="ttname"><a href="a00174.xhtml#a841923a20e6dda97c59351c8e97c9be6">png::header_size</a></div><div class="ttdeci">uint32_t header_size</div><div class="ttdef"><b>Definition:</b> <a href="a00095_source.xhtml#l00041">png.h:41</a></div></div>
+<div class="ttc" id="a00047_xhtml_af1ca434cca36ba9fb2a45f6cef3a16d6"><div class="ttname"><a href="a00047.xhtml#af1ca434cca36ba9fb2a45f6cef3a16d6">type_e</a></div><div class="ttdeci">enum type type_e</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.xhtml#l00049">common.h:49</a></div></div>
+<div class="ttc" id="a00174_xhtml_ab670c6c21aced4765ecd6b29283f22b0"><div class="ttname"><a href="a00174.xhtml#ab670c6c21aced4765ecd6b29283f22b0">png::data_size</a></div><div class="ttdeci">uint32_t data_size</div><div class="ttdef"><b>Definition:</b> <a href="a00095_source.xhtml#l00042">png.h:42</a></div></div>
+<div class="ttc" id="a00095_xhtml_a576071ea25bd3721014ca3e596adcdfb"><div class="ttname"><a href="a00095.xhtml#a576071ea25bd3721014ca3e596adcdfb">stegx_test_file_png</a></div><div class="ttdeci">type_e stegx_test_file_png(FILE *file)</div><div class="ttdoc">Test si le fichier est un fichier PNG. </div><div class="ttdef"><b>Definition:</b> <a href="a00092_source.xhtml#l00024">png.c:24</a></div></div>
+<div class="ttc" id="a00047_xhtml"><div class="ttname"><a href="a00047.xhtml">common.h</a></div><div class="ttdoc">Définitions communes à la partie privée de la bibliothèque. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.xhtml">src</a></li><li class="navelem"><a class="el" href="dir_83cd5de4db6a3549c16bea4263597792.xhtml">file_type</a></li><li class="navelem"><a class="el" href="a00095.xhtml">png.h</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

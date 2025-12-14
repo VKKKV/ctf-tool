@@ -1,0 +1,122 @@
+\hypertarget{a00041}{}\subsection{Référence du fichier src/algo/metadata.h}
+\label{a00041}\index{src/algo/metadata.\+h@{src/algo/metadata.\+h}}
+
+
+Algorithme M\+E\+T\+A\+D\+A\+TA.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de metadata.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00042}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{a00043}
+\end{center}
+\end{figure}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{a00041_a77aaebb61a9a73cbe45380c64c3d8389}{insert\+\_\+metadata} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata. \end{DoxyCompactList}\item 
+int \hyperlink{a00041_a069239660c8070698c4ddcbbd6debe0b}{extract\+\_\+metadata} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Algorithme M\+E\+T\+A\+D\+A\+TA. 
+
+Contient les fonctions concernant l\textquotesingle{}algorithme M\+E\+T\+A\+D\+A\+TA. 
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00041_a069239660c8070698c4ddcbbd6debe0b}\label{a00041_a069239660c8070698c4ddcbbd6debe0b}} 
+\index{metadata.\+h@{metadata.\+h}!extract\+\_\+metadata@{extract\+\_\+metadata}}
+\index{extract\+\_\+metadata@{extract\+\_\+metadata}!metadata.\+h@{metadata.\+h}}
+\paragraph{\texorpdfstring{extract\+\_\+metadata()}{extract\_metadata()}}
+{\footnotesize\ttfamily int extract\+\_\+metadata (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant l\textquotesingle{}extraction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si les données ont bien été extraites ; sinon 1 en cas d\textquotesingle{}erreur et met à jour \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 37 du fichier metadata.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00041_a069239660c8070698c4ddcbbd6debe0b_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{a00041_a069239660c8070698c4ddcbbd6debe0b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00041_a77aaebb61a9a73cbe45380c64c3d8389}\label{a00041_a77aaebb61a9a73cbe45380c64c3d8389}} 
+\index{metadata.\+h@{metadata.\+h}!insert\+\_\+metadata@{insert\+\_\+metadata}}
+\index{insert\+\_\+metadata@{insert\+\_\+metadata}!metadata.\+h@{metadata.\+h}}
+\paragraph{\texorpdfstring{insert\+\_\+metadata()}{insert\_metadata()}}
+{\footnotesize\ttfamily int insert\+\_\+metadata (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si les données ont bien été inserées ; sinon 1 en cas d\textquotesingle{}erreur et met à jour \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 16 du fichier metadata.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00041_a77aaebb61a9a73cbe45380c64c3d8389_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{a00041_a77aaebb61a9a73cbe45380c64c3d8389_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,156 @@
+\hypertarget{a00050}{}\subsection{Référence du fichier src/detect\+\_\+algo.c}
+\label{a00050}\index{src/detect\+\_\+algo.\+c@{src/detect\+\_\+algo.\+c}}
+
+
+Module de détection de l\textquotesingle{}algorithme.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+errors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sugg\+\_\+algo.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de detect\+\_\+algo.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00051}
+\end{center}
+\end{figure}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{a00050_a4ff8628a8b7e85f4a4b8dda0d66c23b5}{read\+\_\+signature} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Lit la signature contenu dans le fichier hôte. \end{DoxyCompactList}\item 
+int \hyperlink{a00050_ae586a372b92d84d36a5733129260dd93}{sig\+\_\+fseek} (F\+I\+LE $\ast$f, char $\ast$h, \hyperlink{a00008_ad7acd42acef1f832c261f34b380de326}{method\+\_\+e} m)
+\begin{DoxyCompactList}\small\item\em Saute la signature. \end{DoxyCompactList}\item 
+int \hyperlink{a00050_a2a3747fdc90ed4467eb3e468d8fba361}{stegx\+\_\+detect\+\_\+algo} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Detecte l\textquotesingle{}algorithme utilisé ainsi que le nom du fichier caché et la taille des données cachées. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Module de détection de l\textquotesingle{}algorithme. 
+
+Lecture de la signature d\textquotesingle{}un fichier hôte. 
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00050_a4ff8628a8b7e85f4a4b8dda0d66c23b5}\label{a00050_a4ff8628a8b7e85f4a4b8dda0d66c23b5}} 
+\index{detect\+\_\+algo.\+c@{detect\+\_\+algo.\+c}!read\+\_\+signature@{read\+\_\+signature}}
+\index{read\+\_\+signature@{read\+\_\+signature}!detect\+\_\+algo.\+c@{detect\+\_\+algo.\+c}}
+\paragraph{\texorpdfstring{read\+\_\+signature()}{read\_signature()}}
+{\footnotesize\ttfamily static int read\+\_\+signature (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Lit la signature contenu dans le fichier hôte. 
+
+\begin{DoxyParagraph}{Effet de bord}
+Renseigne la structure infos\+\_\+s avec les informations contenues dans la signature. 
+\end{DoxyParagraph}
+\begin{DoxyRefDesc}{Erreurs}
+\item[\hyperlink{a00134__errors000009}{Erreurs}]\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a0639f3719d0bf22c36b5ca1711fe3d7e}{E\+R\+R\+\_\+\+N\+E\+E\+D\+\_\+\+P\+A\+S\+S\+WD} si le récepteur n\textquotesingle{}as pas fourni de mot de passe alors qu\textquotesingle{}il aurait dû. \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant l\textquotesingle{}extraction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si la signature a bien été lue, sinon 1 et assigne \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno} à l\textquotesingle{}erreur survenue. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Pierre Ayoub et Damien Delaunay 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 29 du fichier detect\+\_\+algo.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{a00050_a4ff8628a8b7e85f4a4b8dda0d66c23b5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00050_ae586a372b92d84d36a5733129260dd93}\label{a00050_ae586a372b92d84d36a5733129260dd93}} 
+\index{detect\+\_\+algo.\+c@{detect\+\_\+algo.\+c}!sig\+\_\+fseek@{sig\+\_\+fseek}}
+\index{sig\+\_\+fseek@{sig\+\_\+fseek}!detect\+\_\+algo.\+c@{detect\+\_\+algo.\+c}}
+\paragraph{\texorpdfstring{sig\+\_\+fseek()}{sig\_fseek()}}
+{\footnotesize\ttfamily int sig\+\_\+fseek (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{f,  }\item[{char $\ast$}]{h,  }\item[{\hyperlink{a00008_ad7acd42acef1f832c261f34b380de326}{method\+\_\+e}}]{m }\end{DoxyParamCaption})}
+
+
+
+Saute la signature. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em f} & Pointeur sur le fichier ou faire le saut. \\
+\hline
+{\em h} & Pointeur sur la chaîne de caractère du nom du fichier dans la signature. \\
+\hline
+{\em m} & Méthode de protection des données utilisé. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Valeur de \char`\"{}fseek\char`\"{}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Pierre Ayoub et Damien Delaunay 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 111 du fichier detect\+\_\+algo.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00050_ae586a372b92d84d36a5733129260dd93_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00050_a2a3747fdc90ed4467eb3e468d8fba361}\label{a00050_a2a3747fdc90ed4467eb3e468d8fba361}} 
+\index{detect\+\_\+algo.\+c@{detect\+\_\+algo.\+c}!stegx\+\_\+detect\+\_\+algo@{stegx\+\_\+detect\+\_\+algo}}
+\index{stegx\+\_\+detect\+\_\+algo@{stegx\+\_\+detect\+\_\+algo}!detect\+\_\+algo.\+c@{detect\+\_\+algo.\+c}}
+\paragraph{\texorpdfstring{stegx\+\_\+detect\+\_\+algo()}{stegx\_detect\_algo()}}
+{\footnotesize\ttfamily int stegx\+\_\+detect\+\_\+algo (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Detecte l\textquotesingle{}algorithme utilisé ainsi que le nom du fichier caché et la taille des données cachées. 
+
+\begin{DoxyParagraph}{Effet de bord}
+Remplit les champs info\+\_\+s.\+host.\+file\+\_\+info, \hyperlink{a00154_aa6ad0a3fe5b1489edc6684da68c3b588}{info\+\_\+s\+::algo}, \hyperlink{a00154_afe7c54ffc777d8584a1fc4f9e78790d0}{info\+\_\+s\+::method}, \hyperlink{a00154_a5faadf710cbff5ed6e2882e78216084c}{info\+\_\+s\+::hidden\+\_\+length}, \hyperlink{a00154_afa18e57ba4ce959f5ecd8502fd19f858}{info\+\_\+s\+::hidden\+\_\+name}. 
+\end{DoxyParagraph}
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Erreurs}
+\item[\hyperlink{a00134__errors000005}{Erreurs}]\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a65deae87741eaa0b2b39fe1116bfd563}{E\+R\+R\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+A\+L\+G\+OS} si une erreur quelconque survient. 
+
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a0639f3719d0bf22c36b5ca1711fe3d7e}{E\+R\+R\+\_\+\+N\+E\+E\+D\+\_\+\+P\+A\+S\+S\+WD} si l\textquotesingle{}utilisateur n\textquotesingle{}as pas spécifié le mot de passe requis. \end{DoxyRefDesc}
+\begin{DoxyReturn}{Renvoie}
+0 si la détection s\textquotesingle{}est bien déroulée, sinon 1 en cas d\textquotesingle{}erreur et met à jour \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Pierre Ayoub et Damien Delaunay 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 122 du fichier detect\+\_\+algo.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00050_a2a3747fdc90ed4467eb3e468d8fba361_cgraph}
+\end{center}
+\end{figure}

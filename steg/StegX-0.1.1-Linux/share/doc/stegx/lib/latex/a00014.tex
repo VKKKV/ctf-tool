@@ -1,0 +1,123 @@
+\hypertarget{a00014}{}\subsection{Référence du fichier src/algo/eoc.c}
+\label{a00014}\index{src/algo/eoc.\+c@{src/algo/eoc.\+c}}
+
+
+Algorithme End Of Chunk (E\+OC).  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+errors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../insert.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../protection.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../endian.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../rand.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de eoc.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00015}
+\end{center}
+\end{figure}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{a00014_a049b8f5bf7a416fe54b10c6de98487a1}{insert\+\_\+eoc} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme E\+OC. \end{DoxyCompactList}\item 
+int \hyperlink{a00014_ad0cda2ae23fda82b16083952ca1b698a}{extract\+\_\+eoc} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme E\+OC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Algorithme End Of Chunk (E\+OC). 
+
+Contient les fonctions concernant l\textquotesingle{}algorithme E\+OC. 
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00014_ad0cda2ae23fda82b16083952ca1b698a}\label{a00014_ad0cda2ae23fda82b16083952ca1b698a}} 
+\index{eoc.\+c@{eoc.\+c}!extract\+\_\+eoc@{extract\+\_\+eoc}}
+\index{extract\+\_\+eoc@{extract\+\_\+eoc}!eoc.\+c@{eoc.\+c}}
+\paragraph{\texorpdfstring{extract\+\_\+eoc()}{extract\_eoc()}}
+{\footnotesize\ttfamily int extract\+\_\+eoc (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme E\+OC. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si l\textquotesingle{}algorithme a bien ete extrait ; sinon 1 en cas d\textquotesingle{}erreur et met à jour \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+C\+Laire Baskevitch et Tristan Bessac 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 183 du fichier eoc.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00014_ad0cda2ae23fda82b16083952ca1b698a_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{a00014_ad0cda2ae23fda82b16083952ca1b698a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00014_a049b8f5bf7a416fe54b10c6de98487a1}\label{a00014_a049b8f5bf7a416fe54b10c6de98487a1}} 
+\index{eoc.\+c@{eoc.\+c}!insert\+\_\+eoc@{insert\+\_\+eoc}}
+\index{insert\+\_\+eoc@{insert\+\_\+eoc}!eoc.\+c@{eoc.\+c}}
+\paragraph{\texorpdfstring{insert\+\_\+eoc()}{insert\_eoc()}}
+{\footnotesize\ttfamily int insert\+\_\+eoc (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme E\+OC. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si l\textquotesingle{}algorithme a bien été inseré ; sinon 1 en cas d\textquotesingle{}erreur et met à jour \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Claire Baskevitch et Tristan Bessac 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 19 du fichier eoc.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00014_a049b8f5bf7a416fe54b10c6de98487a1_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{a00014_a049b8f5bf7a416fe54b10c6de98487a1_icgraph}
+\end{center}
+\end{figure}

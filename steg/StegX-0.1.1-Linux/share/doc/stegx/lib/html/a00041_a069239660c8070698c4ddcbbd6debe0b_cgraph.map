@@ -1,0 +1,11 @@
+<map id="extract_metadata" name="extract_metadata">
+<area shape="rect" id="node2" href="$a00074.xhtml#a14e9a0ddec04cc168cbfe21cd839166e" title="Va extraire les donnees cachees en utilisant l&#39;algorithme Metadata dans le formar BMP..." alt="" coords="176,56,331,83"/>
+<area shape="rect" id="node7" href="$a00092.xhtml#a258c2aefc0d29e112eca90e652730a84" title="Va extraire les donnees cachees en utilisant l&#39;algorithme Metadata dans le formar PNG..." alt="" coords="178,132,329,159"/>
+<area shape="rect" id="node9" href="$a00068.xhtml#aa0a2b469d42533228d073a79868e775b" title="Va extraire les donnees cachees en utilisant l&#39;algorithme Metadata dans le formar AVI..." alt="" coords="180,183,327,209"/>
+<area shape="rect" id="node10" href="$a00080.xhtml#ac1c7c5c1221f121e1c0014efe23b82f8" title="Va extraire les donnees cachees en utilisant l&#39;algorithme Metadata dans le formar FLV..." alt="" coords="181,233,325,260"/>
+<area shape="rect" id="node3" href="$a00122.xhtml#a4e9a217b960dc65fd08dff9f78e317e4" title="Initialise la seed de la suite pseudo aléatoire. " alt="" coords="533,5,627,32"/>
+<area shape="rect" id="node4" href="$a00122.xhtml#a2a891bbe3514201de3cfc5acced104b7" title="Cree un seed a partir d&#39;un mot de passe. " alt="" coords="533,56,627,83"/>
+<area shape="rect" id="node5" href="$a00122.xhtml#a9966534d45c62d0df7a3d5df48668715" title="Renvoie un entier pseudo&#45;aléatoire. " alt="" coords="537,107,623,133"/>
+<area shape="rect" id="node6" href="$a00116.xhtml#a3fd0a8f9ba189acd34f864c97f059b0f" title="Fait le mélange ou réarrange les octets selon l&#39;algorithme de protection des données. " alt="" coords="385,56,479,83"/>
+<area shape="rect" id="node8" href="$a00056.xhtml#a7434fd197d31a9571f92f9dca4f212e9" title="Convertit un nombre en big endian dans l&#39;endian de la machine. " alt="" coords="379,259,485,285"/>
+</map>

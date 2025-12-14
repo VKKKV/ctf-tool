@@ -1,0 +1,349 @@
+\hypertarget{a00128}{}\subsection{Référence du fichier src/sugg\+\_\+algo.c}
+\label{a00128}\index{src/sugg\+\_\+algo.\+c@{src/sugg\+\_\+algo.\+c}}
+
+
+Proposition des algorithmes.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}endian.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+errors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rand.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de sugg\+\_\+algo.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00129}
+\end{center}
+\end{figure}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{a00128_adb74030cbeeeadb4f0872cd6cb067796}{can\+\_\+use\+\_\+lsb} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Teste si l\textquotesingle{}on peut utiliser l\textquotesingle{}algorithme L\+SB pour la dissimulation. \end{DoxyCompactList}\item 
+static int \hyperlink{a00128_a28857a3fb0be2252aa54849431d1582f}{can\+\_\+use\+\_\+eof} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Teste si l\textquotesingle{}on peut utiliser l\textquotesingle{}algorithme E\+OF pour la dissimulation. \end{DoxyCompactList}\item 
+static int \hyperlink{a00128_ac1012fe713837a597197f24dedc7314f}{can\+\_\+use\+\_\+metadata} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Teste si l\textquotesingle{}on peut utiliser l\textquotesingle{}algorithme Metadata pour la dissimulation. \end{DoxyCompactList}\item 
+static int \hyperlink{a00128_a39a800f242ed5484ff790ee9e92070ab}{can\+\_\+use\+\_\+eoc} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Teste si l\textquotesingle{}on peut utiliser l\textquotesingle{}algorithme E\+OC pour la dissimulation. \end{DoxyCompactList}\item 
+static int \hyperlink{a00128_a7003efd2a5625e2be5923b960397de06}{can\+\_\+use\+\_\+junk\+\_\+chunk} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Teste si l\textquotesingle{}on peut utiliser l\textquotesingle{}algorithme Junk Chunk pour la dissimulation. \end{DoxyCompactList}\item 
+int \hyperlink{a00128_a5501c9c7711252fa8d85ff12cb3390dc}{fill\+\_\+host\+\_\+info} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Remplit les informations du fichier hôte. \end{DoxyCompactList}\item 
+int \hyperlink{a00128_adc277622e5fe0d1814be76f11263b350}{stegx\+\_\+suggest\+\_\+algo} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Propose les algorithmes de stéganographie utilisables. \end{DoxyCompactList}\item 
+int \hyperlink{a00128_a58f7de82387e9b66f9bd7c40c32aeb8f}{stegx\+\_\+choose\+\_\+algo} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos, \hyperlink{a00008_adbe3e383e3f1c4239b26ccae2865aa06}{algo\+\_\+e} algo\+\_\+choosen)
+\begin{DoxyCompactList}\small\item\em Initialise l\textquotesingle{}algorithme à utiliser pour la dissimulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Proposition des algorithmes. 
+
+Module qui contient les fonctions qui permettent de proposer et de vérifier l\textquotesingle{}algorithme de stéganographie à utiliser, ainsi que la fonction de lecture/d\textquotesingle{}analyse du fichier hôte. 
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00128_a39a800f242ed5484ff790ee9e92070ab}\label{a00128_a39a800f242ed5484ff790ee9e92070ab}} 
+\index{sugg\+\_\+algo.\+c@{sugg\+\_\+algo.\+c}!can\+\_\+use\+\_\+eoc@{can\+\_\+use\+\_\+eoc}}
+\index{can\+\_\+use\+\_\+eoc@{can\+\_\+use\+\_\+eoc}!sugg\+\_\+algo.\+c@{sugg\+\_\+algo.\+c}}
+\paragraph{\texorpdfstring{can\+\_\+use\+\_\+eoc()}{can\_use\_eoc()}}
+{\footnotesize\ttfamily static int can\+\_\+use\+\_\+eoc (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Teste si l\textquotesingle{}on peut utiliser l\textquotesingle{}algorithme E\+OC pour la dissimulation. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si l\textquotesingle{}algorithme est proposé, 1 sinon. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 116 du fichier sugg\+\_\+algo.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{a00128_a39a800f242ed5484ff790ee9e92070ab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00128_a28857a3fb0be2252aa54849431d1582f}\label{a00128_a28857a3fb0be2252aa54849431d1582f}} 
+\index{sugg\+\_\+algo.\+c@{sugg\+\_\+algo.\+c}!can\+\_\+use\+\_\+eof@{can\+\_\+use\+\_\+eof}}
+\index{can\+\_\+use\+\_\+eof@{can\+\_\+use\+\_\+eof}!sugg\+\_\+algo.\+c@{sugg\+\_\+algo.\+c}}
+\paragraph{\texorpdfstring{can\+\_\+use\+\_\+eof()}{can\_use\_eof()}}
+{\footnotesize\ttfamily static int can\+\_\+use\+\_\+eof (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Teste si l\textquotesingle{}on peut utiliser l\textquotesingle{}algorithme E\+OF pour la dissimulation. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si l\textquotesingle{}algorithme est proposé, 1 sinon. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 75 du fichier sugg\+\_\+algo.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{a00128_a28857a3fb0be2252aa54849431d1582f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00128_a7003efd2a5625e2be5923b960397de06}\label{a00128_a7003efd2a5625e2be5923b960397de06}} 
+\index{sugg\+\_\+algo.\+c@{sugg\+\_\+algo.\+c}!can\+\_\+use\+\_\+junk\+\_\+chunk@{can\+\_\+use\+\_\+junk\+\_\+chunk}}
+\index{can\+\_\+use\+\_\+junk\+\_\+chunk@{can\+\_\+use\+\_\+junk\+\_\+chunk}!sugg\+\_\+algo.\+c@{sugg\+\_\+algo.\+c}}
+\paragraph{\texorpdfstring{can\+\_\+use\+\_\+junk\+\_\+chunk()}{can\_use\_junk\_chunk()}}
+{\footnotesize\ttfamily static int can\+\_\+use\+\_\+junk\+\_\+chunk (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Teste si l\textquotesingle{}on peut utiliser l\textquotesingle{}algorithme Junk Chunk pour la dissimulation. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si l\textquotesingle{}algorithme est proposé, 1 sinon. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 129 du fichier sugg\+\_\+algo.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{a00128_a7003efd2a5625e2be5923b960397de06_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00128_adb74030cbeeeadb4f0872cd6cb067796}\label{a00128_adb74030cbeeeadb4f0872cd6cb067796}} 
+\index{sugg\+\_\+algo.\+c@{sugg\+\_\+algo.\+c}!can\+\_\+use\+\_\+lsb@{can\+\_\+use\+\_\+lsb}}
+\index{can\+\_\+use\+\_\+lsb@{can\+\_\+use\+\_\+lsb}!sugg\+\_\+algo.\+c@{sugg\+\_\+algo.\+c}}
+\paragraph{\texorpdfstring{can\+\_\+use\+\_\+lsb()}{can\_use\_lsb()}}
+{\footnotesize\ttfamily static int can\+\_\+use\+\_\+lsb (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Teste si l\textquotesingle{}on peut utiliser l\textquotesingle{}algorithme L\+SB pour la dissimulation. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 Si l\textquotesingle{}algorithme est proposé, 1 sinon. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes (B\+MP) et Pierre Ayoub (W\+AV) 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 26 du fichier sugg\+\_\+algo.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{a00128_adb74030cbeeeadb4f0872cd6cb067796_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00128_ac1012fe713837a597197f24dedc7314f}\label{a00128_ac1012fe713837a597197f24dedc7314f}} 
+\index{sugg\+\_\+algo.\+c@{sugg\+\_\+algo.\+c}!can\+\_\+use\+\_\+metadata@{can\+\_\+use\+\_\+metadata}}
+\index{can\+\_\+use\+\_\+metadata@{can\+\_\+use\+\_\+metadata}!sugg\+\_\+algo.\+c@{sugg\+\_\+algo.\+c}}
+\paragraph{\texorpdfstring{can\+\_\+use\+\_\+metadata()}{can\_use\_metadata()}}
+{\footnotesize\ttfamily static int can\+\_\+use\+\_\+metadata (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Teste si l\textquotesingle{}on peut utiliser l\textquotesingle{}algorithme Metadata pour la dissimulation. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si l\textquotesingle{}algorithme est proposé, 1 sinon. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 88 du fichier sugg\+\_\+algo.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{a00128_ac1012fe713837a597197f24dedc7314f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00128_a5501c9c7711252fa8d85ff12cb3390dc}\label{a00128_a5501c9c7711252fa8d85ff12cb3390dc}} 
+\index{sugg\+\_\+algo.\+c@{sugg\+\_\+algo.\+c}!fill\+\_\+host\+\_\+info@{fill\+\_\+host\+\_\+info}}
+\index{fill\+\_\+host\+\_\+info@{fill\+\_\+host\+\_\+info}!sugg\+\_\+algo.\+c@{sugg\+\_\+algo.\+c}}
+\paragraph{\texorpdfstring{fill\+\_\+host\+\_\+info()}{fill\_host\_info()}}
+{\footnotesize\ttfamily int fill\+\_\+host\+\_\+info (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Remplit les informations du fichier hôte. 
+
+Remplit les informations du fichier hôte en fonction du type de fichier. Effectue la lecture des données pour remplir la structure. \begin{DoxyParagraph}{Effet de bord}
+Initialise et rempli le champ info\+\_\+s.\+host.\+file\+\_\+info. 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Prérequis}
+info\+\_\+s.\+host.\+host doit être un fichier ouvert en lecture et compatible avec l\textquotesingle{}application. 
+\end{DoxyParagraph}
+\begin{DoxyRefDesc}{Erreurs}
+\item[\hyperlink{a00134__errors000010}{Erreurs}]\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a72cfc98feeed9df5050bd2b25d2d28c2}{E\+R\+R\+\_\+\+S\+U\+G\+G\+\_\+\+A\+L\+G\+OS} si la fonction est utilisé en mode extraction. 
+
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852ab79036268630b509f43f01d2082a9154}{E\+R\+R\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+A\+L\+GO} si l\textquotesingle{}algorithme choisi n\textquotesingle{}est pas disponible. \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si tout se passe bien, sinon 1 s\textquotesingle{}il y a une erreur. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Yassin Doudouh (B\+MP et P\+NG), Pierre Ayoub et Damien Delaunay (M\+P3 et W\+AV), Claire Baskevitch et Tristan Bessac (A\+VI et F\+LV) 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 136 du fichier sugg\+\_\+algo.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00128_a5501c9c7711252fa8d85ff12cb3390dc_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{a00128_a5501c9c7711252fa8d85ff12cb3390dc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00128_a58f7de82387e9b66f9bd7c40c32aeb8f}\label{a00128_a58f7de82387e9b66f9bd7c40c32aeb8f}} 
+\index{sugg\+\_\+algo.\+c@{sugg\+\_\+algo.\+c}!stegx\+\_\+choose\+\_\+algo@{stegx\+\_\+choose\+\_\+algo}}
+\index{stegx\+\_\+choose\+\_\+algo@{stegx\+\_\+choose\+\_\+algo}!sugg\+\_\+algo.\+c@{sugg\+\_\+algo.\+c}}
+\paragraph{\texorpdfstring{stegx\+\_\+choose\+\_\+algo()}{stegx\_choose\_algo()}}
+{\footnotesize\ttfamily int stegx\+\_\+choose\+\_\+algo (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos,  }\item[{\hyperlink{a00008_adbe3e383e3f1c4239b26ccae2865aa06}{algo\+\_\+e}}]{algo\+\_\+choosen }\end{DoxyParamCaption})}
+
+
+
+Initialise l\textquotesingle{}algorithme à utiliser pour la dissimulation. 
+
+A partir de la variable globale \hyperlink{a00107_a855163fecb257950934ffba1b73ecae4}{stegx\+\_\+propos\+\_\+algos} et de \char`\"{}algo\+\_\+choosen\char`\"{}, cette fonction permet de choisir l\textquotesingle{}algorithme à utiliser. \begin{DoxyParagraph}{Effet de bord}
+Remplit le champ \hyperlink{a00154_aa6ad0a3fe5b1489edc6684da68c3b588}{info\+\_\+s\+::algo} avec l\textquotesingle{}algorithme choisi, ainsi que le champ \hyperlink{a00154_a3b8cb37fa26cdca2b7460e14facd9ec0}{info\+\_\+s\+::passwd} avec un mot de passe aléatoire si l\textquotesingle{}utilisateur n\textquotesingle{}en à pas choisi. 
+\end{DoxyParagraph}
+\begin{DoxyRefDesc}{Erreurs}
+\item[\hyperlink{a00134__errors000004}{Erreurs}]\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a72cfc98feeed9df5050bd2b25d2d28c2}{E\+R\+R\+\_\+\+S\+U\+G\+G\+\_\+\+A\+L\+G\+OS} si la fonction est mal utilisée (mauvais mode). 
+
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852ab79036268630b509f43f01d2082a9154}{E\+R\+R\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+A\+L\+GO} si l\textquotesingle{}algorithme choisi n\textquotesingle{}est pas disponible. \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure contenant les informations concernant la dissimulation. \\
+\hline
+{\em algo\+\_\+choosen} & Algorithme choisi par l\textquotesingle{}utilisateur. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si la fonction s\textquotesingle{}est déroulée normalement, 1 en cas d\textquotesingle{}erreur et met à jour la variable \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Yassin Doudouh 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 377 du fichier sugg\+\_\+algo.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{a00128_a58f7de82387e9b66f9bd7c40c32aeb8f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00128_adc277622e5fe0d1814be76f11263b350}\label{a00128_adc277622e5fe0d1814be76f11263b350}} 
+\index{sugg\+\_\+algo.\+c@{sugg\+\_\+algo.\+c}!stegx\+\_\+suggest\+\_\+algo@{stegx\+\_\+suggest\+\_\+algo}}
+\index{stegx\+\_\+suggest\+\_\+algo@{stegx\+\_\+suggest\+\_\+algo}!sugg\+\_\+algo.\+c@{sugg\+\_\+algo.\+c}}
+\paragraph{\texorpdfstring{stegx\+\_\+suggest\+\_\+algo()}{stegx\_suggest\_algo()}}
+{\footnotesize\ttfamily int stegx\+\_\+suggest\+\_\+algo (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Propose les algorithmes de stéganographie utilisables. 
+
+En fonction des informations rentrées dans \hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s}, vérifie pour chaque algorithme qu\textquotesingle{}il est utilisable en fonction type de fichier hôte et de la taille du fichier à cacher. \begin{DoxyParagraph}{Effet de bord}
+Initialise et rempli le champ \hyperlink{a00154_a5faadf710cbff5ed6e2882e78216084c}{info\+\_\+s\+::hidden\+\_\+length} et info\+\_\+s.\+host.\+file\+\_\+info ainsi que la variable globale \hyperlink{a00107_a855163fecb257950934ffba1b73ecae4}{stegx\+\_\+propos\+\_\+algos}. 
+\end{DoxyParagraph}
+\begin{DoxyRefDesc}{Erreurs}
+\item[\hyperlink{a00134__errors000003}{Erreurs}]\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a72cfc98feeed9df5050bd2b25d2d28c2}{E\+R\+R\+\_\+\+S\+U\+G\+G\+\_\+\+A\+L\+G\+OS} s\textquotesingle{}il y a eu un problème d\textquotesingle{}utilisation. 
+
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852ae149fbd002acad554baf6a5abbc08c12}{E\+R\+R\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+H\+I\+D\+D\+EN} si le fichier à cacher est supérieur à la taille maximum (2$^\wedge$32). \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure contenant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si tout se passe bien, sinon 1 en cas d\textquotesingle{}erreur et met à jour \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Yassin Doudouh 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 346 du fichier sugg\+\_\+algo.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00128_adc277622e5fe0d1814be76f11263b350_cgraph}
+\end{center}
+\end{figure}

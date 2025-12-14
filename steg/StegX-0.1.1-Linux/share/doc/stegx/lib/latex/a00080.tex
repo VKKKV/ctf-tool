@@ -1,0 +1,159 @@
+\hypertarget{a00080}{}\subsection{Référence du fichier src/file\+\_\+type/flv.c}
+\label{a00080}\index{src/file\+\_\+type/flv.\+c@{src/file\+\_\+type/flv.\+c}}
+
+
+Fichier F\+LV.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+errors.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de flv.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00081}
+\end{center}
+\end{figure}
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00080_a774ad0ace2d5c094fea23bd2ae1c76af}{S\+I\+G\+\_\+\+F\+LV}~0x564\+C46
+\end{DoxyCompactItemize}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00047_af1ca434cca36ba9fb2a45f6cef3a16d6}{type\+\_\+e} \hyperlink{a00080_aeb8aa72db41eb744e933e7fed2a920a7}{stegx\+\_\+test\+\_\+file\+\_\+flv} (F\+I\+LE $\ast$file)
+\begin{DoxyCompactList}\small\item\em Test si le fichier est un fichier F\+LV. \end{DoxyCompactList}\item 
+int \hyperlink{a00080_aca61ada38d1e29a78be8587538cabdf6}{insert\+\_\+metadata\+\_\+flv} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le format F\+LV. \end{DoxyCompactList}\item 
+int \hyperlink{a00080_ac1c7c5c1221f121e1c0014efe23b82f8}{extract\+\_\+metadata\+\_\+flv} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le formar F\+LV. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Fichier F\+LV. 
+
+Contient les informations (fonctions, types, structures) relatives aux fichiers au format F\+LV. 
+
+\subsubsection{Documentation des macros}
+\mbox{\Hypertarget{a00080_a774ad0ace2d5c094fea23bd2ae1c76af}\label{a00080_a774ad0ace2d5c094fea23bd2ae1c76af}} 
+\index{flv.\+c@{flv.\+c}!S\+I\+G\+\_\+\+F\+LV@{S\+I\+G\+\_\+\+F\+LV}}
+\index{S\+I\+G\+\_\+\+F\+LV@{S\+I\+G\+\_\+\+F\+LV}!flv.\+c@{flv.\+c}}
+\paragraph{\texorpdfstring{S\+I\+G\+\_\+\+F\+LV}{SIG\_FLV}}
+{\footnotesize\ttfamily \#define S\+I\+G\+\_\+\+F\+LV~0x564\+C46}
+
+Signature d\textquotesingle{}un fichier F\+LV. 
+
+Définition à la ligne 18 du fichier flv.\+c.
+
+
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00080_ac1c7c5c1221f121e1c0014efe23b82f8}\label{a00080_ac1c7c5c1221f121e1c0014efe23b82f8}} 
+\index{flv.\+c@{flv.\+c}!extract\+\_\+metadata\+\_\+flv@{extract\+\_\+metadata\+\_\+flv}}
+\index{extract\+\_\+metadata\+\_\+flv@{extract\+\_\+metadata\+\_\+flv}!flv.\+c@{flv.\+c}}
+\paragraph{\texorpdfstring{extract\+\_\+metadata\+\_\+flv()}{extract\_metadata\_flv()}}
+{\footnotesize\ttfamily int extract\+\_\+metadata\+\_\+flv (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le formar F\+LV. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant l\textquotesingle{}extraction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si les données ont bien été extraites ; sinon 1 en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Claire Baskevitch et Tristan Bessac 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 44 du fichier flv.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00080_ac1c7c5c1221f121e1c0014efe23b82f8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00080_aca61ada38d1e29a78be8587538cabdf6}\label{a00080_aca61ada38d1e29a78be8587538cabdf6}} 
+\index{flv.\+c@{flv.\+c}!insert\+\_\+metadata\+\_\+flv@{insert\+\_\+metadata\+\_\+flv}}
+\index{insert\+\_\+metadata\+\_\+flv@{insert\+\_\+metadata\+\_\+flv}!flv.\+c@{flv.\+c}}
+\paragraph{\texorpdfstring{insert\+\_\+metadata\+\_\+flv()}{insert\_metadata\_flv()}}
+{\footnotesize\ttfamily int insert\+\_\+metadata\+\_\+flv (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le format F\+LV. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si les données ont bien été inserées ; sinon 1 en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Claire Baskevitch et Tristan Bessac 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 38 du fichier flv.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00080_aca61ada38d1e29a78be8587538cabdf6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00080_aeb8aa72db41eb744e933e7fed2a920a7}\label{a00080_aeb8aa72db41eb744e933e7fed2a920a7}} 
+\index{flv.\+c@{flv.\+c}!stegx\+\_\+test\+\_\+file\+\_\+flv@{stegx\+\_\+test\+\_\+file\+\_\+flv}}
+\index{stegx\+\_\+test\+\_\+file\+\_\+flv@{stegx\+\_\+test\+\_\+file\+\_\+flv}!flv.\+c@{flv.\+c}}
+\paragraph{\texorpdfstring{stegx\+\_\+test\+\_\+file\+\_\+flv()}{stegx\_test\_file\_flv()}}
+{\footnotesize\ttfamily \hyperlink{a00047_af1ca434cca36ba9fb2a45f6cef3a16d6}{type\+\_\+e} stegx\+\_\+test\+\_\+file\+\_\+flv (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Test si le fichier est un fichier F\+LV. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em file} & Fichier à tester. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyParagraph}{Prérequis}
+Le pointeur ne doit pas être null et le fichier ouvert en lecture. 
+\end{DoxyParagraph}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da3648fb67ff3ff0f5baefbff1eb09b651}{F\+LV}, \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da6ce26a62afab55d7606ad4e92428b30c}{U\+N\+K\+N\+O\+WN} ou -\/1 en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Claire Baskevitch et Tristan Bessac 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 20 du fichier flv.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00080_aeb8aa72db41eb744e933e7fed2a920a7_icgraph}
+\end{center}
+\end{figure}

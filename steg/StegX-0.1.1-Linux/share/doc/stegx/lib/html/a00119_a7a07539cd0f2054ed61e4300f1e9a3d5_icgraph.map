@@ -1,0 +1,8 @@
+<map id="data_xor_write_tab" name="data_xor_write_tab">
+<area shape="rect" id="node2" href="$a00119.xhtml#af1d405b272ef2dc101b959264bad47e1" title="Écrit des données mélangé ou remise en ordre avec un mot de passe. " alt="" coords="185,56,328,83"/>
+<area shape="rect" id="node3" href="$a00023.xhtml#a1c15f35d77081a076fe7cb19c7eb13b1" title="Va inserer les donnees cachees en utilisant l&#39;algorithme EOF. " alt="" coords="404,5,483,32"/>
+<area shape="rect" id="node5" href="$a00023.xhtml#a0204ccf62793e17621fea9abae71e9da" title="Va extraire les donnees cachees en utilisant l&#39;algorithme EOF. " alt="" coords="400,56,487,83"/>
+<area shape="rect" id="node7" href="$a00029.xhtml#ad04f5216bd1375440a90d0c51a4ba590" title="Va extraire les donnees cachees en utilisant l&#39;algorithme Junk Chunk. " alt="" coords="376,107,511,133"/>
+<area shape="rect" id="node4" href="$a00110.xhtml#a45a1d0709604d55e9d467cb39d6a5b54" title="Va faire l&#39;insertion selon l&#39;algorithme, ainsi que les fichiers en entrée choisis par l&#39;utilisateur..." alt="" coords="563,5,656,32"/>
+<area shape="rect" id="node6" href="$a00065.xhtml#a43c63dd958bfa1f4ab2ecbd7faa14abb" title="Va faire l&#39;extraction selon l&#39;algorithme détecté, ainsi que les fichiers en entrée choisis par l&#39;util..." alt="" coords="559,81,660,108"/>
+</map>

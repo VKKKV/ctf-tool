@@ -1,0 +1,182 @@
+\hypertarget{a00011}{}\subsection{Référence du fichier inc/stegx\+\_\+errors.h}
+\label{a00011}\index{inc/stegx\+\_\+errors.\+h@{inc/stegx\+\_\+errors.\+h}}
+
+
+Module de gestion des erreurs.  
+
+
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00013}
+\end{center}
+\end{figure}
+\subsubsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852}{err\+\_\+code} \{ \newline
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a5203071ca85e00df6bf2526855b6df0d}{E\+R\+R\+\_\+\+N\+O\+NE} = 0, 
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a49b4659ab34e5808bae4b43669ae5689}{E\+R\+R\+\_\+\+H\+O\+ST}, 
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852af09332ce4e53766f2a7c538727b1f672}{E\+R\+R\+\_\+\+H\+I\+D\+D\+EN}, 
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a4d17c66e1810646c6f6fef5e30f8904e}{E\+R\+R\+\_\+\+P\+A\+S\+S\+WD}, 
+\newline
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852ae9b69ff89121ced90b1ad58869cfbf6c}{E\+R\+R\+\_\+\+R\+E\+S\+\_\+\+E\+X\+T\+R\+A\+CT}, 
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a7a60287832ac640af50a1e4d0bb5a7bf}{E\+R\+R\+\_\+\+R\+E\+S\+\_\+\+I\+N\+S\+E\+RT}, 
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a65270b9d4567b81d393face0166d32d2}{E\+R\+R\+\_\+\+R\+E\+AD}, 
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852ab4f003f7e2c346374bb7434b940794f8}{E\+R\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+C\+O\+M\+P\+AT}, 
+\newline
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a72cfc98feeed9df5050bd2b25d2d28c2}{E\+R\+R\+\_\+\+S\+U\+G\+G\+\_\+\+A\+L\+G\+OS}, 
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852ab79036268630b509f43f01d2082a9154}{E\+R\+R\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+A\+L\+GO}, 
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a103888724a059b8ab2855577bd73e8b8}{E\+R\+R\+\_\+\+I\+N\+S\+E\+RT}, 
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852aad3e8c13adfc55ea1cd105e92972dd33}{E\+R\+R\+\_\+\+E\+X\+T\+R\+A\+CT}, 
+\newline
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a65deae87741eaa0b2b39fe1116bfd563}{E\+R\+R\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+A\+L\+G\+OS}, 
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852ae149fbd002acad554baf6a5abbc08c12}{E\+R\+R\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+H\+I\+D\+D\+EN}, 
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a0639f3719d0bf22c36b5ca1711fe3d7e}{E\+R\+R\+\_\+\+N\+E\+E\+D\+\_\+\+P\+A\+S\+S\+WD}, 
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852ab2c336e452987ce9649e2071502f4b50}{E\+R\+R\+\_\+\+H\+I\+D\+D\+E\+N\+\_\+\+F\+I\+L\+E\+\_\+\+E\+M\+P\+TY}, 
+\newline
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a2a8c1bd6dbc0284d37030091f6c9296f}{E\+R\+R\+\_\+\+O\+T\+H\+ER}
+ \}
+\end{DoxyCompactItemize}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{a00011_a5d0d86cd09d47446c87bf95c6f83cfb5}{err\+\_\+print} (const enum \hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852}{err\+\_\+code} err)
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852}{err\+\_\+code} \hyperlink{a00011_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Module de gestion des erreurs. 
+
+Contient les définitions des codes d\textquotesingle{}erreurs ainsi que la variable globale utilisée pour communiquer. 
+
+\subsubsection{Documentation du type de l\textquotesingle{}énumération}
+\mbox{\Hypertarget{a00011_a08b18ac8af0f3462354240d9732f3852}\label{a00011_a08b18ac8af0f3462354240d9732f3852}} 
+\index{stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}!err\+\_\+code@{err\+\_\+code}}
+\index{err\+\_\+code@{err\+\_\+code}!stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}}
+\paragraph{\texorpdfstring{err\+\_\+code}{err\_code}}
+{\footnotesize\ttfamily enum \hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852}{err\+\_\+code}}
+
+\begin{DoxyRefDesc}{Erreurs}
+\item[\hyperlink{a00134__errors000008}{Erreurs}]Liste des codes d\textquotesingle{}erreurs de la bibliothèque. Utilisé dans le retour des fonctions et dans la correspondance erreur $<$=$>$ message. Le code 0 signifie (sauf cas particulier) qu\textquotesingle{}aucune erreur ne s\textquotesingle{}est produite. \end{DoxyRefDesc}
+\begin{DoxyAuthor}{Auteur}
+Pierre Ayoub 
+\end{DoxyAuthor}
+\begin{DoxyEnumFields}{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+N\+O\+NE@{E\+R\+R\+\_\+\+N\+O\+NE}!stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}}\index{stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}!E\+R\+R\+\_\+\+N\+O\+NE@{E\+R\+R\+\_\+\+N\+O\+NE}}}\mbox{\Hypertarget{a00011_a08b18ac8af0f3462354240d9732f3852a5203071ca85e00df6bf2526855b6df0d}\label{a00011_a08b18ac8af0f3462354240d9732f3852a5203071ca85e00df6bf2526855b6df0d}} 
+E\+R\+R\+\_\+\+N\+O\+NE&Aucune erreur. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+H\+O\+ST@{E\+R\+R\+\_\+\+H\+O\+ST}!stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}}\index{stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}!E\+R\+R\+\_\+\+H\+O\+ST@{E\+R\+R\+\_\+\+H\+O\+ST}}}\mbox{\Hypertarget{a00011_a08b18ac8af0f3462354240d9732f3852a49b4659ab34e5808bae4b43669ae5689}\label{a00011_a08b18ac8af0f3462354240d9732f3852a49b4659ab34e5808bae4b43669ae5689}} 
+E\+R\+R\+\_\+\+H\+O\+ST&Erreur pendant l\textquotesingle{}ouverture du fichier hôte. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+H\+I\+D\+D\+EN@{E\+R\+R\+\_\+\+H\+I\+D\+D\+EN}!stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}}\index{stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}!E\+R\+R\+\_\+\+H\+I\+D\+D\+EN@{E\+R\+R\+\_\+\+H\+I\+D\+D\+EN}}}\mbox{\Hypertarget{a00011_a08b18ac8af0f3462354240d9732f3852af09332ce4e53766f2a7c538727b1f672}\label{a00011_a08b18ac8af0f3462354240d9732f3852af09332ce4e53766f2a7c538727b1f672}} 
+E\+R\+R\+\_\+\+H\+I\+D\+D\+EN&Erreur pendant l\textquotesingle{}ouverture du fichier à cacher. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+P\+A\+S\+S\+WD@{E\+R\+R\+\_\+\+P\+A\+S\+S\+WD}!stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}}\index{stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}!E\+R\+R\+\_\+\+P\+A\+S\+S\+WD@{E\+R\+R\+\_\+\+P\+A\+S\+S\+WD}}}\mbox{\Hypertarget{a00011_a08b18ac8af0f3462354240d9732f3852a4d17c66e1810646c6f6fef5e30f8904e}\label{a00011_a08b18ac8af0f3462354240d9732f3852a4d17c66e1810646c6f6fef5e30f8904e}} 
+E\+R\+R\+\_\+\+P\+A\+S\+S\+WD&Mot de passe invalide. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+R\+E\+S\+\_\+\+E\+X\+T\+R\+A\+CT@{E\+R\+R\+\_\+\+R\+E\+S\+\_\+\+E\+X\+T\+R\+A\+CT}!stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}}\index{stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}!E\+R\+R\+\_\+\+R\+E\+S\+\_\+\+E\+X\+T\+R\+A\+CT@{E\+R\+R\+\_\+\+R\+E\+S\+\_\+\+E\+X\+T\+R\+A\+CT}}}\mbox{\Hypertarget{a00011_a08b18ac8af0f3462354240d9732f3852ae9b69ff89121ced90b1ad58869cfbf6c}\label{a00011_a08b18ac8af0f3462354240d9732f3852ae9b69ff89121ced90b1ad58869cfbf6c}} 
+E\+R\+R\+\_\+\+R\+E\+S\+\_\+\+E\+X\+T\+R\+A\+CT&Resultat doit être un dossier en extract. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+R\+E\+S\+\_\+\+I\+N\+S\+E\+RT@{E\+R\+R\+\_\+\+R\+E\+S\+\_\+\+I\+N\+S\+E\+RT}!stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}}\index{stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}!E\+R\+R\+\_\+\+R\+E\+S\+\_\+\+I\+N\+S\+E\+RT@{E\+R\+R\+\_\+\+R\+E\+S\+\_\+\+I\+N\+S\+E\+RT}}}\mbox{\Hypertarget{a00011_a08b18ac8af0f3462354240d9732f3852a7a60287832ac640af50a1e4d0bb5a7bf}\label{a00011_a08b18ac8af0f3462354240d9732f3852a7a60287832ac640af50a1e4d0bb5a7bf}} 
+E\+R\+R\+\_\+\+R\+E\+S\+\_\+\+I\+N\+S\+E\+RT&Resultat invalide pour l\textquotesingle{}insertion. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+R\+E\+AD@{E\+R\+R\+\_\+\+R\+E\+AD}!stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}}\index{stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}!E\+R\+R\+\_\+\+R\+E\+AD@{E\+R\+R\+\_\+\+R\+E\+AD}}}\mbox{\Hypertarget{a00011_a08b18ac8af0f3462354240d9732f3852a65270b9d4567b81d393face0166d32d2}\label{a00011_a08b18ac8af0f3462354240d9732f3852a65270b9d4567b81d393face0166d32d2}} 
+E\+R\+R\+\_\+\+R\+E\+AD&Erreur lors de la lecture. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+C\+O\+M\+P\+AT@{E\+R\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+C\+O\+M\+P\+AT}!stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}}\index{stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}!E\+R\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+C\+O\+M\+P\+AT@{E\+R\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+C\+O\+M\+P\+AT}}}\mbox{\Hypertarget{a00011_a08b18ac8af0f3462354240d9732f3852ab4f003f7e2c346374bb7434b940794f8}\label{a00011_a08b18ac8af0f3462354240d9732f3852ab4f003f7e2c346374bb7434b940794f8}} 
+E\+R\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+C\+O\+M\+P\+AT&Erreur dans le module Verification de la compatibilite des fichiers. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+S\+U\+G\+G\+\_\+\+A\+L\+G\+OS@{E\+R\+R\+\_\+\+S\+U\+G\+G\+\_\+\+A\+L\+G\+OS}!stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}}\index{stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}!E\+R\+R\+\_\+\+S\+U\+G\+G\+\_\+\+A\+L\+G\+OS@{E\+R\+R\+\_\+\+S\+U\+G\+G\+\_\+\+A\+L\+G\+OS}}}\mbox{\Hypertarget{a00011_a08b18ac8af0f3462354240d9732f3852a72cfc98feeed9df5050bd2b25d2d28c2}\label{a00011_a08b18ac8af0f3462354240d9732f3852a72cfc98feeed9df5050bd2b25d2d28c2}} 
+E\+R\+R\+\_\+\+S\+U\+G\+G\+\_\+\+A\+L\+G\+OS&Erreur dans le sous-\/module proposition des algos de steganographie. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+A\+L\+GO@{E\+R\+R\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+A\+L\+GO}!stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}}\index{stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}!E\+R\+R\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+A\+L\+GO@{E\+R\+R\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+A\+L\+GO}}}\mbox{\Hypertarget{a00011_a08b18ac8af0f3462354240d9732f3852ab79036268630b509f43f01d2082a9154}\label{a00011_a08b18ac8af0f3462354240d9732f3852ab79036268630b509f43f01d2082a9154}} 
+E\+R\+R\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+A\+L\+GO&Erreur l\textquotesingle{}algorithme choisi par l\textquotesingle{}utilisateur n\textquotesingle{}est proposé. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+I\+N\+S\+E\+RT@{E\+R\+R\+\_\+\+I\+N\+S\+E\+RT}!stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}}\index{stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}!E\+R\+R\+\_\+\+I\+N\+S\+E\+RT@{E\+R\+R\+\_\+\+I\+N\+S\+E\+RT}}}\mbox{\Hypertarget{a00011_a08b18ac8af0f3462354240d9732f3852a103888724a059b8ab2855577bd73e8b8}\label{a00011_a08b18ac8af0f3462354240d9732f3852a103888724a059b8ab2855577bd73e8b8}} 
+E\+R\+R\+\_\+\+I\+N\+S\+E\+RT&Erreur dans le sous-\/module Insertion. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+E\+X\+T\+R\+A\+CT@{E\+R\+R\+\_\+\+E\+X\+T\+R\+A\+CT}!stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}}\index{stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}!E\+R\+R\+\_\+\+E\+X\+T\+R\+A\+CT@{E\+R\+R\+\_\+\+E\+X\+T\+R\+A\+CT}}}\mbox{\Hypertarget{a00011_a08b18ac8af0f3462354240d9732f3852aad3e8c13adfc55ea1cd105e92972dd33}\label{a00011_a08b18ac8af0f3462354240d9732f3852aad3e8c13adfc55ea1cd105e92972dd33}} 
+E\+R\+R\+\_\+\+E\+X\+T\+R\+A\+CT&Erreur dans le sous-\/module Extraction. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+A\+L\+G\+OS@{E\+R\+R\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+A\+L\+G\+OS}!stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}}\index{stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}!E\+R\+R\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+A\+L\+G\+OS@{E\+R\+R\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+A\+L\+G\+OS}}}\mbox{\Hypertarget{a00011_a08b18ac8af0f3462354240d9732f3852a65deae87741eaa0b2b39fe1116bfd563}\label{a00011_a08b18ac8af0f3462354240d9732f3852a65deae87741eaa0b2b39fe1116bfd563}} 
+E\+R\+R\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+A\+L\+G\+OS&Erreur dans le sous-\/module Dectection des algorithmes de steganographie. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+H\+I\+D\+D\+EN@{E\+R\+R\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+H\+I\+D\+D\+EN}!stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}}\index{stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}!E\+R\+R\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+H\+I\+D\+D\+EN@{E\+R\+R\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+H\+I\+D\+D\+EN}}}\mbox{\Hypertarget{a00011_a08b18ac8af0f3462354240d9732f3852ae149fbd002acad554baf6a5abbc08c12}\label{a00011_a08b18ac8af0f3462354240d9732f3852ae149fbd002acad554baf6a5abbc08c12}} 
+E\+R\+R\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+H\+I\+D\+D\+EN&Erreur taille du fichier à cacher trop élevée \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+N\+E\+E\+D\+\_\+\+P\+A\+S\+S\+WD@{E\+R\+R\+\_\+\+N\+E\+E\+D\+\_\+\+P\+A\+S\+S\+WD}!stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}}\index{stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}!E\+R\+R\+\_\+\+N\+E\+E\+D\+\_\+\+P\+A\+S\+S\+WD@{E\+R\+R\+\_\+\+N\+E\+E\+D\+\_\+\+P\+A\+S\+S\+WD}}}\mbox{\Hypertarget{a00011_a08b18ac8af0f3462354240d9732f3852a0639f3719d0bf22c36b5ca1711fe3d7e}\label{a00011_a08b18ac8af0f3462354240d9732f3852a0639f3719d0bf22c36b5ca1711fe3d7e}} 
+E\+R\+R\+\_\+\+N\+E\+E\+D\+\_\+\+P\+A\+S\+S\+WD&Erreur l\textquotesingle{}application a besoin d\textquotesingle{}un mot de passe pour extraire les données. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+H\+I\+D\+D\+E\+N\+\_\+\+F\+I\+L\+E\+\_\+\+E\+M\+P\+TY@{E\+R\+R\+\_\+\+H\+I\+D\+D\+E\+N\+\_\+\+F\+I\+L\+E\+\_\+\+E\+M\+P\+TY}!stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}}\index{stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}!E\+R\+R\+\_\+\+H\+I\+D\+D\+E\+N\+\_\+\+F\+I\+L\+E\+\_\+\+E\+M\+P\+TY@{E\+R\+R\+\_\+\+H\+I\+D\+D\+E\+N\+\_\+\+F\+I\+L\+E\+\_\+\+E\+M\+P\+TY}}}\mbox{\Hypertarget{a00011_a08b18ac8af0f3462354240d9732f3852ab2c336e452987ce9649e2071502f4b50}\label{a00011_a08b18ac8af0f3462354240d9732f3852ab2c336e452987ce9649e2071502f4b50}} 
+E\+R\+R\+\_\+\+H\+I\+D\+D\+E\+N\+\_\+\+F\+I\+L\+E\+\_\+\+E\+M\+P\+TY&Erreur fichier caché/à cacher est vide. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+R\+R\+\_\+\+O\+T\+H\+ER@{E\+R\+R\+\_\+\+O\+T\+H\+ER}!stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}}\index{stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}!E\+R\+R\+\_\+\+O\+T\+H\+ER@{E\+R\+R\+\_\+\+O\+T\+H\+ER}}}\mbox{\Hypertarget{a00011_a08b18ac8af0f3462354240d9732f3852a2a8c1bd6dbc0284d37030091f6c9296f}\label{a00011_a08b18ac8af0f3462354240d9732f3852a2a8c1bd6dbc0284d37030091f6c9296f}} 
+E\+R\+R\+\_\+\+O\+T\+H\+ER&Erreur quelconque. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Définition à la ligne 17 du fichier stegx\+\_\+errors.\+h.
+
+
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00011_a5d0d86cd09d47446c87bf95c6f83cfb5}\label{a00011_a5d0d86cd09d47446c87bf95c6f83cfb5}} 
+\index{stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}!err\+\_\+print@{err\+\_\+print}}
+\index{err\+\_\+print@{err\+\_\+print}!stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}}
+\paragraph{\texorpdfstring{err\+\_\+print()}{err\_print()}}
+{\footnotesize\ttfamily void err\+\_\+print (\begin{DoxyParamCaption}\item[{const enum \hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852}{err\+\_\+code}}]{err }\end{DoxyParamCaption})}
+
+Affiche le message d\textquotesingle{}erreur sur la sortie d\textquotesingle{}erreur en fonction du code d\textquotesingle{}erreur spécifié. 
+\begin{DoxyParams}{Paramètres}
+{\em err} & Code d\textquotesingle{}erreur. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Pierre Ayoub 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 16 du fichier errors.\+c.
+
+
+
+\subsubsection{Documentation des variables}
+\mbox{\Hypertarget{a00011_a5ec48ccdfbe19fe23855818f8556abec}\label{a00011_a5ec48ccdfbe19fe23855818f8556abec}} 
+\index{stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}!stegx\+\_\+errno@{stegx\+\_\+errno}}
+\index{stegx\+\_\+errno@{stegx\+\_\+errno}!stegx\+\_\+errors.\+h@{stegx\+\_\+errors.\+h}}
+\paragraph{\texorpdfstring{stegx\+\_\+errno}{stegx\_errno}}
+{\footnotesize\ttfamily enum \hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852}{err\+\_\+code} stegx\+\_\+errno}
+
+Variable mise à la disposition des fonctions de la bibliothèque pour y inscrire leur code d\textquotesingle{}erreur. \begin{DoxyAuthor}{Auteur}
+Pierre Ayoub 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 14 du fichier errors.\+c.
+

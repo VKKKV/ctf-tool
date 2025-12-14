@@ -1,0 +1,5 @@
+<map id="stegx_test_file_mp3" name="stegx_test_file_mp3">
+<area shape="rect" id="node2" href="$a00056.xhtml#a7434fd197d31a9571f92f9dca4f212e9" title="Convertit un nombre en big endian dans l&#39;endian de la machine. " alt="" coords="209,5,315,32"/>
+<area shape="rect" id="node3" href="$a00086.xhtml#ad5c1775e3137194eae404a93a564ab96" title="Test si le header est un header ID3v2. " alt="" coords="193,56,331,83"/>
+<area shape="rect" id="node4" href="$a00086.xhtml#a75bc8b052a4d00ab95b05b576918360d" title="Test si le header est un header MPEG 1/2 Layer III. " alt="" coords="192,107,332,133"/>
+</map>

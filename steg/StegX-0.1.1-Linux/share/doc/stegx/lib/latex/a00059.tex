@@ -1,0 +1,115 @@
+\hypertarget{a00059}{}\subsection{Référence du fichier src/endian.h}
+\label{a00059}\index{src/endian.\+h@{src/endian.\+h}}
+
+
+Module qui fait des conversions entre endianness.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Graphe des dépendances par inclusion de endian.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{a00060}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00061}
+\end{center}
+\end{figure}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{a00059_aa1a29df598338a94ef478f60e90b20ba}{stegx\+\_\+htobe32} (uint32\+\_\+t nb)
+\begin{DoxyCompactList}\small\item\em Convertit un nombre en little endian vers le big endian. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{a00059_a7434fd197d31a9571f92f9dca4f212e9}{stegx\+\_\+be32toh} (uint32\+\_\+t nb)
+\begin{DoxyCompactList}\small\item\em Convertit un nombre en big endian dans l\textquotesingle{}endian de la machine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Module qui fait des conversions entre endianness. 
+
+
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00059_a7434fd197d31a9571f92f9dca4f212e9}\label{a00059_a7434fd197d31a9571f92f9dca4f212e9}} 
+\index{endian.\+h@{endian.\+h}!stegx\+\_\+be32toh@{stegx\+\_\+be32toh}}
+\index{stegx\+\_\+be32toh@{stegx\+\_\+be32toh}!endian.\+h@{endian.\+h}}
+\paragraph{\texorpdfstring{stegx\+\_\+be32toh()}{stegx\_be32toh()}}
+{\footnotesize\ttfamily uint32\+\_\+t stegx\+\_\+be32toh (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{nb }\end{DoxyParamCaption})}
+
+
+
+Convertit un nombre en big endian dans l\textquotesingle{}endian de la machine. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nb} & nombre a convertir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+renvoie un nombre compris entre 0x00 et 0x\+F\+F\+F\+F\+F\+F\+FF. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 12 du fichier endian.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00059_a7434fd197d31a9571f92f9dca4f212e9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00059_aa1a29df598338a94ef478f60e90b20ba}\label{a00059_aa1a29df598338a94ef478f60e90b20ba}} 
+\index{endian.\+h@{endian.\+h}!stegx\+\_\+htobe32@{stegx\+\_\+htobe32}}
+\index{stegx\+\_\+htobe32@{stegx\+\_\+htobe32}!endian.\+h@{endian.\+h}}
+\paragraph{\texorpdfstring{stegx\+\_\+htobe32()}{stegx\_htobe32()}}
+{\footnotesize\ttfamily uint32\+\_\+t stegx\+\_\+htobe32 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{nb }\end{DoxyParamCaption})}
+
+
+
+Convertit un nombre en little endian vers le big endian. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nb} & nombre a convertir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+renvoie un nombre compris entre 0x00 et 0x\+F\+F\+F\+F\+F\+F\+FF. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 18 du fichier endian.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{a00059_aa1a29df598338a94ef478f60e90b20ba_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00059_aa1a29df598338a94ef478f60e90b20ba_icgraph}
+\end{center}
+\end{figure}

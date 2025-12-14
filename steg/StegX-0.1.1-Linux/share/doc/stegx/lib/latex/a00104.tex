@@ -1,0 +1,152 @@
+\hypertarget{a00104}{}\subsection{Référence du fichier src/file\+\_\+type/wav.h}
+\label{a00104}\index{src/file\+\_\+type/wav.\+h@{src/file\+\_\+type/wav.\+h}}
+
+
+Fichier W\+A\+VE.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de wav.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00105}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00106}
+\end{center}
+\end{figure}
+\subsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00178}{wav}
+\begin{DoxyCompactList}\small\item\em Structure du format W\+A\+VE. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00104_a8b5283f4d6221ba85c05464617bd7a0d}{W\+A\+V\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+GN}~0x61746164
+\item 
+\#define \hyperlink{a00104_abd6aa64daa48e2fd526a0c4c7086abd8}{W\+A\+V\+\_\+\+F\+M\+T\+\_\+\+S\+I\+GN}~0x20746d66
+\item 
+\#define \hyperlink{a00104_a234b1b82bd1bbe27eccccc2b74319fbf}{W\+A\+V\+\_\+\+F\+M\+T\+\_\+\+B\+P\+S\+\_\+\+O\+FF}~14
+\item 
+\#define \hyperlink{a00104_a101fcdeac0a71273796d0e3c1470e937}{W\+A\+V\+\_\+\+S\+U\+B\+C\+H\+K1\+\_\+\+A\+D\+DR}~12
+\end{DoxyCompactItemize}
+\subsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00178}{wav} \hyperlink{a00104_ae7804dffa1f86f00af57f8d7bfb9f1e1}{wav\+\_\+s}
+\end{DoxyCompactItemize}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00047_af1ca434cca36ba9fb2a45f6cef3a16d6}{type\+\_\+e} \hyperlink{a00104_ade2af55cc4dbaf47d31e91a4681415f1}{stegx\+\_\+test\+\_\+file\+\_\+wav} (F\+I\+LE $\ast$file)
+\begin{DoxyCompactList}\small\item\em Test si le fichier est un fichier W\+A\+VE. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Fichier W\+A\+VE. 
+
+Contient les informations (fonctions, types, structures) relatives aux fichiers au format W\+A\+VE. 
+
+\subsubsection{Documentation des macros}
+\mbox{\Hypertarget{a00104_a8b5283f4d6221ba85c05464617bd7a0d}\label{a00104_a8b5283f4d6221ba85c05464617bd7a0d}} 
+\index{wav.\+h@{wav.\+h}!W\+A\+V\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+GN@{W\+A\+V\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+GN}}
+\index{W\+A\+V\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+GN@{W\+A\+V\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+GN}!wav.\+h@{wav.\+h}}
+\paragraph{\texorpdfstring{W\+A\+V\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+GN}{WAV\_DATA\_SIGN}}
+{\footnotesize\ttfamily \#define W\+A\+V\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+GN~0x61746164}
+
+Signature du subchunk data. 
+
+Définition à la ligne 17 du fichier wav.\+h.
+
+\mbox{\Hypertarget{a00104_a234b1b82bd1bbe27eccccc2b74319fbf}\label{a00104_a234b1b82bd1bbe27eccccc2b74319fbf}} 
+\index{wav.\+h@{wav.\+h}!W\+A\+V\+\_\+\+F\+M\+T\+\_\+\+B\+P\+S\+\_\+\+O\+FF@{W\+A\+V\+\_\+\+F\+M\+T\+\_\+\+B\+P\+S\+\_\+\+O\+FF}}
+\index{W\+A\+V\+\_\+\+F\+M\+T\+\_\+\+B\+P\+S\+\_\+\+O\+FF@{W\+A\+V\+\_\+\+F\+M\+T\+\_\+\+B\+P\+S\+\_\+\+O\+FF}!wav.\+h@{wav.\+h}}
+\paragraph{\texorpdfstring{W\+A\+V\+\_\+\+F\+M\+T\+\_\+\+B\+P\+S\+\_\+\+O\+FF}{WAV\_FMT\_BPS\_OFF}}
+{\footnotesize\ttfamily \#define W\+A\+V\+\_\+\+F\+M\+T\+\_\+\+B\+P\+S\+\_\+\+O\+FF~14}
+
+Offset entre le champ situé après la taille du subchunk fmt et le nombre de bit par sample. 
+
+Définition à la ligne 22 du fichier wav.\+h.
+
+\mbox{\Hypertarget{a00104_abd6aa64daa48e2fd526a0c4c7086abd8}\label{a00104_abd6aa64daa48e2fd526a0c4c7086abd8}} 
+\index{wav.\+h@{wav.\+h}!W\+A\+V\+\_\+\+F\+M\+T\+\_\+\+S\+I\+GN@{W\+A\+V\+\_\+\+F\+M\+T\+\_\+\+S\+I\+GN}}
+\index{W\+A\+V\+\_\+\+F\+M\+T\+\_\+\+S\+I\+GN@{W\+A\+V\+\_\+\+F\+M\+T\+\_\+\+S\+I\+GN}!wav.\+h@{wav.\+h}}
+\paragraph{\texorpdfstring{W\+A\+V\+\_\+\+F\+M\+T\+\_\+\+S\+I\+GN}{WAV\_FMT\_SIGN}}
+{\footnotesize\ttfamily \#define W\+A\+V\+\_\+\+F\+M\+T\+\_\+\+S\+I\+GN~0x20746d66}
+
+Signature du subchunk fmt. 
+
+Définition à la ligne 19 du fichier wav.\+h.
+
+\mbox{\Hypertarget{a00104_a101fcdeac0a71273796d0e3c1470e937}\label{a00104_a101fcdeac0a71273796d0e3c1470e937}} 
+\index{wav.\+h@{wav.\+h}!W\+A\+V\+\_\+\+S\+U\+B\+C\+H\+K1\+\_\+\+A\+D\+DR@{W\+A\+V\+\_\+\+S\+U\+B\+C\+H\+K1\+\_\+\+A\+D\+DR}}
+\index{W\+A\+V\+\_\+\+S\+U\+B\+C\+H\+K1\+\_\+\+A\+D\+DR@{W\+A\+V\+\_\+\+S\+U\+B\+C\+H\+K1\+\_\+\+A\+D\+DR}!wav.\+h@{wav.\+h}}
+\paragraph{\texorpdfstring{W\+A\+V\+\_\+\+S\+U\+B\+C\+H\+K1\+\_\+\+A\+D\+DR}{WAV\_SUBCHK1\_ADDR}}
+{\footnotesize\ttfamily \#define W\+A\+V\+\_\+\+S\+U\+B\+C\+H\+K1\+\_\+\+A\+D\+DR~12}
+
+Adresse du premier subchunk (octet). 
+
+Définition à la ligne 24 du fichier wav.\+h.
+
+
+
+\subsubsection{Documentation des définitions de type}
+\mbox{\Hypertarget{a00104_ae7804dffa1f86f00af57f8d7bfb9f1e1}\label{a00104_ae7804dffa1f86f00af57f8d7bfb9f1e1}} 
+\index{wav.\+h@{wav.\+h}!wav\+\_\+s@{wav\+\_\+s}}
+\index{wav\+\_\+s@{wav\+\_\+s}!wav.\+h@{wav.\+h}}
+\paragraph{\texorpdfstring{wav\+\_\+s}{wav\_s}}
+{\footnotesize\ttfamily typedef struct \hyperlink{a00178}{wav} \hyperlink{a00104_ae7804dffa1f86f00af57f8d7bfb9f1e1}{wav\+\_\+s}}
+
+Type du format W\+A\+VE. 
+
+Définition à la ligne 38 du fichier wav.\+h.
+
+
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00104_ade2af55cc4dbaf47d31e91a4681415f1}\label{a00104_ade2af55cc4dbaf47d31e91a4681415f1}} 
+\index{wav.\+h@{wav.\+h}!stegx\+\_\+test\+\_\+file\+\_\+wav@{stegx\+\_\+test\+\_\+file\+\_\+wav}}
+\index{stegx\+\_\+test\+\_\+file\+\_\+wav@{stegx\+\_\+test\+\_\+file\+\_\+wav}!wav.\+h@{wav.\+h}}
+\paragraph{\texorpdfstring{stegx\+\_\+test\+\_\+file\+\_\+wav()}{stegx\_test\_file\_wav()}}
+{\footnotesize\ttfamily \hyperlink{a00047_af1ca434cca36ba9fb2a45f6cef3a16d6}{type\+\_\+e} stegx\+\_\+test\+\_\+file\+\_\+wav (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Test si le fichier est un fichier W\+A\+VE. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em file} & Fichier à tester. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyParagraph}{Prérequis}
+Le pointeur ne doit pas être null et le fichier ouvert en lecture. 
+\end{DoxyParagraph}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2daca6d0756a91c2083dbad62c83d0be38a}{W\+A\+V\+\_\+\+P\+CM}, \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da05986f8348197bcc7c4ac587d122852c}{W\+A\+V\+\_\+\+N\+O\+\_\+\+P\+CM}, \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da6ce26a62afab55d7606ad4e92428b30c}{U\+N\+K\+N\+O\+WN} ou -\/1 en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes, Pierre Ayoub et Damien Delaunay 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 28 du fichier wav.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00104_ade2af55cc4dbaf47d31e91a4681415f1_icgraph}
+\end{center}
+\end{figure}

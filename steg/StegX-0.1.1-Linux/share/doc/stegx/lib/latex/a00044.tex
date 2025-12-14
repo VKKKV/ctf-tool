@@ -1,0 +1,133 @@
+\hypertarget{a00044}{}\subsection{Référence du fichier src/check\+\_\+compa.c}
+\label{a00044}\index{src/check\+\_\+compa.\+c@{src/check\+\_\+compa.\+c}}
+
+
+Module de vérification de la compatibilité.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+errors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de check\+\_\+compa.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00045}
+\end{center}
+\end{figure}
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00044_a2193695d4dc432c1b482fbcbaaa855b8}{S\+T\+E\+G\+X\+\_\+\+T\+E\+S\+T\+\_\+\+F\+I\+L\+E\+\_\+\+NB}~6
+\end{DoxyCompactItemize}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00047_af1ca434cca36ba9fb2a45f6cef3a16d6}{type\+\_\+e} \hyperlink{a00044_aa5fe126b37cde4faccaaf190a3b977d3}{check\+\_\+file\+\_\+format} (F\+I\+LE $\ast$file)
+\begin{DoxyCompactList}\small\item\em Retourne le type du fichier. \end{DoxyCompactList}\item 
+int \hyperlink{a00044_aa5b31aaae617d7c5d0c29d564e2c8a42}{stegx\+\_\+check\+\_\+compatibility} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Vérifie la compatibilité des fichiers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Module de vérification de la compatibilité. 
+
+Vérification de la compatibilité des fichiers en entrée, détection du type du fichier hôte. 
+
+\subsubsection{Documentation des macros}
+\mbox{\Hypertarget{a00044_a2193695d4dc432c1b482fbcbaaa855b8}\label{a00044_a2193695d4dc432c1b482fbcbaaa855b8}} 
+\index{check\+\_\+compa.\+c@{check\+\_\+compa.\+c}!S\+T\+E\+G\+X\+\_\+\+T\+E\+S\+T\+\_\+\+F\+I\+L\+E\+\_\+\+NB@{S\+T\+E\+G\+X\+\_\+\+T\+E\+S\+T\+\_\+\+F\+I\+L\+E\+\_\+\+NB}}
+\index{S\+T\+E\+G\+X\+\_\+\+T\+E\+S\+T\+\_\+\+F\+I\+L\+E\+\_\+\+NB@{S\+T\+E\+G\+X\+\_\+\+T\+E\+S\+T\+\_\+\+F\+I\+L\+E\+\_\+\+NB}!check\+\_\+compa.\+c@{check\+\_\+compa.\+c}}
+\paragraph{\texorpdfstring{S\+T\+E\+G\+X\+\_\+\+T\+E\+S\+T\+\_\+\+F\+I\+L\+E\+\_\+\+NB}{STEGX\_TEST\_FILE\_NB}}
+{\footnotesize\ttfamily \#define S\+T\+E\+G\+X\+\_\+\+T\+E\+S\+T\+\_\+\+F\+I\+L\+E\+\_\+\+NB~6}
+
+Nombre de fonctions de test d\textquotesingle{}un type de fichier. 
+
+Définition à la ligne 17 du fichier check\+\_\+compa.\+c.
+
+
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00044_aa5fe126b37cde4faccaaf190a3b977d3}\label{a00044_aa5fe126b37cde4faccaaf190a3b977d3}} 
+\index{check\+\_\+compa.\+c@{check\+\_\+compa.\+c}!check\+\_\+file\+\_\+format@{check\+\_\+file\+\_\+format}}
+\index{check\+\_\+file\+\_\+format@{check\+\_\+file\+\_\+format}!check\+\_\+compa.\+c@{check\+\_\+compa.\+c}}
+\paragraph{\texorpdfstring{check\+\_\+file\+\_\+format()}{check\_file\_format()}}
+{\footnotesize\ttfamily \hyperlink{a00047_af1ca434cca36ba9fb2a45f6cef3a16d6}{type\+\_\+e} check\+\_\+file\+\_\+format (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Retourne le type du fichier. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em $\ast$file} & fichier à tester. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+type\+\_\+e représentant les différents types pris en charge par l\textquotesingle{}application. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Yassin Doudouh 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 26 du fichier check\+\_\+compa.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00044_aa5fe126b37cde4faccaaf190a3b977d3_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{a00044_aa5fe126b37cde4faccaaf190a3b977d3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00044_aa5b31aaae617d7c5d0c29d564e2c8a42}\label{a00044_aa5b31aaae617d7c5d0c29d564e2c8a42}} 
+\index{check\+\_\+compa.\+c@{check\+\_\+compa.\+c}!stegx\+\_\+check\+\_\+compatibility@{stegx\+\_\+check\+\_\+compatibility}}
+\index{stegx\+\_\+check\+\_\+compatibility@{stegx\+\_\+check\+\_\+compatibility}!check\+\_\+compa.\+c@{check\+\_\+compa.\+c}}
+\paragraph{\texorpdfstring{stegx\+\_\+check\+\_\+compatibility()}{stegx\_check\_compatibility()}}
+{\footnotesize\ttfamily int stegx\+\_\+check\+\_\+compatibility (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Vérifie la compatibilité des fichiers. 
+
+\begin{DoxyParagraph}{Effet de bord}
+Remplit le champ \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2d}{info\+\_\+s\+::host\+::type} de la structure \hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s}. 
+\end{DoxyParagraph}
+\begin{DoxyRefDesc}{Erreurs}
+\item[\hyperlink{a00134__errors000002}{Erreurs}]\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852ab4f003f7e2c346374bb7434b940794f8}{E\+R\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+C\+O\+M\+P\+AT} si la vérification de la compatibilité a échouée. \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure privée qui contient les informations pour réaliser la dissimulation et l\textquotesingle{}extraction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si la vérification s\textquotesingle{}est bien déroulée, sinon 1 en cas d\textquotesingle{}erreur et met à jour \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Yassin Doudouh 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 38 du fichier check\+\_\+compa.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00044_aa5b31aaae617d7c5d0c29d564e2c8a42_cgraph}
+\end{center}
+\end{figure}

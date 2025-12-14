@@ -1,0 +1,433 @@
+\hypertarget{a00089}{}\subsection{Référence du fichier src/file\+\_\+type/mp3.h}
+\label{a00089}\index{src/file\+\_\+type/mp3.\+h@{src/file\+\_\+type/mp3.\+h}}
+
+
+Fichier M\+P3.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de mp3.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00090}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00091}
+\end{center}
+\end{figure}
+\subsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00170}{mp3}
+\begin{DoxyCompactList}\small\item\em Structure du format M\+P3. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00089_a8922ae84b90bc792376936798a647326}{M\+P3\+\_\+\+H\+D\+R\+\_\+\+N\+B\+\_\+\+B\+I\+T\+S\+\_\+\+M\+O\+D\+IF}~3
+\end{DoxyCompactItemize}
+\subsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00170}{mp3} \hyperlink{a00089_a6656cd7a888ac286a329791039a5fbc4}{mp3\+\_\+s}
+\end{DoxyCompactItemize}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{a00089_af03e7dddbda714ccda0efc124dcf7484}{mp3\+\_\+mpeg\+\_\+hdr\+\_\+test} (uint32\+\_\+t hdr)
+\begin{DoxyCompactList}\small\item\em Test si le header est un header M\+P\+EG 1/2 Layer I\+II. \end{DoxyCompactList}\item 
+int \hyperlink{a00089_aa1f3d4311fe8115981f98b79a1fea672}{mp3\+\_\+mpeg\+\_\+fr\+\_\+seek} (uint32\+\_\+t hdr, F\+I\+LE $\ast$f)
+\begin{DoxyCompactList}\small\item\em Saute la frame M\+P3 actuelle. \end{DoxyCompactList}\item 
+int \hyperlink{a00089_ab0198bd0d67c778ff7493f1bcd0a409e}{mp3\+\_\+mpeg\+\_\+fr\+\_\+write} (uint32\+\_\+t hdr, F\+I\+LE $\ast$src, F\+I\+LE $\ast$dst)
+\begin{DoxyCompactList}\small\item\em Écris la frame M\+P3 actuelle. \end{DoxyCompactList}\item 
+long int \hyperlink{a00089_afc3c44f7f4f0993fbc17c150c728e677}{mp3\+\_\+mpeg\+\_\+fr\+\_\+find\+\_\+first} (F\+I\+LE $\ast$f)
+\begin{DoxyCompactList}\small\item\em Trouve la première frame M\+P\+EG 1/2 Layer I\+II. \end{DoxyCompactList}\item 
+int \hyperlink{a00089_a7ebf97db66e0a6c9230536a642923cb5}{mp3\+\_\+id3v1\+\_\+hdr\+\_\+test} (uint32\+\_\+t hdr)
+\begin{DoxyCompactList}\small\item\em Test si le header est un header I\+D3v1. \end{DoxyCompactList}\item 
+int \hyperlink{a00089_ab0fd93a465f2e320e749093c17f20823}{mp3\+\_\+id3v1\+\_\+tag\+\_\+seek} (F\+I\+LE $\ast$f)
+\begin{DoxyCompactList}\small\item\em Saute le tag I\+D3v1 actuel. \end{DoxyCompactList}\item 
+int \hyperlink{a00089_a0f2f8f49760a8be1dc011675b01f63d1}{mp3\+\_\+id3v1\+\_\+tag\+\_\+write} (F\+I\+LE $\ast$src, F\+I\+LE $\ast$dst)
+\begin{DoxyCompactList}\small\item\em Écris le tag I\+D3v1 actuel. \end{DoxyCompactList}\item 
+\hyperlink{a00047_af1ca434cca36ba9fb2a45f6cef3a16d6}{type\+\_\+e} \hyperlink{a00089_a581193a38ac3c779c8920bd3be9883fc}{stegx\+\_\+test\+\_\+file\+\_\+mp3} (F\+I\+LE $\ast$file)
+\begin{DoxyCompactList}\small\item\em Test si le fichier est un fichier M\+P3. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Fichier M\+P3. 
+
+Contient les informations (fonctions, types, structures) relatives aux fichiers au format M\+P3. 
+
+\subsubsection{Documentation des macros}
+\mbox{\Hypertarget{a00089_a8922ae84b90bc792376936798a647326}\label{a00089_a8922ae84b90bc792376936798a647326}} 
+\index{mp3.\+h@{mp3.\+h}!M\+P3\+\_\+\+H\+D\+R\+\_\+\+N\+B\+\_\+\+B\+I\+T\+S\+\_\+\+M\+O\+D\+IF@{M\+P3\+\_\+\+H\+D\+R\+\_\+\+N\+B\+\_\+\+B\+I\+T\+S\+\_\+\+M\+O\+D\+IF}}
+\index{M\+P3\+\_\+\+H\+D\+R\+\_\+\+N\+B\+\_\+\+B\+I\+T\+S\+\_\+\+M\+O\+D\+IF@{M\+P3\+\_\+\+H\+D\+R\+\_\+\+N\+B\+\_\+\+B\+I\+T\+S\+\_\+\+M\+O\+D\+IF}!mp3.\+h@{mp3.\+h}}
+\paragraph{\texorpdfstring{M\+P3\+\_\+\+H\+D\+R\+\_\+\+N\+B\+\_\+\+B\+I\+T\+S\+\_\+\+M\+O\+D\+IF}{MP3\_HDR\_NB\_BITS\_MODIF}}
+{\footnotesize\ttfamily \#define M\+P3\+\_\+\+H\+D\+R\+\_\+\+N\+B\+\_\+\+B\+I\+T\+S\+\_\+\+M\+O\+D\+IF~3}
+
+Nombre de bit modifiable en L\+SB dans un header M\+P\+EG 1/2 Layer I\+II. 
+
+Définition à la ligne 17 du fichier mp3.\+h.
+
+
+
+\subsubsection{Documentation des définitions de type}
+\mbox{\Hypertarget{a00089_a6656cd7a888ac286a329791039a5fbc4}\label{a00089_a6656cd7a888ac286a329791039a5fbc4}} 
+\index{mp3.\+h@{mp3.\+h}!mp3\+\_\+s@{mp3\+\_\+s}}
+\index{mp3\+\_\+s@{mp3\+\_\+s}!mp3.\+h@{mp3.\+h}}
+\paragraph{\texorpdfstring{mp3\+\_\+s}{mp3\_s}}
+{\footnotesize\ttfamily typedef struct \hyperlink{a00170}{mp3} \hyperlink{a00089_a6656cd7a888ac286a329791039a5fbc4}{mp3\+\_\+s}}
+
+Type du format M\+P3. 
+
+Définition à la ligne 31 du fichier mp3.\+h.
+
+
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00089_a7ebf97db66e0a6c9230536a642923cb5}\label{a00089_a7ebf97db66e0a6c9230536a642923cb5}} 
+\index{mp3.\+h@{mp3.\+h}!mp3\+\_\+id3v1\+\_\+hdr\+\_\+test@{mp3\+\_\+id3v1\+\_\+hdr\+\_\+test}}
+\index{mp3\+\_\+id3v1\+\_\+hdr\+\_\+test@{mp3\+\_\+id3v1\+\_\+hdr\+\_\+test}!mp3.\+h@{mp3.\+h}}
+\paragraph{\texorpdfstring{mp3\+\_\+id3v1\+\_\+hdr\+\_\+test()}{mp3\_id3v1\_hdr\_test()}}
+{\footnotesize\ttfamily int mp3\+\_\+id3v1\+\_\+hdr\+\_\+test (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{hdr }\end{DoxyParamCaption})}
+
+
+
+Test si le header est un header I\+D3v1. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em hdr} & Header à tester. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si le header est incorrect, sinon 1 si le header est valide. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Pierre Ayoub, Damien Delaunay 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 195 du fichier mp3.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00089_a7ebf97db66e0a6c9230536a642923cb5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00089_ab0fd93a465f2e320e749093c17f20823}\label{a00089_ab0fd93a465f2e320e749093c17f20823}} 
+\index{mp3.\+h@{mp3.\+h}!mp3\+\_\+id3v1\+\_\+tag\+\_\+seek@{mp3\+\_\+id3v1\+\_\+tag\+\_\+seek}}
+\index{mp3\+\_\+id3v1\+\_\+tag\+\_\+seek@{mp3\+\_\+id3v1\+\_\+tag\+\_\+seek}!mp3.\+h@{mp3.\+h}}
+\paragraph{\texorpdfstring{mp3\+\_\+id3v1\+\_\+tag\+\_\+seek()}{mp3\_id3v1\_tag\_seek()}}
+{\footnotesize\ttfamily int mp3\+\_\+id3v1\+\_\+tag\+\_\+seek (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Saute le tag I\+D3v1 actuel. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em f} & Fichier M\+P3. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Valeur de retour de fseek(). 
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Prérequis}
+Le fichier f doit être ouvert en lecture. Lors du déplacement, il est considéré que la signature du tag vient d\textquotesingle{}être lu, le curseur de lecture est donc à \char`\"{}debut\+\_\+du\+\_\+tag + sizeof(sig)\char`\"{}. 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Effet de bord}
+Le curseur de lecture du fichier est modifié pour sauter le tag. 
+\end{DoxyParagraph}
+\begin{DoxyAuthor}{Auteur}
+Pierre Ayoub, Damien Delaunay 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 200 du fichier mp3.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00089_ab0fd93a465f2e320e749093c17f20823_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00089_a0f2f8f49760a8be1dc011675b01f63d1}\label{a00089_a0f2f8f49760a8be1dc011675b01f63d1}} 
+\index{mp3.\+h@{mp3.\+h}!mp3\+\_\+id3v1\+\_\+tag\+\_\+write@{mp3\+\_\+id3v1\+\_\+tag\+\_\+write}}
+\index{mp3\+\_\+id3v1\+\_\+tag\+\_\+write@{mp3\+\_\+id3v1\+\_\+tag\+\_\+write}!mp3.\+h@{mp3.\+h}}
+\paragraph{\texorpdfstring{mp3\+\_\+id3v1\+\_\+tag\+\_\+write()}{mp3\_id3v1\_tag\_write()}}
+{\footnotesize\ttfamily int mp3\+\_\+id3v1\+\_\+tag\+\_\+write (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{src,  }\item[{F\+I\+LE $\ast$}]{dst }\end{DoxyParamCaption})}
+
+
+
+Écris le tag I\+D3v1 actuel. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em src} & Fichier M\+P3 source. \\
+\hline
+{\em dst} & Fichier de destination. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+-\/1 sur une erreur, sinon 0. 
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Prérequis}
+Les fichiers src et dst doivent êtres ouverts en lecture. Lors de l\textquotesingle{}écriture, il est considéré que le header du tag à déjà été lu puis écrit, les curseurs de lecture et d\textquotesingle{}écriture sont donc à \char`\"{}debut\+\_\+du\+\_\+tag +
+sizeof(hdr)\char`\"{}. 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Effet de bord}
+Les curseurs de lecture du fichier src et d\textquotesingle{}écriture du fichier dst sont modifiés pour lire puis écrire la frame. 
+\end{DoxyParagraph}
+\begin{DoxyAuthor}{Auteur}
+Pierre Ayoub, Damien Delaunay 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 206 du fichier mp3.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00089_a0f2f8f49760a8be1dc011675b01f63d1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00089_afc3c44f7f4f0993fbc17c150c728e677}\label{a00089_afc3c44f7f4f0993fbc17c150c728e677}} 
+\index{mp3.\+h@{mp3.\+h}!mp3\+\_\+mpeg\+\_\+fr\+\_\+find\+\_\+first@{mp3\+\_\+mpeg\+\_\+fr\+\_\+find\+\_\+first}}
+\index{mp3\+\_\+mpeg\+\_\+fr\+\_\+find\+\_\+first@{mp3\+\_\+mpeg\+\_\+fr\+\_\+find\+\_\+first}!mp3.\+h@{mp3.\+h}}
+\paragraph{\texorpdfstring{mp3\+\_\+mpeg\+\_\+fr\+\_\+find\+\_\+first()}{mp3\_mpeg\_fr\_find\_first()}}
+{\footnotesize\ttfamily long int mp3\+\_\+mpeg\+\_\+fr\+\_\+find\+\_\+first (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Trouve la première frame M\+P\+EG 1/2 Layer I\+II. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em f} & Fichier où chercher. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+L\textquotesingle{}adresse du header de la première frame si elle est trouvée (ftell(f)), sinon -\/1 sur une erreur. 
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Prérequis}
+Le fichier f doit être ouvert en lecture et bien être un fichier M\+P3. 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Effet de bord}
+Modifie l\textquotesingle{}emplacement du curseur de lecture dans le fichier f. 
+\end{DoxyParagraph}
+\begin{DoxyAuthor}{Auteur}
+Pierre Ayoub, Damien Delaunay 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 180 du fichier mp3.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00089_afc3c44f7f4f0993fbc17c150c728e677_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00089_afc3c44f7f4f0993fbc17c150c728e677_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00089_aa1f3d4311fe8115981f98b79a1fea672}\label{a00089_aa1f3d4311fe8115981f98b79a1fea672}} 
+\index{mp3.\+h@{mp3.\+h}!mp3\+\_\+mpeg\+\_\+fr\+\_\+seek@{mp3\+\_\+mpeg\+\_\+fr\+\_\+seek}}
+\index{mp3\+\_\+mpeg\+\_\+fr\+\_\+seek@{mp3\+\_\+mpeg\+\_\+fr\+\_\+seek}!mp3.\+h@{mp3.\+h}}
+\paragraph{\texorpdfstring{mp3\+\_\+mpeg\+\_\+fr\+\_\+seek()}{mp3\_mpeg\_fr\_seek()}}
+{\footnotesize\ttfamily int mp3\+\_\+mpeg\+\_\+fr\+\_\+seek (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{hdr,  }\item[{F\+I\+LE $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Saute la frame M\+P3 actuelle. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em hdr} & Header de la frame M\+P3 à sauter. \\
+\hline
+{\em f} & Fichier M\+P3. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Valeur de retour de fseek(). 
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Prérequis}
+Le fichier f doit être ouvert en lecture. Lors du déplacement, il est considéré que le header de la frame vient d\textquotesingle{}être lu, le curseur de lecture est donc à \char`\"{}debut\+\_\+de\+\_\+la\+\_\+frame + sizeof(hdr)\char`\"{}. 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Effet de bord}
+Le curseur de lecture du fichier est modifié pour sauter la frame. 
+\end{DoxyParagraph}
+\begin{DoxyAuthor}{Auteur}
+Pierre Ayoub, Damien Delaunay 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 162 du fichier mp3.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00089_aa1f3d4311fe8115981f98b79a1fea672_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00089_aa1f3d4311fe8115981f98b79a1fea672_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00089_ab0198bd0d67c778ff7493f1bcd0a409e}\label{a00089_ab0198bd0d67c778ff7493f1bcd0a409e}} 
+\index{mp3.\+h@{mp3.\+h}!mp3\+\_\+mpeg\+\_\+fr\+\_\+write@{mp3\+\_\+mpeg\+\_\+fr\+\_\+write}}
+\index{mp3\+\_\+mpeg\+\_\+fr\+\_\+write@{mp3\+\_\+mpeg\+\_\+fr\+\_\+write}!mp3.\+h@{mp3.\+h}}
+\paragraph{\texorpdfstring{mp3\+\_\+mpeg\+\_\+fr\+\_\+write()}{mp3\_mpeg\_fr\_write()}}
+{\footnotesize\ttfamily int mp3\+\_\+mpeg\+\_\+fr\+\_\+write (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{hdr,  }\item[{F\+I\+LE $\ast$}]{src,  }\item[{F\+I\+LE $\ast$}]{dst }\end{DoxyParamCaption})}
+
+
+
+Écris la frame M\+P3 actuelle. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em hdr} & Header de la frame M\+P3 à écrire. \\
+\hline
+{\em src} & Fichier M\+P3 source. \\
+\hline
+{\em dst} & Fichier de destination. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+-\/1 sur une erreur, sinon 0. 
+\end{DoxyReturn}
+\begin{DoxyParagraph}{Prérequis}
+Les fichiers src et dst doivent êtres ouverts en lecture. Lors de l\textquotesingle{}écriture, il est considéré que le header de la frame à déjà été lu puis écrit, les curseurs de lecture et d\textquotesingle{}écriture sont donc à \char`\"{}debut\+\_\+de\+\_\+la\+\_\+frame +
+sizeof(hdr)\char`\"{}. 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Effet de bord}
+Les curseurs de lecture du fichier src et d\textquotesingle{}écriture du fichier dst sont modifiés pour lire puis écrire la frame. 
+\end{DoxyParagraph}
+\begin{DoxyAuthor}{Auteur}
+Pierre Ayoub, Damien Delaunay 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 169 du fichier mp3.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00089_ab0198bd0d67c778ff7493f1bcd0a409e_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00089_ab0198bd0d67c778ff7493f1bcd0a409e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00089_af03e7dddbda714ccda0efc124dcf7484}\label{a00089_af03e7dddbda714ccda0efc124dcf7484}} 
+\index{mp3.\+h@{mp3.\+h}!mp3\+\_\+mpeg\+\_\+hdr\+\_\+test@{mp3\+\_\+mpeg\+\_\+hdr\+\_\+test}}
+\index{mp3\+\_\+mpeg\+\_\+hdr\+\_\+test@{mp3\+\_\+mpeg\+\_\+hdr\+\_\+test}!mp3.\+h@{mp3.\+h}}
+\paragraph{\texorpdfstring{mp3\+\_\+mpeg\+\_\+hdr\+\_\+test()}{mp3\_mpeg\_hdr\_test()}}
+{\footnotesize\ttfamily int mp3\+\_\+mpeg\+\_\+hdr\+\_\+test (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{hdr }\end{DoxyParamCaption})}
+
+
+
+Test si le header est un header M\+P\+EG 1/2 Layer I\+II. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em hdr} & Header à tester. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si le header est incorrect, sinon 1 si le header est valide. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Pierre Ayoub, Damien Delaunay 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 157 du fichier mp3.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00089_af03e7dddbda714ccda0efc124dcf7484_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00089_a581193a38ac3c779c8920bd3be9883fc}\label{a00089_a581193a38ac3c779c8920bd3be9883fc}} 
+\index{mp3.\+h@{mp3.\+h}!stegx\+\_\+test\+\_\+file\+\_\+mp3@{stegx\+\_\+test\+\_\+file\+\_\+mp3}}
+\index{stegx\+\_\+test\+\_\+file\+\_\+mp3@{stegx\+\_\+test\+\_\+file\+\_\+mp3}!mp3.\+h@{mp3.\+h}}
+\paragraph{\texorpdfstring{stegx\+\_\+test\+\_\+file\+\_\+mp3()}{stegx\_test\_file\_mp3()}}
+{\footnotesize\ttfamily \hyperlink{a00047_af1ca434cca36ba9fb2a45f6cef3a16d6}{type\+\_\+e} stegx\+\_\+test\+\_\+file\+\_\+mp3 (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Test si le fichier est un fichier M\+P3. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em file} & Fichier à tester. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyParagraph}{Prérequis}
+Le fichier doit être ouvert en lecture. 
+\end{DoxyParagraph}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da4449f604829c7a948e359aeb0b9b6508}{M\+P3}, \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da6ce26a62afab55d7606ad4e92428b30c}{U\+N\+K\+N\+O\+WN} ou -\/1 en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Pierre Ayoub, Damien Delaunay 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 215 du fichier mp3.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{a00089_a581193a38ac3c779c8920bd3be9883fc_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00089_a581193a38ac3c779c8920bd3be9883fc_icgraph}
+\end{center}
+\end{figure}

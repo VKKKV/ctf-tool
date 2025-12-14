@@ -1,0 +1,21 @@
+<map id="stegx_be32toh" name="stegx_be32toh">
+<area shape="rect" id="node2" href="$a00017.xhtml#a049b8f5bf7a416fe54b10c6de98487a1" title="Va inserer les donnees cachees en utilisant l&#39;algorithme EOC. " alt="" coords="397,6,479,33"/>
+<area shape="rect" id="node4" href="$a00017.xhtml#ad0cda2ae23fda82b16083952ca1b698a" title="Va extraire les donnees cachees en utilisant l&#39;algorithme EOC. " alt="" coords="190,158,281,185"/>
+<area shape="rect" id="node6" href="$a00035.xhtml#a14e9d876697b0225ded31095c1076b64" title="Va inserer les donnees cachees en utilisant l&#39;algorithme LSB. " alt="" coords="399,108,477,134"/>
+<area shape="rect" id="node7" href="$a00035.xhtml#abc757e2627fc9971e388a584e0e0c2ca" title="Va extraire les donnees cachees en utilisant l&#39;algorithme LSB. " alt="" coords="192,260,279,286"/>
+<area shape="rect" id="node8" href="$a00059.xhtml#aa1a29df598338a94ef478f60e90b20ba" title="Convertit un nombre en little endian vers le big endian. " alt="" coords="182,57,289,84"/>
+<area shape="rect" id="node11" href="$a00086.xhtml#acc4a0b82043fbdeadb8c669eda06d2cb" title="Saute le tag ID3v2 actuel. " alt="" coords="163,361,308,388"/>
+<area shape="rect" id="node12" href="$a00089.xhtml#afc3c44f7f4f0993fbc17c150c728e677" title="Trouve la première frame MPEG 1/2 Layer III. " alt="" coords="359,361,517,388"/>
+<area shape="rect" id="node13" href="$a00131.xhtml#a5501c9c7711252fa8d85ff12cb3390dc" title="Remplit les informations du fichier hôte. " alt="" coords="606,386,701,413"/>
+<area shape="rect" id="node16" href="$a00089.xhtml#a581193a38ac3c779c8920bd3be9883fc" title="Test si le fichier est un fichier MP3. " alt="" coords="166,462,305,489"/>
+<area shape="rect" id="node19" href="$a00095.xhtml#a258c2aefc0d29e112eca90e652730a84" title="Va extraire les donnees cachees en utilisant l&#39;algorithme Metadata dans le formar PNG..." alt="" coords="160,209,311,236"/>
+<area shape="rect" id="node3" href="$a00110.xhtml#a45a1d0709604d55e9d467cb39d6a5b54" title="Va faire l&#39;insertion selon l&#39;algorithme, ainsi que les fichiers en entrée choisis par l&#39;utilisateur..." alt="" coords="812,57,905,84"/>
+<area shape="rect" id="node5" href="$a00065.xhtml#a43c63dd958bfa1f4ab2ecbd7faa14abb" title="Va faire l&#39;extraction selon l&#39;algorithme détecté, ainsi que les fichiers en entrée choisis par l&#39;util..." alt="" coords="603,209,704,236"/>
+<area shape="rect" id="node9" href="$a00095.xhtml#a2386f518ec5df78485cca31c6fe4f858" title="Va inserer les donnees cachees en utilisant l&#39;algorithme Metadata dans le format PNG. " alt="" coords="367,57,509,84"/>
+<area shape="rect" id="node10" href="$a00041.xhtml#a77aaebb61a9a73cbe45380c64c3d8389" title="Va inserer les donnees cachees en utilisant l&#39;algorithme Metadata. " alt="" coords="596,57,711,84"/>
+<area shape="rect" id="node14" href="$a00050.xhtml#a2a3747fdc90ed4467eb3e468d8fba361" title="Detecte l&#39;algorithme utilisé ainsi que le nom du fichier caché et la taille des données cachées..." alt="" coords="795,412,923,438"/>
+<area shape="rect" id="node15" href="$a00128.xhtml#adc277622e5fe0d1814be76f11263b350" title="Propose les algorithmes de stéganographie utilisables. " alt="" coords="789,361,928,388"/>
+<area shape="rect" id="node17" href="$a00044.xhtml#aa5fe126b37cde4faccaaf190a3b977d3" title="Retourne le type du fichier. " alt="" coords="375,462,501,489"/>
+<area shape="rect" id="node18" href="$a00044.xhtml#aa5b31aaae617d7c5d0c29d564e2c8a42" title="Vérifie la compatibilité des fichiers. " alt="" coords="565,462,741,489"/>
+<area shape="rect" id="node20" href="$a00041.xhtml#a069239660c8070698c4ddcbbd6debe0b" title="Va extraire les donnees cachees en utilisant l&#39;algorithme Metadata. " alt="" coords="377,209,499,236"/>
+</map>

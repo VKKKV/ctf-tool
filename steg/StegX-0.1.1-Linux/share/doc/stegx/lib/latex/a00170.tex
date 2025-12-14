@@ -1,0 +1,70 @@
+\hypertarget{a00170}{}\subsection{Référence de la structure mp3}
+\label{a00170}\index{mp3@{mp3}}
+
+
+Structure du format M\+P3.  
+
+
+
+
+{\ttfamily \#include $<$mp3.\+h$>$}
+
+\subsubsection*{Champs de données}
+\begin{DoxyCompactItemize}
+\item 
+long int \hyperlink{a00170_a2dd557563c90ce058f662d1298f0e3e6}{fr\+\_\+frst\+\_\+adr}
+\item 
+long int \hyperlink{a00170_a01ffc583bacb63600e32d207f1cf3475}{fr\+\_\+nb}
+\item 
+long int \hyperlink{a00170_a7142157770763558acb56818ae46955a}{eof}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Structure du format M\+P3. 
+
+\begin{DoxyAuthor}{Auteur}
+Pierre Ayoub et Damien Delaunay 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 23 du fichier mp3.\+h.
+
+
+
+\subsubsection{Documentation des champs}
+\mbox{\Hypertarget{a00170_a7142157770763558acb56818ae46955a}\label{a00170_a7142157770763558acb56818ae46955a}} 
+\index{mp3@{mp3}!eof@{eof}}
+\index{eof@{eof}!mp3@{mp3}}
+\paragraph{\texorpdfstring{eof}{eof}}
+{\footnotesize\ttfamily long int eof}
+
+Adresse de la fin du fichier officiel (sans signature et données cachées, après la dernière frame ou après le T\+AG I\+D3v1). 
+
+Définition à la ligne 26 du fichier mp3.\+h.
+
+\mbox{\Hypertarget{a00170_a2dd557563c90ce058f662d1298f0e3e6}\label{a00170_a2dd557563c90ce058f662d1298f0e3e6}} 
+\index{mp3@{mp3}!fr\+\_\+frst\+\_\+adr@{fr\+\_\+frst\+\_\+adr}}
+\index{fr\+\_\+frst\+\_\+adr@{fr\+\_\+frst\+\_\+adr}!mp3@{mp3}}
+\paragraph{\texorpdfstring{fr\+\_\+frst\+\_\+adr}{fr\_frst\_adr}}
+{\footnotesize\ttfamily long int fr\+\_\+frst\+\_\+adr}
+
+Adresse du header de la première frame M\+P\+EG 1/2 Layer I\+II. 
+
+Définition à la ligne 24 du fichier mp3.\+h.
+
+\mbox{\Hypertarget{a00170_a01ffc583bacb63600e32d207f1cf3475}\label{a00170_a01ffc583bacb63600e32d207f1cf3475}} 
+\index{mp3@{mp3}!fr\+\_\+nb@{fr\+\_\+nb}}
+\index{fr\+\_\+nb@{fr\+\_\+nb}!mp3@{mp3}}
+\paragraph{\texorpdfstring{fr\+\_\+nb}{fr\_nb}}
+{\footnotesize\ttfamily long int fr\+\_\+nb}
+
+Nombre de frame M\+P\+EG 1/2 Layer I\+II. 
+
+Définition à la ligne 25 du fichier mp3.\+h.
+
+
+
+La documentation de cette structure a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/file\+\_\+type/\hyperlink{a00089}{mp3.\+h}\end{DoxyCompactItemize}

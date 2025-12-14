@@ -1,0 +1,122 @@
+\hypertarget{a00017}{}\subsection{Référence du fichier src/algo/eoc.h}
+\label{a00017}\index{src/algo/eoc.\+h@{src/algo/eoc.\+h}}
+
+
+Algorithme End Of Chunk (E\+OC).  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de eoc.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00018}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{a00019}
+\end{center}
+\end{figure}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{a00017_a049b8f5bf7a416fe54b10c6de98487a1}{insert\+\_\+eoc} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme E\+OC. \end{DoxyCompactList}\item 
+int \hyperlink{a00017_ad0cda2ae23fda82b16083952ca1b698a}{extract\+\_\+eoc} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme E\+OC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Algorithme End Of Chunk (E\+OC). 
+
+Contient les fonctions concernant l\textquotesingle{}algorithme E\+OC. 
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00017_ad0cda2ae23fda82b16083952ca1b698a}\label{a00017_ad0cda2ae23fda82b16083952ca1b698a}} 
+\index{eoc.\+h@{eoc.\+h}!extract\+\_\+eoc@{extract\+\_\+eoc}}
+\index{extract\+\_\+eoc@{extract\+\_\+eoc}!eoc.\+h@{eoc.\+h}}
+\paragraph{\texorpdfstring{extract\+\_\+eoc()}{extract\_eoc()}}
+{\footnotesize\ttfamily int extract\+\_\+eoc (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme E\+OC. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si l\textquotesingle{}algorithme a bien ete extrait ; sinon 1 en cas d\textquotesingle{}erreur et met à jour \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+C\+Laire Baskevitch et Tristan Bessac 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 183 du fichier eoc.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00017_ad0cda2ae23fda82b16083952ca1b698a_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{a00017_ad0cda2ae23fda82b16083952ca1b698a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00017_a049b8f5bf7a416fe54b10c6de98487a1}\label{a00017_a049b8f5bf7a416fe54b10c6de98487a1}} 
+\index{eoc.\+h@{eoc.\+h}!insert\+\_\+eoc@{insert\+\_\+eoc}}
+\index{insert\+\_\+eoc@{insert\+\_\+eoc}!eoc.\+h@{eoc.\+h}}
+\paragraph{\texorpdfstring{insert\+\_\+eoc()}{insert\_eoc()}}
+{\footnotesize\ttfamily int insert\+\_\+eoc (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme E\+OC. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si l\textquotesingle{}algorithme a bien été inseré ; sinon 1 en cas d\textquotesingle{}erreur et met à jour \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Claire Baskevitch et Tristan Bessac 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 19 du fichier eoc.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00017_a049b8f5bf7a416fe54b10c6de98487a1_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{a00017_a049b8f5bf7a416fe54b10c6de98487a1_icgraph}
+\end{center}
+\end{figure}

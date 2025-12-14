@@ -1,0 +1,179 @@
+\hypertarget{a00092}{}\subsection{Référence du fichier src/file\+\_\+type/png.c}
+\label{a00092}\index{src/file\+\_\+type/png.\+c@{src/file\+\_\+type/png.\+c}}
+
+
+Fichier P\+NG.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+errors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../insert.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../protection.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../endian.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../rand.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de png.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00093}
+\end{center}
+\end{figure}
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00092_a6bbe3494feb7eb80b98ce88c9eb31134}{S\+I\+G\+\_\+\+P\+NG}~0x0\+A1\+A0\+A0\+D474\+E5089
+\end{DoxyCompactItemize}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00047_af1ca434cca36ba9fb2a45f6cef3a16d6}{type\+\_\+e} \hyperlink{a00092_a576071ea25bd3721014ca3e596adcdfb}{stegx\+\_\+test\+\_\+file\+\_\+png} (F\+I\+LE $\ast$file)
+\begin{DoxyCompactList}\small\item\em Test si le fichier est un fichier P\+NG. \end{DoxyCompactList}\item 
+int \hyperlink{a00092_a2386f518ec5df78485cca31c6fe4f858}{insert\+\_\+metadata\+\_\+png} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le format P\+NG. \end{DoxyCompactList}\item 
+int \hyperlink{a00092_a258c2aefc0d29e112eca90e652730a84}{extract\+\_\+metadata\+\_\+png} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le formar P\+NG. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Fichier P\+NG. 
+
+Contient les informations (fonctions, types, structures) relatives aux fichiers au format P\+NG. 
+
+\subsubsection{Documentation des macros}
+\mbox{\Hypertarget{a00092_a6bbe3494feb7eb80b98ce88c9eb31134}\label{a00092_a6bbe3494feb7eb80b98ce88c9eb31134}} 
+\index{png.\+c@{png.\+c}!S\+I\+G\+\_\+\+P\+NG@{S\+I\+G\+\_\+\+P\+NG}}
+\index{S\+I\+G\+\_\+\+P\+NG@{S\+I\+G\+\_\+\+P\+NG}!png.\+c@{png.\+c}}
+\paragraph{\texorpdfstring{S\+I\+G\+\_\+\+P\+NG}{SIG\_PNG}}
+{\footnotesize\ttfamily \#define S\+I\+G\+\_\+\+P\+NG~0x0\+A1\+A0\+A0\+D474\+E5089}
+
+Signature P\+NG 
+
+Définition à la ligne 22 du fichier png.\+c.
+
+
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00092_a258c2aefc0d29e112eca90e652730a84}\label{a00092_a258c2aefc0d29e112eca90e652730a84}} 
+\index{png.\+c@{png.\+c}!extract\+\_\+metadata\+\_\+png@{extract\+\_\+metadata\+\_\+png}}
+\index{extract\+\_\+metadata\+\_\+png@{extract\+\_\+metadata\+\_\+png}!png.\+c@{png.\+c}}
+\paragraph{\texorpdfstring{extract\+\_\+metadata\+\_\+png()}{extract\_metadata\_png()}}
+{\footnotesize\ttfamily int extract\+\_\+metadata\+\_\+png (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le formar P\+NG. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant l\textquotesingle{}extraction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si les données ont bien été extraites ; sinon 1 en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Yassin Doudouh 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 156 du fichier png.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00092_a258c2aefc0d29e112eca90e652730a84_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00092_a258c2aefc0d29e112eca90e652730a84_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00092_a2386f518ec5df78485cca31c6fe4f858}\label{a00092_a2386f518ec5df78485cca31c6fe4f858}} 
+\index{png.\+c@{png.\+c}!insert\+\_\+metadata\+\_\+png@{insert\+\_\+metadata\+\_\+png}}
+\index{insert\+\_\+metadata\+\_\+png@{insert\+\_\+metadata\+\_\+png}!png.\+c@{png.\+c}}
+\paragraph{\texorpdfstring{insert\+\_\+metadata\+\_\+png()}{insert\_metadata\_png()}}
+{\footnotesize\ttfamily int insert\+\_\+metadata\+\_\+png (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le format P\+NG. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si les données ont bien été inserées ; sinon 1 en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Yassin Doudouh 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 39 du fichier png.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00092_a2386f518ec5df78485cca31c6fe4f858_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00092_a2386f518ec5df78485cca31c6fe4f858_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00092_a576071ea25bd3721014ca3e596adcdfb}\label{a00092_a576071ea25bd3721014ca3e596adcdfb}} 
+\index{png.\+c@{png.\+c}!stegx\+\_\+test\+\_\+file\+\_\+png@{stegx\+\_\+test\+\_\+file\+\_\+png}}
+\index{stegx\+\_\+test\+\_\+file\+\_\+png@{stegx\+\_\+test\+\_\+file\+\_\+png}!png.\+c@{png.\+c}}
+\paragraph{\texorpdfstring{stegx\+\_\+test\+\_\+file\+\_\+png()}{stegx\_test\_file\_png()}}
+{\footnotesize\ttfamily \hyperlink{a00047_af1ca434cca36ba9fb2a45f6cef3a16d6}{type\+\_\+e} stegx\+\_\+test\+\_\+file\+\_\+png (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Test si le fichier est un fichier P\+NG. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em file} & Fichier à tester. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyParagraph}{Prérequis}
+Le pointeur ne doit pas être null et le fichier ouvert en lecture. 
+\end{DoxyParagraph}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da842c5fc4bbe3f780e57c76d1a3cafe9f}{P\+NG}, \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da6ce26a62afab55d7606ad4e92428b30c}{U\+N\+K\+N\+O\+WN}, -\/1 en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Yassin Doudouh 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 24 du fichier png.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00092_a576071ea25bd3721014ca3e596adcdfb_icgraph}
+\end{center}
+\end{figure}

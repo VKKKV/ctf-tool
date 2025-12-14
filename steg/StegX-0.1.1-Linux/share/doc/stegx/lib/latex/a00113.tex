@@ -1,0 +1,70 @@
+\hypertarget{a00113}{}\subsection{Référence du fichier src/insert.h}
+\label{a00113}\index{src/insert.\+h@{src/insert.\+h}}
+
+
+Insertion des données cachées dans une copie de l\textquotesingle{}hôte.  
+
+
+{\ttfamily \#include \char`\"{}stegx\+\_\+common.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de insert.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{a00114}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00115}
+\end{center}
+\end{figure}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{a00113_a66a71cd33131eb29010132269d237356}{write\+\_\+signature} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Ecrit la signature StegX. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Insertion des données cachées dans une copie de l\textquotesingle{}hôte. 
+
+Module qui contient la fonction d\textquotesingle{}insertion et la fonction d\textquotesingle{}écriture de la signature. 
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00113_a66a71cd33131eb29010132269d237356}\label{a00113_a66a71cd33131eb29010132269d237356}} 
+\index{insert.\+h@{insert.\+h}!write\+\_\+signature@{write\+\_\+signature}}
+\index{write\+\_\+signature@{write\+\_\+signature}!insert.\+h@{insert.\+h}}
+\paragraph{\texorpdfstring{write\+\_\+signature()}{write\_signature()}}
+{\footnotesize\ttfamily int write\+\_\+signature (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Ecrit la signature StegX. 
+
+Ecrit l\textquotesingle{}algorithme et la méthode (1 octet), la taille du fichier caché (4 octets), la taille du nom du fichier caché (1 octet), le nom du fichier caché X\+O\+Ré avec le mot de passe (255 octets max), le mot de passe par défaut si l\textquotesingle{}utilisateur n\textquotesingle{}a pas choisi de mot de passe (64 octets). 
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si la signature a bien ete écrite, 1 sinon. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 24 du fichier insert.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00113_a66a71cd33131eb29010132269d237356_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,210 @@
+\hypertarget{a00047}{}\subsection{Référence du fichier src/common.h}
+\label{a00047}\index{src/common.\+h@{src/common.\+h}}
+
+
+Définitions communes à la partie privée de la bibliothèque.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}file\+\_\+type/bmp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}file\+\_\+type/png.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}file\+\_\+type/wav.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}file\+\_\+type/mp3.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}file\+\_\+type/avi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}file\+\_\+type/flv.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de common.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00048}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00049}
+\end{center}
+\end{figure}
+\subsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00146}{host\+\_\+info}
+\begin{DoxyCompactList}\small\item\em Informations concernant le fichier hôte. \end{DoxyCompactList}\item 
+union \hyperlink{a00150}{host\+\_\+info\+::file\+\_\+info\+\_\+u}
+\item 
+struct \hyperlink{a00154}{info}
+\begin{DoxyCompactList}\small\item\em Informations utiles aux fonctions de la bibliothèque pour l\textquotesingle{}insertion et la dissimulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00047_a8b3aa3f669b97d484ddaf145ca9380ef}{I\+S\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+PE}(enum\+\_\+type)~(enum\+\_\+type $>$ \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da6ce26a62afab55d7606ad4e92428b30c}{U\+N\+K\+N\+O\+WN} \&\& enum\+\_\+type $<$= \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da3648fb67ff3ff0f5baefbff1eb09b651}{F\+LV} ? 1 \+: 0);
+\begin{DoxyCompactList}\small\item\em Test si le paramètre correspond à un format de fichier connu par l\textquotesingle{}application. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00047_a7abae389b15b6d71177b6ec6155aad8f}{L\+E\+N\+G\+T\+H\+\_\+\+H\+I\+D\+D\+E\+N\+\_\+\+N\+A\+M\+E\+\_\+\+M\+AX}~255
+\item 
+\#define \hyperlink{a00047_a24c0fa06fa7cc4e918a9d217b1e62657}{L\+E\+N\+G\+T\+H\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+S\+S\+WD}~64       /$\ast$ 64 caractères sans compter le \textquotesingle{}\textbackslash{}0\textquotesingle{}. $\ast$/
+\end{DoxyCompactItemize}
+\subsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2d}{type} \hyperlink{a00047_af1ca434cca36ba9fb2a45f6cef3a16d6}{type\+\_\+e}
+\item 
+typedef struct \hyperlink{a00146}{host\+\_\+info} \hyperlink{a00047_a47a6ba857e6823e361bd050dfdf415a2}{host\+\_\+info\+\_\+s}
+\end{DoxyCompactItemize}
+\subsubsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2d}{type} \{ \newline
+\hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da6ce26a62afab55d7606ad4e92428b30c}{U\+N\+K\+N\+O\+WN} = 0, 
+\hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da9573d9b7bb7b633a06929d27f8e90e21}{B\+M\+P\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+ED}, 
+\hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2daefc7cfb01e9ffdac79f60659489429c0}{B\+M\+P\+\_\+\+U\+N\+C\+O\+M\+P\+R\+E\+S\+S\+ED}, 
+\hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2daca6d0756a91c2083dbad62c83d0be38a}{W\+A\+V\+\_\+\+P\+CM}, 
+\newline
+\hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da05986f8348197bcc7c4ac587d122852c}{W\+A\+V\+\_\+\+N\+O\+\_\+\+P\+CM}, 
+\hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da842c5fc4bbe3f780e57c76d1a3cafe9f}{P\+NG}, 
+\hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da4449f604829c7a948e359aeb0b9b6508}{M\+P3}, 
+\hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da8be9d15a34dc2faad0683156eb0a1955}{A\+V\+I\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+ED}, 
+\newline
+\hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da2c36dc6c8b804f634a89da3f50f90c07}{A\+V\+I\+\_\+\+U\+N\+C\+O\+M\+P\+R\+E\+S\+S\+ED}, 
+\hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da3648fb67ff3ff0f5baefbff1eb09b651}{F\+LV}
+ \}\begin{DoxyCompactList}\small\item\em Types de fichiers possibles pour le fichier hôte. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Définitions communes à la partie privée de la bibliothèque. 
+
+Ce fichier peut-\/être inclus par les différents modules de la bibliothèque. 
+
+\subsubsection{Documentation des macros}
+\mbox{\Hypertarget{a00047_a8b3aa3f669b97d484ddaf145ca9380ef}\label{a00047_a8b3aa3f669b97d484ddaf145ca9380ef}} 
+\index{common.\+h@{common.\+h}!I\+S\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+PE@{I\+S\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+PE}}
+\index{I\+S\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+PE@{I\+S\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+PE}!common.\+h@{common.\+h}}
+\paragraph{\texorpdfstring{I\+S\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+PE}{IS\_FILE\_TYPE}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+PE(\begin{DoxyParamCaption}\item[{}]{enum\+\_\+type }\end{DoxyParamCaption})~(enum\+\_\+type $>$ \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da6ce26a62afab55d7606ad4e92428b30c}{U\+N\+K\+N\+O\+WN} \&\& enum\+\_\+type $<$= \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da3648fb67ff3ff0f5baefbff1eb09b651}{F\+LV} ? 1 \+: 0);}
+
+
+
+Test si le paramètre correspond à un format de fichier connu par l\textquotesingle{}application. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em enum\+\_\+type} & Enumération de type à tester. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 si le type est connu, 0 sinon. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Pierre Ayoub 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 28 du fichier common.\+h.
+
+\mbox{\Hypertarget{a00047_a24c0fa06fa7cc4e918a9d217b1e62657}\label{a00047_a24c0fa06fa7cc4e918a9d217b1e62657}} 
+\index{common.\+h@{common.\+h}!L\+E\+N\+G\+T\+H\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+S\+S\+WD@{L\+E\+N\+G\+T\+H\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+S\+S\+WD}}
+\index{L\+E\+N\+G\+T\+H\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+S\+S\+WD@{L\+E\+N\+G\+T\+H\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+S\+S\+WD}!common.\+h@{common.\+h}}
+\paragraph{\texorpdfstring{L\+E\+N\+G\+T\+H\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+S\+S\+WD}{LENGTH\_DEFAULT\_PASSWD}}
+{\footnotesize\ttfamily \#define L\+E\+N\+G\+T\+H\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+S\+S\+WD~64       /$\ast$ 64 caractères sans compter le \textquotesingle{}\textbackslash{}0\textquotesingle{}. $\ast$/}
+
+Longueur du mot de passe choisi par défaut. 
+
+Définition à la ligne 111 du fichier common.\+h.
+
+\mbox{\Hypertarget{a00047_a7abae389b15b6d71177b6ec6155aad8f}\label{a00047_a7abae389b15b6d71177b6ec6155aad8f}} 
+\index{common.\+h@{common.\+h}!L\+E\+N\+G\+T\+H\+\_\+\+H\+I\+D\+D\+E\+N\+\_\+\+N\+A\+M\+E\+\_\+\+M\+AX@{L\+E\+N\+G\+T\+H\+\_\+\+H\+I\+D\+D\+E\+N\+\_\+\+N\+A\+M\+E\+\_\+\+M\+AX}}
+\index{L\+E\+N\+G\+T\+H\+\_\+\+H\+I\+D\+D\+E\+N\+\_\+\+N\+A\+M\+E\+\_\+\+M\+AX@{L\+E\+N\+G\+T\+H\+\_\+\+H\+I\+D\+D\+E\+N\+\_\+\+N\+A\+M\+E\+\_\+\+M\+AX}!common.\+h@{common.\+h}}
+\paragraph{\texorpdfstring{L\+E\+N\+G\+T\+H\+\_\+\+H\+I\+D\+D\+E\+N\+\_\+\+N\+A\+M\+E\+\_\+\+M\+AX}{LENGTH\_HIDDEN\_NAME\_MAX}}
+{\footnotesize\ttfamily \#define L\+E\+N\+G\+T\+H\+\_\+\+H\+I\+D\+D\+E\+N\+\_\+\+N\+A\+M\+E\+\_\+\+M\+AX~255}
+
+Taille maximale pour le nom du fichier caché. 
+
+Définition à la ligne 108 du fichier common.\+h.
+
+
+
+\subsubsection{Documentation des définitions de type}
+\mbox{\Hypertarget{a00047_a47a6ba857e6823e361bd050dfdf415a2}\label{a00047_a47a6ba857e6823e361bd050dfdf415a2}} 
+\index{common.\+h@{common.\+h}!host\+\_\+info\+\_\+s@{host\+\_\+info\+\_\+s}}
+\index{host\+\_\+info\+\_\+s@{host\+\_\+info\+\_\+s}!common.\+h@{common.\+h}}
+\paragraph{\texorpdfstring{host\+\_\+info\+\_\+s}{host\_info\_s}}
+{\footnotesize\ttfamily typedef struct \hyperlink{a00146}{host\+\_\+info} \hyperlink{a00047_a47a6ba857e6823e361bd050dfdf415a2}{host\+\_\+info\+\_\+s}}
+
+Type du fichier hôte. 
+
+Définition à la ligne 80 du fichier common.\+h.
+
+\mbox{\Hypertarget{a00047_af1ca434cca36ba9fb2a45f6cef3a16d6}\label{a00047_af1ca434cca36ba9fb2a45f6cef3a16d6}} 
+\index{common.\+h@{common.\+h}!type\+\_\+e@{type\+\_\+e}}
+\index{type\+\_\+e@{type\+\_\+e}!common.\+h@{common.\+h}}
+\paragraph{\texorpdfstring{type\+\_\+e}{type\_e}}
+{\footnotesize\ttfamily typedef enum \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2d}{type} \hyperlink{a00047_af1ca434cca36ba9fb2a45f6cef3a16d6}{type\+\_\+e}}
+
+Type des types de fichiers. 
+
+Définition à la ligne 49 du fichier common.\+h.
+
+
+
+\subsubsection{Documentation du type de l\textquotesingle{}énumération}
+\mbox{\Hypertarget{a00047_a7aead736a07eaf25623ad7bfa1f0ee2d}\label{a00047_a7aead736a07eaf25623ad7bfa1f0ee2d}} 
+\index{common.\+h@{common.\+h}!type@{type}}
+\index{type@{type}!common.\+h@{common.\+h}}
+\paragraph{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily enum \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2d}{type}}
+
+
+
+Types de fichiers possibles pour le fichier hôte. 
+
+\begin{DoxyEnumFields}{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+N\+K\+N\+O\+WN@{U\+N\+K\+N\+O\+WN}!common.\+h@{common.\+h}}\index{common.\+h@{common.\+h}!U\+N\+K\+N\+O\+WN@{U\+N\+K\+N\+O\+WN}}}\mbox{\Hypertarget{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da6ce26a62afab55d7606ad4e92428b30c}\label{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da6ce26a62afab55d7606ad4e92428b30c}} 
+U\+N\+K\+N\+O\+WN&Type de fichier inconnu. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+M\+P\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+ED@{B\+M\+P\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+ED}!common.\+h@{common.\+h}}\index{common.\+h@{common.\+h}!B\+M\+P\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+ED@{B\+M\+P\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+ED}}}\mbox{\Hypertarget{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da9573d9b7bb7b633a06929d27f8e90e21}\label{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da9573d9b7bb7b633a06929d27f8e90e21}} 
+B\+M\+P\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+ED&Fichier B\+MP compressé. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+M\+P\+\_\+\+U\+N\+C\+O\+M\+P\+R\+E\+S\+S\+ED@{B\+M\+P\+\_\+\+U\+N\+C\+O\+M\+P\+R\+E\+S\+S\+ED}!common.\+h@{common.\+h}}\index{common.\+h@{common.\+h}!B\+M\+P\+\_\+\+U\+N\+C\+O\+M\+P\+R\+E\+S\+S\+ED@{B\+M\+P\+\_\+\+U\+N\+C\+O\+M\+P\+R\+E\+S\+S\+ED}}}\mbox{\Hypertarget{a00047_a7aead736a07eaf25623ad7bfa1f0ee2daefc7cfb01e9ffdac79f60659489429c0}\label{a00047_a7aead736a07eaf25623ad7bfa1f0ee2daefc7cfb01e9ffdac79f60659489429c0}} 
+B\+M\+P\+\_\+\+U\+N\+C\+O\+M\+P\+R\+E\+S\+S\+ED&Fichier B\+MP non-\/compressé. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{W\+A\+V\+\_\+\+P\+CM@{W\+A\+V\+\_\+\+P\+CM}!common.\+h@{common.\+h}}\index{common.\+h@{common.\+h}!W\+A\+V\+\_\+\+P\+CM@{W\+A\+V\+\_\+\+P\+CM}}}\mbox{\Hypertarget{a00047_a7aead736a07eaf25623ad7bfa1f0ee2daca6d0756a91c2083dbad62c83d0be38a}\label{a00047_a7aead736a07eaf25623ad7bfa1f0ee2daca6d0756a91c2083dbad62c83d0be38a}} 
+W\+A\+V\+\_\+\+P\+CM&Fichier W\+A\+V\+E-\/\+P\+CM. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{W\+A\+V\+\_\+\+N\+O\+\_\+\+P\+CM@{W\+A\+V\+\_\+\+N\+O\+\_\+\+P\+CM}!common.\+h@{common.\+h}}\index{common.\+h@{common.\+h}!W\+A\+V\+\_\+\+N\+O\+\_\+\+P\+CM@{W\+A\+V\+\_\+\+N\+O\+\_\+\+P\+CM}}}\mbox{\Hypertarget{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da05986f8348197bcc7c4ac587d122852c}\label{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da05986f8348197bcc7c4ac587d122852c}} 
+W\+A\+V\+\_\+\+N\+O\+\_\+\+P\+CM&Fichier W\+A\+VE contenant un flux non-\/\+P\+CM. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+NG@{P\+NG}!common.\+h@{common.\+h}}\index{common.\+h@{common.\+h}!P\+NG@{P\+NG}}}\mbox{\Hypertarget{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da842c5fc4bbe3f780e57c76d1a3cafe9f}\label{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da842c5fc4bbe3f780e57c76d1a3cafe9f}} 
+P\+NG&Fichier P\+NG. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+P3@{M\+P3}!common.\+h@{common.\+h}}\index{common.\+h@{common.\+h}!M\+P3@{M\+P3}}}\mbox{\Hypertarget{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da4449f604829c7a948e359aeb0b9b6508}\label{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da4449f604829c7a948e359aeb0b9b6508}} 
+M\+P3&Fichier M\+P3. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+V\+I\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+ED@{A\+V\+I\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+ED}!common.\+h@{common.\+h}}\index{common.\+h@{common.\+h}!A\+V\+I\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+ED@{A\+V\+I\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+ED}}}\mbox{\Hypertarget{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da8be9d15a34dc2faad0683156eb0a1955}\label{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da8be9d15a34dc2faad0683156eb0a1955}} 
+A\+V\+I\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+ED&Fichier A\+VI compressé. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+V\+I\+\_\+\+U\+N\+C\+O\+M\+P\+R\+E\+S\+S\+ED@{A\+V\+I\+\_\+\+U\+N\+C\+O\+M\+P\+R\+E\+S\+S\+ED}!common.\+h@{common.\+h}}\index{common.\+h@{common.\+h}!A\+V\+I\+\_\+\+U\+N\+C\+O\+M\+P\+R\+E\+S\+S\+ED@{A\+V\+I\+\_\+\+U\+N\+C\+O\+M\+P\+R\+E\+S\+S\+ED}}}\mbox{\Hypertarget{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da2c36dc6c8b804f634a89da3f50f90c07}\label{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da2c36dc6c8b804f634a89da3f50f90c07}} 
+A\+V\+I\+\_\+\+U\+N\+C\+O\+M\+P\+R\+E\+S\+S\+ED&Fichier A\+VI non-\/compressé. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+LV@{F\+LV}!common.\+h@{common.\+h}}\index{common.\+h@{common.\+h}!F\+LV@{F\+LV}}}\mbox{\Hypertarget{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da3648fb67ff3ff0f5baefbff1eb09b651}\label{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da3648fb67ff3ff0f5baefbff1eb09b651}} 
+F\+LV&Fichier F\+LV (doit rester le dernier dans la liste). \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Définition à la ligne 35 du fichier common.\+h.
+

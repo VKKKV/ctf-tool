@@ -1,0 +1,134 @@
+\hypertarget{a00125}{}\subsection{Référence du fichier src/rand.h}
+\label{a00125}\index{src/rand.\+h@{src/rand.\+h}}
+
+
+Module qui s\textquotesingle{}occupe de l\textquotesingle{}aléatoire.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Graphe des dépendances par inclusion de rand.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{a00126}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00127}
+\end{center}
+\end{figure}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{a00125_a2a891bbe3514201de3cfc5acced104b7}{create\+\_\+seed} (const char $\ast$passwd)
+\begin{DoxyCompactList}\small\item\em Cree un seed a partir d\textquotesingle{}un mot de passe. \end{DoxyCompactList}\item 
+void \hyperlink{a00125_a4e9a217b960dc65fd08dff9f78e317e4}{stegx\+\_\+srand} (unsigned int seed)
+\begin{DoxyCompactList}\small\item\em Initialise la seed de la suite pseudo aléatoire. \end{DoxyCompactList}\item 
+int \hyperlink{a00125_a9966534d45c62d0df7a3d5df48668715}{stegx\+\_\+rand} ()
+\begin{DoxyCompactList}\small\item\em Renvoie un entier pseudo-\/aléatoire. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Module qui s\textquotesingle{}occupe de l\textquotesingle{}aléatoire. 
+
+
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00125_a2a891bbe3514201de3cfc5acced104b7}\label{a00125_a2a891bbe3514201de3cfc5acced104b7}} 
+\index{rand.\+h@{rand.\+h}!create\+\_\+seed@{create\+\_\+seed}}
+\index{create\+\_\+seed@{create\+\_\+seed}!rand.\+h@{rand.\+h}}
+\paragraph{\texorpdfstring{create\+\_\+seed()}{create\_seed()}}
+{\footnotesize\ttfamily unsigned int create\+\_\+seed (\begin{DoxyParamCaption}\item[{const char $\ast$}]{passwd }\end{DoxyParamCaption})}
+
+
+
+Cree un seed a partir d\textquotesingle{}un mot de passe. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em passwd} & Mot de passe a partir duquel on veut creer un seed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+unsigned int représentant le seed a creer. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Pierre Ayoub 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 18 du fichier rand.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00125_a2a891bbe3514201de3cfc5acced104b7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00125_a9966534d45c62d0df7a3d5df48668715}\label{a00125_a9966534d45c62d0df7a3d5df48668715}} 
+\index{rand.\+h@{rand.\+h}!stegx\+\_\+rand@{stegx\+\_\+rand}}
+\index{stegx\+\_\+rand@{stegx\+\_\+rand}!rand.\+h@{rand.\+h}}
+\paragraph{\texorpdfstring{stegx\+\_\+rand()}{stegx\_rand()}}
+{\footnotesize\ttfamily int stegx\+\_\+rand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Renvoie un entier pseudo-\/aléatoire. 
+
+\begin{DoxyReturn}{Renvoie}
+renvoie l\textquotesingle{}entier de la suite pseudo aléatoire. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 35 du fichier rand.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00125_a9966534d45c62d0df7a3d5df48668715_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00125_a4e9a217b960dc65fd08dff9f78e317e4}\label{a00125_a4e9a217b960dc65fd08dff9f78e317e4}} 
+\index{rand.\+h@{rand.\+h}!stegx\+\_\+srand@{stegx\+\_\+srand}}
+\index{stegx\+\_\+srand@{stegx\+\_\+srand}!rand.\+h@{rand.\+h}}
+\paragraph{\texorpdfstring{stegx\+\_\+srand()}{stegx\_srand()}}
+{\footnotesize\ttfamily void stegx\+\_\+srand (\begin{DoxyParamCaption}\item[{unsigned int}]{seed }\end{DoxyParamCaption})}
+
+
+
+Initialise la seed de la suite pseudo aléatoire. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em seed} & nombre qui représentera la seed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 31 du fichier rand.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00125_a4e9a217b960dc65fd08dff9f78e317e4_icgraph}
+\end{center}
+\end{figure}

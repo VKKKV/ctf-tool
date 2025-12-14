@@ -1,0 +1,12 @@
+<map id="mp3_mpeg_hdr_get_bitrate" name="mp3_mpeg_hdr_get_bitrate">
+<area shape="rect" id="node2" href="$a00086.xhtml#a3f5f1c770ad5013ccf94bce56b7d0a04" title="Obtient la taille d&#39;une frame MP3. " alt="" coords="232,95,399,121"/>
+<area shape="rect" id="node3" href="$a00089.xhtml#aa1f3d4311fe8115981f98b79a1fea672" title="Saute la frame MP3 actuelle. " alt="" coords="447,63,583,89"/>
+<area shape="rect" id="node9" href="$a00089.xhtml#ab0198bd0d67c778ff7493f1bcd0a409e" title="Écris la frame MP3 actuelle. " alt="" coords="447,120,583,147"/>
+<area shape="rect" id="node4" href="$a00035.xhtml#abc757e2627fc9971e388a584e0e0c2ca" title="Va extraire les donnees cachees en utilisant l&#39;algorithme LSB. " alt="" coords="635,9,721,36"/>
+<area shape="rect" id="node6" href="$a00131.xhtml#a5501c9c7711252fa8d85ff12cb3390dc" title="Remplit les informations du fichier hôte. " alt="" coords="631,63,725,89"/>
+<area shape="rect" id="node5" href="$a00065.xhtml#a43c63dd958bfa1f4ab2ecbd7faa14abb" title="Va faire l&#39;extraction selon l&#39;algorithme détecté, ainsi que les fichiers en entrée choisis par l&#39;util..." alt="" coords="792,5,893,32"/>
+<area shape="rect" id="node7" href="$a00050.xhtml#a2a3747fdc90ed4467eb3e468d8fba361" title="Detecte l&#39;algorithme utilisé ainsi que le nom du fichier caché et la taille des données cachées..." alt="" coords="779,56,907,83"/>
+<area shape="rect" id="node8" href="$a00128.xhtml#adc277622e5fe0d1814be76f11263b350" title="Propose les algorithmes de stéganographie utilisables. " alt="" coords="773,107,912,133"/>
+<area shape="rect" id="node10" href="$a00035.xhtml#a14e9d876697b0225ded31095c1076b64" title="Va inserer les donnees cachees en utilisant l&#39;algorithme LSB. " alt="" coords="639,132,717,159"/>
+<area shape="rect" id="node11" href="$a00110.xhtml#a45a1d0709604d55e9d467cb39d6a5b54" title="Va faire l&#39;insertion selon l&#39;algorithme, ainsi que les fichiers en entrée choisis par l&#39;utilisateur..." alt="" coords="796,157,889,184"/>
+</map>

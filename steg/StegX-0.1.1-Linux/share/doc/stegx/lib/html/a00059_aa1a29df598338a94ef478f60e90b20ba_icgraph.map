@@ -1,0 +1,7 @@
+<map id="stegx_htobe32" name="stegx_htobe32">
+<area shape="rect" id="node2" href="$a00017.xhtml#a049b8f5bf7a416fe54b10c6de98487a1" title="Va inserer les donnees cachees en utilisant l&#39;algorithme EOC. " alt="" coords="367,5,449,32"/>
+<area shape="rect" id="node4" href="$a00035.xhtml#a14e9d876697b0225ded31095c1076b64" title="Va inserer les donnees cachees en utilisant l&#39;algorithme LSB. " alt="" coords="192,56,271,83"/>
+<area shape="rect" id="node5" href="$a00095.xhtml#a2386f518ec5df78485cca31c6fe4f858" title="Va inserer les donnees cachees en utilisant l&#39;algorithme Metadata dans le format PNG. " alt="" coords="160,107,303,133"/>
+<area shape="rect" id="node3" href="$a00110.xhtml#a45a1d0709604d55e9d467cb39d6a5b54" title="Va faire l&#39;insertion selon l&#39;algorithme, ainsi que les fichiers en entrée choisis par l&#39;utilisateur..." alt="" coords="513,56,607,83"/>
+<area shape="rect" id="node6" href="$a00041.xhtml#a77aaebb61a9a73cbe45380c64c3d8389" title="Va inserer les donnees cachees en utilisant l&#39;algorithme Metadata. " alt="" coords="351,107,465,133"/>
+</map>

@@ -1,0 +1,27 @@
+var a00086 =
+[
+    [ "MASK_ID3", "a00086.xhtml#af29eebe797f1bb6a0197ab437fdcd272", null ],
+    [ "MASK_MPEG_LAYER3", "a00086.xhtml#ad38f73b4907c04d04d5fd11f217d6f76", null ],
+    [ "SIG_ID3V1", "a00086.xhtml#a4200ab53666cf79bb1eb74767317b163", null ],
+    [ "SIG_ID3V2", "a00086.xhtml#a614034522891647c549411c62b53ce0f", null ],
+    [ "SIG_MPEG1_LAYER3", "a00086.xhtml#a11c862d20e6cf0093ca956075b6ffef2", null ],
+    [ "SIG_MPEG2_LAYER3", "a00086.xhtml#a7a6c697cbf52b4aae0b68598721fecaf", null ],
+    [ "TAG_ID3V1_SIZE", "a00086.xhtml#a34c66c6ef015ace4008339875d8f6912", null ],
+    [ "TAG_ID3V2_HEADER_SIZE", "a00086.xhtml#a79293fca9a575dbe9bf1f6572ab40a6e", null ],
+    [ "mp3_id3v1_hdr_test", "a00086.xhtml#aaccf359620da01d34de43ba7ce7f3513", null ],
+    [ "mp3_id3v1_tag_seek", "a00086.xhtml#ab0fd93a465f2e320e749093c17f20823", null ],
+    [ "mp3_id3v1_tag_write", "a00086.xhtml#a0f2f8f49760a8be1dc011675b01f63d1", null ],
+    [ "mp3_id3v2_hdr_test", "a00086.xhtml#ad5c1775e3137194eae404a93a564ab96", null ],
+    [ "mp3_id3v2_size_unsyncsafe", "a00086.xhtml#a98007b4129951e18b3ba95b3d5ad973e", null ],
+    [ "mp3_id3v2_tag_seek", "a00086.xhtml#acc4a0b82043fbdeadb8c669eda06d2cb", null ],
+    [ "mp3_mpeg_fr_find_first", "a00086.xhtml#afc3c44f7f4f0993fbc17c150c728e677", null ],
+    [ "mp3_mpeg_fr_seek", "a00086.xhtml#aee166f42b332d8c5b51d25a9ef8c14b7", null ],
+    [ "mp3_mpeg_fr_write", "a00086.xhtml#ab0198bd0d67c778ff7493f1bcd0a409e", null ],
+    [ "mp3_mpeg_hdr_get_bitrate", "a00086.xhtml#aa48df36af23103ce104d13854d4cbb87", null ],
+    [ "mp3_mpeg_hdr_get_samprate", "a00086.xhtml#a85aeeafb97867c551e217ba3283e6fec", null ],
+    [ "mp3_mpeg_hdr_get_size", "a00086.xhtml#a3f5f1c770ad5013ccf94bce56b7d0a04", null ],
+    [ "mp3_mpeg_hdr_get_version", "a00086.xhtml#a2f08a046bc257029ca74b86b48204380", null ],
+    [ "mp3_mpeg_hdr_is_padding", "a00086.xhtml#a407e3a1d9a7c3350620818a2ef19f142", null ],
+    [ "mp3_mpeg_hdr_test", "a00086.xhtml#a75bc8b052a4d00ab95b05b576918360d", null ],
+    [ "stegx_test_file_mp3", "a00086.xhtml#a581193a38ac3c779c8920bd3be9883fc", null ]
+];

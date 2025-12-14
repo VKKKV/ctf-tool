@@ -1,0 +1,346 @@
+\hypertarget{a00005}{}\subsection{Référence du fichier inc/stegx.h}
+\label{a00005}\index{inc/stegx.\+h@{inc/stegx.\+h}}
+
+
+Fonctions d\textquotesingle{}utilisations de la bibliothèque StegX.  
+
+
+{\ttfamily \#include \char`\"{}stegx\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+errors.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de stegx.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{a00006}
+\end{center}
+\end{figure}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$ \hyperlink{a00005_ab6aa5e9de0fc83d5dc066f032c75c51b}{stegx\+\_\+init} (\hyperlink{a00008_ae5a2888ba8550edd4b6da33702b83a9d}{stegx\+\_\+choices\+\_\+s} $\ast$choices)
+\begin{DoxyCompactList}\small\item\em Initialise la bibliothèque. \end{DoxyCompactList}\item 
+void \hyperlink{a00005_abe47a9ab49d16f6f0b4812f77e6e44c5}{stegx\+\_\+clear} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Procédure de fin d\textquotesingle{}utilisation de la bibliothèque. \end{DoxyCompactList}\item 
+int \hyperlink{a00005_aa5b31aaae617d7c5d0c29d564e2c8a42}{stegx\+\_\+check\+\_\+compatibility} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Vérifie la compatibilité des fichiers. \end{DoxyCompactList}\item 
+int \hyperlink{a00005_adc277622e5fe0d1814be76f11263b350}{stegx\+\_\+suggest\+\_\+algo} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Propose les algorithmes de stéganographie utilisables. \end{DoxyCompactList}\item 
+int \hyperlink{a00005_a58f7de82387e9b66f9bd7c40c32aeb8f}{stegx\+\_\+choose\+\_\+algo} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos, \hyperlink{a00008_adbe3e383e3f1c4239b26ccae2865aa06}{algo\+\_\+e} algo\+\_\+choosen)
+\begin{DoxyCompactList}\small\item\em Initialise l\textquotesingle{}algorithme à utiliser pour la dissimulation. \end{DoxyCompactList}\item 
+int \hyperlink{a00005_a2a3747fdc90ed4467eb3e468d8fba361}{stegx\+\_\+detect\+\_\+algo} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Detecte l\textquotesingle{}algorithme utilisé ainsi que le nom du fichier caché et la taille des données cachées. \end{DoxyCompactList}\item 
+int \hyperlink{a00005_a45a1d0709604d55e9d467cb39d6a5b54}{stegx\+\_\+insert} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va faire l\textquotesingle{}insertion selon l\textquotesingle{}algorithme, ainsi que les fichiers en entrée choisis par l\textquotesingle{}utilisateur. \end{DoxyCompactList}\item 
+int \hyperlink{a00005_a43c63dd958bfa1f4ab2ecbd7faa14abb}{stegx\+\_\+extract} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos, char $\ast$res\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Va faire l\textquotesingle{}extraction selon l\textquotesingle{}algorithme détecté, ainsi que les fichiers en entrée choisis par l\textquotesingle{}utilisateur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Fonctions d\textquotesingle{}utilisations de la bibliothèque StegX. 
+
+Fichier contenant des fonctions publiques destinées à être utilisées par les applications utilisant la bibliothèque. 
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00005_aa5b31aaae617d7c5d0c29d564e2c8a42}\label{a00005_aa5b31aaae617d7c5d0c29d564e2c8a42}} 
+\index{stegx.\+h@{stegx.\+h}!stegx\+\_\+check\+\_\+compatibility@{stegx\+\_\+check\+\_\+compatibility}}
+\index{stegx\+\_\+check\+\_\+compatibility@{stegx\+\_\+check\+\_\+compatibility}!stegx.\+h@{stegx.\+h}}
+\paragraph{\texorpdfstring{stegx\+\_\+check\+\_\+compatibility()}{stegx\_check\_compatibility()}}
+{\footnotesize\ttfamily int stegx\+\_\+check\+\_\+compatibility (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Vérifie la compatibilité des fichiers. 
+
+\begin{DoxyParagraph}{Effet de bord}
+Remplit le champ \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2d}{info\+\_\+s\+::host\+::type} de la structure \hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s}. 
+\end{DoxyParagraph}
+\begin{DoxyRefDesc}{Erreurs}
+\item[\hyperlink{a00134__errors000002}{Erreurs}]\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852ab4f003f7e2c346374bb7434b940794f8}{E\+R\+R\+\_\+\+C\+H\+E\+C\+K\+\_\+\+C\+O\+M\+P\+AT} si la vérification de la compatibilité a échouée. \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure privée qui contient les informations pour réaliser la dissimulation et l\textquotesingle{}extraction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si la vérification s\textquotesingle{}est bien déroulée, sinon 1 en cas d\textquotesingle{}erreur et met à jour \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Yassin Doudouh 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 38 du fichier check\+\_\+compa.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00005_aa5b31aaae617d7c5d0c29d564e2c8a42_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00005_a58f7de82387e9b66f9bd7c40c32aeb8f}\label{a00005_a58f7de82387e9b66f9bd7c40c32aeb8f}} 
+\index{stegx.\+h@{stegx.\+h}!stegx\+\_\+choose\+\_\+algo@{stegx\+\_\+choose\+\_\+algo}}
+\index{stegx\+\_\+choose\+\_\+algo@{stegx\+\_\+choose\+\_\+algo}!stegx.\+h@{stegx.\+h}}
+\paragraph{\texorpdfstring{stegx\+\_\+choose\+\_\+algo()}{stegx\_choose\_algo()}}
+{\footnotesize\ttfamily int stegx\+\_\+choose\+\_\+algo (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos,  }\item[{\hyperlink{a00008_adbe3e383e3f1c4239b26ccae2865aa06}{algo\+\_\+e}}]{algo\+\_\+choosen }\end{DoxyParamCaption})}
+
+
+
+Initialise l\textquotesingle{}algorithme à utiliser pour la dissimulation. 
+
+A partir de la variable globale \hyperlink{a00107_a855163fecb257950934ffba1b73ecae4}{stegx\+\_\+propos\+\_\+algos} et de \char`\"{}algo\+\_\+choosen\char`\"{}, cette fonction permet de choisir l\textquotesingle{}algorithme à utiliser. \begin{DoxyParagraph}{Effet de bord}
+Remplit le champ \hyperlink{a00154_aa6ad0a3fe5b1489edc6684da68c3b588}{info\+\_\+s\+::algo} avec l\textquotesingle{}algorithme choisi, ainsi que le champ \hyperlink{a00154_a3b8cb37fa26cdca2b7460e14facd9ec0}{info\+\_\+s\+::passwd} avec un mot de passe aléatoire si l\textquotesingle{}utilisateur n\textquotesingle{}en à pas choisi. 
+\end{DoxyParagraph}
+\begin{DoxyRefDesc}{Erreurs}
+\item[\hyperlink{a00134__errors000004}{Erreurs}]\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a72cfc98feeed9df5050bd2b25d2d28c2}{E\+R\+R\+\_\+\+S\+U\+G\+G\+\_\+\+A\+L\+G\+OS} si la fonction est mal utilisée (mauvais mode). 
+
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852ab79036268630b509f43f01d2082a9154}{E\+R\+R\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+A\+L\+GO} si l\textquotesingle{}algorithme choisi n\textquotesingle{}est pas disponible. \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure contenant les informations concernant la dissimulation. \\
+\hline
+{\em algo\+\_\+choosen} & Algorithme choisi par l\textquotesingle{}utilisateur. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si la fonction s\textquotesingle{}est déroulée normalement, 1 en cas d\textquotesingle{}erreur et met à jour la variable \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Yassin Doudouh 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 377 du fichier sugg\+\_\+algo.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{a00005_a58f7de82387e9b66f9bd7c40c32aeb8f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00005_abe47a9ab49d16f6f0b4812f77e6e44c5}\label{a00005_abe47a9ab49d16f6f0b4812f77e6e44c5}} 
+\index{stegx.\+h@{stegx.\+h}!stegx\+\_\+clear@{stegx\+\_\+clear}}
+\index{stegx\+\_\+clear@{stegx\+\_\+clear}!stegx.\+h@{stegx.\+h}}
+\paragraph{\texorpdfstring{stegx\+\_\+clear()}{stegx\_clear()}}
+{\footnotesize\ttfamily void stegx\+\_\+clear (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Procédure de fin d\textquotesingle{}utilisation de la bibliothèque. 
+
+\begin{DoxyParagraph}{Prérequis}
+Avoir appelé \hyperlink{a00107_ab6aa5e9de0fc83d5dc066f032c75c51b}{stegx\+\_\+init} sur le paramètre \char`\"{}infos\char`\"{}. 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Effet de bord}
+Libère la mémoire de la structure \hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s}. 
+\end{DoxyParagraph}
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure à libérer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Pierre Ayoub 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 125 du fichier init.\+c.
+
+\mbox{\Hypertarget{a00005_a2a3747fdc90ed4467eb3e468d8fba361}\label{a00005_a2a3747fdc90ed4467eb3e468d8fba361}} 
+\index{stegx.\+h@{stegx.\+h}!stegx\+\_\+detect\+\_\+algo@{stegx\+\_\+detect\+\_\+algo}}
+\index{stegx\+\_\+detect\+\_\+algo@{stegx\+\_\+detect\+\_\+algo}!stegx.\+h@{stegx.\+h}}
+\paragraph{\texorpdfstring{stegx\+\_\+detect\+\_\+algo()}{stegx\_detect\_algo()}}
+{\footnotesize\ttfamily int stegx\+\_\+detect\+\_\+algo (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Detecte l\textquotesingle{}algorithme utilisé ainsi que le nom du fichier caché et la taille des données cachées. 
+
+\begin{DoxyParagraph}{Effet de bord}
+Remplit les champs info\+\_\+s.\+host.\+file\+\_\+info, \hyperlink{a00154_aa6ad0a3fe5b1489edc6684da68c3b588}{info\+\_\+s\+::algo}, \hyperlink{a00154_afe7c54ffc777d8584a1fc4f9e78790d0}{info\+\_\+s\+::method}, \hyperlink{a00154_a5faadf710cbff5ed6e2882e78216084c}{info\+\_\+s\+::hidden\+\_\+length}, \hyperlink{a00154_afa18e57ba4ce959f5ecd8502fd19f858}{info\+\_\+s\+::hidden\+\_\+name}. 
+\end{DoxyParagraph}
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Erreurs}
+\item[\hyperlink{a00134__errors000005}{Erreurs}]\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a65deae87741eaa0b2b39fe1116bfd563}{E\+R\+R\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+A\+L\+G\+OS} si une erreur quelconque survient. 
+
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a0639f3719d0bf22c36b5ca1711fe3d7e}{E\+R\+R\+\_\+\+N\+E\+E\+D\+\_\+\+P\+A\+S\+S\+WD} si l\textquotesingle{}utilisateur n\textquotesingle{}as pas spécifié le mot de passe requis. \end{DoxyRefDesc}
+\begin{DoxyReturn}{Renvoie}
+0 si la détection s\textquotesingle{}est bien déroulée, sinon 1 en cas d\textquotesingle{}erreur et met à jour \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Pierre Ayoub et Damien Delaunay 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 122 du fichier detect\+\_\+algo.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00005_a2a3747fdc90ed4467eb3e468d8fba361_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00005_a43c63dd958bfa1f4ab2ecbd7faa14abb}\label{a00005_a43c63dd958bfa1f4ab2ecbd7faa14abb}} 
+\index{stegx.\+h@{stegx.\+h}!stegx\+\_\+extract@{stegx\+\_\+extract}}
+\index{stegx\+\_\+extract@{stegx\+\_\+extract}!stegx.\+h@{stegx.\+h}}
+\paragraph{\texorpdfstring{stegx\+\_\+extract()}{stegx\_extract()}}
+{\footnotesize\ttfamily int stegx\+\_\+extract (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos,  }\item[{char $\ast$}]{res\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Va faire l\textquotesingle{}extraction selon l\textquotesingle{}algorithme détecté, ainsi que les fichiers en entrée choisis par l\textquotesingle{}utilisateur. 
+
+\begin{DoxyParagraph}{Effet de bord}
+Remplit le champ res. 
+\end{DoxyParagraph}
+\begin{DoxyRefDesc}{Erreurs}
+\item[\hyperlink{a00134__errors000007}{Erreurs}]\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852aad3e8c13adfc55ea1cd105e92972dd33}{E\+R\+R\+\_\+\+E\+X\+T\+R\+A\+CT} si une erreur survient lors de l\textquotesingle{}extraction. \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant l\textquotesingle{}extraction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si l\textquotesingle{}extraction s\textquotesingle{}est bien passé, sinon 1 en cas d\textquotesingle{}erreur et met à jour \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Pierre Ayoub 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 23 du fichier extract.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00005_a43c63dd958bfa1f4ab2ecbd7faa14abb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00005_ab6aa5e9de0fc83d5dc066f032c75c51b}\label{a00005_ab6aa5e9de0fc83d5dc066f032c75c51b}} 
+\index{stegx.\+h@{stegx.\+h}!stegx\+\_\+init@{stegx\+\_\+init}}
+\index{stegx\+\_\+init@{stegx\+\_\+init}!stegx.\+h@{stegx.\+h}}
+\paragraph{\texorpdfstring{stegx\+\_\+init()}{stegx\_init()}}
+{\footnotesize\ttfamily \hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s}$\ast$ stegx\+\_\+init (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_ae5a2888ba8550edd4b6da33702b83a9d}{stegx\+\_\+choices\+\_\+s} $\ast$}]{choices }\end{DoxyParamCaption})}
+
+
+
+Initialise la bibliothèque. 
+
+Initialise la bibliothèque avec les choix de l\textquotesingle{}utilisateur en remplissant les structures nécéssaire et en ouvrant les fichiers. \begin{DoxyParagraph}{Effet de bord}
+Initialise la structure \hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} en fonction des choix de l\textquotesingle{}utilisateur. Il restera les champs \hyperlink{a00154_a5faadf710cbff5ed6e2882e78216084c}{info\+::hidden\+\_\+length}, \hyperlink{a00154_aa6ad0a3fe5b1489edc6684da68c3b588}{info\+::algo}, \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2d}{info\+::host\+::type}, info.\+host.\+file\+\_\+info à initialiser. 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Prérequis}
+La structure \hyperlink{a00008_ae5a2888ba8550edd4b6da33702b83a9d}{stegx\+\_\+choices\+\_\+s} doit être initialisée comme indiquée dans sa description. 
+\end{DoxyParagraph}
+\begin{DoxyRefDesc}{Erreurs}
+\item[\hyperlink{a00134__errors000001}{Erreurs}]\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a49b4659ab34e5808bae4b43669ae5689}{E\+R\+R\+\_\+\+H\+O\+ST} si une erreur survient pendant l\textquotesingle{}ouverture du fichier hôte. 
+
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852af09332ce4e53766f2a7c538727b1f672}{E\+R\+R\+\_\+\+H\+I\+D\+D\+EN} si une erreur survient pendant l\textquotesingle{}ouverture du fichier à caché. 
+
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a7a60287832ac640af50a1e4d0bb5a7bf}{E\+R\+R\+\_\+\+R\+E\+S\+\_\+\+I\+N\+S\+E\+RT} si une erreur surivient pendant l\textquotesingle{}ouverture du fichier résultat lors de l\textquotesingle{}insertion. 
+
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852ae9b69ff89121ced90b1ad58869cfbf6c}{E\+R\+R\+\_\+\+R\+E\+S\+\_\+\+E\+X\+T\+R\+A\+CT} si une erreur surivient pendant l\textquotesingle{}ouverture du dossier résultat lors de l\textquotesingle{}extraction. 
+
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a4d17c66e1810646c6f6fef5e30f8904e}{E\+R\+R\+\_\+\+P\+A\+S\+S\+WD} si le mot de passe fourni est non-\/conforme. \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Paramètres}
+{\em choices} & Structure contenant les choix de l\textquotesingle{}utilisateur. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Pointeur sur la structure privée qui contient les informations pour réaliser la dissimulation et l\textquotesingle{}extraction, sinon N\+U\+LL sur une erreur et met à jour la variable \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Pierre Ayoub 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 23 du fichier init.\+c.
+
+\mbox{\Hypertarget{a00005_a45a1d0709604d55e9d467cb39d6a5b54}\label{a00005_a45a1d0709604d55e9d467cb39d6a5b54}} 
+\index{stegx.\+h@{stegx.\+h}!stegx\+\_\+insert@{stegx\+\_\+insert}}
+\index{stegx\+\_\+insert@{stegx\+\_\+insert}!stegx.\+h@{stegx.\+h}}
+\paragraph{\texorpdfstring{stegx\+\_\+insert()}{stegx\_insert()}}
+{\footnotesize\ttfamily int stegx\+\_\+insert (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va faire l\textquotesingle{}insertion selon l\textquotesingle{}algorithme, ainsi que les fichiers en entrée choisis par l\textquotesingle{}utilisateur. 
+
+\begin{DoxyRefDesc}{Erreurs}
+\item[\hyperlink{a00134__errors000006}{Erreurs}]\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a103888724a059b8ab2855577bd73e8b8}{E\+R\+R\+\_\+\+I\+N\+S\+E\+RT} si une erreur survient durant la dissimulation. \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si l\textquotesingle{}insertion s\textquotesingle{}et bien passé, sinon 1 en cas d\textquotesingle{}erreur et met à jour \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Pierre Ayoub 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 69 du fichier insert.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00005_a45a1d0709604d55e9d467cb39d6a5b54_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00005_adc277622e5fe0d1814be76f11263b350}\label{a00005_adc277622e5fe0d1814be76f11263b350}} 
+\index{stegx.\+h@{stegx.\+h}!stegx\+\_\+suggest\+\_\+algo@{stegx\+\_\+suggest\+\_\+algo}}
+\index{stegx\+\_\+suggest\+\_\+algo@{stegx\+\_\+suggest\+\_\+algo}!stegx.\+h@{stegx.\+h}}
+\paragraph{\texorpdfstring{stegx\+\_\+suggest\+\_\+algo()}{stegx\_suggest\_algo()}}
+{\footnotesize\ttfamily int stegx\+\_\+suggest\+\_\+algo (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Propose les algorithmes de stéganographie utilisables. 
+
+En fonction des informations rentrées dans \hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s}, vérifie pour chaque algorithme qu\textquotesingle{}il est utilisable en fonction type de fichier hôte et de la taille du fichier à cacher. \begin{DoxyParagraph}{Effet de bord}
+Initialise et rempli le champ \hyperlink{a00154_a5faadf710cbff5ed6e2882e78216084c}{info\+\_\+s\+::hidden\+\_\+length} et info\+\_\+s.\+host.\+file\+\_\+info ainsi que la variable globale \hyperlink{a00107_a855163fecb257950934ffba1b73ecae4}{stegx\+\_\+propos\+\_\+algos}. 
+\end{DoxyParagraph}
+\begin{DoxyRefDesc}{Erreurs}
+\item[\hyperlink{a00134__errors000003}{Erreurs}]\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a72cfc98feeed9df5050bd2b25d2d28c2}{E\+R\+R\+\_\+\+S\+U\+G\+G\+\_\+\+A\+L\+G\+OS} s\textquotesingle{}il y a eu un problème d\textquotesingle{}utilisation. 
+
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852ae149fbd002acad554baf6a5abbc08c12}{E\+R\+R\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+H\+I\+D\+D\+EN} si le fichier à cacher est supérieur à la taille maximum (2$^\wedge$32). \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure contenant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si tout se passe bien, sinon 1 en cas d\textquotesingle{}erreur et met à jour \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Yassin Doudouh 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 346 du fichier sugg\+\_\+algo.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00005_adc277622e5fe0d1814be76f11263b350_cgraph}
+\end{center}
+\end{figure}

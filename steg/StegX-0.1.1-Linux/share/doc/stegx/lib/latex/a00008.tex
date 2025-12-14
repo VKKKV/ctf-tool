@@ -1,0 +1,223 @@
+\hypertarget{a00008}{}\subsection{Référence du fichier inc/stegx\+\_\+common.h}
+\label{a00008}\index{inc/stegx\+\_\+common.\+h@{inc/stegx\+\_\+common.\+h}}
+
+
+Définitions communes à la partie privée et public de la bibliothèque.  
+
+
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00010}
+\end{center}
+\end{figure}
+\subsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00138}{stegx\+\_\+info\+\_\+insert}
+\begin{DoxyCompactList}\small\item\em Informations concernant uniquement l\textquotesingle{}insertion de données. \end{DoxyCompactList}\item 
+struct \hyperlink{a00142}{stegx\+\_\+choices}
+\begin{DoxyCompactList}\small\item\em Informations du choix de l\textquotesingle{}utilisateur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{a00008_a1a6b6fb557d8d37d59700faf4e4c9167}{mode} \hyperlink{a00008_a3410d2f61b2ebef290660e7d14215bbd}{mode\+\_\+e}
+\item 
+typedef enum \hyperlink{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23}{algo} \hyperlink{a00008_adbe3e383e3f1c4239b26ccae2865aa06}{algo\+\_\+e}
+\item 
+typedef enum \hyperlink{a00008_abed946c62f140eb7ff2ac742e6ad9497}{method} \hyperlink{a00008_ad7acd42acef1f832c261f34b380de326}{method\+\_\+e}
+\item 
+typedef struct \hyperlink{a00154}{info} \hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s}
+\item 
+typedef struct \hyperlink{a00138}{stegx\+\_\+info\+\_\+insert} \hyperlink{a00008_a176cafec595278af1f86f1e9ef478cb0}{stegx\+\_\+info\+\_\+insert\+\_\+s}
+\item 
+typedef struct \hyperlink{a00142}{stegx\+\_\+choices} \hyperlink{a00008_ae5a2888ba8550edd4b6da33702b83a9d}{stegx\+\_\+choices\+\_\+s}
+\end{DoxyCompactItemize}
+\subsubsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00008_a1a6b6fb557d8d37d59700faf4e4c9167}{mode} \{ \hyperlink{a00008_a1a6b6fb557d8d37d59700faf4e4c9167a24551ca27f11d8f5a30e8de8d0df7f74}{S\+T\+E\+G\+X\+\_\+\+M\+O\+D\+E\+\_\+\+I\+N\+S\+E\+RT}, 
+\hyperlink{a00008_a1a6b6fb557d8d37d59700faf4e4c9167a7e0fef6b5363c352f9652457ddd6328f}{S\+T\+E\+G\+X\+\_\+\+M\+O\+D\+E\+\_\+\+E\+X\+T\+R\+A\+CT}
+ \}
+\item 
+enum \hyperlink{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23}{algo} \{ \newline
+\hyperlink{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23a3681255405d19b7e5fb65f0a2ff55bd2}{S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+L\+SB} = 0, 
+\hyperlink{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23a6367de53e1c79da0e194a9dbf8d19dea}{S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+E\+OF}, 
+\hyperlink{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23a092772fb5d97df32eb904304bbbef80c}{S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+M\+E\+T\+A\+D\+A\+TA}, 
+\hyperlink{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23a6072ca50449be645d1e7dbf2d60d97ed}{S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+E\+OC}, 
+\newline
+\hyperlink{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23a557456be7a623a5c7629c441dad5ddec}{S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+J\+U\+N\+K\+\_\+\+C\+H\+U\+NK}, 
+\hyperlink{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23a6266bb55785ce37f799cb062cb11b2a4}{S\+T\+E\+G\+X\+\_\+\+N\+B\+\_\+\+A\+L\+GO}
+ \}
+\item 
+enum \hyperlink{a00008_abed946c62f140eb7ff2ac742e6ad9497}{method} \{ \hyperlink{a00008_abed946c62f140eb7ff2ac742e6ad9497a980af043b0785bf61c3e05f9c9b71eb9}{S\+T\+E\+G\+X\+\_\+\+W\+I\+T\+H\+O\+U\+T\+\_\+\+P\+A\+S\+S\+WD}, 
+\hyperlink{a00008_abed946c62f140eb7ff2ac742e6ad9497a7c28dd7cd83fc28a626a0c10f2bccb37}{S\+T\+E\+G\+X\+\_\+\+W\+I\+T\+H\+\_\+\+P\+A\+S\+S\+WD}
+ \}
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00008_adbe3e383e3f1c4239b26ccae2865aa06}{algo\+\_\+e} $\ast$ \hyperlink{a00008_a855163fecb257950934ffba1b73ecae4}{stegx\+\_\+propos\+\_\+algos}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Définitions communes à la partie privée et public de la bibliothèque. 
+
+Ce fichier peut-\/être inclus par les programme utilisant la bibliothèque ainsi que par les différents modules de la bibliothèque. Il contient des types, des structures et des variables globales. 
+
+\subsubsection{Documentation des définitions de type}
+\mbox{\Hypertarget{a00008_adbe3e383e3f1c4239b26ccae2865aa06}\label{a00008_adbe3e383e3f1c4239b26ccae2865aa06}} 
+\index{stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}!algo\+\_\+e@{algo\+\_\+e}}
+\index{algo\+\_\+e@{algo\+\_\+e}!stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}}
+\paragraph{\texorpdfstring{algo\+\_\+e}{algo\_e}}
+{\footnotesize\ttfamily typedef enum \hyperlink{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23}{algo} \hyperlink{a00008_adbe3e383e3f1c4239b26ccae2865aa06}{algo\+\_\+e}}
+
+Type d\textquotesingle{}un algortihme proposé par l\textquotesingle{}application. 
+
+Définition à la ligne 43 du fichier stegx\+\_\+common.\+h.
+
+\mbox{\Hypertarget{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}\label{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}} 
+\index{stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}!info\+\_\+s@{info\+\_\+s}}
+\index{info\+\_\+s@{info\+\_\+s}!stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}}
+\paragraph{\texorpdfstring{info\+\_\+s}{info\_s}}
+{\footnotesize\ttfamily typedef struct \hyperlink{a00154}{info} \hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s}}
+
+Type de la structure privée stockant les informations de la bibliothèque. 
+
+Définition à la ligne 55 du fichier stegx\+\_\+common.\+h.
+
+\mbox{\Hypertarget{a00008_ad7acd42acef1f832c261f34b380de326}\label{a00008_ad7acd42acef1f832c261f34b380de326}} 
+\index{stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}!method\+\_\+e@{method\+\_\+e}}
+\index{method\+\_\+e@{method\+\_\+e}!stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}}
+\paragraph{\texorpdfstring{method\+\_\+e}{method\_e}}
+{\footnotesize\ttfamily typedef enum \hyperlink{a00008_abed946c62f140eb7ff2ac742e6ad9497}{method} \hyperlink{a00008_ad7acd42acef1f832c261f34b380de326}{method\+\_\+e}}
+
+Type de la méthode de protection des données. 
+
+Définition à la ligne 52 du fichier stegx\+\_\+common.\+h.
+
+\mbox{\Hypertarget{a00008_a3410d2f61b2ebef290660e7d14215bbd}\label{a00008_a3410d2f61b2ebef290660e7d14215bbd}} 
+\index{stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}!mode\+\_\+e@{mode\+\_\+e}}
+\index{mode\+\_\+e@{mode\+\_\+e}!stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}}
+\paragraph{\texorpdfstring{mode\+\_\+e}{mode\_e}}
+{\footnotesize\ttfamily typedef enum \hyperlink{a00008_a1a6b6fb557d8d37d59700faf4e4c9167}{mode} \hyperlink{a00008_a3410d2f61b2ebef290660e7d14215bbd}{mode\+\_\+e}}
+
+Type du mode d\textquotesingle{}utilisation de la bibliothèque. 
+
+Définition à la ligne 27 du fichier stegx\+\_\+common.\+h.
+
+\mbox{\Hypertarget{a00008_ae5a2888ba8550edd4b6da33702b83a9d}\label{a00008_ae5a2888ba8550edd4b6da33702b83a9d}} 
+\index{stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}!stegx\+\_\+choices\+\_\+s@{stegx\+\_\+choices\+\_\+s}}
+\index{stegx\+\_\+choices\+\_\+s@{stegx\+\_\+choices\+\_\+s}!stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}}
+\paragraph{\texorpdfstring{stegx\+\_\+choices\+\_\+s}{stegx\_choices\_s}}
+{\footnotesize\ttfamily typedef struct \hyperlink{a00142}{stegx\+\_\+choices} \hyperlink{a00008_ae5a2888ba8550edd4b6da33702b83a9d}{stegx\+\_\+choices\+\_\+s}}
+
+Type des informations du choix de l\textquotesingle{}utilisateur. 
+
+Définition à la ligne 101 du fichier stegx\+\_\+common.\+h.
+
+\mbox{\Hypertarget{a00008_a176cafec595278af1f86f1e9ef478cb0}\label{a00008_a176cafec595278af1f86f1e9ef478cb0}} 
+\index{stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}!stegx\+\_\+info\+\_\+insert\+\_\+s@{stegx\+\_\+info\+\_\+insert\+\_\+s}}
+\index{stegx\+\_\+info\+\_\+insert\+\_\+s@{stegx\+\_\+info\+\_\+insert\+\_\+s}!stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}}
+\paragraph{\texorpdfstring{stegx\+\_\+info\+\_\+insert\+\_\+s}{stegx\_info\_insert\_s}}
+{\footnotesize\ttfamily typedef struct \hyperlink{a00138}{stegx\+\_\+info\+\_\+insert} \hyperlink{a00008_a176cafec595278af1f86f1e9ef478cb0}{stegx\+\_\+info\+\_\+insert\+\_\+s}}
+
+Type des informations concernant uniquement l\textquotesingle{}insertion. 
+
+Définition à la ligne 83 du fichier stegx\+\_\+common.\+h.
+
+
+
+\subsubsection{Documentation du type de l\textquotesingle{}énumération}
+\mbox{\Hypertarget{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23}\label{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23}} 
+\index{stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}!algo@{algo}}
+\index{algo@{algo}!stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}}
+\paragraph{\texorpdfstring{algo}{algo}}
+{\footnotesize\ttfamily enum \hyperlink{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23}{algo}}
+
+Algorithmes proposés par l\textquotesingle{}application (sans prendre compte du format du fichier hôte) (attention, l\textquotesingle{}ordre ne doit pas être modifié). \begin{DoxyEnumFields}{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+L\+SB@{S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+L\+SB}!stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}}\index{stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}!S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+L\+SB@{S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+L\+SB}}}\mbox{\Hypertarget{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23a3681255405d19b7e5fb65f0a2ff55bd2}\label{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23a3681255405d19b7e5fb65f0a2ff55bd2}} 
+S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+L\+SB&Least Significant Bit \+: modification du bit de poids faible. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+E\+OF@{S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+E\+OF}!stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}}\index{stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}!S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+E\+OF@{S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+E\+OF}}}\mbox{\Hypertarget{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23a6367de53e1c79da0e194a9dbf8d19dea}\label{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23a6367de53e1c79da0e194a9dbf8d19dea}} 
+S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+E\+OF&End-\/\+Of-\/\+File \+: concaténation avec le fichier à cacher. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+M\+E\+T\+A\+D\+A\+TA@{S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+M\+E\+T\+A\+D\+A\+TA}!stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}}\index{stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}!S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+M\+E\+T\+A\+D\+A\+TA@{S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+M\+E\+T\+A\+D\+A\+TA}}}\mbox{\Hypertarget{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23a092772fb5d97df32eb904304bbbef80c}\label{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23a092772fb5d97df32eb904304bbbef80c}} 
+S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+M\+E\+T\+A\+D\+A\+TA&Métadonnée \+: stockage du fichier à cacher dans les métadonnées du fichier hôte. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+E\+OC@{S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+E\+OC}!stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}}\index{stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}!S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+E\+OC@{S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+E\+OC}}}\mbox{\Hypertarget{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23a6072ca50449be645d1e7dbf2d60d97ed}\label{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23a6072ca50449be645d1e7dbf2d60d97ed}} 
+S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+E\+OC&End-\/\+Of-\/\+Chunk \+: stockage du fichier à cacher après chaque chunk. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+J\+U\+N\+K\+\_\+\+C\+H\+U\+NK@{S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+J\+U\+N\+K\+\_\+\+C\+H\+U\+NK}!stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}}\index{stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}!S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+J\+U\+N\+K\+\_\+\+C\+H\+U\+NK@{S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+J\+U\+N\+K\+\_\+\+C\+H\+U\+NK}}}\mbox{\Hypertarget{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23a557456be7a623a5c7629c441dad5ddec}\label{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23a557456be7a623a5c7629c441dad5ddec}} 
+S\+T\+E\+G\+X\+\_\+\+A\+L\+G\+O\+\_\+\+J\+U\+N\+K\+\_\+\+C\+H\+U\+NK&Chunk poubelle \+: stockage du fichier dans des chunks invalides. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+E\+G\+X\+\_\+\+N\+B\+\_\+\+A\+L\+GO@{S\+T\+E\+G\+X\+\_\+\+N\+B\+\_\+\+A\+L\+GO}!stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}}\index{stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}!S\+T\+E\+G\+X\+\_\+\+N\+B\+\_\+\+A\+L\+GO@{S\+T\+E\+G\+X\+\_\+\+N\+B\+\_\+\+A\+L\+GO}}}\mbox{\Hypertarget{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23a6266bb55785ce37f799cb062cb11b2a4}\label{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23a6266bb55785ce37f799cb062cb11b2a4}} 
+S\+T\+E\+G\+X\+\_\+\+N\+B\+\_\+\+A\+L\+GO&Nombres d\textquotesingle{}algorithmes proposés par l\textquotesingle{}application. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Définition à la ligne 33 du fichier stegx\+\_\+common.\+h.
+
+\mbox{\Hypertarget{a00008_abed946c62f140eb7ff2ac742e6ad9497}\label{a00008_abed946c62f140eb7ff2ac742e6ad9497}} 
+\index{stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}!method@{method}}
+\index{method@{method}!stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}}
+\paragraph{\texorpdfstring{method}{method}}
+{\footnotesize\ttfamily enum \hyperlink{a00008_abed946c62f140eb7ff2ac742e6ad9497}{method}}
+
+Méthode de protection des données. \begin{DoxyEnumFields}{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+E\+G\+X\+\_\+\+W\+I\+T\+H\+O\+U\+T\+\_\+\+P\+A\+S\+S\+WD@{S\+T\+E\+G\+X\+\_\+\+W\+I\+T\+H\+O\+U\+T\+\_\+\+P\+A\+S\+S\+WD}!stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}}\index{stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}!S\+T\+E\+G\+X\+\_\+\+W\+I\+T\+H\+O\+U\+T\+\_\+\+P\+A\+S\+S\+WD@{S\+T\+E\+G\+X\+\_\+\+W\+I\+T\+H\+O\+U\+T\+\_\+\+P\+A\+S\+S\+WD}}}\mbox{\Hypertarget{a00008_abed946c62f140eb7ff2ac742e6ad9497a980af043b0785bf61c3e05f9c9b71eb9}\label{a00008_abed946c62f140eb7ff2ac742e6ad9497a980af043b0785bf61c3e05f9c9b71eb9}} 
+S\+T\+E\+G\+X\+\_\+\+W\+I\+T\+H\+O\+U\+T\+\_\+\+P\+A\+S\+S\+WD&Aucun mot de passe choisi par l\textquotesingle{}utilisateur. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+E\+G\+X\+\_\+\+W\+I\+T\+H\+\_\+\+P\+A\+S\+S\+WD@{S\+T\+E\+G\+X\+\_\+\+W\+I\+T\+H\+\_\+\+P\+A\+S\+S\+WD}!stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}}\index{stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}!S\+T\+E\+G\+X\+\_\+\+W\+I\+T\+H\+\_\+\+P\+A\+S\+S\+WD@{S\+T\+E\+G\+X\+\_\+\+W\+I\+T\+H\+\_\+\+P\+A\+S\+S\+WD}}}\mbox{\Hypertarget{a00008_abed946c62f140eb7ff2ac742e6ad9497a7c28dd7cd83fc28a626a0c10f2bccb37}\label{a00008_abed946c62f140eb7ff2ac742e6ad9497a7c28dd7cd83fc28a626a0c10f2bccb37}} 
+S\+T\+E\+G\+X\+\_\+\+W\+I\+T\+H\+\_\+\+P\+A\+S\+S\+WD&Mot de passe choisi par l\textquotesingle{}utilisateur. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Définition à la ligne 46 du fichier stegx\+\_\+common.\+h.
+
+\mbox{\Hypertarget{a00008_a1a6b6fb557d8d37d59700faf4e4c9167}\label{a00008_a1a6b6fb557d8d37d59700faf4e4c9167}} 
+\index{stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}!mode@{mode}}
+\index{mode@{mode}!stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}}
+\paragraph{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily enum \hyperlink{a00008_a1a6b6fb557d8d37d59700faf4e4c9167}{mode}}
+
+Mode permettant de distinguer les deux fonctionnalités proposés par l\textquotesingle{}application. \begin{DoxyEnumFields}{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+E\+G\+X\+\_\+\+M\+O\+D\+E\+\_\+\+I\+N\+S\+E\+RT@{S\+T\+E\+G\+X\+\_\+\+M\+O\+D\+E\+\_\+\+I\+N\+S\+E\+RT}!stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}}\index{stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}!S\+T\+E\+G\+X\+\_\+\+M\+O\+D\+E\+\_\+\+I\+N\+S\+E\+RT@{S\+T\+E\+G\+X\+\_\+\+M\+O\+D\+E\+\_\+\+I\+N\+S\+E\+RT}}}\mbox{\Hypertarget{a00008_a1a6b6fb557d8d37d59700faf4e4c9167a24551ca27f11d8f5a30e8de8d0df7f74}\label{a00008_a1a6b6fb557d8d37d59700faf4e4c9167a24551ca27f11d8f5a30e8de8d0df7f74}} 
+S\+T\+E\+G\+X\+\_\+\+M\+O\+D\+E\+\_\+\+I\+N\+S\+E\+RT&Mode insertion/dissimulation de données. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+E\+G\+X\+\_\+\+M\+O\+D\+E\+\_\+\+E\+X\+T\+R\+A\+CT@{S\+T\+E\+G\+X\+\_\+\+M\+O\+D\+E\+\_\+\+E\+X\+T\+R\+A\+CT}!stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}}\index{stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}!S\+T\+E\+G\+X\+\_\+\+M\+O\+D\+E\+\_\+\+E\+X\+T\+R\+A\+CT@{S\+T\+E\+G\+X\+\_\+\+M\+O\+D\+E\+\_\+\+E\+X\+T\+R\+A\+CT}}}\mbox{\Hypertarget{a00008_a1a6b6fb557d8d37d59700faf4e4c9167a7e0fef6b5363c352f9652457ddd6328f}\label{a00008_a1a6b6fb557d8d37d59700faf4e4c9167a7e0fef6b5363c352f9652457ddd6328f}} 
+S\+T\+E\+G\+X\+\_\+\+M\+O\+D\+E\+\_\+\+E\+X\+T\+R\+A\+CT&Mode extraction de données. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Définition à la ligne 21 du fichier stegx\+\_\+common.\+h.
+
+
+
+\subsubsection{Documentation des variables}
+\mbox{\Hypertarget{a00008_a855163fecb257950934ffba1b73ecae4}\label{a00008_a855163fecb257950934ffba1b73ecae4}} 
+\index{stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}!stegx\+\_\+propos\+\_\+algos@{stegx\+\_\+propos\+\_\+algos}}
+\index{stegx\+\_\+propos\+\_\+algos@{stegx\+\_\+propos\+\_\+algos}!stegx\+\_\+common.\+h@{stegx\+\_\+common.\+h}}
+\paragraph{\texorpdfstring{stegx\+\_\+propos\+\_\+algos}{stegx\_propos\_algos}}
+{\footnotesize\ttfamily \hyperlink{a00008_adbe3e383e3f1c4239b26ccae2865aa06}{algo\+\_\+e}$\ast$ stegx\+\_\+propos\+\_\+algos}
+
+Variable globale pointant sur un tableau de booléen de taille \hyperlink{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23a6266bb55785ce37f799cb062cb11b2a4}{S\+T\+E\+G\+X\+\_\+\+N\+B\+\_\+\+A\+L\+GO}. Si stegx\+\_\+propos\+\_\+algo\mbox{[}i\mbox{]} est égal à 1, alors on peut utiliser l\textquotesingle{}algorithme correspondant à algo\+\_\+e égal à i. Sinon, on ne peut pas. 
+
+Définition à la ligne 21 du fichier init.\+c.
+

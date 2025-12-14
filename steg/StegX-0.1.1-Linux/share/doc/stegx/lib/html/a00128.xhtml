@@ -1,0 +1,515 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>StegX: Référence du fichier src/sugg_algo.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-doc.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">StegX
+   &#160;<span id="projectnumber">1.1.0</span>
+   </div>
+   <div id="projectbrief">Projet de Stéganographie pour l&#39;UVSQ</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('a00128.xhtml','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier sugg_algo.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Proposition des algorithmes.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00059_source.xhtml">endian.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00047_source.xhtml">common.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00008_source.xhtml">stegx_common.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00011_source.xhtml">stegx_errors.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00125_source.xhtml">rand.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de sugg_algo.c:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00129.svg" width="100%" height="496"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<p><a href="a00128_source.xhtml">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:adb74030cbeeeadb4f0872cd6cb067796"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00128.xhtml#adb74030cbeeeadb4f0872cd6cb067796">can_use_lsb</a> (<a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *infos)</td></tr>
+<tr class="memdesc:adb74030cbeeeadb4f0872cd6cb067796"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teste si l'on peut utiliser l'algorithme LSB pour la dissimulation.  <a href="#adb74030cbeeeadb4f0872cd6cb067796">Plus de détails...</a><br /></td></tr>
+<tr class="separator:adb74030cbeeeadb4f0872cd6cb067796"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28857a3fb0be2252aa54849431d1582f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00128.xhtml#a28857a3fb0be2252aa54849431d1582f">can_use_eof</a> (<a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *infos)</td></tr>
+<tr class="memdesc:a28857a3fb0be2252aa54849431d1582f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teste si l'on peut utiliser l'algorithme EOF pour la dissimulation.  <a href="#a28857a3fb0be2252aa54849431d1582f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a28857a3fb0be2252aa54849431d1582f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1012fe713837a597197f24dedc7314f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00128.xhtml#ac1012fe713837a597197f24dedc7314f">can_use_metadata</a> (<a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *infos)</td></tr>
+<tr class="memdesc:ac1012fe713837a597197f24dedc7314f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teste si l'on peut utiliser l'algorithme Metadata pour la dissimulation.  <a href="#ac1012fe713837a597197f24dedc7314f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac1012fe713837a597197f24dedc7314f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39a800f242ed5484ff790ee9e92070ab"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00128.xhtml#a39a800f242ed5484ff790ee9e92070ab">can_use_eoc</a> (<a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *infos)</td></tr>
+<tr class="memdesc:a39a800f242ed5484ff790ee9e92070ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teste si l'on peut utiliser l'algorithme EOC pour la dissimulation.  <a href="#a39a800f242ed5484ff790ee9e92070ab">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a39a800f242ed5484ff790ee9e92070ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7003efd2a5625e2be5923b960397de06"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00128.xhtml#a7003efd2a5625e2be5923b960397de06">can_use_junk_chunk</a> (<a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *infos)</td></tr>
+<tr class="memdesc:a7003efd2a5625e2be5923b960397de06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teste si l'on peut utiliser l'algorithme Junk Chunk pour la dissimulation.  <a href="#a7003efd2a5625e2be5923b960397de06">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7003efd2a5625e2be5923b960397de06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5501c9c7711252fa8d85ff12cb3390dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00128.xhtml#a5501c9c7711252fa8d85ff12cb3390dc">fill_host_info</a> (<a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *infos)</td></tr>
+<tr class="memdesc:a5501c9c7711252fa8d85ff12cb3390dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remplit les informations du fichier hôte.  <a href="#a5501c9c7711252fa8d85ff12cb3390dc">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a5501c9c7711252fa8d85ff12cb3390dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc277622e5fe0d1814be76f11263b350"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00128.xhtml#adc277622e5fe0d1814be76f11263b350">stegx_suggest_algo</a> (<a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *infos)</td></tr>
+<tr class="memdesc:adc277622e5fe0d1814be76f11263b350"><td class="mdescLeft">&#160;</td><td class="mdescRight">Propose les algorithmes de stéganographie utilisables.  <a href="#adc277622e5fe0d1814be76f11263b350">Plus de détails...</a><br /></td></tr>
+<tr class="separator:adc277622e5fe0d1814be76f11263b350"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58f7de82387e9b66f9bd7c40c32aeb8f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00128.xhtml#a58f7de82387e9b66f9bd7c40c32aeb8f">stegx_choose_algo</a> (<a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *infos, <a class="el" href="a00008.xhtml#adbe3e383e3f1c4239b26ccae2865aa06">algo_e</a> algo_choosen)</td></tr>
+<tr class="memdesc:a58f7de82387e9b66f9bd7c40c32aeb8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise l'algorithme à utiliser pour la dissimulation.  <a href="#a58f7de82387e9b66f9bd7c40c32aeb8f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a58f7de82387e9b66f9bd7c40c32aeb8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Proposition des algorithmes. </p>
+<p>Module qui contient les fonctions qui permettent de proposer et de vérifier l'algorithme de stéganographie à utiliser, ainsi que la fonction de lecture/d'analyse du fichier hôte. </p>
+
+<p class="definition">Définition dans le fichier <a class="el" href="a00128_source.xhtml">sugg_algo.c</a>.</p>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a39a800f242ed5484ff790ee9e92070ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39a800f242ed5484ff790ee9e92070ab">&#9670;&nbsp;</a></span>can_use_eoc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int can_use_eoc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *&#160;</td>
+          <td class="paramname"><em>infos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Teste si l'on peut utiliser l'algorithme EOC pour la dissimulation. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">infos</td><td>Structure représentant les informations concernant la dissimulation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 si l'algorithme est proposé, 1 sinon. </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Clément Caumes </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="a00128_source.xhtml#l00116">116</a> du fichier <a class="el" href="a00128_source.xhtml">sugg_algo.c</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00128_a39a800f242ed5484ff790ee9e92070ab_icgraph.svg" width="296" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a28857a3fb0be2252aa54849431d1582f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28857a3fb0be2252aa54849431d1582f">&#9670;&nbsp;</a></span>can_use_eof()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int can_use_eof </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *&#160;</td>
+          <td class="paramname"><em>infos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Teste si l'on peut utiliser l'algorithme EOF pour la dissimulation. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">infos</td><td>Structure représentant les informations concernant la dissimulation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 si l'algorithme est proposé, 1 sinon. </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Clément Caumes </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="a00128_source.xhtml#l00075">75</a> du fichier <a class="el" href="a00128_source.xhtml">sugg_algo.c</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00128_a28857a3fb0be2252aa54849431d1582f_icgraph.svg" width="294" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a7003efd2a5625e2be5923b960397de06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7003efd2a5625e2be5923b960397de06">&#9670;&nbsp;</a></span>can_use_junk_chunk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int can_use_junk_chunk </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *&#160;</td>
+          <td class="paramname"><em>infos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Teste si l'on peut utiliser l'algorithme Junk Chunk pour la dissimulation. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">infos</td><td>Structure représentant les informations concernant la dissimulation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 si l'algorithme est proposé, 1 sinon. </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Clément Caumes </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="a00128_source.xhtml#l00129">129</a> du fichier <a class="el" href="a00128_source.xhtml">sugg_algo.c</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00128_a7003efd2a5625e2be5923b960397de06_icgraph.svg" width="342" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="adb74030cbeeeadb4f0872cd6cb067796"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb74030cbeeeadb4f0872cd6cb067796">&#9670;&nbsp;</a></span>can_use_lsb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int can_use_lsb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *&#160;</td>
+          <td class="paramname"><em>infos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Teste si l'on peut utiliser l'algorithme LSB pour la dissimulation. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">infos</td><td>Structure représentant les informations concernant la dissimulation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 Si l'algorithme est proposé, 1 sinon. </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Clément Caumes (BMP) et Pierre Ayoub (WAV) </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="a00128_source.xhtml#l00026">26</a> du fichier <a class="el" href="a00128_source.xhtml">sugg_algo.c</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00128_adb74030cbeeeadb4f0872cd6cb067796_icgraph.svg" width="292" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac1012fe713837a597197f24dedc7314f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1012fe713837a597197f24dedc7314f">&#9670;&nbsp;</a></span>can_use_metadata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int can_use_metadata </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *&#160;</td>
+          <td class="paramname"><em>infos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Teste si l'on peut utiliser l'algorithme Metadata pour la dissimulation. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">infos</td><td>Structure représentant les informations concernant la dissimulation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 si l'algorithme est proposé, 1 sinon. </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Clément Caumes </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="a00128_source.xhtml#l00088">88</a> du fichier <a class="el" href="a00128_source.xhtml">sugg_algo.c</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00128_ac1012fe713837a597197f24dedc7314f_icgraph.svg" width="330" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5501c9c7711252fa8d85ff12cb3390dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5501c9c7711252fa8d85ff12cb3390dc">&#9670;&nbsp;</a></span>fill_host_info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fill_host_info </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *&#160;</td>
+          <td class="paramname"><em>infos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remplit les informations du fichier hôte. </p>
+<p>Remplit les informations du fichier hôte en fonction du type de fichier. Effectue la lecture des données pour remplir la structure. </p><dl class="section user"><dt>Effet de bord</dt><dd>Initialise et rempli le champ info_s.host.file_info. </dd></dl>
+<dl class="section user"><dt>Prérequis</dt><dd>info_s.host.host doit être un fichier ouvert en lecture et compatible avec l'application. </dd></dl>
+<dl class="errors"><dt><b><a class="el" href="a00134.xhtml#_errors000010">Erreurs:</a></b></dt><dd><p class="startdd"><a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a72cfc98feeed9df5050bd2b25d2d28c2">ERR_SUGG_ALGOS</a> si la fonction est utilisé en mode extraction. </p>
+<p class="enddd"><a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852ab79036268630b509f43f01d2082a9154">ERR_CHOICE_ALGO</a> si l'algorithme choisi n'est pas disponible. </p>
+</dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">infos</td><td>Structure représentant les informations concernant la dissimulation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 si tout se passe bien, sinon 1 s'il y a une erreur. </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Clément Caumes et Yassin Doudouh (BMP et PNG), Pierre Ayoub et Damien Delaunay (MP3 et WAV), Claire Baskevitch et Tristan Bessac (AVI et FLV) </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="a00128_source.xhtml#l00136">136</a> du fichier <a class="el" href="a00128_source.xhtml">sugg_algo.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00128_a5501c9c7711252fa8d85ff12cb3390dc_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00128_a5501c9c7711252fa8d85ff12cb3390dc_icgraph.svg" width="292" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a58f7de82387e9b66f9bd7c40c32aeb8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58f7de82387e9b66f9bd7c40c32aeb8f">&#9670;&nbsp;</a></span>stegx_choose_algo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stegx_choose_algo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *&#160;</td>
+          <td class="paramname"><em>infos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00008.xhtml#adbe3e383e3f1c4239b26ccae2865aa06">algo_e</a>&#160;</td>
+          <td class="paramname"><em>algo_choosen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialise l'algorithme à utiliser pour la dissimulation. </p>
+<p>A partir de la variable globale <a class="el" href="a00107.xhtml#a855163fecb257950934ffba1b73ecae4">stegx_propos_algos</a> et de "algo_choosen", cette fonction permet de choisir l'algorithme à utiliser. </p><dl class="section user"><dt>Effet de bord</dt><dd>Remplit le champ <a class="el" href="a00154.xhtml#aa6ad0a3fe5b1489edc6684da68c3b588">info_s::algo</a> avec l'algorithme choisi, ainsi que le champ <a class="el" href="a00154.xhtml#a3b8cb37fa26cdca2b7460e14facd9ec0">info_s::passwd</a> avec un mot de passe aléatoire si l'utilisateur n'en à pas choisi. </dd></dl>
+<dl class="errors"><dt><b><a class="el" href="a00134.xhtml#_errors000004">Erreurs:</a></b></dt><dd><p class="startdd"><a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a72cfc98feeed9df5050bd2b25d2d28c2">ERR_SUGG_ALGOS</a> si la fonction est mal utilisée (mauvais mode). </p>
+<p class="enddd"><a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852ab79036268630b509f43f01d2082a9154">ERR_CHOICE_ALGO</a> si l'algorithme choisi n'est pas disponible. </p>
+</dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">infos</td><td>Structure contenant les informations concernant la dissimulation. </td></tr>
+    <tr><td class="paramname">algo_choosen</td><td>Algorithme choisi par l'utilisateur. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 si la fonction s'est déroulée normalement, 1 en cas d'erreur et met à jour la variable <a class="el" href="a00062.xhtml#a5ec48ccdfbe19fe23855818f8556abec">stegx_errno</a>. </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Clément Caumes et Yassin Doudouh </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="a00128_source.xhtml#l00377">377</a> du fichier <a class="el" href="a00128_source.xhtml">sugg_algo.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00128_a58f7de82387e9b66f9bd7c40c32aeb8f_cgraph.svg" width="287" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="adc277622e5fe0d1814be76f11263b350"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc277622e5fe0d1814be76f11263b350">&#9670;&nbsp;</a></span>stegx_suggest_algo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stegx_suggest_algo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *&#160;</td>
+          <td class="paramname"><em>infos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Propose les algorithmes de stéganographie utilisables. </p>
+<p>En fonction des informations rentrées dans <a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a>, vérifie pour chaque algorithme qu'il est utilisable en fonction type de fichier hôte et de la taille du fichier à cacher. </p><dl class="section user"><dt>Effet de bord</dt><dd>Initialise et rempli le champ <a class="el" href="a00154.xhtml#a5faadf710cbff5ed6e2882e78216084c">info_s::hidden_length</a> et info_s.host.file_info ainsi que la variable globale <a class="el" href="a00107.xhtml#a855163fecb257950934ffba1b73ecae4">stegx_propos_algos</a>. </dd></dl>
+<dl class="errors"><dt><b><a class="el" href="a00134.xhtml#_errors000003">Erreurs:</a></b></dt><dd><p class="startdd"><a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852a72cfc98feeed9df5050bd2b25d2d28c2">ERR_SUGG_ALGOS</a> s'il y a eu un problème d'utilisation. </p>
+<p class="enddd"><a class="el" href="a00011.xhtml#a08b18ac8af0f3462354240d9732f3852ae149fbd002acad554baf6a5abbc08c12">ERR_LENGTH_HIDDEN</a> si le fichier à cacher est supérieur à la taille maximum (2^32). </p>
+</dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">infos</td><td>Structure contenant les informations concernant la dissimulation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 si tout se passe bien, sinon 1 en cas d'erreur et met à jour <a class="el" href="a00062.xhtml#a5ec48ccdfbe19fe23855818f8556abec">stegx_errno</a>. </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Clément Caumes et Yassin Doudouh </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="a00128_source.xhtml#l00346">346</a> du fichier <a class="el" href="a00128_source.xhtml">sugg_algo.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00128_adc277622e5fe0d1814be76f11263b350_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.xhtml">src</a></li><li class="navelem"><a class="el" href="a00128.xhtml">sugg_algo.c</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

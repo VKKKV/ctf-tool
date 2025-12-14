@@ -1,0 +1,111 @@
+\hypertarget{a00110}{}\subsection{Référence du fichier src/insert.c}
+\label{a00110}\index{src/insert.\+c@{src/insert.\+c}}
+
+
+Insertion des données cachées dans une copie de l\textquotesingle{}hôte.  
+
+
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+errors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}algo/lsb.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}algo/eof.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}algo/metadata.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}algo/eoc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}algo/junk\+\_\+chunk.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de insert.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00111}
+\end{center}
+\end{figure}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{a00110_a66a71cd33131eb29010132269d237356}{write\+\_\+signature} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Ecrit la signature StegX. \end{DoxyCompactList}\item 
+int \hyperlink{a00110_a45a1d0709604d55e9d467cb39d6a5b54}{stegx\+\_\+insert} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va faire l\textquotesingle{}insertion selon l\textquotesingle{}algorithme, ainsi que les fichiers en entrée choisis par l\textquotesingle{}utilisateur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Insertion des données cachées dans une copie de l\textquotesingle{}hôte. 
+
+Module qui contient la fonction d\textquotesingle{}insertion et la fonction d\textquotesingle{}écriture de la signature. 
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00110_a45a1d0709604d55e9d467cb39d6a5b54}\label{a00110_a45a1d0709604d55e9d467cb39d6a5b54}} 
+\index{insert.\+c@{insert.\+c}!stegx\+\_\+insert@{stegx\+\_\+insert}}
+\index{stegx\+\_\+insert@{stegx\+\_\+insert}!insert.\+c@{insert.\+c}}
+\paragraph{\texorpdfstring{stegx\+\_\+insert()}{stegx\_insert()}}
+{\footnotesize\ttfamily int stegx\+\_\+insert (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va faire l\textquotesingle{}insertion selon l\textquotesingle{}algorithme, ainsi que les fichiers en entrée choisis par l\textquotesingle{}utilisateur. 
+
+\begin{DoxyRefDesc}{Erreurs}
+\item[\hyperlink{a00134__errors000006}{Erreurs}]\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a103888724a059b8ab2855577bd73e8b8}{E\+R\+R\+\_\+\+I\+N\+S\+E\+RT} si une erreur survient durant la dissimulation. \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si l\textquotesingle{}insertion s\textquotesingle{}et bien passé, sinon 1 en cas d\textquotesingle{}erreur et met à jour \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Pierre Ayoub 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 69 du fichier insert.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00110_a45a1d0709604d55e9d467cb39d6a5b54_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00110_a66a71cd33131eb29010132269d237356}\label{a00110_a66a71cd33131eb29010132269d237356}} 
+\index{insert.\+c@{insert.\+c}!write\+\_\+signature@{write\+\_\+signature}}
+\index{write\+\_\+signature@{write\+\_\+signature}!insert.\+c@{insert.\+c}}
+\paragraph{\texorpdfstring{write\+\_\+signature()}{write\_signature()}}
+{\footnotesize\ttfamily int write\+\_\+signature (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Ecrit la signature StegX. 
+
+Ecrit l\textquotesingle{}algorithme et la méthode (1 octet), la taille du fichier caché (4 octets), la taille du nom du fichier caché (1 octet), le nom du fichier caché X\+O\+Ré avec le mot de passe (255 octets max), le mot de passe par défaut si l\textquotesingle{}utilisateur n\textquotesingle{}a pas choisi de mot de passe (64 octets). 
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si la signature a bien ete écrite, 1 sinon. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 24 du fichier insert.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00110_a66a71cd33131eb29010132269d237356_icgraph}
+\end{center}
+\end{figure}

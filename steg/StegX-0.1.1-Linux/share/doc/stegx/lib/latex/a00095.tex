@@ -1,0 +1,298 @@
+\hypertarget{a00095}{}\subsection{Référence du fichier src/file\+\_\+type/png.h}
+\label{a00095}\index{src/file\+\_\+type/png.\+h@{src/file\+\_\+type/png.\+h}}
+
+
+Fichier P\+NG.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de png.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00096}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00097}
+\end{center}
+\end{figure}
+\subsubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00174}{png}
+\begin{DoxyCompactList}\small\item\em Structure du format P\+NG. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00095_a26323106d2b60eb827c0889c658d91e1}{P\+N\+G\+\_\+\+D\+E\+F\+\_\+\+I\+H\+DR}~8
+\item 
+\#define \hyperlink{a00095_a93096a25f40187501506b8b775119b4a}{S\+I\+G\+\_\+\+I\+E\+ND}~0x444\+E4549
+\item 
+\#define \hyperlink{a00095_a634801961cc73b81c30edc286556c781}{S\+I\+G\+\_\+\+I\+D\+AT}~0x54414449
+\item 
+\#define \hyperlink{a00095_a62c1ea4563bb6718526bdc2cdc652b5c}{S\+I\+G\+\_\+t\+E\+Xt}~0x74584574
+\item 
+\#define \hyperlink{a00095_acd49fabf599d0ee1224d90bdfe2e9de8}{S\+I\+G\+\_\+\+S\+T\+E\+G\+X\+\_\+\+P\+NG}~0x53544547
+\item 
+\#define \hyperlink{a00095_a38cdc6b069846fcd541e77b8f2e55d22}{L\+E\+N\+G\+T\+H\+\_\+\+C\+H\+U\+N\+K\+\_\+\+I\+E\+ND}~12
+\item 
+\#define \hyperlink{a00095_ae5c81215d8f14ec1d20647029a22cf7c}{L\+E\+N\+G\+T\+H\+\_\+\+I\+E\+ND}~4
+\item 
+\#define \hyperlink{a00095_a66b45cefa7e813509629dfff0680c50b}{L\+E\+N\+G\+T\+H\+\_\+\+C\+RC}~4
+\item 
+\#define \hyperlink{a00095_ab0b5f0b6d9c3b7aee8b41934ec34d1c4}{L\+E\+N\+G\+T\+H\+\_\+\+S\+I\+G\+\_\+\+P\+NG}~8
+\end{DoxyCompactItemize}
+\subsubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00174}{png} \hyperlink{a00095_a714e5dc9c1149c3bec03347018bdecc7}{png\+\_\+s}
+\end{DoxyCompactItemize}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00047_af1ca434cca36ba9fb2a45f6cef3a16d6}{type\+\_\+e} \hyperlink{a00095_a576071ea25bd3721014ca3e596adcdfb}{stegx\+\_\+test\+\_\+file\+\_\+png} (F\+I\+LE $\ast$file)
+\begin{DoxyCompactList}\small\item\em Test si le fichier est un fichier P\+NG. \end{DoxyCompactList}\item 
+int \hyperlink{a00095_a2386f518ec5df78485cca31c6fe4f858}{insert\+\_\+metadata\+\_\+png} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le format P\+NG. \end{DoxyCompactList}\item 
+int \hyperlink{a00095_a258c2aefc0d29e112eca90e652730a84}{extract\+\_\+metadata\+\_\+png} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le formar P\+NG. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Fichier P\+NG. 
+
+Contient les informations (fonctions, types, structures) relatives aux fichiers au format P\+NG. 
+
+\subsubsection{Documentation des macros}
+\mbox{\Hypertarget{a00095_a38cdc6b069846fcd541e77b8f2e55d22}\label{a00095_a38cdc6b069846fcd541e77b8f2e55d22}} 
+\index{png.\+h@{png.\+h}!L\+E\+N\+G\+T\+H\+\_\+\+C\+H\+U\+N\+K\+\_\+\+I\+E\+ND@{L\+E\+N\+G\+T\+H\+\_\+\+C\+H\+U\+N\+K\+\_\+\+I\+E\+ND}}
+\index{L\+E\+N\+G\+T\+H\+\_\+\+C\+H\+U\+N\+K\+\_\+\+I\+E\+ND@{L\+E\+N\+G\+T\+H\+\_\+\+C\+H\+U\+N\+K\+\_\+\+I\+E\+ND}!png.\+h@{png.\+h}}
+\paragraph{\texorpdfstring{L\+E\+N\+G\+T\+H\+\_\+\+C\+H\+U\+N\+K\+\_\+\+I\+E\+ND}{LENGTH\_CHUNK\_IEND}}
+{\footnotesize\ttfamily \#define L\+E\+N\+G\+T\+H\+\_\+\+C\+H\+U\+N\+K\+\_\+\+I\+E\+ND~12}
+
+Longueur en octets chunk I\+E\+ND 
+
+Définition à la ligne 27 du fichier png.\+h.
+
+\mbox{\Hypertarget{a00095_a66b45cefa7e813509629dfff0680c50b}\label{a00095_a66b45cefa7e813509629dfff0680c50b}} 
+\index{png.\+h@{png.\+h}!L\+E\+N\+G\+T\+H\+\_\+\+C\+RC@{L\+E\+N\+G\+T\+H\+\_\+\+C\+RC}}
+\index{L\+E\+N\+G\+T\+H\+\_\+\+C\+RC@{L\+E\+N\+G\+T\+H\+\_\+\+C\+RC}!png.\+h@{png.\+h}}
+\paragraph{\texorpdfstring{L\+E\+N\+G\+T\+H\+\_\+\+C\+RC}{LENGTH\_CRC}}
+{\footnotesize\ttfamily \#define L\+E\+N\+G\+T\+H\+\_\+\+C\+RC~4}
+
+Longueur en octets bloc C\+RC. 
+
+Définition à la ligne 31 du fichier png.\+h.
+
+\mbox{\Hypertarget{a00095_ae5c81215d8f14ec1d20647029a22cf7c}\label{a00095_ae5c81215d8f14ec1d20647029a22cf7c}} 
+\index{png.\+h@{png.\+h}!L\+E\+N\+G\+T\+H\+\_\+\+I\+E\+ND@{L\+E\+N\+G\+T\+H\+\_\+\+I\+E\+ND}}
+\index{L\+E\+N\+G\+T\+H\+\_\+\+I\+E\+ND@{L\+E\+N\+G\+T\+H\+\_\+\+I\+E\+ND}!png.\+h@{png.\+h}}
+\paragraph{\texorpdfstring{L\+E\+N\+G\+T\+H\+\_\+\+I\+E\+ND}{LENGTH\_IEND}}
+{\footnotesize\ttfamily \#define L\+E\+N\+G\+T\+H\+\_\+\+I\+E\+ND~4}
+
+Longueur en octets signature I\+E\+ND. 
+
+Définition à la ligne 29 du fichier png.\+h.
+
+\mbox{\Hypertarget{a00095_ab0b5f0b6d9c3b7aee8b41934ec34d1c4}\label{a00095_ab0b5f0b6d9c3b7aee8b41934ec34d1c4}} 
+\index{png.\+h@{png.\+h}!L\+E\+N\+G\+T\+H\+\_\+\+S\+I\+G\+\_\+\+P\+NG@{L\+E\+N\+G\+T\+H\+\_\+\+S\+I\+G\+\_\+\+P\+NG}}
+\index{L\+E\+N\+G\+T\+H\+\_\+\+S\+I\+G\+\_\+\+P\+NG@{L\+E\+N\+G\+T\+H\+\_\+\+S\+I\+G\+\_\+\+P\+NG}!png.\+h@{png.\+h}}
+\paragraph{\texorpdfstring{L\+E\+N\+G\+T\+H\+\_\+\+S\+I\+G\+\_\+\+P\+NG}{LENGTH\_SIG\_PNG}}
+{\footnotesize\ttfamily \#define L\+E\+N\+G\+T\+H\+\_\+\+S\+I\+G\+\_\+\+P\+NG~8}
+
+Longueur jusqu\textquotesingle{}au premier chunk P\+NG. 
+
+Définition à la ligne 33 du fichier png.\+h.
+
+\mbox{\Hypertarget{a00095_a26323106d2b60eb827c0889c658d91e1}\label{a00095_a26323106d2b60eb827c0889c658d91e1}} 
+\index{png.\+h@{png.\+h}!P\+N\+G\+\_\+\+D\+E\+F\+\_\+\+I\+H\+DR@{P\+N\+G\+\_\+\+D\+E\+F\+\_\+\+I\+H\+DR}}
+\index{P\+N\+G\+\_\+\+D\+E\+F\+\_\+\+I\+H\+DR@{P\+N\+G\+\_\+\+D\+E\+F\+\_\+\+I\+H\+DR}!png.\+h@{png.\+h}}
+\paragraph{\texorpdfstring{P\+N\+G\+\_\+\+D\+E\+F\+\_\+\+I\+H\+DR}{PNG\_DEF\_IHDR}}
+{\footnotesize\ttfamily \#define P\+N\+G\+\_\+\+D\+E\+F\+\_\+\+I\+H\+DR~8}
+
+Adresse (offset) de la definition du chunk I\+H\+DR (octet). 
+
+Définition à la ligne 17 du fichier png.\+h.
+
+\mbox{\Hypertarget{a00095_a634801961cc73b81c30edc286556c781}\label{a00095_a634801961cc73b81c30edc286556c781}} 
+\index{png.\+h@{png.\+h}!S\+I\+G\+\_\+\+I\+D\+AT@{S\+I\+G\+\_\+\+I\+D\+AT}}
+\index{S\+I\+G\+\_\+\+I\+D\+AT@{S\+I\+G\+\_\+\+I\+D\+AT}!png.\+h@{png.\+h}}
+\paragraph{\texorpdfstring{S\+I\+G\+\_\+\+I\+D\+AT}{SIG\_IDAT}}
+{\footnotesize\ttfamily \#define S\+I\+G\+\_\+\+I\+D\+AT~0x54414449}
+
+Signature I\+D\+AT 
+
+Définition à la ligne 21 du fichier png.\+h.
+
+\mbox{\Hypertarget{a00095_a93096a25f40187501506b8b775119b4a}\label{a00095_a93096a25f40187501506b8b775119b4a}} 
+\index{png.\+h@{png.\+h}!S\+I\+G\+\_\+\+I\+E\+ND@{S\+I\+G\+\_\+\+I\+E\+ND}}
+\index{S\+I\+G\+\_\+\+I\+E\+ND@{S\+I\+G\+\_\+\+I\+E\+ND}!png.\+h@{png.\+h}}
+\paragraph{\texorpdfstring{S\+I\+G\+\_\+\+I\+E\+ND}{SIG\_IEND}}
+{\footnotesize\ttfamily \#define S\+I\+G\+\_\+\+I\+E\+ND~0x444\+E4549}
+
+Signature I\+E\+ND. 
+
+Définition à la ligne 19 du fichier png.\+h.
+
+\mbox{\Hypertarget{a00095_acd49fabf599d0ee1224d90bdfe2e9de8}\label{a00095_acd49fabf599d0ee1224d90bdfe2e9de8}} 
+\index{png.\+h@{png.\+h}!S\+I\+G\+\_\+\+S\+T\+E\+G\+X\+\_\+\+P\+NG@{S\+I\+G\+\_\+\+S\+T\+E\+G\+X\+\_\+\+P\+NG}}
+\index{S\+I\+G\+\_\+\+S\+T\+E\+G\+X\+\_\+\+P\+NG@{S\+I\+G\+\_\+\+S\+T\+E\+G\+X\+\_\+\+P\+NG}!png.\+h@{png.\+h}}
+\paragraph{\texorpdfstring{S\+I\+G\+\_\+\+S\+T\+E\+G\+X\+\_\+\+P\+NG}{SIG\_STEGX\_PNG}}
+{\footnotesize\ttfamily \#define S\+I\+G\+\_\+\+S\+T\+E\+G\+X\+\_\+\+P\+NG~0x53544547}
+
+Signature t\+E\+Xt S\+T\+E\+GX P\+NG 
+
+Définition à la ligne 25 du fichier png.\+h.
+
+\mbox{\Hypertarget{a00095_a62c1ea4563bb6718526bdc2cdc652b5c}\label{a00095_a62c1ea4563bb6718526bdc2cdc652b5c}} 
+\index{png.\+h@{png.\+h}!S\+I\+G\+\_\+t\+E\+Xt@{S\+I\+G\+\_\+t\+E\+Xt}}
+\index{S\+I\+G\+\_\+t\+E\+Xt@{S\+I\+G\+\_\+t\+E\+Xt}!png.\+h@{png.\+h}}
+\paragraph{\texorpdfstring{S\+I\+G\+\_\+t\+E\+Xt}{SIG\_tEXt}}
+{\footnotesize\ttfamily \#define S\+I\+G\+\_\+t\+E\+Xt~0x74584574}
+
+Signature t\+E\+Xt 
+
+Définition à la ligne 23 du fichier png.\+h.
+
+
+
+\subsubsection{Documentation des définitions de type}
+\mbox{\Hypertarget{a00095_a714e5dc9c1149c3bec03347018bdecc7}\label{a00095_a714e5dc9c1149c3bec03347018bdecc7}} 
+\index{png.\+h@{png.\+h}!png\+\_\+s@{png\+\_\+s}}
+\index{png\+\_\+s@{png\+\_\+s}!png.\+h@{png.\+h}}
+\paragraph{\texorpdfstring{png\+\_\+s}{png\_s}}
+{\footnotesize\ttfamily typedef struct \hyperlink{a00174}{png} \hyperlink{a00095_a714e5dc9c1149c3bec03347018bdecc7}{png\+\_\+s}}
+
+Type du format P\+NG. 
+
+Définition à la ligne 46 du fichier png.\+h.
+
+
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00095_a258c2aefc0d29e112eca90e652730a84}\label{a00095_a258c2aefc0d29e112eca90e652730a84}} 
+\index{png.\+h@{png.\+h}!extract\+\_\+metadata\+\_\+png@{extract\+\_\+metadata\+\_\+png}}
+\index{extract\+\_\+metadata\+\_\+png@{extract\+\_\+metadata\+\_\+png}!png.\+h@{png.\+h}}
+\paragraph{\texorpdfstring{extract\+\_\+metadata\+\_\+png()}{extract\_metadata\_png()}}
+{\footnotesize\ttfamily int extract\+\_\+metadata\+\_\+png (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le formar P\+NG. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant l\textquotesingle{}extraction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si les données ont bien été extraites ; sinon 1 en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Yassin Doudouh 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 156 du fichier png.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00095_a258c2aefc0d29e112eca90e652730a84_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00095_a258c2aefc0d29e112eca90e652730a84_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00095_a2386f518ec5df78485cca31c6fe4f858}\label{a00095_a2386f518ec5df78485cca31c6fe4f858}} 
+\index{png.\+h@{png.\+h}!insert\+\_\+metadata\+\_\+png@{insert\+\_\+metadata\+\_\+png}}
+\index{insert\+\_\+metadata\+\_\+png@{insert\+\_\+metadata\+\_\+png}!png.\+h@{png.\+h}}
+\paragraph{\texorpdfstring{insert\+\_\+metadata\+\_\+png()}{insert\_metadata\_png()}}
+{\footnotesize\ttfamily int insert\+\_\+metadata\+\_\+png (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme Metadata dans le format P\+NG. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si les données ont bien été inserées ; sinon 1 en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Yassin Doudouh 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 39 du fichier png.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00095_a2386f518ec5df78485cca31c6fe4f858_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00095_a2386f518ec5df78485cca31c6fe4f858_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00095_a576071ea25bd3721014ca3e596adcdfb}\label{a00095_a576071ea25bd3721014ca3e596adcdfb}} 
+\index{png.\+h@{png.\+h}!stegx\+\_\+test\+\_\+file\+\_\+png@{stegx\+\_\+test\+\_\+file\+\_\+png}}
+\index{stegx\+\_\+test\+\_\+file\+\_\+png@{stegx\+\_\+test\+\_\+file\+\_\+png}!png.\+h@{png.\+h}}
+\paragraph{\texorpdfstring{stegx\+\_\+test\+\_\+file\+\_\+png()}{stegx\_test\_file\_png()}}
+{\footnotesize\ttfamily \hyperlink{a00047_af1ca434cca36ba9fb2a45f6cef3a16d6}{type\+\_\+e} stegx\+\_\+test\+\_\+file\+\_\+png (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Test si le fichier est un fichier P\+NG. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em file} & Fichier à tester. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyParagraph}{Prérequis}
+Le pointeur ne doit pas être null et le fichier ouvert en lecture. 
+\end{DoxyParagraph}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da842c5fc4bbe3f780e57c76d1a3cafe9f}{P\+NG}, \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2da6ce26a62afab55d7606ad4e92428b30c}{U\+N\+K\+N\+O\+WN}, -\/1 en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Yassin Doudouh 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 24 du fichier png.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00095_a576071ea25bd3721014ca3e596adcdfb_icgraph}
+\end{center}
+\end{figure}

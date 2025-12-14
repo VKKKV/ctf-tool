@@ -1,0 +1,205 @@
+\hypertarget{a00032}{}\subsection{Référence du fichier src/algo/lsb.c}
+\label{a00032}\index{src/algo/lsb.\+c@{src/algo/lsb.\+c}}
+
+
+Algorithme L\+SB.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+errors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}protection.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}insert.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rand.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de lsb.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00033}
+\end{center}
+\end{figure}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{a00032_a72239fe09f5e932458901b822ccdf945}{protect\+\_\+data\+\_\+lsb} (uint8\+\_\+t $\ast$pixels, uint32\+\_\+t pixels\+\_\+length, uint8\+\_\+t $\ast$data, uint32\+\_\+t data\+\_\+length, char $\ast$passwd, \hyperlink{a00008_a3410d2f61b2ebef290660e7d14215bbd}{mode\+\_\+e} \hyperlink{a00008_a1a6b6fb557d8d37d59700faf4e4c9167}{mode})
+\begin{DoxyCompactList}\small\item\em Cache les octets de data dans pixels selon l\textquotesingle{}algorithme de protection des données en L\+SB. \end{DoxyCompactList}\item 
+int \hyperlink{a00032_a14e9d876697b0225ded31095c1076b64}{insert\+\_\+lsb} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme L\+SB. \end{DoxyCompactList}\item 
+int \hyperlink{a00032_abc757e2627fc9971e388a584e0e0c2ca}{extract\+\_\+lsb} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme L\+SB. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const uint32\+\_\+t \hyperlink{a00032_ae3d02d9170a4bf482089f3d6f5606458}{mp3\+\_\+mask} \mbox{[}\hyperlink{a00089_a8922ae84b90bc792376936798a647326}{M\+P3\+\_\+\+H\+D\+R\+\_\+\+N\+B\+\_\+\+B\+I\+T\+S\+\_\+\+M\+O\+D\+IF}\mbox{]} = \{0x\+F\+F\+F\+F\+F\+F\+F\+B, 0x\+F\+F\+F\+F\+F\+F\+F7, 0x\+F\+F\+F\+F\+F\+E\+F\+F\}
+\item 
+static const uint32\+\_\+t \hyperlink{a00032_acd9a62842d3772d036c5ed36acbcc963}{mp3\+\_\+shift} \mbox{[}\hyperlink{a00089_a8922ae84b90bc792376936798a647326}{M\+P3\+\_\+\+H\+D\+R\+\_\+\+N\+B\+\_\+\+B\+I\+T\+S\+\_\+\+M\+O\+D\+IF}\mbox{]} = \{2, 3, 8\}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Algorithme L\+SB. 
+
+Contient les fonctions concernant l\textquotesingle{}algorithme L\+SB. 
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00032_abc757e2627fc9971e388a584e0e0c2ca}\label{a00032_abc757e2627fc9971e388a584e0e0c2ca}} 
+\index{lsb.\+c@{lsb.\+c}!extract\+\_\+lsb@{extract\+\_\+lsb}}
+\index{extract\+\_\+lsb@{extract\+\_\+lsb}!lsb.\+c@{lsb.\+c}}
+\paragraph{\texorpdfstring{extract\+\_\+lsb()}{extract\_lsb()}}
+{\footnotesize\ttfamily int extract\+\_\+lsb (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme L\+SB. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant l\textquotesingle{}extraction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si l\textquotesingle{}algorithme a bien ete extrait ; sinon 1 en cas d\textquotesingle{}erreur et met à jour \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Pierre Ayoub 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 315 du fichier lsb.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00032_abc757e2627fc9971e388a584e0e0c2ca_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{a00032_abc757e2627fc9971e388a584e0e0c2ca_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00032_a14e9d876697b0225ded31095c1076b64}\label{a00032_a14e9d876697b0225ded31095c1076b64}} 
+\index{lsb.\+c@{lsb.\+c}!insert\+\_\+lsb@{insert\+\_\+lsb}}
+\index{insert\+\_\+lsb@{insert\+\_\+lsb}!lsb.\+c@{lsb.\+c}}
+\paragraph{\texorpdfstring{insert\+\_\+lsb()}{insert\_lsb()}}
+{\footnotesize\ttfamily int insert\+\_\+lsb (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme L\+SB. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si l\textquotesingle{}algorithme a bien ete inseré ; sinon 1 en cas d\textquotesingle{}erreur et met à jour \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clement Caumes et Pierre Ayoub 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 132 du fichier lsb.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00032_a14e9d876697b0225ded31095c1076b64_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{a00032_a14e9d876697b0225ded31095c1076b64_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00032_a72239fe09f5e932458901b822ccdf945}\label{a00032_a72239fe09f5e932458901b822ccdf945}} 
+\index{lsb.\+c@{lsb.\+c}!protect\+\_\+data\+\_\+lsb@{protect\+\_\+data\+\_\+lsb}}
+\index{protect\+\_\+data\+\_\+lsb@{protect\+\_\+data\+\_\+lsb}!lsb.\+c@{lsb.\+c}}
+\paragraph{\texorpdfstring{protect\+\_\+data\+\_\+lsb()}{protect\_data\_lsb()}}
+{\footnotesize\ttfamily int protect\+\_\+data\+\_\+lsb (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{pixels,  }\item[{uint32\+\_\+t}]{pixels\+\_\+length,  }\item[{uint8\+\_\+t $\ast$}]{data,  }\item[{uint32\+\_\+t}]{data\+\_\+length,  }\item[{char $\ast$}]{passwd,  }\item[{\hyperlink{a00008_a3410d2f61b2ebef290660e7d14215bbd}{mode\+\_\+e}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Cache les octets de data dans pixels selon l\textquotesingle{}algorithme de protection des données en L\+SB. 
+
+Pour l\textquotesingle{}insertion, à partir du mot de passe, est créé un seed. Puis les octets contenus dans data seront mélangés dans des pixels aléatoires. Pour l\textquotesingle{}extraction, la seed va permettre de remettre dans le bon ordre les octets mélangés. 
+\begin{DoxyParams}{Paramètres}
+{\em pixels} & Tableau d\textquotesingle{}octets representant les pixels. \\
+\hline
+{\em pixels\+\_\+length} & Taille du tableau pixels (correspond à la taille du bloc data). \\
+\hline
+{\em data} & Tableau d\textquotesingle{}octets representant les donnees a cacher. \\
+\hline
+{\em data\+\_\+length} & Taille du tableau data (correspond à la taille des données a cacher). \\
+\hline
+{\em passwd} & Mot de passe à partir duquel un seed sera créé pour la suite pseudo aleatoire nécessaire au mélange des octets de tab. \\
+\hline
+{\em mode} & Mode qui peut être \{S\+T\+E\+G\+X\+\_\+\+S\+T\+E\+G\+X\+\_\+\+M\+O\+D\+E\+\_\+\+I\+N\+S\+E\+RT\} ou \{S\+T\+E\+G\+X\+\_\+\+M\+O\+D\+E\+\_\+\+E\+X\+T\+R\+A\+CT\}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si le melange des donnees s\textquotesingle{}est bien passé ; 1 sinon. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clement Caumes 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 24 du fichier lsb.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{a00032_a72239fe09f5e932458901b822ccdf945_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00032_a72239fe09f5e932458901b822ccdf945_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsubsection{Documentation des variables}
+\mbox{\Hypertarget{a00032_ae3d02d9170a4bf482089f3d6f5606458}\label{a00032_ae3d02d9170a4bf482089f3d6f5606458}} 
+\index{lsb.\+c@{lsb.\+c}!mp3\+\_\+mask@{mp3\+\_\+mask}}
+\index{mp3\+\_\+mask@{mp3\+\_\+mask}!lsb.\+c@{lsb.\+c}}
+\paragraph{\texorpdfstring{mp3\+\_\+mask}{mp3\_mask}}
+{\footnotesize\ttfamily const uint32\+\_\+t mp3\+\_\+mask\mbox{[}\hyperlink{a00089_a8922ae84b90bc792376936798a647326}{M\+P3\+\_\+\+H\+D\+R\+\_\+\+N\+B\+\_\+\+B\+I\+T\+S\+\_\+\+M\+O\+D\+IF}\mbox{]} = \{0x\+F\+F\+F\+F\+F\+F\+F\+B, 0x\+F\+F\+F\+F\+F\+F\+F7, 0x\+F\+F\+F\+F\+F\+E\+F\+F\}\hspace{0.3cm}{\ttfamily [static]}}
+
+M\+P3 \+: masque à appliquer au header où cacher un bit. 
+
+Définition à la ligne 20 du fichier lsb.\+c.
+
+\mbox{\Hypertarget{a00032_acd9a62842d3772d036c5ed36acbcc963}\label{a00032_acd9a62842d3772d036c5ed36acbcc963}} 
+\index{lsb.\+c@{lsb.\+c}!mp3\+\_\+shift@{mp3\+\_\+shift}}
+\index{mp3\+\_\+shift@{mp3\+\_\+shift}!lsb.\+c@{lsb.\+c}}
+\paragraph{\texorpdfstring{mp3\+\_\+shift}{mp3\_shift}}
+{\footnotesize\ttfamily const uint32\+\_\+t mp3\+\_\+shift\mbox{[}\hyperlink{a00089_a8922ae84b90bc792376936798a647326}{M\+P3\+\_\+\+H\+D\+R\+\_\+\+N\+B\+\_\+\+B\+I\+T\+S\+\_\+\+M\+O\+D\+IF}\mbox{]} = \{2, 3, 8\}\hspace{0.3cm}{\ttfamily [static]}}
+
+M\+P3 \+: offset à appliquer au bit à caché / déjà caché en fonction du masque. 
+
+Définition à la ligne 22 du fichier lsb.\+c.
+

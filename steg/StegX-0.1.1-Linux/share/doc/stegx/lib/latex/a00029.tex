@@ -1,0 +1,114 @@
+\hypertarget{a00029}{}\subsection{Référence du fichier src/algo/junk\+\_\+chunk.h}
+\label{a00029}\index{src/algo/junk\+\_\+chunk.\+h@{src/algo/junk\+\_\+chunk.\+h}}
+
+
+Algorithme J\+U\+NK C\+H\+U\+NK.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de junk\+\_\+chunk.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00030}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{a00031}
+\end{center}
+\end{figure}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{a00029_a84a30fc7a160233a093155bf41411c00}{insert\+\_\+junk\+\_\+chunk} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme Junk Chunk. \end{DoxyCompactList}\item 
+int \hyperlink{a00029_ad04f5216bd1375440a90d0c51a4ba590}{extract\+\_\+junk\+\_\+chunk} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme Junk Chunk. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Algorithme J\+U\+NK C\+H\+U\+NK. 
+
+Contient les fonctions concernant l\textquotesingle{}algorithme J\+U\+NK C\+H\+U\+NK. 
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00029_ad04f5216bd1375440a90d0c51a4ba590}\label{a00029_ad04f5216bd1375440a90d0c51a4ba590}} 
+\index{junk\+\_\+chunk.\+h@{junk\+\_\+chunk.\+h}!extract\+\_\+junk\+\_\+chunk@{extract\+\_\+junk\+\_\+chunk}}
+\index{extract\+\_\+junk\+\_\+chunk@{extract\+\_\+junk\+\_\+chunk}!junk\+\_\+chunk.\+h@{junk\+\_\+chunk.\+h}}
+\paragraph{\texorpdfstring{extract\+\_\+junk\+\_\+chunk()}{extract\_junk\_chunk()}}
+{\footnotesize\ttfamily int extract\+\_\+junk\+\_\+chunk (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va extraire les donnees cachees en utilisant l\textquotesingle{}algorithme Junk Chunk. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant l\textquotesingle{}extraction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si l\textquotesingle{}algorithme a bien ete extrait ; sinon 1 en cas d\textquotesingle{}erreur et met à jour \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Claire Baskevitch et Tristan Bessac 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 72 du fichier junk\+\_\+chunk.\+c.
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00029_ad04f5216bd1375440a90d0c51a4ba590_cgraph}
+\end{center}
+\end{figure}
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{a00029_ad04f5216bd1375440a90d0c51a4ba590_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00029_a84a30fc7a160233a093155bf41411c00}\label{a00029_a84a30fc7a160233a093155bf41411c00}} 
+\index{junk\+\_\+chunk.\+h@{junk\+\_\+chunk.\+h}!insert\+\_\+junk\+\_\+chunk@{insert\+\_\+junk\+\_\+chunk}}
+\index{insert\+\_\+junk\+\_\+chunk@{insert\+\_\+junk\+\_\+chunk}!junk\+\_\+chunk.\+h@{junk\+\_\+chunk.\+h}}
+\paragraph{\texorpdfstring{insert\+\_\+junk\+\_\+chunk()}{insert\_junk\_chunk()}}
+{\footnotesize\ttfamily int insert\+\_\+junk\+\_\+chunk (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Va inserer les donnees cachees en utilisant l\textquotesingle{}algorithme Junk Chunk. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure représentant les informations concernant la dissimulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 si l\textquotesingle{}algorithme a bien ete inseré ; sinon 1 en cas d\textquotesingle{}erreur et met à jour \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Claire Baskevitch et Tristan Bessac 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 20 du fichier junk\+\_\+chunk.\+c.
+
+Voici le graphe des appelants de cette fonction \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{a00029_a84a30fc7a160233a093155bf41411c00_icgraph}
+\end{center}
+\end{figure}

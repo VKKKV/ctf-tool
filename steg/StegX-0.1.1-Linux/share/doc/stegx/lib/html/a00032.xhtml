@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>StegX: Référence du fichier src/algo/lsb.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-doc.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">StegX
+   &#160;<span id="projectnumber">1.1.0</span>
+   </div>
+   <div id="projectbrief">Projet de Stéganographie pour l&#39;UVSQ</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('a00032.xhtml','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier lsb.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Algorithme LSB.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="a00047_source.xhtml">common.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00008_source.xhtml">stegx_common.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00011_source.xhtml">stegx_errors.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00119_source.xhtml">protection.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00113_source.xhtml">insert.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00125_source.xhtml">rand.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de lsb.c:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00033.svg" width="100%" height="496"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<p><a href="a00032_source.xhtml">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a72239fe09f5e932458901b822ccdf945"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.xhtml#a72239fe09f5e932458901b822ccdf945">protect_data_lsb</a> (uint8_t *pixels, uint32_t pixels_length, uint8_t *data, uint32_t data_length, char *passwd, <a class="el" href="a00008.xhtml#a3410d2f61b2ebef290660e7d14215bbd">mode_e</a> <a class="el" href="a00008.xhtml#a1a6b6fb557d8d37d59700faf4e4c9167">mode</a>)</td></tr>
+<tr class="memdesc:a72239fe09f5e932458901b822ccdf945"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache les octets de data dans pixels selon l'algorithme de protection des données en LSB.  <a href="#a72239fe09f5e932458901b822ccdf945">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a72239fe09f5e932458901b822ccdf945"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14e9d876697b0225ded31095c1076b64"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.xhtml#a14e9d876697b0225ded31095c1076b64">insert_lsb</a> (<a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *infos)</td></tr>
+<tr class="memdesc:a14e9d876697b0225ded31095c1076b64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Va inserer les donnees cachees en utilisant l'algorithme LSB.  <a href="#a14e9d876697b0225ded31095c1076b64">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a14e9d876697b0225ded31095c1076b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc757e2627fc9971e388a584e0e0c2ca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.xhtml#abc757e2627fc9971e388a584e0e0c2ca">extract_lsb</a> (<a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *infos)</td></tr>
+<tr class="memdesc:abc757e2627fc9971e388a584e0e0c2ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Va extraire les donnees cachees en utilisant l'algorithme LSB.  <a href="#abc757e2627fc9971e388a584e0e0c2ca">Plus de détails...</a><br /></td></tr>
+<tr class="separator:abc757e2627fc9971e388a584e0e0c2ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ae3d02d9170a4bf482089f3d6f5606458"><td class="memItemLeft" align="right" valign="top">static const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.xhtml#ae3d02d9170a4bf482089f3d6f5606458">mp3_mask</a> [<a class="el" href="a00089.xhtml#a8922ae84b90bc792376936798a647326">MP3_HDR_NB_BITS_MODIF</a>] = {0xFFFFFFFB, 0xFFFFFFF7, 0xFFFFFEFF}</td></tr>
+<tr class="separator:ae3d02d9170a4bf482089f3d6f5606458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd9a62842d3772d036c5ed36acbcc963"><td class="memItemLeft" align="right" valign="top">static const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.xhtml#acd9a62842d3772d036c5ed36acbcc963">mp3_shift</a> [<a class="el" href="a00089.xhtml#a8922ae84b90bc792376936798a647326">MP3_HDR_NB_BITS_MODIF</a>] = {2, 3, 8}</td></tr>
+<tr class="separator:acd9a62842d3772d036c5ed36acbcc963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Algorithme LSB. </p>
+<p>Contient les fonctions concernant l'algorithme LSB. </p>
+
+<p class="definition">Définition dans le fichier <a class="el" href="a00032_source.xhtml">lsb.c</a>.</p>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="abc757e2627fc9971e388a584e0e0c2ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc757e2627fc9971e388a584e0e0c2ca">&#9670;&nbsp;</a></span>extract_lsb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int extract_lsb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *&#160;</td>
+          <td class="paramname"><em>infos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Va extraire les donnees cachees en utilisant l'algorithme LSB. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">infos</td><td>Structure représentant les informations concernant l'extraction. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 si l'algorithme a bien ete extrait ; sinon 1 en cas d'erreur et met à jour <a class="el" href="a00062.xhtml#a5ec48ccdfbe19fe23855818f8556abec">stegx_errno</a>. </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Clément Caumes et Pierre Ayoub </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="a00032_source.xhtml#l00315">315</a> du fichier <a class="el" href="a00032_source.xhtml">lsb.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00032_abc757e2627fc9971e388a584e0e0c2ca_cgraph.svg" width="100%" height="526"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00032_abc757e2627fc9971e388a584e0e0c2ca_icgraph.svg" width="247" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a14e9d876697b0225ded31095c1076b64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14e9d876697b0225ded31095c1076b64">&#9670;&nbsp;</a></span>insert_lsb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int insert_lsb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00008.xhtml#aa8ca908d92fb5bdd3c0a9e1f58b2cf03">info_s</a> *&#160;</td>
+          <td class="paramname"><em>infos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Va inserer les donnees cachees en utilisant l'algorithme LSB. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">infos</td><td>Structure représentant les informations concernant la dissimulation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 si l'algorithme a bien ete inseré ; sinon 1 en cas d'erreur et met à jour <a class="el" href="a00062.xhtml#a5ec48ccdfbe19fe23855818f8556abec">stegx_errno</a>. </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Clement Caumes et Pierre Ayoub </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="a00032_source.xhtml#l00132">132</a> du fichier <a class="el" href="a00032_source.xhtml">lsb.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="a00032_a14e9d876697b0225ded31095c1076b64_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00032_a14e9d876697b0225ded31095c1076b64_icgraph.svg" width="231" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a72239fe09f5e932458901b822ccdf945"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72239fe09f5e932458901b822ccdf945">&#9670;&nbsp;</a></span>protect_data_lsb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int protect_data_lsb </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pixels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>pixels_length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>data_length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>passwd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00008.xhtml#a3410d2f61b2ebef290660e7d14215bbd">mode_e</a>&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cache les octets de data dans pixels selon l'algorithme de protection des données en LSB. </p>
+<p>Pour l'insertion, à partir du mot de passe, est créé un seed. Puis les octets contenus dans data seront mélangés dans des pixels aléatoires. Pour l'extraction, la seed va permettre de remettre dans le bon ordre les octets mélangés. </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pixels</td><td>Tableau d'octets representant les pixels. </td></tr>
+    <tr><td class="paramname">pixels_length</td><td>Taille du tableau pixels (correspond à la taille du bloc data). </td></tr>
+    <tr><td class="paramname">data</td><td>Tableau d'octets representant les donnees a cacher. </td></tr>
+    <tr><td class="paramname">data_length</td><td>Taille du tableau data (correspond à la taille des données a cacher). </td></tr>
+    <tr><td class="paramname">passwd</td><td>Mot de passe à partir duquel un seed sera créé pour la suite pseudo aleatoire nécessaire au mélange des octets de tab. </td></tr>
+    <tr><td class="paramname">mode</td><td>Mode qui peut être {STEGX_STEGX_MODE_INSERT} ou {STEGX_MODE_EXTRACT}. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 si le melange des donnees s'est bien passé ; 1 sinon. </dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>Clement Caumes </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="a00032_source.xhtml#l00024">24</a> du fichier <a class="el" href="a00032_source.xhtml">lsb.c</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00032_a72239fe09f5e932458901b822ccdf945_cgraph.svg" width="271" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="a00032_a72239fe09f5e932458901b822ccdf945_icgraph.svg" width="414" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a id="ae3d02d9170a4bf482089f3d6f5606458"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3d02d9170a4bf482089f3d6f5606458">&#9670;&nbsp;</a></span>mp3_mask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint32_t mp3_mask[<a class="el" href="a00089.xhtml#a8922ae84b90bc792376936798a647326">MP3_HDR_NB_BITS_MODIF</a>] = {0xFFFFFFFB, 0xFFFFFFF7, 0xFFFFFEFF}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>MP3 : masque à appliquer au header où cacher un bit. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="a00032_source.xhtml#l00020">20</a> du fichier <a class="el" href="a00032_source.xhtml">lsb.c</a>.</p>
+
+</div>
+</div>
+<a id="acd9a62842d3772d036c5ed36acbcc963"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd9a62842d3772d036c5ed36acbcc963">&#9670;&nbsp;</a></span>mp3_shift</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint32_t mp3_shift[<a class="el" href="a00089.xhtml#a8922ae84b90bc792376936798a647326">MP3_HDR_NB_BITS_MODIF</a>] = {2, 3, 8}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>MP3 : offset à appliquer au bit à caché / déjà caché en fonction du masque. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="a00032_source.xhtml#l00022">22</a> du fichier <a class="el" href="a00032_source.xhtml">lsb.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.xhtml">src</a></li><li class="navelem"><a class="el" href="dir_8111f045ab156cab490d6e0f8a4c6c64.xhtml">algo</a></li><li class="navelem"><a class="el" href="a00032.xhtml">lsb.c</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

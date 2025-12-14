@@ -1,0 +1,4 @@
+<map id="mp3_mpeg_hdr_get_samprate" name="mp3_mpeg_hdr_get_samprate">
+<area shape="rect" id="node2" href="$a00086.xhtml#a75bc8b052a4d00ab95b05b576918360d" title="Test si le header est un header MPEG 1/2 Layer III. " alt="" coords="484,5,624,32"/>
+<area shape="rect" id="node3" href="$a00086.xhtml#a2f08a046bc257029ca74b86b48204380" title="Obtient la version de la norme MPEG du header d&#39;une frame MP3. " alt="" coords="251,31,436,57"/>
+</map>

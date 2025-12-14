@@ -1,0 +1,352 @@
+ 
+
+
+
+
+
+\subsection*{Introduction }
+
+{\bfseries StegX} est une application de stéganographie. Elle permet de dissimuler des données dans divers formats de fichier, de type image, son ou vidéo. Les données cachées peuvent ainsi être transmises par un canal non sécurisé sans être découverte, puis le receveur pourra les extraire. L\textquotesingle{}application se compose d\textquotesingle{}une interface graphique et d\textquotesingle{}une interface en ligne de commande, ainsi que d\textquotesingle{}une bibliothèque partagée intégrable dans d\textquotesingle{}autres projets de développement.
+
+\subsubsection*{Fonctionnalités }
+
+
+\begin{DoxyItemize}
+\item {\itshape Formats et algorithmes pris en charge par l\textquotesingle{}application} \+:
+\begin{DoxyItemize}
+\item {\bfseries B\+MP} \+: L\+SB, E\+OF, Metadata.
+\item {\bfseries P\+NG} \+: E\+OF, Metadata.
+\item {\bfseries A\+VI} \+: Junk Chunk.
+\item {\bfseries F\+LV} \+: E\+OF, E\+OC.
+\item {\bfseries W\+A\+VE} \+: L\+SB, E\+OF.
+\item {\bfseries M\+P3} \+: L\+SB, E\+OF.
+\end{DoxyItemize}
+\item {\itshape Description, avantages et inconvénients des algorithmes} \+:
+\begin{DoxyItemize}
+\item {\bfseries L\+SB (Least Significant Bit)} \+: Cet algorithme consiste à modifier les bits de poids faible des octets définissants les données du fichier. Étant un bit de moindre importance, les données ne sont quasimment pas affectées et la dissimulation est invisible pour l\textquotesingle{}homme (sur une image ou du son par exemple). De manière générale, cet algorithme consiste à modifier des bits de moindres importances (par exemple dans un header). Il a comme avantage d\textquotesingle{}être très discret et de ne pas augmenter la taille du fichier hôte. Cependant, pour cacher un fichier d\textquotesingle{}une grande taille, il faudra également un fichier hôte d\textquotesingle{}une taille conséquente.
+\item {\bfseries E\+OF} \+: Cet algorithme consiste à cacher les données du fichier à cacher à la fin du fichier hôte, de tel manière que les données cachées ne soient pas interprétées par les logiciels lisant le fichier hôte. L\textquotesingle{}algorithme à comme avantage d\textquotesingle{}être simple, rapide et de ne pas imposer de limite de taille. Cependant, cet algorithme n\textquotesingle{}est pas discret et augmente la taille du fichier hôte proportionnelement à la taille du fichier à cacher.
+\item {\bfseries Metadata} \+: Cet algorithme ajoute des métadonnées contenant les données à cacher au fichier hôte, en suivant les standards propre à chaque format de fichier. Cette méthode est plus discrète qu\textquotesingle{}E\+OF, mais augmente toujours la taille du fichier hôte proportionnellement à la taille du fichier à chacher.
+\item {\bfseries E\+OC} \+: Variante d\textquotesingle{}E\+OF, le fichier à cacher est découpé et cacher à la fin de certains chunks (blocs de base constituant les données du fichier hôte). Cette méthode est aussi plus discrète qu\textquotesingle{}E\+OF.
+\item {\bfseries Junk Chunk} \+: Algorithme ayant comme principe la création de chunk poubelle. Ce sont des morceaux de données non-\/interprétées par les logiciels lisant le fichier hôte car les données ne respecte pas le format intiale et sont invalides.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+
+
+
+
+\subsection*{Installation }
+
+\subsubsection*{Unix (Debian-\/like) }
+
+\paragraph*{-\/ Installateur}
+
+
+\begin{DoxyEnumerate}
+\item Dans la section {\ttfamily Release}, téléchargez le fichier {\ttfamily Steg\+X-\/xxx.\+deb}.
+\item Installer le en utilisant une interface à A\+PT (par exemple en double cliquant dessus), ou en utilisant la commande {\ttfamily sudo apt-\/get install ./\+Steg\+X-\/xxx.deb} depuis le répertoire de téléchargement.
+\end{DoxyEnumerate}
+
+\paragraph*{-\/ Portable}
+
+
+\begin{DoxyEnumerate}
+\item Dans la section {\ttfamily Release}, téléchargez le fichier {\ttfamily Steg\+X-\/xxx.\+tar.\+gz} (archive tar) ou {\ttfamily Steg\+X-\/xxx.\+sh} (exécutable auto extractible).
+\item Décompresser l\textquotesingle{}archive avec la commande {\ttfamily tar xzvf Steg\+X-\/xxx.\+tar.\+gz} ou lancer l\textquotesingle{}extraction de l\textquotesingle{}exécutable avec la commande {\ttfamily ./\+Steg\+X-\/xxx.sh} en fonction de votre choix de téléchargement.
+\item Vous trouverez un dossier contenant l\textquotesingle{}application.
+\end{DoxyEnumerate}
+
+\subsubsection*{Windows }
+
+\paragraph*{-\/ Installateur}
+
+
+\begin{DoxyEnumerate}
+\item Dans la section {\ttfamily Release}, téléchargez le fichier {\ttfamily Steg\+X-\/xxx.\+exe}.
+\item Installer le en double cliquant dessus.
+\item Si vous voulez pouvoir lancer l\textquotesingle{}interface en ligne de commande depuis le terminal avec la commande {\ttfamily stegx}, alors sélectionner {\ttfamily Ajouter le répertoire d\textquotesingle{}installation au P\+A\+TH} lorsque cela vous sera demandé lors de l\textquotesingle{}installation.
+\end{DoxyEnumerate}
+
+\paragraph*{-\/ Portable}
+
+
+\begin{DoxyEnumerate}
+\item Dans la section {\ttfamily Release}, téléchargez le fichier {\ttfamily Steg\+X-\/xxx.\+zip} (archive compressée).
+\item Décompresser l\textquotesingle{}archive, ainsi vous trouverez un dossier contenant l\textquotesingle{}application.
+\end{DoxyEnumerate}
+
+
+
+
+
+\subsection*{Désinstallation }
+
+\subsubsection*{Unix (Debian-\/like) }
+
+Exécuter la commande {\ttfamily sudo apt remove stegx} pour supprimer le paquet de votre système.
+
+\subsubsection*{Windows }
+
+Accéder au panneau de configuration, cliquer sur désinstaller un programme, sélectionner {\ttfamily StegX} et cliquer sur désinstaller. 
+
+
+
+\subsection*{Utilisation }
+
+\subsubsection*{Après une installation avec un installateur }
+
+Dans un terminal, utiliser la commande {\ttfamily stegx} pour utiliser l\textquotesingle{}interface en ligne de commande. Pour lancer l\textquotesingle{}interface graphique, taper {\ttfamily stegx-\/gui} dans votre terminal, ou utiliser le raccourci créer dans le menu démarrer ou sur le bureau.
+
+\subsubsection*{Après décompression de la version portable }
+
+Placez vous dans le répertoire dans le répertoire {\ttfamily bin} contenu dans le répertoire racine de l\textquotesingle{}application, puis exécutez dans votre terminal {\ttfamily ./stegx} pour l\textquotesingle{}interface en ligne de commande ou {\ttfamily ./stegx-\/gui} pour l\textquotesingle{}interface graphique.
+
+\subsubsection*{Aide }
+
+Pour afficher l\textquotesingle{}aide de l\textquotesingle{}interface en ligne de commande, taper la commande {\ttfamily stegx -\/h}. Pour avoir une aide sur l\textquotesingle{}interface graphique, consulter le manuel d\textquotesingle{}utilisation produit lors de la génération des rapports en P\+DF. 
+
+
+
+\subsection*{Développement }
+
+\subsubsection*{Dépendances }
+
+\paragraph*{-\/ Requises}
+
+\subparagraph*{-- Unix}
+
+
+\begin{DoxyItemize}
+\item {\itshape Compilateur} \+: {\bfseries G\+NU Compiler Collection} (G\+CC) (\href{https://gcc.gnu.org/}{\tt https\+://gcc.\+gnu.\+org/})
+\item {\itshape Moteur de production} \+: {\bfseries G\+NU Make} (\href{https://www.gnu.org/software/make/}{\tt https\+://www.\+gnu.\+org/software/make/})
+\end{DoxyItemize}
+
+\subparagraph*{-- Windows}
+
+Au choix \+:
+\begin{DoxyItemize}
+\item {\itshape Compilateur et environment Unix} \+:
+\begin{DoxyItemize}
+\item {\bfseries Min\+G\+W-\/w64/\+G\+CC} (\href{https://mingw-w64.org/doku.php}{\tt https\+://mingw-\/w64.\+org/doku.\+php})
+\item {\bfseries M\+S\+Y\+S2} (\href{http://www.msys2.org/}{\tt http\+://www.\+msys2.\+org/})
+\end{DoxyItemize}
+\item {\itshape Compilateur et environment de développement} \+:
+\begin{DoxyItemize}
+\item {\bfseries Microsoft Visual Studio} (M\+S\+VC) (\href{https://www.visualstudio.com/fr/downloads/}{\tt https\+://www.\+visualstudio.\+com/fr/downloads/})
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\subparagraph*{-- Unix \& Windows}
+
+
+\begin{DoxyItemize}
+\item {\itshape Moteur de production} \+: {\bfseries C\+Make} (\href{https://cmake.org/}{\tt https\+://cmake.\+org/})
+\item {\itshape Interface graphique} \+: {\bfseries  G\+T\+K+ } ($>$= 3.\+0) (\href{https://www.gtk.org/}{\tt https\+://www.\+gtk.\+org/})
+\end{DoxyItemize}
+
+\paragraph*{-\/ Optionnelles}
+
+\subparagraph*{-- Unix \& Windows}
+
+
+\begin{DoxyItemize}
+\item {\itshape Générateur de documentation} \+: {\bfseries Doxygen} (\href{https://www.stack.nl/~dimitri/doxygen/index.html}{\tt https\+://www.\+stack.\+nl/$\sim$dimitri/doxygen/index.\+html})
+\item {\itshape Distribution La\+TeX} \+: {\bfseries TeX Live} (\href{https://tug.org/texlive/}{\tt https\+://tug.\+org/texlive/})
+\item {\itshape Test unitaire} \+: {\bfseries C\+Mocka} (\href{https://cmocka.org/}{\tt https\+://cmocka.\+org/})
+\end{DoxyItemize}
+
+\subparagraph*{-- Unix}
+
+
+\begin{DoxyItemize}
+\item {\itshape Générateur de tags} \+: {\bfseries Ctags} (\href{http://ctags.sourceforge.net/}{\tt http\+://ctags.\+sourceforge.\+net/})
+\item {\itshape Formateur de code source} \+: {\bfseries G\+NU Indent} (\href{https://www.gnu.org/software/indent/}{\tt https\+://www.\+gnu.\+org/software/indent/})
+\end{DoxyItemize}
+
+\subsubsection*{Commandes et cibles }
+
+La configuration de la compilation est à faire en première. Toutes les autres commandes sont à effectuer dans le dossier {\itshape build}. Lors de l\textquotesingle{}ajout d\textquotesingle{}un fichier source au projet ou lors de la rencontre d\textquotesingle{}un bug lors de la configuration/compilation, utilisez la commande de réinitialisation de l\textquotesingle{}arborescence, sinon, supprimez le dossier {\itshape build} et recommencez la configuration. Les commandes entre {\itshape \mbox{[} \mbox{]}} sont optionnelles.
+
+Sur {\bfseries Windows}, si une erreur survient, faites attention de placer le dossier dans un chemin qui ne contient pas d\textquotesingle{}espaces. Certains modules de {\bfseries C\+Make} pour {\bfseries Windows} gèrent mal les espaces. Les cibles (targets) exécutées par {\bfseries C\+Make} peuvent aussi êtres générées directement par l\textquotesingle{}interface graphique de {\bfseries M\+S\+VC} sous forme de solution.
+
+Pour chaque commande avec {\bfseries Make}, vous pouvez utiliser {\itshape V\+E\+R\+B\+O\+SE=1} pour afficher toutes les actions effectuées.
+
+L\textquotesingle{}option {\itshape -\/\+D\+Var\+Name=Var\+Value} de {\bfseries C\+Make} permet de configurer une variable. Ci-\/dessous une liste des variables configurables avec leurs valeurs possibles \+:
+\begin{DoxyEnumerate}
+\item {\itshape Description} \+: {\bfseries Var\+Name} = Var\+Value1, Var\+Value2 etc...
+\item {\itshape Chemin vers un dossier existant pour l\textquotesingle{}installation} \+: {\bfseries C\+M\+A\+K\+E\+\_\+\+I\+N\+S\+T\+A\+L\+L\+\_\+\+P\+R\+E\+F\+IX} = /usr/local, /opt/stegx
+\item {\itshape Mode de compilation} \+: {\bfseries C\+M\+A\+K\+E\+\_\+\+B\+U\+I\+L\+D\+\_\+\+T\+Y\+PE} = Release, Debug
+\end{DoxyEnumerate}
+
+\paragraph*{-\/ Unix}
+
+\subparagraph*{-- Configuration de la compilation}
+
+\begin{DoxyVerb}mkdir build
+cd build
+cmake .. [-G "Unix Makefiles"] [-DVarName=VarValue]
+\end{DoxyVerb}
+
+
+\subparagraph*{-- Compilation des modules principaux}
+
+\begin{DoxyVerb}make [all] [stegx-cli stegx-gui stegx-lib] [VERBOSE=1]
+\end{DoxyVerb}
+
+
+\subparagraph*{-- Génération de la documentation}
+
+\begin{DoxyVerb}make doc
+\end{DoxyVerb}
+
+
+\subparagraph*{-- Génération des rapports}
+
+\begin{DoxyVerb}make report
+\end{DoxyVerb}
+
+
+\subparagraph*{-- Lancement des tests unitaires}
+
+\begin{DoxyVerb}make check
+\end{DoxyVerb}
+
+
+\subparagraph*{-- Création des binaires de distribution}
+
+\begin{DoxyVerb}sudo make dist
+\end{DoxyVerb}
+
+
+\subparagraph*{-- Installation}
+
+\begin{DoxyVerb}sudo make install
+\end{DoxyVerb}
+
+
+\subparagraph*{-- Désinstallation}
+
+\begin{DoxyVerb}sudo make uninstall
+\end{DoxyVerb}
+
+
+\subparagraph*{-- Génération des tags}
+
+\begin{DoxyVerb}make tags
+\end{DoxyVerb}
+
+
+\subparagraph*{-- Formatage du code source}
+
+\begin{DoxyVerb}make indent
+\end{DoxyVerb}
+
+
+\subparagraph*{-- Nettoyage}
+
+\begin{DoxyVerb}make clean
+\end{DoxyVerb}
+
+
+\subparagraph*{-- Réinitialisation}
+
+\begin{DoxyVerb}make reinit
+\end{DoxyVerb}
+
+
+\paragraph*{-\/ Windows}
+
+\subparagraph*{-- Configuration de la compilation}
+
+\begin{DoxyVerb}mkdir build
+cd build
+MSYS :
+    cmake .. -G "MSYS Makefiles" [-DVarName=VarValue]
+MinGW :
+    cmake .. -G "MinGW Makefiles" [-DVarName=VarValue]
+MSVC :
+    cmake .. [-G "Visual Studio 15 2017"] [-DVarName=VarValue]
+\end{DoxyVerb}
+
+
+\subparagraph*{-- Compilation des modules principaux}
+
+\begin{DoxyVerb}MSYS :
+    make [all] [stegx-cli stegx-gui stegx-lib] [VERBOSE=1]
+MinGW :
+    cmake --build . --target all [stegx-cli stegx-gui stegx-lib]
+MSVC : Interface graphique (GTK+) non disponible.
+    cmake --build . --target ALL_BUILD [stegx-cli stegx-lib]
+\end{DoxyVerb}
+
+
+\subparagraph*{-- Génération de la documentation}
+
+\begin{DoxyVerb}MSYS :
+    make doc
+MinGW & MSVC:
+    cmake --build . --target doc
+\end{DoxyVerb}
+
+
+\subparagraph*{-- Génération des rapports}
+
+\begin{DoxyVerb}MSYS :
+    make report
+MinGW & MSVC :
+    cmake --build . --target report
+\end{DoxyVerb}
+
+
+\subparagraph*{-- Lancement des tests unitaires}
+
+\begin{DoxyVerb}MSYS & MinGW :
+    Tests unitaires non disponibles.
+MSVC :
+    cmake --build . --target check
+\end{DoxyVerb}
+
+
+\subparagraph*{-- Création des binaires de distribution}
+
+\begin{DoxyVerb}MSYS :
+    make dist
+MinGW & MSVC : à lancer en tant qu'administrateur.
+    cmake --build . --target dist
+\end{DoxyVerb}
+
+
+\subparagraph*{-- Installation}
+
+\begin{DoxyVerb}MSYS : à lancer en tant qu'administrateur.
+    make install
+MinGW & MSVC : à lancer en tant qu'administrateur.
+    cmake --build . --target INSTALL
+\end{DoxyVerb}
+
+
+\subparagraph*{-- Désinstallation}
+
+\begin{DoxyVerb}MSYS : à lancer en tant qu'administrateur.
+    make uninstall
+MinGW & MSVC : à lancer en tant qu'administrateur.
+    cmake --build . --target uninstall
+\end{DoxyVerb}
+
+
+\subparagraph*{-- Nettoyage}
+
+\begin{DoxyVerb}MSYS :
+    make clean
+MinGW & MSVC :
+    cmake --build . --target clean
+\end{DoxyVerb}
+
+
+\subparagraph*{-- Réinitialisation}
+
+\begin{DoxyVerb}MSYS :
+    make reinit
+MinGW & MSVC :
+    cmake --build . --target reinit\end{DoxyVerb}
+ 

@@ -1,0 +1,70 @@
+\hypertarget{a00062}{}\subsection{Référence du fichier src/errors.c}
+\label{a00062}\index{src/errors.\+c@{src/errors.\+c}}
+
+
+Module de gestion des erreurs.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+errors.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de errors.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{a00063}
+\end{center}
+\end{figure}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{a00062_a4e64579b7bb7e4cbc62af850504b6c36}{err\+\_\+print} (enum \hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852}{err\+\_\+code} err)
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852}{err\+\_\+code} \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno} = \hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a5203071ca85e00df6bf2526855b6df0d}{E\+R\+R\+\_\+\+N\+O\+NE}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Module de gestion des erreurs. 
+
+Contient les fonctions de gestion des erreurs ainsi que les descriptions des codes d\textquotesingle{}erreurs. 
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00062_a4e64579b7bb7e4cbc62af850504b6c36}\label{a00062_a4e64579b7bb7e4cbc62af850504b6c36}} 
+\index{errors.\+c@{errors.\+c}!err\+\_\+print@{err\+\_\+print}}
+\index{err\+\_\+print@{err\+\_\+print}!errors.\+c@{errors.\+c}}
+\paragraph{\texorpdfstring{err\+\_\+print()}{err\_print()}}
+{\footnotesize\ttfamily void err\+\_\+print (\begin{DoxyParamCaption}\item[{const enum \hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852}{err\+\_\+code}}]{err }\end{DoxyParamCaption})}
+
+Affiche le message d\textquotesingle{}erreur sur la sortie d\textquotesingle{}erreur en fonction du code d\textquotesingle{}erreur spécifié. 
+\begin{DoxyParams}{Paramètres}
+{\em err} & Code d\textquotesingle{}erreur. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Pierre Ayoub 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 16 du fichier errors.\+c.
+
+
+
+\subsubsection{Documentation des variables}
+\mbox{\Hypertarget{a00062_a5ec48ccdfbe19fe23855818f8556abec}\label{a00062_a5ec48ccdfbe19fe23855818f8556abec}} 
+\index{errors.\+c@{errors.\+c}!stegx\+\_\+errno@{stegx\+\_\+errno}}
+\index{stegx\+\_\+errno@{stegx\+\_\+errno}!errors.\+c@{errors.\+c}}
+\paragraph{\texorpdfstring{stegx\+\_\+errno}{stegx\_errno}}
+{\footnotesize\ttfamily enum \hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852}{err\+\_\+code} stegx\+\_\+errno = \hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a5203071ca85e00df6bf2526855b6df0d}{E\+R\+R\+\_\+\+N\+O\+NE}}
+
+Variable mise à la disposition des fonctions de la bibliothèque pour y inscrire leur code d\textquotesingle{}erreur. \begin{DoxyAuthor}{Auteur}
+Pierre Ayoub 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 14 du fichier errors.\+c.
+

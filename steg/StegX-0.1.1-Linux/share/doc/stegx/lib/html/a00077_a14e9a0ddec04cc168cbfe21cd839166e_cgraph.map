@@ -1,0 +1,6 @@
+<map id="extract_metadata_bmp" name="extract_metadata_bmp">
+<area shape="rect" id="node2" href="$a00122.xhtml#a4e9a217b960dc65fd08dff9f78e317e4" title="Initialise la seed de la suite pseudo aléatoire. " alt="" coords="351,5,444,32"/>
+<area shape="rect" id="node3" href="$a00122.xhtml#a2a891bbe3514201de3cfc5acced104b7" title="Cree un seed a partir d&#39;un mot de passe. " alt="" coords="351,68,444,95"/>
+<area shape="rect" id="node4" href="$a00122.xhtml#a9966534d45c62d0df7a3d5df48668715" title="Renvoie un entier pseudo&#45;aléatoire. " alt="" coords="354,131,441,157"/>
+<area shape="rect" id="node5" href="$a00116.xhtml#a3fd0a8f9ba189acd34f864c97f059b0f" title="Fait le mélange ou réarrange les octets selon l&#39;algorithme de protection des données. " alt="" coords="208,43,303,69"/>
+</map>

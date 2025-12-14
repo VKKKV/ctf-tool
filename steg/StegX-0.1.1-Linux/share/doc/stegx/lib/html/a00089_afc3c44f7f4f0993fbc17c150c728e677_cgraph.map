@@ -1,0 +1,7 @@
+<map id="mp3_mpeg_fr_find_first" name="mp3_mpeg_fr_find_first">
+<area shape="rect" id="node2" href="$a00056.xhtml#a7434fd197d31a9571f92f9dca4f212e9" title="Convertit un nombre en big endian dans l&#39;endian de la machine. " alt="" coords="447,5,554,32"/>
+<area shape="rect" id="node3" href="$a00086.xhtml#ad5c1775e3137194eae404a93a564ab96" title="Test si le header est un header ID3v2. " alt="" coords="215,31,354,57"/>
+<area shape="rect" id="node4" href="$a00086.xhtml#acc4a0b82043fbdeadb8c669eda06d2cb" title="Saute le tag ID3v2 actuel. " alt="" coords="212,81,357,108"/>
+<area shape="rect" id="node6" href="$a00086.xhtml#a75bc8b052a4d00ab95b05b576918360d" title="Test si le header est un header MPEG 1/2 Layer III. " alt="" coords="215,132,355,159"/>
+<area shape="rect" id="node5" href="$a00086.xhtml#a98007b4129951e18b3ba95b3d5ad973e" title="Retire la sécurité de synchronisation de la taille d&#39;un tag ID3v2. " alt="" coords="405,81,596,108"/>
+</map>

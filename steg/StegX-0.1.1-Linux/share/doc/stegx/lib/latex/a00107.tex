@@ -1,0 +1,126 @@
+\hypertarget{a00107}{}\subsection{Référence du fichier src/init.c}
+\label{a00107}\index{src/init.\+c@{src/init.\+c}}
+
+
+Fonction d\textquotesingle{}initialisation et de libération de la bibliothèque.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$libgen.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stegx\+\_\+errors.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de init.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00108}
+\end{center}
+\end{figure}
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$ \hyperlink{a00107_ab6aa5e9de0fc83d5dc066f032c75c51b}{stegx\+\_\+init} (\hyperlink{a00008_ae5a2888ba8550edd4b6da33702b83a9d}{stegx\+\_\+choices\+\_\+s} $\ast$choices)
+\begin{DoxyCompactList}\small\item\em Initialise la bibliothèque. \end{DoxyCompactList}\item 
+void \hyperlink{a00107_abe47a9ab49d16f6f0b4812f77e6e44c5}{stegx\+\_\+clear} (\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$infos)
+\begin{DoxyCompactList}\small\item\em Procédure de fin d\textquotesingle{}utilisation de la bibliothèque. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00008_adbe3e383e3f1c4239b26ccae2865aa06}{algo\+\_\+e} $\ast$ \hyperlink{a00107_a855163fecb257950934ffba1b73ecae4}{stegx\+\_\+propos\+\_\+algos} = N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Fonction d\textquotesingle{}initialisation et de libération de la bibliothèque. 
+
+Fichier contenant la fonction d\textquotesingle{}initialisation de la structure privée de la bibliothèque, ainsi que sa réciproque avec la fonction de libération mémoire. 
+
+\subsubsection{Documentation des fonctions}
+\mbox{\Hypertarget{a00107_abe47a9ab49d16f6f0b4812f77e6e44c5}\label{a00107_abe47a9ab49d16f6f0b4812f77e6e44c5}} 
+\index{init.\+c@{init.\+c}!stegx\+\_\+clear@{stegx\+\_\+clear}}
+\index{stegx\+\_\+clear@{stegx\+\_\+clear}!init.\+c@{init.\+c}}
+\paragraph{\texorpdfstring{stegx\+\_\+clear()}{stegx\_clear()}}
+{\footnotesize\ttfamily void stegx\+\_\+clear (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} $\ast$}]{infos }\end{DoxyParamCaption})}
+
+
+
+Procédure de fin d\textquotesingle{}utilisation de la bibliothèque. 
+
+\begin{DoxyParagraph}{Prérequis}
+Avoir appelé \hyperlink{a00107_ab6aa5e9de0fc83d5dc066f032c75c51b}{stegx\+\_\+init} sur le paramètre \char`\"{}infos\char`\"{}. 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Effet de bord}
+Libère la mémoire de la structure \hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s}. 
+\end{DoxyParagraph}
+
+\begin{DoxyParams}{Paramètres}
+{\em infos} & Structure à libérer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Pierre Ayoub 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 125 du fichier init.\+c.
+
+\mbox{\Hypertarget{a00107_ab6aa5e9de0fc83d5dc066f032c75c51b}\label{a00107_ab6aa5e9de0fc83d5dc066f032c75c51b}} 
+\index{init.\+c@{init.\+c}!stegx\+\_\+init@{stegx\+\_\+init}}
+\index{stegx\+\_\+init@{stegx\+\_\+init}!init.\+c@{init.\+c}}
+\paragraph{\texorpdfstring{stegx\+\_\+init()}{stegx\_init()}}
+{\footnotesize\ttfamily \hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s}$\ast$ stegx\+\_\+init (\begin{DoxyParamCaption}\item[{\hyperlink{a00008_ae5a2888ba8550edd4b6da33702b83a9d}{stegx\+\_\+choices\+\_\+s} $\ast$}]{choices }\end{DoxyParamCaption})}
+
+
+
+Initialise la bibliothèque. 
+
+Initialise la bibliothèque avec les choix de l\textquotesingle{}utilisateur en remplissant les structures nécéssaire et en ouvrant les fichiers. \begin{DoxyParagraph}{Effet de bord}
+Initialise la structure \hyperlink{a00008_aa8ca908d92fb5bdd3c0a9e1f58b2cf03}{info\+\_\+s} en fonction des choix de l\textquotesingle{}utilisateur. Il restera les champs \hyperlink{a00154_a5faadf710cbff5ed6e2882e78216084c}{info\+::hidden\+\_\+length}, \hyperlink{a00154_aa6ad0a3fe5b1489edc6684da68c3b588}{info\+::algo}, \hyperlink{a00047_a7aead736a07eaf25623ad7bfa1f0ee2d}{info\+::host\+::type}, info.\+host.\+file\+\_\+info à initialiser. 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Prérequis}
+La structure \hyperlink{a00008_ae5a2888ba8550edd4b6da33702b83a9d}{stegx\+\_\+choices\+\_\+s} doit être initialisée comme indiquée dans sa description. 
+\end{DoxyParagraph}
+\begin{DoxyRefDesc}{Erreurs}
+\item[\hyperlink{a00134__errors000001}{Erreurs}]\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a49b4659ab34e5808bae4b43669ae5689}{E\+R\+R\+\_\+\+H\+O\+ST} si une erreur survient pendant l\textquotesingle{}ouverture du fichier hôte. 
+
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852af09332ce4e53766f2a7c538727b1f672}{E\+R\+R\+\_\+\+H\+I\+D\+D\+EN} si une erreur survient pendant l\textquotesingle{}ouverture du fichier à caché. 
+
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a7a60287832ac640af50a1e4d0bb5a7bf}{E\+R\+R\+\_\+\+R\+E\+S\+\_\+\+I\+N\+S\+E\+RT} si une erreur surivient pendant l\textquotesingle{}ouverture du fichier résultat lors de l\textquotesingle{}insertion. 
+
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852ae9b69ff89121ced90b1ad58869cfbf6c}{E\+R\+R\+\_\+\+R\+E\+S\+\_\+\+E\+X\+T\+R\+A\+CT} si une erreur surivient pendant l\textquotesingle{}ouverture du dossier résultat lors de l\textquotesingle{}extraction. 
+
+\hyperlink{a00011_a08b18ac8af0f3462354240d9732f3852a4d17c66e1810646c6f6fef5e30f8904e}{E\+R\+R\+\_\+\+P\+A\+S\+S\+WD} si le mot de passe fourni est non-\/conforme. \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Paramètres}
+{\em choices} & Structure contenant les choix de l\textquotesingle{}utilisateur. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Pointeur sur la structure privée qui contient les informations pour réaliser la dissimulation et l\textquotesingle{}extraction, sinon N\+U\+LL sur une erreur et met à jour la variable \hyperlink{a00062_a5ec48ccdfbe19fe23855818f8556abec}{stegx\+\_\+errno}. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Clément Caumes et Pierre Ayoub 
+\end{DoxyAuthor}
+
+
+Définition à la ligne 23 du fichier init.\+c.
+
+
+
+\subsubsection{Documentation des variables}
+\mbox{\Hypertarget{a00107_a855163fecb257950934ffba1b73ecae4}\label{a00107_a855163fecb257950934ffba1b73ecae4}} 
+\index{init.\+c@{init.\+c}!stegx\+\_\+propos\+\_\+algos@{stegx\+\_\+propos\+\_\+algos}}
+\index{stegx\+\_\+propos\+\_\+algos@{stegx\+\_\+propos\+\_\+algos}!init.\+c@{init.\+c}}
+\paragraph{\texorpdfstring{stegx\+\_\+propos\+\_\+algos}{stegx\_propos\_algos}}
+{\footnotesize\ttfamily \hyperlink{a00008_adbe3e383e3f1c4239b26ccae2865aa06}{algo\+\_\+e}$\ast$ stegx\+\_\+propos\+\_\+algos = N\+U\+LL}
+
+Variable globale pointant sur un tableau de booléen de taille \hyperlink{a00008_ad3066b71c7c05f99ce6c3bd88da7ac23a6266bb55785ce37f799cb062cb11b2a4}{S\+T\+E\+G\+X\+\_\+\+N\+B\+\_\+\+A\+L\+GO}. Si stegx\+\_\+propos\+\_\+algo\mbox{[}i\mbox{]} est égal à 1, alors on peut utiliser l\textquotesingle{}algorithme correspondant à algo\+\_\+e égal à i. Sinon, on ne peut pas. 
+
+Définition à la ligne 21 du fichier init.\+c.
+
