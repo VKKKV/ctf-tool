@@ -31,3 +31,18 @@
 [submodule "web/reverse-shell-generator"]
 	path = web/reverse-shell-generator
 	url = https://github.com/0dayCTF/reverse-shell-generator.git
+[submodule "dic/wister"]
+	path = dic/wister
+	url = https://github.com/cycurity/wister.git
+[submodule "pentest"]
+	path = pentest
+	url = https://github.com/jivoi/pentest.git
+[submodule "steg/qrazybox"]
+	path = steg/qrazybox
+	url = https://github.com/Merricx/qrazybox.git
+[submodule "web/Priv2Admin"]
+	path = web/Priv2Admin
+	url = https://github.com/gtworek/Priv2Admin.git
+[submodule "web/nc.exe"]
+	path = web/nc.exe
+	url = https://github.com/int0x33/nc.exe.git
