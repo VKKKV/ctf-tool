@@ -1,0 +1,33 @@
+[submodule "dic/SecLists"]
+	path = dic/SecLists
+	url = https://github.com/danielmiessler/SecLists.git
+[submodule "web/PayloadsAllTheThings"]
+	path = web/PayloadsAllTheThings
+	url = https://github.com/swisskyrepo/PayloadsAllTheThings.git
+[submodule "web/PEASS-ng"]
+	path = web/PEASS-ng
+	url = https://github.com/peass-ng/PEASS-ng.git
+[submodule "web/PowerSploit"]
+	path = web/PowerSploit
+	url = https://github.com/PowerShellMafia/PowerSploit.git
+[submodule "web/nishang"]
+	path = web/nishang
+	url = https://github.com/samratashok/nishang.git
+[submodule "web/pspy"]
+	path = web/pspy
+	url = https://github.com/DominicBreuker/pspy.git
+[submodule "web/SSRFmap"]
+	path = web/SSRFmap
+	url = https://github.com/swisskyrepo/SSRFmap.git
+[submodule "web/GitTools"]
+	path = web/GitTools
+	url = https://github.com/internetwache/GitTools.git
+[submodule "Microsoft-Activation-Scripts"]
+	path = Microsoft-Activation-Scripts
+	url = https://github.com/massgravel/Microsoft-Activation-Scripts.git
+[submodule "web/exploit-notes"]
+	path = web/exploit-notes
+	url = https://github.com/hdks-bug/exploit-notes.git
+[submodule "web/reverse-shell-generator"]
+	path = web/reverse-shell-generator
+	url = https://github.com/0dayCTF/reverse-shell-generator.git
