@@ -46,3 +46,15 @@
 [submodule "web/nc.exe"]
 	path = web/nc.exe
 	url = https://github.com/int0x33/nc.exe.git
+[submodule "web/xsser"]
+	path = web/xsser
+	url = https://github.com/epsylon/xsser.git
+[submodule "reverse/ida/long_night"]
+	path = reverse/ida/long_night
+	url = https://github.com/ioncodes/long_night.git
+[submodule "reverse/Ghidra-Themes"]
+	path = reverse/Ghidra-Themes
+	url = https://github.com/lr-m/Ghidra-Themes.git
+[submodule "reverse/dnSpyEx"]
+	path = reverse/dnSpyEx
+	url = https://github.com/dnSpyEx/dnSpy.git
