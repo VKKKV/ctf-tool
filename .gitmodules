@@ -1,5 +1,5 @@
 [submodule "dic/SecLists"]
-	path = dic/SecLists
+	path = dict/SecLists
 	url = https://github.com/danielmiessler/SecLists.git
 [submodule "web/PayloadsAllTheThings"]
 	path = web/PayloadsAllTheThings
@@ -32,13 +32,13 @@
 	path = web/reverse-shell-generator
 	url = https://github.com/0dayCTF/reverse-shell-generator.git
 [submodule "dic/wister"]
-	path = dic/wister
+	path = dict/wister
 	url = https://github.com/cycurity/wister.git
 [submodule "pentest"]
 	path = pentest
 	url = https://github.com/jivoi/pentest.git
 [submodule "steg/qrazybox"]
-	path = steg/qrazybox
+	path = misc/steg/qrazybox
 	url = https://github.com/Merricx/qrazybox.git
 [submodule "web/Priv2Admin"]
 	path = web/Priv2Admin
