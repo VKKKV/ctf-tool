@@ -5,7 +5,6 @@ Allows interactive communication with a remote server.
 """
 
 import socket
-import sys
 
 # --- Configuration ---
 HOST = "101.132.242.241"
