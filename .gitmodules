@@ -58,3 +58,6 @@
 [submodule "reverse/dnSpyEx"]
 	path = reverse/dnSpyEx
 	url = https://github.com/dnSpyEx/dnSpy.git
+[submodule "web/hacktricks"]
+	path = web/hacktricks
+	url = https://github.com/HackTricks-wiki/hacktricks.git
