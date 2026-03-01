@@ -11,6 +11,7 @@ HOST = "101.132.242.241"
 PORT = 33065
 BUFFER_SIZE = 4096
 
+
 def start_client():
     try:
         # Create socket and connect
@@ -34,13 +35,14 @@ def start_client():
                 if not data:
                     print("[-] Connection closed by server.")
                     break
-                
+
                 print(f"[*] Server response: {data.decode('utf-8', errors='replace')}")
 
     except ConnectionRefusedError:
         print(f"[!] Error: Connection refused by {HOST}:{PORT}")
     except Exception as e:
         print(f"[!] Error: {e}")
+
 
 if __name__ == "__main__":
     start_client()
