@@ -5,11 +5,6 @@ HOST = "7a3875d00fa5d462.247ctf.com"
 PORT = 50337
 
 
-pwn.context.log_level = "info"
-
-pwn.tube.newline = b"\r\n"
-
-
 def solve_challenge():
     conn = None
     try:
@@ -45,4 +40,6 @@ def solve_challenge():
 
 
 if __name__ == "__main__":
+    pwn.context.log_level = "info"
+    pwn.tube.newline = b"\r\n"
     solve_challenge()
