@@ -13,6 +13,7 @@ PREFIX = "H4"
 SUFFIX = "N_TH3_MIDD33_4TT4CK"
 LENGTH = 5  # Length of the variable middle part
 
+
 def generate_payloads(length):
     """Generates all combinations of CHARSET of a given length."""
     # Using itertools.product is much more efficient and cleaner than nested loops
@@ -20,23 +21,23 @@ def generate_payloads(length):
         middle = "".join(combo)
         yield f"{PREFIX}{middle}{SUFFIX}"
 
-def main():
-    print(f"[*] Generating payloads of length {LENGTH}...")
-    print(f"[*] Total combinations: {len(CHARSET)**LENGTH:,}")
-    
+
+def main(length=LENGTH):
+    print(f"[*] Generating payloads of length {length}...")
+    print(f"[*] Total combinations: {len(CHARSET) ** length:,}")
+
     try:
         # Warning: This can produce massive output
-        for payload in generate_payloads(LENGTH):
+        for payload in generate_payloads(length):
             print(payload)
     except KeyboardInterrupt:
         print("\n[!] Interrupted by user.")
 
+
 if __name__ == "__main__":
     # Note: 36^5 is over 60 million. Use with caution!
     if len(sys.argv) > 1:
-        length = int(sys.argv[1])
+        main(int(sys.argv[1]))
     else:
-        length = 1 # Start small by default for safety
         print("[!] Defaulting to length 1. Pass an argument to change length.")
-        
-    main()
+        main(1)
