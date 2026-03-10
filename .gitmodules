@@ -61,3 +61,6 @@
 [submodule "web/hacktricks"]
 	path = web/hacktricks
 	url = https://github.com/HackTricks-wiki/hacktricks.git
+[submodule "web/GTFOBins.github.io"]
+	path = web/GTFOBins.github.io
+	url = https://github.com/GTFOBins/GTFOBins.github.io.git
