@@ -26,5 +26,4 @@ for i in range(1, 10):
 
     log.success(f"密文: {ct_str}, Key: {key_str} => 明文: {pt_str}")
 
-# 拿下 Flag 并保持交互
 p.interactive()
