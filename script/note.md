@@ -1,12 +1,7 @@
-/task
+# assembly
 
-Host: root-me.org
+https://ref.x86asm.net/coder64.html
 
-curl -X GET http://localhost/task -H "Host: root-me.org"
+https://syscall.sh/
 
-/gate
-
-Host: net-force.nl:80
-
-
-curl -v -X GET http://localhost/gate -H "Host: net-force.nl:80"
+https://www.felixcloutier.com/x86/
