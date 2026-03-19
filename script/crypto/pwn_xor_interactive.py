@@ -1,3 +1,4 @@
+"""Interactive XOR challenge solver: 10 rounds of hex key ^ hex cipher."""
 from pwn import *
 from pwn import xor, log, process
 

@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-Database Query and Analysis Script
-Connects to a MySQL database and checks for log inconsistencies.
-"""
+"""MySQL log analyzer: detect inconsistencies in database records."""
 
 import pymysql
 import sys

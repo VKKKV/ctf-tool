@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-Image Byte Manipulation Script
-Corrects images where bytes have been inverted/transformed (0x100 - byte).
-"""
+"""Fix images with inverted bytes (0x100 - byte complement)."""
 
 import os
 import sys

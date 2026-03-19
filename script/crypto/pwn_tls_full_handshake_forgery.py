@@ -1,3 +1,4 @@
+"""Full TLS handshake forgery: DH key exchange + cert forgery + AES decrypt."""
 import base64
 import hashlib
 import itertools

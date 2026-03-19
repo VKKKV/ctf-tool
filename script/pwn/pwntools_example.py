@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
+"""Pwntools reference: JSON protocol, endian packing, remote/process usage."""
 
 import json
 
-from pwn import *  # pip install pwntools
+from pwn import *
 from pwn import remote, process, p32, p64, u32
 
 HOST = "socket.cryptohack.org"

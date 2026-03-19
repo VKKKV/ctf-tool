@@ -1,3 +1,4 @@
+"""RSA decryption with leaked primes p and q."""
 from Crypto.Cipher import AES
 from Crypto.PublicKey import RSA
 from Crypto.Random import get_random_bytes

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""PCAP analyzer: show packets, search raw payloads, decode hex streams."""
 import glob
 import os
 

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Full MITM: ARP spoof + TCP payload injection (echo -> flag)."""
 import socket
 import threading
 import time

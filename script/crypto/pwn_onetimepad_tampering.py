@@ -1,3 +1,4 @@
+"""OTP tampering: XOR-swap encrypted command from 'sleep' to 'flag!'."""
 from pwn import *
 from pwn import log, process, xor
 

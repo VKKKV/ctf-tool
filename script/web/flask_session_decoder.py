@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-Flask Session Decoder
-Decodes Flask session cookies (without signature verification).
-"""
+"""Decode Flask session cookies without signature verification."""
 
 import sys
 import zlib

@@ -1,3 +1,4 @@
+"""247CTF: XOR decrypt hex chunks from IDA with known key string."""
 from pwn import p64, xor
 
 # 1. 提取 IDA Pro 里的 64-bit Hex Chunks

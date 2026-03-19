@@ -1,3 +1,4 @@
+"""HTTP cookie manipulation template."""
 import requests
 
 URL = "http://localhost/"

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Blind SQLi via POST: extract password char-by-char using substr()."""
 import argparse
 import string
 import sys

@@ -1,3 +1,4 @@
+"""RSA signature challenge: sign with leaked d."""
 import base64
 import json
 import pathlib

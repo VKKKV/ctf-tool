@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""ARP spoofing: send gratuitous ARP reply to poison target's cache."""
 from scapy.all import send, sendp, sniff, sr1, srp
 from scapy.layers.inet import ICMP, IP, TCP, UDP
 from scapy.layers.l2 import ARP, Ether, arp_mitm, getmacbyip

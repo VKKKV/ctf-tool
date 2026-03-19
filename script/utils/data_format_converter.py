@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-Data Conversion Utility
-Converts a list of decimal ASCII values to various formats (Hex, String, Base64).
-"""
+"""Convert decimal ASCII values to hex, string, and base64."""
 
 import base64
 

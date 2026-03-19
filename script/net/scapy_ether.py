@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Send raw Ethernet frame with custom type field."""
 from scapy.all import sendp, sniff, sr1, srp
 from scapy.layers.inet import ICMP, IP
 from scapy.layers.l2 import ARP, Ether, getmacbyip

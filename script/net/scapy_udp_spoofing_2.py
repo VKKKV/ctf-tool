@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""UDP port scan with spoofed source: batch send to all ports at once."""
 import socket
 import sys
 

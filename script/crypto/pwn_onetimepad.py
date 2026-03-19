@@ -1,3 +1,4 @@
+"""One-time pad: XOR key with ciphertext to recover flag."""
 from pwn import *
 from pwn import log, process, xor
 

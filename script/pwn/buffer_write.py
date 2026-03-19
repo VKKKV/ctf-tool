@@ -1,3 +1,4 @@
+"""Reverse: decode password through triple hex-encode + binary conversion."""
 import base64
 import sys
 

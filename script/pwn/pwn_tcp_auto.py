@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""247CTF: auto-solve 500 math problems over TCP."""
 import pwn
 
 HOST = "7a3875d00fa5d462.247ctf.com"

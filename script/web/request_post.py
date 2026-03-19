@@ -1,3 +1,4 @@
+"""HTTP POST request template with custom headers."""
 import requests
 
 URL = "http://localhost/gate"

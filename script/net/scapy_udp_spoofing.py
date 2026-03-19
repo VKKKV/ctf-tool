@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""UDP port scan with spoofed source: brute-force all ports one-by-one."""
 import socket
 import sys
 

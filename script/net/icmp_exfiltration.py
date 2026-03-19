@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Extract data hidden in ICMP Echo Reply payloads from a PCAP."""
 from scapy.all import rdpcap, sniff, sr1, srp,Raw
 from scapy.layers.inet import ICMP, IP
 from scapy.layers.l2 import ARP, Ether

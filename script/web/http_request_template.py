@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+"""HTTP request template for CTF web challenges."""
 import requests
 
 BASE_URL = "https://9894a61910fb83f2.247ctf.com/calculator"

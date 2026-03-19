@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-Quick HTTP File Server
-Serves the current directory on a specified port.
-"""
+"""Quick HTTP file server for current directory."""
 
 import http.server
 import socketserver

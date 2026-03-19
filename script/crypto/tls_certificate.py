@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Extract TLS certificates from PCAP and match against private key files."""
 import glob
 import os
 

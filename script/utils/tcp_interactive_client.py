@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-Simple TCP Client for CTF Socket Challenges
-Allows interactive communication with a remote server.
-"""
+"""Simple TCP client for interactive CTF socket challenges."""
 
 import socket
 

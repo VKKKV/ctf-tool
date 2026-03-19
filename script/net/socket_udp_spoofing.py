@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""UDP port scan using raw sockets (no scapy) with bind for response capture."""
 import socket
 import sys
 

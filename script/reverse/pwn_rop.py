@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""ROP exploit: auto-build chain to call system("/bin/sh")."""
 from pwn import *
 from pwn import ELF, ROP, context, log, process, remote
 

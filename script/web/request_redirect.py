@@ -1,3 +1,4 @@
+"""HTTP redirect handling: follow or capture intermediate responses."""
 import requests
 
 URL = "http://localhost/"

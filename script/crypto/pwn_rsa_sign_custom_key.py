@@ -1,3 +1,4 @@
+"""RSA: generate own keypair, sign server challenge, decrypt secret."""
 import base64
 import json
 import pathlib

@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-String Generator / Brute-force Payload Generator
-Generates strings with a fixed prefix, middle part from a charset, and fixed suffix.
-"""
+"""Brute-force payload generator: prefix + charset permutations + suffix."""
 
 import itertools
 import sys

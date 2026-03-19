@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""247CTF: reconstruct unlock code from x86 ops, then XOR-decrypt payload."""
 
 def main():
 

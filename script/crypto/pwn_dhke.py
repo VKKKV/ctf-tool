@@ -1,3 +1,4 @@
+"""DHKE exploit: send B=p to force shared secret to 0."""
 from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
 from Crypto.Random.random import getrandbits

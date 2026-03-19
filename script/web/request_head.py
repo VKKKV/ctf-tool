@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+"""HTTP HEAD request with custom Host header."""
 import requests
 
 BASE_URL = "http://localhost/mission"

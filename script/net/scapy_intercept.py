@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""ARP-based traffic interception: poison cache, redirect to local port."""
 import time
 
 from scapy.all import send, sendp, sniff, sr1, srp

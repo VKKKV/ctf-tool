@@ -1,3 +1,4 @@
+"""Brute-force bcrypt hashes character-by-character to recover flag."""
 import bcrypt
 
 hashes = [

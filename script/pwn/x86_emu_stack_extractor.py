@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-x86 Emulation Script using Unicorn Engine
-Used to extract flag characters pushed onto the stack during execution.
-"""
+"""x86 emulation via Unicorn: extract flag chars pushed onto the stack."""
 
 import sys
 from unicorn import *

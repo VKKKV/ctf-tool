@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-PNG Forensics Toolkit
-Utilities for fixing dimensions, brute-forcing CRCs, and basic zlib operations.
-"""
+"""PNG forensics: brute-force IHDR dimensions via CRC32, fix corrupted PNGs."""
 
 import binascii
 import struct
@@ -36,8 +33,7 @@ def fix_png_dimensions(file_path, target_crc=None):
             ihdr_data[8:12] = height_bytes
             
             if zlib.crc32(ihdr_data) & 0xFFFFFFFF == target_crc:
-                print(f"
-[+] SUCCESS! Found dimensions: {w}x{h}")
+                print(f"\n[+] SUCCESS! Found dimensions: {w}x{h}")
                 new_data = bytearray(raw_data)
                 new_data[16:20] = width_bytes
                 new_data[20:24] = height_bytes
@@ -49,10 +45,9 @@ def fix_png_dimensions(file_path, target_crc=None):
                 return
 
         if w % 100 == 0:
-            sys.stdout.write(f"[*] Progress: {w}/4096...")
+            sys.stdout.write(f"\r[*] Progress: {w}/4096...")
             sys.stdout.flush()
-    print("
-[-] Failed to find matching dimensions.")
+    print("\n[-] Failed to find matching dimensions.")
 
 def brute_force_png_height(file_path, target_crc):
     """Brute force ONLY PNG height (faster if width is known)."""

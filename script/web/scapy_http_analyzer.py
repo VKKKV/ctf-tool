@@ -1,11 +1,5 @@
 #!/usr/bin/env python3
-"""
-Scapy HTTP/Webshell Traffic Analyzer
-------------------------------------
-A specialized utility for extracting and decrypting payloads from PCAP files,
-targeting traffic typical of PHP webshells (e.g., Behinder, AntSword).
-Includes logic for XOR decryption, Zlib decompression, and flag assembly.
-"""
+"""PCAP webshell traffic analyzer: extract and decrypt XOR/zlib payloads."""
 
 import base64
 import re

@@ -1,8 +1,6 @@
 #!/usr/bin/python
-
-# Quick and dirty demonstration of CVE-2014-0160 originally by Jared Stafford (jspenguin@jspenguin.org)
-# The author disclaims copyright to this source code.
-# Modified by SensePost based on lots of other people's efforts (hard to work out credit via PasteBin)
+"""Heartbleed (CVE-2014-0160) PoC: leak server memory via malformed TLS heartbeat."""
+# Originally by Jared Stafford, modified by SensePost
 
 import sys
 import struct

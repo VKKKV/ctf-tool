@@ -1,3 +1,4 @@
+"""SSH pwn template: connect and extract flag via pwntools ssh."""
 import pwn
 
 shell = pwn.ssh(host="237.84.2.178", port=22, user="root", password="root")

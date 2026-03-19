@@ -1,3 +1,4 @@
+"""RSA decryption with leaked private exponent d."""
 from Crypto.Cipher import AES
 from Crypto.PublicKey import RSA
 from Crypto.Random import get_random_bytes

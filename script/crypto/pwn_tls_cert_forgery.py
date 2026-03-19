@@ -1,3 +1,4 @@
+"""TLS cert forgery: sign user cert with leaked root key d, decrypt secret."""
 import base64
 import hashlib
 import itertools

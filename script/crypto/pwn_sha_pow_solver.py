@@ -1,3 +1,4 @@
+"""SHA256 Proof-of-Work solver: find nonce with leading zero bytes."""
 import base64
 import hashlib
 import itertools

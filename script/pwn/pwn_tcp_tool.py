@@ -1,14 +1,11 @@
 #!/usr/bin/env python3
+"""Pwn TCP tool: wrapper class for remote/SSH + CRC-based protocol solver."""
+
 import json
 import zlib
 
 from pwn import *
 from pwn import context, log, remote, ssh, tube
-
-"""
-Pwn TCP Tool - A consolidated utility for CTF PWN challenges.
-Optimized for readability and consistent pwntools usage.
-"""
 
 # Default Target Configuration
 # tcp://35f9359cc67c7983.247ctf.com:50385

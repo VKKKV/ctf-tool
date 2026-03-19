@@ -1,3 +1,4 @@
+"""247CTF: ECB block-level token forgery via cut-and-paste attack."""
 import binascii
 
 import requests

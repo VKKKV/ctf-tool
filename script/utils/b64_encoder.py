@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-Base64 Tool
-Encodes or decodes data from stdin.
-"""
+"""Base64 encode/decode from stdin."""
 
 import sys
 import base64

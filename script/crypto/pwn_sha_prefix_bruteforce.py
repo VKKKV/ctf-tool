@@ -1,3 +1,4 @@
+"""SHA256 prefix collision: brute-force input matching a given hash prefix."""
 import base64
 import hashlib
 import json

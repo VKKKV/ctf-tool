@@ -1,3 +1,4 @@
+"""HTTP request with custom User-Agent header."""
 import requests
 
 URL = "http://localhost/gate"

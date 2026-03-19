@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""247CTF: predict random() by brute-forcing server timestamp seed."""
 import random
 import time
 

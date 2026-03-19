@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Query FactorDB API to factorize large integers."""
 import json
 import sys
 import urllib.error

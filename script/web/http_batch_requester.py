@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-Simple HTTP GET Requester
-Appends lines from stdin to a base URL and prints the response.
-"""
+"""Batch HTTP GET: append stdin lines to base URL, print responses."""
 
 import requests
 import sys

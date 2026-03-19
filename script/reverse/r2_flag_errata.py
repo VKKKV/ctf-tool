@@ -1,3 +1,4 @@
+"""Radare2: debug flag_errata.exe, extract flag from EDX at comparison point."""
 import os
 
 import r2pipe

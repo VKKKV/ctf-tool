@@ -1,3 +1,5 @@
+"""GCD and Extended GCD implementation."""
+
 def gcd(a, b):
     while b:
         a, b = b, a % b

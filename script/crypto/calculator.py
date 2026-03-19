@@ -1,3 +1,4 @@
+"""247CTF: Flask calculator with Werkzeug debug console (pin-free)."""
 import os
 
 from flask import Flask, request

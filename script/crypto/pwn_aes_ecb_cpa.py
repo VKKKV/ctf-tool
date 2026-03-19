@@ -1,3 +1,4 @@
+"""ECB Chosen Plaintext Attack: single-byte oracle comparison."""
 import string
 
 from Crypto.Cipher import AES

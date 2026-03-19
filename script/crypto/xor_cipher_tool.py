@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-General Purpose XOR Utility
-Supports XORing with a key, a repeated key, or finding a key given known plaintext/ciphertext.
-"""
+"""General purpose XOR tool: encrypt/decrypt files or find key from known plaintext."""
 
 import sys
 import argparse

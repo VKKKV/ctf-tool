@@ -1,3 +1,4 @@
+"""ECB CPA via HTTP: SQLi to extract flag char-by-char through ECB oracle."""
 import string
 
 import requests

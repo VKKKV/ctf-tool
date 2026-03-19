@@ -1,3 +1,4 @@
+"""Radare2: NOP out jump instructions in a given address range."""
 import r2pipe
 
 

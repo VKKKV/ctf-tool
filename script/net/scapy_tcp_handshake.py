@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Manual TCP 3-way handshake using scapy."""
 from scapy.all import send, sendp, sniff, sr1, srp
 from scapy.layers.inet import ICMP, IP, TCP, UDP
 from scapy.layers.l2 import ARP, Ether, getmacbyip

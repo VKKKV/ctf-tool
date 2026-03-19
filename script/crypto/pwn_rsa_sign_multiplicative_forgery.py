@@ -1,20 +1,6 @@
-import base64
-import json
-import pathlib
-import random
-import string
-import sys
-import textwrap
-
-from Crypto.Cipher import AES
-from Crypto.Hash.SHA256 import SHA256Hash
-from Crypto.PublicKey import RSA
-from Crypto.Random import get_random_bytes
-from Crypto.Random.random import getrandbits, randrange
-from Crypto.Util.Padding import pad, unpad
-from Crypto.Util.strxor import strxor
+"""RSA multiplicative forgery: factor target into two signable parts, combine signatures."""
 from pwn import *
-from pwn import b64d, b64e, context, enhex, log, process, unhex, xor
+from pwn import b64d, b64e, log, process
 
 log.info("START")
 

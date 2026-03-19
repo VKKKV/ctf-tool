@@ -1,3 +1,4 @@
+"""DHKE exploit: send B=p to force s=0, then decrypt AES-CBC flag."""
 from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
 from Crypto.Random.random import getrandbits

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Angr solver for flag_errata.exe: symbolic execution with find/avoid."""
 
 import logging
 import sys

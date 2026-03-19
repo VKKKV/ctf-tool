@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Two-stage ROP: leak libc via puts@GOT, then ret2libc system("/bin/sh")."""
 from pwn import *
 
 from pwn import ROP,context,log,ELF,process,remote,u64

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""UDP port scan: blast payload to all ports, capture flag response."""
 import logging
 import socket
 import sys
@@ -7,8 +8,6 @@ from scapy.all import Raw, send, sendp, sniff, sr, sr1, srp
 from scapy.layers.inet import ICMP, IP, TCP, UDP
 from scapy.layers.l2 import ARP, Ether, getmacbyip
 from sympy.stats.matrix_distributions import rv
-
-# not work
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 
 target_ip = "10.0.0.2"

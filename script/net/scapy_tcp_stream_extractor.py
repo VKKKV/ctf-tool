@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Extract reassembled TCP stream payload from PCAP to binary file."""
 import glob
 import os
 

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Plot hex coordinate pairs from a file to reveal hidden flag image."""
 from pathlib import Path
 
 import matplotlib.pyplot as plt

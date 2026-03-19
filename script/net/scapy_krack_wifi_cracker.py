@@ -1,3 +1,4 @@
+"""KRACK (CVE-2017-13077): decrypt CCMP frames using all-zero temporal key."""
 import binascii
 
 from cryptography.hazmat.backends import default_backend

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Basic PCAP reading and live packet sniffing with scapy."""
 from scapy.all import rdpcap, sniff, sr1, srp, Raw
 from scapy.layers.inet import ICMP, IP, UDP, TCP
 from scapy.layers.l2 import ARP, Ether

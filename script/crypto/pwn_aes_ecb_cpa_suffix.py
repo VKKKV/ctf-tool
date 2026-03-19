@@ -1,3 +1,4 @@
+"""ECB Chosen Plaintext Attack: suffix-prepend byte-by-byte recovery."""
 import string
 
 import requests

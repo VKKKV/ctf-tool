@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-Advanced Blind SQL Injection Tool
-Supports linear and binary search methods for data extraction.
-"""
+"""Blind SQLi tool: linear and binary search extraction methods."""
 
 import argparse
 import string

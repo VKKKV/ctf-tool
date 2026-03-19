@@ -1,3 +1,4 @@
+"""Many-time pad: recover key by encrypting known plaintext, then decrypt flag."""
 from pwn import *
 from pwn import log, process, xor
 

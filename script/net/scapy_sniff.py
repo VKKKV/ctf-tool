@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Sniff UDP port 4444 and print incoming payloads."""
 from scapy.all import Raw, conf, send, sendp, sniff, sr, sr1, srp
 from scapy.layers.inet import ICMP, IP, TCP, UDP
 from scapy.layers.l2 import ARP, Ether, getmacbyip

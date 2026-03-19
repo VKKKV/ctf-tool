@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-Angr CTF Solving Template & Cheat Sheet
-Author: Kita (Optimized)
-"""
+"""Angr CTF solving template with cheat sheet snippets."""
 
 import logging
 import sys

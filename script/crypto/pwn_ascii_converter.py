@@ -1,3 +1,4 @@
+"""XOR single-char ASCII decryption challenge solver."""
 from pwn import *
 from pwn import log, process, xor
 

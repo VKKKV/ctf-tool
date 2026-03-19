@@ -1,3 +1,4 @@
+"""CBC Padding Oracle Attack: forge ciphertext for arbitrary plaintext."""
 import os
 
 from Crypto.Cipher import AES

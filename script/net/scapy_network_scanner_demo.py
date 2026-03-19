@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""
-Scapy Learning Example
-A cleaned and structured script demonstrating ICMP pinging, ARP scanning, and packet sniffing.
-Note: Raw socket operations (sending/sniffing) usually require root privileges.
-"""
+"""Scapy demo: ICMP ping, ARP scan, and packet sniffing examples."""
 
 import logging
 

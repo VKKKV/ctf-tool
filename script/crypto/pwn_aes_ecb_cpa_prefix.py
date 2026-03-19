@@ -1,3 +1,4 @@
+"""ECB Chosen Plaintext Attack: two-oracle byte-by-byte flag recovery."""
 import string
 
 import requests

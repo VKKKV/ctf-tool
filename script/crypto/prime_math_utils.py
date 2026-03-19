@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-Prime Number Utilities
-Includes Sieve of Eratosthenes and a custom search for primes with prime digit sums.
-"""
+"""Prime number utilities: sieve, primality test, and special prime finder."""
 
 def sieve_of_eratosthenes(limit):
     """Returns a list of all primes up to the given limit."""
