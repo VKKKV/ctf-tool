@@ -1,37 +1,47 @@
-# CTF Toolkit & Workspace
+# CTF Toolkit
 
-A comprehensive collection of tools, scripts, and resources for Capture The Flag (CTF) competitions and security research.
+A collection of tools, scripts, and resources for CTF competitions and security research.
 
-## 🚀 Overview
+## Core Technologies
 
-This workspace is organized into functional modules covering various areas of cybersecurity, serving as both an automation repository and a local knowledge base.
+- **Languages:** Python 3, PHP, Shell, C
+- **Key Libraries:** pwntools, scapy, requests, angr, PyCryptodome
+- **Integrated Tools:** SecLists, PayloadsAllTheThings, Ghidra, IDA, dnSpy, GTFOBins, HackTricks
 
-### 🛠 Core Technologies
-- **Languages:** Python 3, PHP, Shell, C.
-- **Key Libraries:** `pwntools`, `requests`, `base64`, `hashlib`.
-- **Integrated Tools:** SecLists, PayloadsAllTheThings, Ghidra, IDA, dnSpy.
+## Directory Structure
 
-## 📁 Directory Structure
+### `script/` — Custom Scripts
 
-- **`script/`**: Custom scripts for Crypto, Forensics, Pwn, and Web.
-- **`dict/`**: Massive collection of wordlists (SecLists, rockyou, etc.).
-- **`web/`**: Exploitation frameworks (Behinder, AntSword) and vulnerability scanners.
-- **`reverse/`**: Reverse engineering tools and configurations.
-- **`forensis/`**: OS symbol tables and forensic utilities.
-- **`misc/`**: Steganography and archive recovery tools.
+| Category | Scripts | Description |
+|----------|---------|-------------|
+| `crypto/` | 40 | AES-ECB/CBC exploits (CPA, padding oracle, bit-flip), RSA attacks, DHKE, XOR/OTP, SHA PoW, TLS forgery |
+| `net/` | 20 | Scapy packet crafting (ARP, TCP, UDP, ICMP), PCAP analysis, MITM, KRACK WiFi, spoofing |
+| `pwn/` | 17 | Buffer overflow, shellcode injection, NOP sleds, PIE bypass, ROP, angr-assisted exploits |
+| `reverse/` | 21 | cIMG format exploitation suite (14 variants), angr symbolic execution, radare2 debugging, bcrypt cracking |
+| `web/` | 13 | HTTP request templates, blind SQLi tools, Flask session decoding, Heartbleed PoC |
+| `forensics/` | 3 | PNG dimension brute-force, image byte fixer, coordinate plotter |
+| `shell/` | 5 | PHP web shells, reverse shells, linpeas, pspy64, rootshell.c |
+| `utils/` | 5 | Base64, data format converter, payload generator, TCP client, DB log analyzer |
 
-## 📖 Usage
+### Top-Level Directories
 
-### Running Scripts
-Most utilities are standalone Python 3 scripts:
+| Directory | Description |
+|-----------|-------------|
+| `dict/` | Wordlists — SecLists, rockyou, wister, custom dictionaries |
+| `web/` | Exploitation frameworks — Behinder, AntSword, PayloadsAllTheThings, PEASS-ng, PowerSploit, nishang, SSRFmap, GitTools, GTFOBins, HackTricks, xsser |
+| `reverse/` | RE tools — IDA themes (long_night), Ghidra themes, dnSpyEx, ida-pro-mcp, ret-sync |
+| `forensis/` | OS symbol tables for Volatility |
+| `misc/` | Steganography tools (bftools, qrazybox), file magic numbers, archive utilities |
+
+## Usage
+
+Most scripts are standalone Python 3:
+
 ```bash
 python3 script/<category>/<script_name>.py
 ```
 
-### Development
-- **Utils**: Use `script/utils/` for common data transformations.
-- **Solves**: Add challenge-specific solvers to `script/solves/`.
-- **Templates**: See `script/request.py` or `script/pwn/pwntools_example.py` for starting points.
-
----
-*Maintained for CTF excellence.*
+Reference docs are available in `script/`:
+- `pwntools_cheatsheet.md` — pwntools quick reference
+- `note.md` — x86 assembly and syscall references
+- `ansi.md` — ANSI escape code reference
