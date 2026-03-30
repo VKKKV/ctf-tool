@@ -1,7 +1,6 @@
 """Shellcode injection: assemble and send shellcraft payload."""
 from pwn import *
 from pwn import asm, context, process
-from pwnlib.shellcraft import shellcraft
 
 context.update(arch="amd64", os="linux")
 

