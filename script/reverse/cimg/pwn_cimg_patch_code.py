@@ -7,7 +7,6 @@ from pwn import *
 
 def solve(known_flag):
     try:
-        # PTY 欺骗 termios，PIPE 保证二进制流纯净
         p = process(
             ["/challenge/quest.py"],
             stdin=process.PTY,
