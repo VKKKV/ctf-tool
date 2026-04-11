@@ -70,3 +70,9 @@
 [submodule "forensis/ImHex-Patterns"]
 	path = forensis/ImHex-Patterns
 	url = https://github.com/WerWolv/ImHex-Patterns.git
+[submodule "forensis/rules"]
+	path = forensis/rules
+	url = https://github.com/Yara-Rules/rules.git
+[submodule "forensis/signature-base"]
+	path = forensis/signature-base
+	url = https://github.com/Neo23x0/signature-base.git
