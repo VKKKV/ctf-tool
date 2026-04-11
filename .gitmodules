@@ -67,3 +67,6 @@
 [submodule "forensis/kaitai_struct_formats"]
 	path = forensis/kaitai_struct_formats
 	url = https://github.com/kaitai-io/kaitai_struct_formats.git
+[submodule "forensis/ImHex-Patterns"]
+	path = forensis/ImHex-Patterns
+	url = https://github.com/WerWolv/ImHex-Patterns.git
