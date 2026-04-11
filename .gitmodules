@@ -64,3 +64,6 @@
 [submodule "web/GTFOBins.github.io"]
 	path = web/GTFOBins.github.io
 	url = https://github.com/GTFOBins/GTFOBins.github.io.git
+[submodule "forensis/kaitai_struct_formats"]
+	path = forensis/kaitai_struct_formats
+	url = https://github.com/kaitai-io/kaitai_struct_formats.git
