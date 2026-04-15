@@ -76,3 +76,18 @@
 [submodule "forensis/signature-base"]
 	path = forensis/signature-base
 	url = https://github.com/Neo23x0/signature-base.git
+[submodule "web/antSword"]
+	path = web/antSword
+	url = https://github.com/AntSwordProject/antSword.git
+[submodule "web/ysoserial"]
+	path = web/ysoserial
+	url = https://github.com/frohoff/ysoserial.git
+[submodule "reverse/jd-gui"]
+	path = reverse/jd-gui
+	url = https://github.com/java-decompiler/jd-gui.git
+[submodule "forensis/LovelyMem"]
+	path = forensis/LovelyMem
+	url = https://github.com/Tokeii0/LovelyMem.git
+[submodule "forensis/MemProcFS"]
+	path = forensis/MemProcFS
+	url = https://github.com/ufrisk/MemProcFS.git
