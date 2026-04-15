@@ -107,11 +107,6 @@ def build_payload():
 
     magic = b"cIMG"
     version = 3
-    remaining_directives = 1
-    file_header = struct.pack(
-        "<4sHBBI", magic, version, width, height, remaining_directives
-    )
-
     file_header = struct.pack("<4sHBBI", magic, version, width, height, directive_count)
 
     # 4. 组装并运行

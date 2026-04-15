@@ -17,8 +17,7 @@ from scapy.layers.tls.all import TLS
 from scapy.layers.tls.cert import Cert
 from scapy.layers.tls.handshake import TLSCertificate
 
-PCAP_FILE = "/home/kita/Downloads/commutative_payload.pcap"
-KEYS = "/home/kita/Downloads/keys/"
+PCAP_FILE = "/home/kita/Downloads/thedamage.pcapng"
 
 load_layer("tls")
 
@@ -40,11 +39,6 @@ def check_pcap(pcap_path):
             except Exception as e:
                 print(f"[-] Error: {e}")
                 continue
-
-def check_smb(pcap_path):
-    packets = rdpcap(pcap_path)
-    pass
-
 
 def print_raw(pcap_path):
     packets = rdpcap(pcap_path)
@@ -96,6 +90,7 @@ def decode_hex_str(hex_str):
 
 if __name__ == "__main__":
     # show_pcap(PCAP_FILE)
-    check_pcap(PCAP_FILE)
-    # print_hex(PCAP_FILE)
+    # check_pcap(PCAP_FILE)
+    # print_raw(PCAP_FILE)
+    print_hex(PCAP_FILE)
     # print_hex_search(PCAP_FILE, b"b925afc100")
