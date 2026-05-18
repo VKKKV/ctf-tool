@@ -91,3 +91,9 @@
 [submodule "forensis/MemProcFS"]
 	path = forensis/MemProcFS
 	url = https://github.com/ufrisk/MemProcFS.git
+[submodule "script/dirtyfrag"]
+	path = script/dirtyfrag
+	url = https://github.com/V4bel/dirtyfrag.git
+[submodule "script/pocs"]
+	path = script/pocs
+	url = https://github.com/v12-security/pocs.git
