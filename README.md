@@ -1,13 +1,13 @@
 # CTF Toolkit
 
-Personal CTF and security-research workspace with two distinct parts:
+Personal CTF and security-research workspace. It is a toolbox repo, not a single packaged application.
 
-- `script/` contains local helper scripts, exploit templates, and notes.
-- the rest of the repo is mostly vendored reference material and submodules.
+The repo has two different kinds of content:
 
-This is not a single packaged application. Treat it as a toolbox repo.
+- `script/` is the local working area: helper scripts, exploit templates, notes, and disposable challenge utilities.
+- most other top-level directories are vendored references, third-party tools, or git submodules.
 
-## Getting Started
+## Quick Start
 
 Clone with submodules if you want the full reference set:
 
@@ -30,7 +30,7 @@ source script/.venv/bin/activate
 pip install -r script/requirements.txt
 ```
 
-Most custom scripts are then run directly:
+Run custom scripts directly:
 
 ```bash
 python3 script/<category>/<name>.py
@@ -44,36 +44,36 @@ python3 script/net/scapy/scapy_pcap_analyzer.py
 python3 script/pwn/templates/pwntools_example.py
 ```
 
-## Repository Layout
+## Local Script Area
 
-### Local Working Area
+Owned code and notes live under `script/`.
 
-| Path | Purpose |
-| --- | --- |
-| `script/crypto` | crypto helpers, CTF solvers, encoders/decoders |
-| `script/net` | packet tooling, Scapy experiments, PCAP analysis |
-| `script/pwn` | pwntools exploits, shellcode work, templates |
-| `script/reverse` | reverse-engineering helpers, angr/r2/cIMG scripts |
-| `script/forensics` | small forensic utilities |
-| `script/web` | HTTP, session, SQLi, and web exploitation helpers |
-| `script/utils` | general-purpose utility scripts |
-| `script/post_exp` | post-exploitation binaries and helpers |
-| `script/shellcode` | assembly payloads and generated shellcode artifacts |
-| `script/cheat_sheets` | notes and quick references |
+- `script/crypto` - crypto helpers, challenge solvers, encoders/decoders
+- `script/net` - packet tooling, Scapy experiments, PCAP analysis
+- `script/pwn` - pwntools exploits, shellcode work, cIMG helpers, templates
+- `script/reverse` - reverse-engineering helpers, angr/r2 scripts
+- `script/forensics` - small forensic utilities
+- `script/web` - HTTP, session, SQLi, and web exploitation helpers
+- `script/utils` - general-purpose utilities, input automation, desktop helpers
+- `script/post_exp` - post-exploitation binaries and helpers
+- `script/shellcode` - assembly payloads and generated shellcode artifacts
+- `script/cheat_sheets` - quick notes and reusable references
 
-### Reference Material
+Some scripts are one-off exploit solvers with hard-coded paths, ports, payloads, or challenge assumptions. Read them before reuse.
 
-| Path | Purpose |
-| --- | --- |
-| `dict/` | wordlists and password dictionaries |
-| `web/` | third-party exploitation references and offensive tooling |
-| `reverse/` | reverse-engineering tools, themes, and integrations |
-| `forensis/` | forensic signatures, patterns, and formats |
-| `misc/` | assorted utilities, magic signatures, and steg tooling |
+## Vendored Reference Areas
+
+These directories are mostly third-party material or submodules. Do not edit them as local code unless the task explicitly targets that project.
+
+- `dict/` - wordlists and password dictionaries
+- `web/` - third-party exploitation references and offensive tooling
+- `reverse/` - reverse-engineering tools, themes, integrations, decompilers
+- `forensis/` - forensic signatures, ImHex patterns, file-format specs
+- `misc/` - assorted utilities, magic signatures, steg tooling
 
 ## Submodules
 
-The repo tracks a large number of third-party resources as submodules, including:
+The repo tracks many third-party resources as git submodules, including:
 
 - `dict/SecLists`
 - `web/PayloadsAllTheThings`
@@ -81,21 +81,46 @@ The repo tracks a large number of third-party resources as submodules, including
 - `web/hacktricks`
 - `web/GTFOBins.github.io`
 - `reverse/dnSpyEx`
+- `reverse/ida-pro-mcp`
+- `reverse/ret-sync`
 - `forensis/ImHex-Patterns`
+- `forensis/rules`
+- `forensis/signature-base`
 
-Do not assume those directories are maintained locally. Check `git submodule status` before editing them.
+Check submodule state before assuming a directory is local code:
 
-## Notes For Maintenance
+```bash
+git submodule status --recursive
+```
 
-- `script/requirements.txt` is the closest thing to a project dependency manifest.
-- `script/.venv/` may exist locally, but it is ignored by git and should be treated as disposable.
-- Some scripts contain hard-coded local paths, challenge-specific payloads, or one-off exploit logic. Verify inputs before reuse.
-- The top-level repo can be dirty even when your local script changes are clean because submodules track their own state independently.
+Update all submodules to the commits recorded by this repo:
 
-## Included References
+```bash
+git submodule update --init --recursive
+```
 
-Useful local notes in this repo:
+Update submodules to the latest upstream commits configured in `.gitmodules`:
 
-- [script/cheat_sheets/pwntools_cheatsheet.md](/home/kita/ctf/tool/script/cheat_sheets/pwntools_cheatsheet.md)
-- [script/cheat_sheets/note.md](/home/kita/ctf/tool/script/cheat_sheets/note.md)
-- [script/cheat_sheets/ansi.md](/home/kita/ctf/tool/script/cheat_sheets/ansi.md)
+```bash
+git submodule update --remote --recursive
+```
+
+After updating submodules, commit the changed submodule pointers in the parent repo if the update should be kept.
+
+## Maintenance Notes
+
+- Check `git status` before editing. Submodules can be dirty independently of the parent repo.
+- `script/requirements.txt` is the closest thing to a dependency manifest.
+- `script/.venv/` may exist locally, but it is ignored by git and disposable.
+- For Python edits, run a targeted syntax check or execute the touched script when practical.
+- For docs-only edits, no test run is required.
+- For submodule edits, validate using that subproject's own workflow.
+- Keep top-level docs focused on setup, repo layout, and practical usage.
+
+## Included Local References
+
+Useful local notes:
+
+- [`script/cheat_sheets/pwntools_cheatsheet.md`](script/cheat_sheets/pwntools_cheatsheet.md)
+- [`script/cheat_sheets/note.md`](script/cheat_sheets/note.md)
+- [`script/cheat_sheets/ansi.md`](script/cheat_sheets/ansi.md)
