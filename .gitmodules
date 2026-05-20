@@ -97,3 +97,9 @@
 [submodule "script/pocs"]
 	path = script/pocs
 	url = https://github.com/v12-security/pocs.git
+[submodule "reverse/ida-pro-mcp"]
+	path = reverse/ida-pro-mcp
+	url = https://github.com/mrexodia/ida-pro-mcp.git
+[submodule "reverse/ret-sync"]
+	path = reverse/ret-sync
+	url = https://github.com/bootleg/ret-sync.git
