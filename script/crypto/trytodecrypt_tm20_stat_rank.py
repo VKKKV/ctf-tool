@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 import json, math, os, random, time, urllib.parse, urllib.request
 from collections import Counter, defaultdict
-KEY='REMOVED'
+# WARNING: API key was hardcoded here. Use env var instead.
+import os
+KEY=os.environ.get('TTD_API_KEY', 'YOUR_API_KEY_HERE')
 C='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_.,;:?! '
 CT20='8221E4F2173368D6B6B6E5050935D986A8C4CA764CF8A8C4B734E99807140B19DB691998095CC4E3D6C60D6E91'
 OUT='/tmp/tm20_stats.jsonl'

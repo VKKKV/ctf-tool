@@ -2,7 +2,9 @@
 import urllib.parse, urllib.request, time, sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from collections import defaultdict, Counter
-KEY='REMOVED'
+# WARNING: API key was hardcoded here. Use env var instead.
+import os
+KEY=os.environ.get('TTD_API_KEY', 'YOUR_API_KEY_HERE')
 C='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_.,;:?! '
 CT20='8221E4F2173368D6B6B6E5050935D986A8C4CA764CF8A8C4B734E99807140B19DB691998095CC4E3D6C60D6E91'
 TG=[CT20[i:i+5] for i in range(0,len(CT20),5)]
