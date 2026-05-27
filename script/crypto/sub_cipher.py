@@ -5,7 +5,7 @@ OFF = 2
 def dec(s,OFF=OFF):
     r = []
     for i in range(0, len(s), 2):
-        r.append(C[int(s[i:i+2], 16) - OFF])
+        r.append(C[(int(s[i:i+2], 16) - OFF) % len(C)])
     return "".join(r)
 
 if __name__ == "__main__":
