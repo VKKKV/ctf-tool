@@ -22,7 +22,7 @@ If the repo is already cloned:
 git submodule update --init --recursive
 ```
 
-Set up the Python environment for `script/` using **uv**:
+Set up the Python environment for `script/` using **uv** (requires Python >=3.12):
 
 ```bash
 cd script
@@ -47,7 +47,7 @@ uv run script/pwn/template_pwntools_example.py
 
 ## Local Script Area
 
-Owned code and notes live under `script/`.
+Owned code and notes live under `script/`. Submodules under `script/` are noted.
 
 - `script/crypto` — crypto helpers, challenge solvers, encoders/decoders
 - `script/net` — packet tooling, Scapy experiments, PCAP analysis
@@ -62,7 +62,8 @@ Owned code and notes live under `script/`.
 - `script/hook` — LD_PRELOAD hooks, ptrace bypass, shellcode runners
 - `script/kb-tools` — knowledge base migration and maintenance scripts
 - `script/maze` — maze challenge exploits (shellcode injection, GDB scripts)
-- `script/dirtyfrag` — Dirty COW / race-condition exploit fragments
+- `script/dirtyfrag` — [submodule] Dirty COW / race-condition exploit fragments
+- `script/pocs` — [submodule] CVE PoC collection
 
 Some scripts are one-off exploit solvers with hard-coded paths, ports, payloads, or challenge assumptions. Read them before reuse.
 
@@ -70,28 +71,65 @@ Some scripts are one-off exploit solvers with hard-coded paths, ports, payloads,
 
 These directories are mostly third-party material or submodules. Do not edit them as local code unless the task explicitly targets that project.
 
-- `dict/` — wordlists and password dictionaries
-- `web/` — third-party exploitation references and offensive tooling
-- `reverse/` — reverse-engineering tools, themes, integrations, decompilers
-- `forensis/` — forensic signatures, ImHex patterns, file-format specs
-- `misc/` — assorted utilities, magic signatures, steg tooling
+- `dict/` — wordlists, password dictionaries, and security testing payloads
+  - Submodules: SecLists, wister
+  - Local: organized by category under passwords/, usernames/, dirs/, subdomains/, payloads/, middleware/, devices/, misc/
+  - See [`dict/README.md`](dict/README.md)
+- `web/` — third-party exploitation references and offensive tooling (all submodules)
+- `reverse/` — reverse-engineering tools, themes, integrations, decompilers (all submodules)
+- `forensis/` — forensic signatures, ImHex patterns, file-format specs (all submodules)
+- `misc/` — assorted utilities, magic signatures, steg tooling (submodule: qrazybox)
+- `pentest/` — [submodule] pentest script collection
 
 ## Submodules
 
-The repo tracks many third-party resources as git submodules, including:
+The repo tracks many third-party resources as git submodules. Full list (34 total):
 
-- `dict/SecLists`
+**dict**
+- `dict/SecLists` — comprehensive wordlist collection
+- `dict/wister` — WPA/WPA2 PMKID cracking tool
+
+**web (exploitation & references)**
 - `web/PayloadsAllTheThings`
-- `web/PEASS-ng`
-- `web/hacktricks`
-- `web/GTFOBins.github.io`
-- `web/exploit-notes`
-- `reverse/dnSpyEx`
-- `reverse/ida-pro-mcp`
-- `reverse/ret-sync`
-- `forensis/ImHex-Patterns`
-- `forensis/rules`
-- `forensis/signature-base`
+- `web/PEASS-ng` — privilege escalation enumeration
+- `web/hacktricks` — hacking techniques wiki
+- `web/GTFOBins.github.io` — Unix binary exploitation
+- `web/exploit-notes` — exploit development notes
+- `web/SSRFmap` — SSRF exploitation framework
+- `web/GitTools` — Git repository tools
+- `web/antSword` — cross-platform webshell manager
+- `web/nc.exe` — netcat for Windows
+- `web/nishang` — PowerShell for offensive security
+- `web/PowerSploit` — PowerShell exploitation framework
+- `web/Priv2Admin` — Windows privilege escalation
+- `web/pspy` — Linux process monitoring
+- `web/reverse-shell-generator` — reverse shell payload generator
+- `web/xsser` — XSS detection and exploitation
+- `web/ysoserial` — Java deserialization payloads
+
+**reverse**
+- `reverse/dnSpyEx` — .NET debugger and assembly editor
+- `reverse/Ghidra-Themes` — Ghidra IDE themes
+- `reverse/ida-pro-mcp` — IDA Pro MCP plugin
+- `reverse/ida/long_night` — IDA dark theme
+- `reverse/jd-gui` — Java decompiler
+- `reverse/ret-sync` — IDA/GDB/Windbg sync
+
+**forensis**
+- `forensis/ImHex-Patterns` — ImHex hex editor patterns
+- `forensis/kaitai_struct_formats` — binary format definitions
+- `forensis/LovelyMem` — memory analysis tools
+- `forensis/MemProcFS` — memory process file system
+- `forensis/rules` — YARA rules collection
+- `forensis/signature-base` — forensic signatures
+
+**misc**
+- `misc/steg/qrazybox` — QR code analysis
+
+**Other**
+- `pentest` — pentest scripts and tools
+- `script/dirtyfrag` — Dirty COW exploit fragments
+- `script/pocs` — CVE proof-of-concept collection
 
 Check submodule state before assuming a directory is local code:
 
@@ -123,9 +161,15 @@ cd script
 uv sync
 ```
 
-The full locked dependency list is in `script/pyproject.toml` (`[project] dependencies`).
+To upgrade all packages to latest compatible versions:
 
-**Note:** The venv is self-contained — these packages are installed inside `script/.venv/`, not globally. Key additions beyond the basic CTF toolchain include **gmpy2** (RSA/bigint math), **numpy** (crypto array ops), **pillow** (forensic image analysis), and **impacket** (Windows protocol exploitation, SMB/Kerberos/LDAP).
+```bash
+uv lock --upgrade && uv sync
+```
+
+Dependencies are pinned with `>=` constraints and resolved into `uv.lock`. Key additions beyond the basic CTF toolchain include **gmpy2** (RSA/bigint math), **numpy** (crypto array ops), **pillow** (forensic image analysis), and **impacket** (Windows protocol exploitation, SMB/Kerberos/LDAP).
+
+**Note:** The venv is self-contained inside `script/.venv/`, git-ignored and disposable.
 
 ## Maintenance Notes
 
@@ -136,6 +180,7 @@ The full locked dependency list is in `script/pyproject.toml` (`[project] depend
 - For docs-only edits, no test run is required.
 - For submodule edits, validate using that subproject's own workflow.
 - Keep top-level docs focused on setup, repo layout, and practical usage.
+- Submodules are initialized to pinned commits. Run `git submodule update --remote` to pull latest upstream, then commit the updated pointers.
 
 ## Included Local References
 
@@ -145,3 +190,6 @@ Useful local notes:
 - [`script/cheat_sheets/note.md`](script/cheat_sheets/note.md)
 - [`script/cheat_sheets/ansi.md`](script/cheat_sheets/ansi.md)
 - [`script/crypto/trytodecrypt/README.md`](script/crypto/trytodecrypt/README.md) — trytodecrypt.com solver collection
+- [`dict/README.md`](dict/README.md) — wordlist organization
+- [`dict/docs/sql-injection-cheatsheet.md`](dict/docs/sql-injection-cheatsheet.md) — SQL injection reference
+- [`dict/docs/oracle-cheat-sheet.md`](dict/docs/oracle-cheat-sheet.md) — Oracle hacking reference
