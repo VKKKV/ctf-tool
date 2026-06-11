@@ -29,60 +29,67 @@
  */
 
 #define _GNU_SOURCE
-#include <stdio.h>
 #include <ctype.h>
-#include <string.h>
 #include <dlfcn.h>
+#include <stdio.h>
+#include <string.h>
 #include <unistd.h>
 
 static int mem_dumped = 0;
 
 static void dump_readable_strings(void) {
-    if (mem_dumped) return;
-    mem_dumped = 1;
+  if (mem_dumped)
+    return;
+  mem_dumped = 1;
 
-    FILE *maps = fopen("/proc/self/maps", "r");
-    if (!maps) return;
+  FILE *maps = fopen("/proc/self/maps", "r");
+  if (!maps)
+    return;
 
-    char line[512];
-    while (fgets(line, sizeof(line), maps)) {
-        unsigned long start, end;
-        char perms[8];
-        if (sscanf(line, "%lx-%lx %7s", &start, &end, perms) < 3)
-            continue;
+  char line[512];
+  while (fgets(line, sizeof(line), maps)) {
+    unsigned long start, end;
+    char perms[8];
+    if (sscanf(line, "%lx-%lx %7s", &start, &end, perms) < 3)
+      continue;
 
-        // 只扫可读段
-        if (perms[0] != 'r') continue;
+    // 只扫可读段
+    if (perms[0] != 'r')
+      continue;
 
-        // 跳过 stack/vvar/vdso 等噪声段
-        if (strstr(line, "[stack]") || strstr(line, "[vvar]") ||
-            strstr(line, "[vdso]") || strstr(line, "[vsyscall]") ||
-            strstr(line, "[vvar]"))
-            continue;
+    // 跳过 stack/vvar/vdso 等噪声段
+    if (strstr(line, "[stack]") || strstr(line, "[vvar]") ||
+        strstr(line, "[vdso]") || strstr(line, "[vsyscall]") ||
+        strstr(line, "[vvar]"))
+      continue;
 
-        for (unsigned long addr = start; addr < end; ) {
-            // 找 printable 串起点
-            int is_print = 1;
-            int slen = 0;
-            for (unsigned long p = addr; p < end && p - addr < 256; p++) {
-                char c = *(volatile char *)p;
-                if (c == '\0') break;
-                if (!isprint((unsigned char)c)) { is_print = 0; break; }
-                slen++;
-            }
-
-            if (is_print && slen >= 4) {
-                // 有意义的 printable 串 → 整体输出
-                // 用 write() 直接写 stderr 避免递归
-                write(2, (const void *)addr, slen);
-                write(2, "\n", 1);
-                addr += slen;
-            } else {
-                addr += 16;
-            }
+    for (unsigned long addr = start; addr < end;) {
+      // 找 printable 串起点
+      int is_print = 1;
+      int slen = 0;
+      for (unsigned long p = addr; p < end && p - addr < 256; p++) {
+        char c = *(volatile char *)p;
+        if (c == '\0')
+          break;
+        if (!isprint((unsigned char)c)) {
+          is_print = 0;
+          break;
         }
+        slen++;
+      }
+
+      if (is_print && slen >= 4) {
+        // 有意义的 printable 串 → 整体输出
+        // 用 write() 直接写 stderr 避免递归
+        write(2, (const void *)addr, slen);
+        write(2, "\n", 1);
+        addr += slen;
+      } else {
+        addr += 16;
+      }
     }
-    fclose(maps);
+  }
+  fclose(maps);
 }
 
 /*
@@ -90,27 +97,29 @@ static void dump_readable_strings(void) {
  * 但注意: 不能在写 stderr 时也 dump，会递归
  */
 ssize_t write(int fd, const void *buf, size_t count) {
-    static ssize_t (*real_write)(int, const void *, size_t) = NULL;
-    if (!real_write) real_write = dlsym(RTLD_NEXT, "write");
+  static ssize_t (*real_write)(int, const void *, size_t) = NULL;
+  if (!real_write)
+    real_write = dlsym(RTLD_NEXT, "write");
 
-    // 只对 stdout/stderr 触发一次 dump
-    if (fd <= 2 && !mem_dumped) {
-        dump_readable_strings();
-    }
+  // 只对 stdout/stderr 触发一次 dump
+  if (fd <= 2 && !mem_dumped) {
+    dump_readable_strings();
+  }
 
-    return real_write(fd, buf, count);
+  return real_write(fd, buf, count);
 }
 
 /*
  * hook puts()——puts 通常由 binary 调用，触发时机好
  */
 int puts(const char *s) {
-    static int (*real_puts)(const char *) = NULL;
-    if (!real_puts) real_puts = dlsym(RTLD_NEXT, "puts");
+  static int (*real_puts)(const char *) = NULL;
+  if (!real_puts)
+    real_puts = dlsym(RTLD_NEXT, "puts");
 
-    if (!mem_dumped) {
-        dump_readable_strings();
-    }
+  if (!mem_dumped) {
+    dump_readable_strings();
+  }
 
-    return real_puts(s);
+  return real_puts(s);
 }

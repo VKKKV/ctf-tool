@@ -41,8 +41,8 @@ Examples:
 
 ```bash
 uv run script/crypto/xor_cipher_tool.py
-uv run script/net/scapy/scapy_pcap_analyzer.py
-uv run script/pwn/templates/pwntools_example.py
+uv run script/net/scapy_pcap_analyzer.py
+uv run script/pwn/template_pwntools_example.py
 ```
 
 ## Local Script Area
@@ -59,6 +59,10 @@ Owned code and notes live under `script/`.
 - `script/post_exp` — post-exploitation binaries and helpers
 - `script/shellcode` — assembly payloads and generated shellcode artifacts
 - `script/cheat_sheets` — quick notes and reusable references
+- `script/hook` — LD_PRELOAD hooks, ptrace bypass, shellcode runners
+- `script/kb-tools` — knowledge base migration and maintenance scripts
+- `script/maze` — maze challenge exploits (shellcode injection, GDB scripts)
+- `script/dirtyfrag` — Dirty COW / race-condition exploit fragments
 
 Some scripts are one-off exploit solvers with hard-coded paths, ports, payloads, or challenge assumptions. Read them before reuse.
 
@@ -121,7 +125,7 @@ uv sync
 
 The full locked dependency list is in `script/pyproject.toml` (`[project] dependencies`).
 
-**Note:** The venv is self-contained — these packages are installed inside `script/.venv/`, not globally. Most are also available as Arch packages (see `python-<name>`), but the venv ensures consistent versions regardless of the host distro.
+**Note:** The venv is self-contained — these packages are installed inside `script/.venv/`, not globally. Key additions beyond the basic CTF toolchain include **gmpy2** (RSA/bigint math), **numpy** (crypto array ops), **pillow** (forensic image analysis), and **impacket** (Windows protocol exploitation, SMB/Kerberos/LDAP).
 
 ## Maintenance Notes
 
@@ -140,3 +144,4 @@ Useful local notes:
 - [`script/cheat_sheets/pwntools_cheatsheet.md`](script/cheat_sheets/pwntools_cheatsheet.md)
 - [`script/cheat_sheets/note.md`](script/cheat_sheets/note.md)
 - [`script/cheat_sheets/ansi.md`](script/cheat_sheets/ansi.md)
+- [`script/crypto/trytodecrypt/README.md`](script/crypto/trytodecrypt/README.md) — trytodecrypt.com solver collection

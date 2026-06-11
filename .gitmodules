@@ -13,18 +13,12 @@
 [submodule "web/nishang"]
 	path = web/nishang
 	url = https://github.com/samratashok/nishang.git
-[submodule "web/pspy"]
-	path = web/pspy
-	url = https://github.com/DominicBreuker/pspy.git
 [submodule "web/SSRFmap"]
 	path = web/SSRFmap
 	url = https://github.com/swisskyrepo/SSRFmap.git
 [submodule "web/GitTools"]
 	path = web/GitTools
 	url = https://github.com/internetwache/GitTools.git
-[submodule "Microsoft-Activation-Scripts"]
-	path = Microsoft-Activation-Scripts
-	url = https://github.com/massgravel/Microsoft-Activation-Scripts.git
 [submodule "web/exploit-notes"]
 	path = web/exploit-notes
 	url = https://github.com/hdks-bug/exploit-notes.git
@@ -34,9 +28,6 @@
 [submodule "dic/wister"]
 	path = dict/wister
 	url = https://github.com/cycurity/wister.git
-[submodule "pentest"]
-	path = pentest
-	url = https://github.com/jivoi/pentest.git
 [submodule "steg/qrazybox"]
 	path = misc/steg/qrazybox
 	url = https://github.com/Merricx/qrazybox.git
@@ -94,12 +85,18 @@
 [submodule "script/dirtyfrag"]
 	path = script/dirtyfrag
 	url = https://github.com/V4bel/dirtyfrag.git
-[submodule "script/pocs"]
-	path = script/pocs
-	url = https://github.com/v12-security/pocs.git
 [submodule "reverse/ida-pro-mcp"]
 	path = reverse/ida-pro-mcp
 	url = https://github.com/mrexodia/ida-pro-mcp.git
 [submodule "reverse/ret-sync"]
 	path = reverse/ret-sync
 	url = https://github.com/bootleg/ret-sync.git
+[submodule "web/pspy"]
+	path = web/pspy
+	url = https://github.com/DominicBreuker/pspy.git
+[submodule "pentest"]
+	path = pentest
+	url = https://github.com/jivoi/pentest.git
+[submodule "script/pocs"]
+	path = script/pocs
+	url = https://github.com/v12-security/pocs.git
