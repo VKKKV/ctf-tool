@@ -83,13 +83,15 @@ These directories are mostly third-party material or submodules. Do not edit the
 
 ## Submodules
 
-The repo tracks many third-party resources as git submodules. Full list (34 total):
+The repo tracks many third-party resources as git submodules. Full list (35 total):
 
 **dict**
+
 - `dict/SecLists` — comprehensive wordlist collection
 - `dict/wister` — WPA/WPA2 PMKID cracking tool
 
 **web (exploitation & references)**
+
 - `web/PayloadsAllTheThings`
 - `web/PEASS-ng` — privilege escalation enumeration
 - `web/hacktricks` — hacking techniques wiki
@@ -106,8 +108,10 @@ The repo tracks many third-party resources as git submodules. Full list (34 tota
 - `web/reverse-shell-generator` — reverse shell payload generator
 - `web/xsser` — XSS detection and exploitation
 - `web/ysoserial` — Java deserialization payloads
+- `web/impacket` — Windows protocol exploitation toolkit (SMB, Kerberos, AD secretsdump)
 
 **reverse**
+
 - `reverse/dnSpyEx` — .NET debugger and assembly editor
 - `reverse/Ghidra-Themes` — Ghidra IDE themes
 - `reverse/ida-pro-mcp` — IDA Pro MCP plugin
@@ -116,6 +120,7 @@ The repo tracks many third-party resources as git submodules. Full list (34 tota
 - `reverse/ret-sync` — IDA/GDB/Windbg sync
 
 **forensis**
+
 - `forensis/ImHex-Patterns` — ImHex hex editor patterns
 - `forensis/kaitai_struct_formats` — binary format definitions
 - `forensis/LovelyMem` — memory analysis tools
@@ -124,9 +129,11 @@ The repo tracks many third-party resources as git submodules. Full list (34 tota
 - `forensis/signature-base` — forensic signatures
 
 **misc**
+
 - `misc/steg/qrazybox` — QR code analysis
 
 **Other**
+
 - `pentest` — pentest scripts and tools
 - `script/dirtyfrag` — Dirty COW exploit fragments
 - `script/pocs` — CVE proof-of-concept collection

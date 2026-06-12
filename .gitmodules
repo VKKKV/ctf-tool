@@ -100,3 +100,6 @@
 [submodule "script/pocs"]
 	path = script/pocs
 	url = https://github.com/v12-security/pocs.git
+[submodule "web/impacket"]
+	path = web/impacket
+	url = https://github.com/fortra/impacket.git
