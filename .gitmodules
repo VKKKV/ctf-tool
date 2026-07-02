@@ -103,3 +103,6 @@
 [submodule "web/impacket"]
 	path = web/impacket
 	url = https://github.com/fortra/impacket.git
+[submodule "LinEnum-ng"]
+	path = LinEnum-ng
+	url = https://github.com/strikoder/LinEnum-ng
