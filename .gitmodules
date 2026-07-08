@@ -106,3 +106,6 @@
 [submodule "LinEnum-ng"]
 	path = web/LinEnum-ng
 	url = https://github.com/strikoder/LinEnum-ng
+[submodule "misc/collisions"]
+	path = misc/collisions
+	url = https://github.com/corkami/collisions.git
